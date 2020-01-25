@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Fri Jan 24 17:15:51 2020
+//Date        : Fri Jan 24 18:02:36 2020
 //Host        : patricknaughton01 running 64-bit Ubuntu 18.04.3 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -30,9 +30,7 @@ module design_1_wrapper
     FIXED_IO_mio,
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
-    FIXED_IO_ps_srstb,
-    uart_rtl_rxd,
-    uart_rtl_txd);
+    FIXED_IO_ps_srstb);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -54,8 +52,6 @@ module design_1_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  input uart_rtl_rxd;
-  output uart_rtl_txd;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -78,8 +74,6 @@ module design_1_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire uart_rtl_rxd;
-  wire uart_rtl_txd;
 
   design_1 design_1_i
        (.DDR_addr(DDR_addr),
@@ -102,7 +96,5 @@ module design_1_wrapper
         .FIXED_IO_mio(FIXED_IO_mio),
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
-        .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .uart_rtl_rxd(uart_rtl_rxd),
-        .uart_rtl_txd(uart_rtl_txd));
+        .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb));
 endmodule
