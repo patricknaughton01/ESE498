@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module top#(parameter C_S_AXI_ADDR_WIDTH = 10, C_S_AXI_DATA_WIDTH = 32, INITIAL=46, DELAY=64, READ_MAX=100)(
+module top#(parameter C_S_AXI_ADDR_WIDTH = 10, C_S_AXI_DATA_WIDTH = 32, INITIAL=46, DELAY=64, READ_MAX=100, VIRUS=1024)(
     // Axi4Lite Bus
     input       S_AXI_ACLK,
     input       S_AXI_ARESETN,
@@ -51,6 +51,9 @@ reg  [C_S_AXI_DATA_WIDTH-1:0] rdData;
 wire rd;
 
 wire [DELAY-1:0] tdcOut;
+
+reg  virusEn;
+reg  [VIRUS-1:0] virusOut;
 
 Axi4LiteSupporter#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH))AxiSupporter1(
     // Simple Bus
@@ -89,6 +92,11 @@ tdc#(.INITIAL(INITIAL), .DELAY(DELAY)) tdc1(
     .delay(tdcOut)
 );
 
+virus#(.SIZE(VIRUS)) virus1(
+    .out(virusOut),
+    .enable(virusEn)
+);
+
 parameter IDLE=0, READ=1;
 reg [7:0] state, nextState;
 reg [5:0] mem[READ_MAX-1:0];
@@ -100,6 +108,7 @@ integer i;
 always @ * begin
     counterD = counterQ;
     nextState = state;
+    virusEn = 0;
     case(state)
         IDLE:begin
             if(rd && rdAddr < READ_MAX)begin
