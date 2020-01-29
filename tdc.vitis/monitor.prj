@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ASCII"?>
+<aieproject:AIEProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aieproject="http://www.xilinx.com/aieproject" name="monitor" location="C:/Users/ressw/Documents/School/ESE498/CodeStuff/ESE498/tdc.vitis" platform="C:/Xilinx/Vitis/2019.2/platforms/xcvc1902_fixed/xcvc1902_fixed.xpfm" platformUID="xilinx:::0.0" systemProject="monitor_system" sysConfig="AIEngine" runtime="C/C++" cpu="aiengine" cpuInstance="ai_engine" os="aie_runtime">
+  <configuration name="Debug" id="com.xilinx.sdx.aie.managedbuild.project.debug.673990198">
+    <configBuildOptions xsi:type="aieproject:AIEOptions"/>
+  </configuration>
+  <configuration name="Release" id="com.xilinx.sdx.aie.managedbuild.project.release.1400315962">
+    <configBuildOptions xsi:type="aieproject:AIEOptions"/>
+  </configuration>
+</aieproject:AIEProject>
