@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Sat Jan 25 13:01:09 2020
+| Date         : Fri Jan 31 18:43:04 2020
 | Host         : patricknaughton01 running 64-bit Ubuntu 18.04.3 LTS
 | Command      : report_timing_summary -max_paths 10 -file design_1_wrapper_timing_summary_routed.rpt -pb design_1_wrapper_timing_summary_routed.pb -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation
 | Design       : design_1_wrapper
@@ -54,49 +54,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 6 register/latch pins with no clock driven by root clock pin: design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.grant_rnw_reg/Q (HIGH)
-
- There are 6 register/latch pins with no clock driven by root clock pin: design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[10]/Q (HIGH)
-
- There are 6 register/latch pins with no clock driven by root clock pin: design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[3]/Q (HIGH)
-
- There are 6 register/latch pins with no clock driven by root clock pin: design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[4]/Q (HIGH)
-
- There are 6 register/latch pins with no clock driven by root clock pin: design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[5]/Q (HIGH)
-
- There are 6 register/latch pins with no clock driven by root clock pin: design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[6]/Q (HIGH)
-
- There are 6 register/latch pins with no clock driven by root clock pin: design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[7]/Q (HIGH)
-
- There are 6 register/latch pins with no clock driven by root clock pin: design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[8]/Q (HIGH)
-
- There are 6 register/latch pins with no clock driven by root clock pin: design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[9]/Q (HIGH)
-
- There are 6 register/latch pins with no clock driven by root clock pin: design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_valid_i_reg/Q (HIGH)
-
- There are 6 register/latch pins with no clock driven by root clock pin: design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/m_atarget_hot_reg[1]/Q (HIGH)
-
- There are 6 register/latch pins with no clock driven by root clock pin: design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/splitter_ar/m_ready_d_reg[1]/Q (HIGH)
-
- There are 6 register/latch pins with no clock driven by root clock pin: design_1_i/top_0/inst/AxiSupporter1/FSM_sequential_state_reg[0]/Q (HIGH)
-
- There are 6 register/latch pins with no clock driven by root clock pin: design_1_i/top_0/inst/AxiSupporter1/FSM_sequential_state_reg[1]/Q (HIGH)
-
- There are 606 register/latch pins with no clock driven by root clock pin: design_1_i/top_0/inst/FSM_sequential_state_reg/Q (HIGH)
-
- There are 600 register/latch pins with no clock driven by root clock pin: design_1_i/top_0/inst/counterQ_reg[0]/Q (HIGH)
-
- There are 600 register/latch pins with no clock driven by root clock pin: design_1_i/top_0/inst/counterQ_reg[1]/Q (HIGH)
-
- There are 600 register/latch pins with no clock driven by root clock pin: design_1_i/top_0/inst/counterQ_reg[2]/Q (HIGH)
-
- There are 600 register/latch pins with no clock driven by root clock pin: design_1_i/top_0/inst/counterQ_reg[3]/Q (HIGH)
-
- There are 600 register/latch pins with no clock driven by root clock pin: design_1_i/top_0/inst/counterQ_reg[4]/Q (HIGH)
-
- There are 600 register/latch pins with no clock driven by root clock pin: design_1_i/top_0/inst/counterQ_reg[5]/Q (HIGH)
-
- There are 600 register/latch pins with no clock driven by root clock pin: design_1_i/top_0/inst/counterQ_reg[6]/Q (HIGH)
+ There are 0 register/latch pins with no clock.
 
 
 2. checking constant_clock
@@ -111,7 +69,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 606 pins that are not constrained for maximum delay. (HIGH)
+ There are 0 pins that are not constrained for maximum delay.
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -144,7 +102,7 @@ Table of Contents
 
 9. checking loops
 -----------------
- There are 0 combinational loops in the design.
+ There are 5000 combinational loops in the design. (HIGH)
 
 
 10. checking partial_input_delay
@@ -170,7 +128,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-      0.000        0.000                      0                 1674       -0.354       -0.631                      6                 1674        4.020        0.000                       0                   900  
+      0.000        0.000                      0                 6436       -0.828      -28.108                     63                 6436       20.019        0.000                       0                  2489  
 
 
 Timing constraints are not met.
@@ -183,7 +141,7 @@ Timing constraints are not met.
 
 Clock       Waveform(ns)       Period(ns)      Frequency(MHz)
 -----       ------------       ----------      --------------
-clk_fpga_0  {0.000 5.000}      10.000          100.000         
+clk_fpga_0  {0.000 21.000}     41.999          23.810          
 
 
 ------------------------------------------------------------------------------------------------
@@ -193,7 +151,7 @@ clk_fpga_0  {0.000 5.000}      10.000          100.000
 
 Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
 -----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-clk_fpga_0          0.000        0.000                      0                 1674       -0.354       -0.631                      6                 1674        4.020        0.000                       0                   900  
+clk_fpga_0          0.000        0.000                      0                 6436       -0.828      -28.108                     63                 6436       20.019        0.000                       0                  2489  
 
 
 ------------------------------------------------------------------------------------------------
@@ -225,8 +183,8 @@ From Clock:  clk_fpga_0
   To Clock:  clk_fpga_0
 
 Setup :            0  Failing Endpoints,  Worst Slack        0.000ns,  Total Violation        0.000ns
-Hold  :            6  Failing Endpoints,  Worst Slack       -0.354ns,  Total Violation       -0.631ns
-PW    :            0  Failing Endpoints,  Worst Slack        4.020ns,  Total Violation        0.000ns
+Hold  :           63  Failing Endpoints,  Worst Slack       -0.828ns,  Total Violation      -28.108ns
+PW    :            0  Failing Endpoints,  Worst Slack       20.019ns,  Total Violation        0.000ns
 ---------------------------------------------------------------------------------------------------
 
 
@@ -234,30 +192,30 @@ Max Delay Paths
 --------------------------------------------------------------------------------------
 Slack (MET) :             0.000ns  (required time - arrival time)
   Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[10]/D
-                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[57]/D
+                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@21.000ns period=41.999ns})
   Path Group:             clk_fpga_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
-  Data Path Delay:        5.154ns  (logic 0.225ns (4.366%)  route 4.929ns (95.634%))
+  Data Path Delay:        4.479ns  (logic 0.225ns (5.024%)  route 4.254ns (94.976%))
   Logic Levels:           2  (BUFG=1 LUT1=1)
-  Clock Path Skew:        2.646ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    2.646ns
+  Clock Path Skew:        2.654ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.654ns
     Source Clock Delay      (SCD):    0.000ns
     Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+  Clock Uncertainty:      0.631ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.300ns
+    Total Input Jitter      (TIJ):    1.260ns
     Discrete Jitter          (DJ):    0.000ns
     Phase Error              (PE):    0.000ns
   Time Borrowing:         
-    Nominal pulse width:              5.000ns
-    Library setup time:              -0.027ns
-    Computed max time borrow:         4.973ns
-    Time borrowed from endpoint:      2.662ns
-    Open edge uncertainty:           -0.154ns
-    Time given to startpoint:         2.508ns
+    Nominal pulse width:              21.000ns
+    Library setup time:              -0.050ns
+    Computed max time borrow:         20.950ns
+    Time borrowed from endpoint:      2.456ns
+    Open edge uncertainty:           -0.631ns
+    Time given to startpoint:         1.825ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -266,10 +224,10 @@ Slack (MET) :             0.000ns  (required time - arrival time)
     PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.193     1.193    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         2.283     3.577    design_1_i/top_0/inst/tdc1/initial_bufs[45]
-    SLICE_X48Y104        LUT1 (Prop_lut1_I0_O)        0.124     3.701 r  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
-                         net (fo=46, routed)          1.453     5.154    design_1_i/top_0/inst/tdc1/delay_bufs[10]
-    SLICE_X50Y99         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[10]/D
+                         net (fo=2493, routed)        2.090     3.384    design_1_i/top_0/inst/tdc1/initial_bufs[255]
+    SLICE_X48Y92         LUT1 (Prop_lut1_I0_O)        0.124     3.508 r  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
+                         net (fo=63, routed)          0.971     4.479    design_1_i/top_0/inst/tdc1/delay_bufs[57]
+    SLICE_X45Y88         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[57]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 rise edge)
@@ -277,43 +235,43 @@ Slack (MET) :             0.000ns  (required time - arrival time)
     PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.088     1.088    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         1.467     2.646    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X50Y99         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[10]/G
-                         clock pessimism              0.000     2.646    
-                         clock uncertainty           -0.154     2.492    
-                         time borrowed                2.662     5.154    
+                         net (fo=2493, routed)        1.475     2.654    design_1_i/top_0/inst/tdc1/initial_bufs[0]
+    SLICE_X45Y88         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[57]/G
+                         clock pessimism              0.000     2.654    
+                         clock uncertainty           -0.631     2.023    
+                         time borrowed                2.456     4.479    
   -------------------------------------------------------------------
-                         required time                          5.154    
-                         arrival time                          -5.154    
+                         required time                          4.479    
+                         arrival time                          -4.479    
   -------------------------------------------------------------------
                          slack                                  0.000    
 
 Slack (MET) :             0.000ns  (required time - arrival time)
   Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[14]/D
-                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[30]/D
+                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@21.000ns period=41.999ns})
   Path Group:             clk_fpga_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
-  Data Path Delay:        5.162ns  (logic 0.225ns (4.359%)  route 4.937ns (95.641%))
+  Data Path Delay:        4.439ns  (logic 0.225ns (5.069%)  route 4.214ns (94.931%))
   Logic Levels:           2  (BUFG=1 LUT1=1)
-  Clock Path Skew:        2.658ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    2.658ns
+  Clock Path Skew:        2.643ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.643ns
     Source Clock Delay      (SCD):    0.000ns
     Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+  Clock Uncertainty:      0.631ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.300ns
+    Total Input Jitter      (TIJ):    1.260ns
     Discrete Jitter          (DJ):    0.000ns
     Phase Error              (PE):    0.000ns
   Time Borrowing:         
-    Nominal pulse width:              5.000ns
+    Nominal pulse width:              21.000ns
     Library setup time:              -0.056ns
-    Computed max time borrow:         4.944ns
-    Time borrowed from endpoint:      2.659ns
-    Open edge uncertainty:           -0.154ns
-    Time given to startpoint:         2.504ns
+    Computed max time borrow:         20.944ns
+    Time borrowed from endpoint:      2.427ns
+    Open edge uncertainty:           -0.631ns
+    Time given to startpoint:         1.796ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -322,10 +280,10 @@ Slack (MET) :             0.000ns  (required time - arrival time)
     PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.193     1.193    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         2.283     3.577    design_1_i/top_0/inst/tdc1/initial_bufs[45]
-    SLICE_X48Y104        LUT1 (Prop_lut1_I0_O)        0.124     3.701 r  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
-                         net (fo=46, routed)          1.461     5.162    design_1_i/top_0/inst/tdc1/delay_bufs[14]
-    SLICE_X47Y99         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[14]/D
+                         net (fo=2493, routed)        2.090     3.384    design_1_i/top_0/inst/tdc1/initial_bufs[255]
+    SLICE_X48Y92         LUT1 (Prop_lut1_I0_O)        0.124     3.508 r  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
+                         net (fo=63, routed)          0.931     4.439    design_1_i/top_0/inst/tdc1/delay_bufs[30]
+    SLICE_X53Y90         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[30]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 rise edge)
@@ -333,43 +291,43 @@ Slack (MET) :             0.000ns  (required time - arrival time)
     PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.088     1.088    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         1.479     2.658    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X47Y99         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[14]/G
-                         clock pessimism              0.000     2.658    
-                         clock uncertainty           -0.154     2.504    
-                         time borrowed                2.659     5.162    
+                         net (fo=2493, routed)        1.464     2.643    design_1_i/top_0/inst/tdc1/initial_bufs[0]
+    SLICE_X53Y90         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[30]/G
+                         clock pessimism              0.000     2.643    
+                         clock uncertainty           -0.631     2.012    
+                         time borrowed                2.427     4.439    
   -------------------------------------------------------------------
-                         required time                          5.162    
-                         arrival time                          -5.162    
+                         required time                          4.439    
+                         arrival time                          -4.439    
   -------------------------------------------------------------------
                          slack                                  0.000    
 
 Slack (MET) :             0.000ns  (required time - arrival time)
   Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[6]/D
-                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[34]/D
+                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@21.000ns period=41.999ns})
   Path Group:             clk_fpga_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
-  Data Path Delay:        5.118ns  (logic 0.225ns (4.396%)  route 4.893ns (95.604%))
+  Data Path Delay:        4.437ns  (logic 0.225ns (5.071%)  route 4.212ns (94.929%))
   Logic Levels:           2  (BUFG=1 LUT1=1)
-  Clock Path Skew:        2.658ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    2.658ns
+  Clock Path Skew:        2.643ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.643ns
     Source Clock Delay      (SCD):    0.000ns
     Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+  Clock Uncertainty:      0.631ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.300ns
+    Total Input Jitter      (TIJ):    1.260ns
     Discrete Jitter          (DJ):    0.000ns
     Phase Error              (PE):    0.000ns
   Time Borrowing:         
-    Nominal pulse width:              5.000ns
-    Library setup time:              -0.056ns
-    Computed max time borrow:         4.944ns
-    Time borrowed from endpoint:      2.614ns
-    Open edge uncertainty:           -0.154ns
-    Time given to startpoint:         2.460ns
+    Nominal pulse width:              21.000ns
+    Library setup time:              -0.050ns
+    Computed max time borrow:         20.950ns
+    Time borrowed from endpoint:      2.425ns
+    Open edge uncertainty:           -0.631ns
+    Time given to startpoint:         1.794ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -378,10 +336,10 @@ Slack (MET) :             0.000ns  (required time - arrival time)
     PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.193     1.193    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         2.283     3.577    design_1_i/top_0/inst/tdc1/initial_bufs[45]
-    SLICE_X48Y104        LUT1 (Prop_lut1_I0_O)        0.124     3.701 r  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
-                         net (fo=46, routed)          1.417     5.118    design_1_i/top_0/inst/tdc1/delay_bufs[6]
-    SLICE_X45Y99         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[6]/D
+                         net (fo=2493, routed)        2.090     3.384    design_1_i/top_0/inst/tdc1/initial_bufs[255]
+    SLICE_X48Y92         LUT1 (Prop_lut1_I0_O)        0.124     3.508 r  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
+                         net (fo=63, routed)          0.929     4.437    design_1_i/top_0/inst/tdc1/delay_bufs[34]
+    SLICE_X53Y90         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[34]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 rise edge)
@@ -389,43 +347,43 @@ Slack (MET) :             0.000ns  (required time - arrival time)
     PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.088     1.088    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         1.479     2.658    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X45Y99         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[6]/G
-                         clock pessimism              0.000     2.658    
-                         clock uncertainty           -0.154     2.504    
-                         time borrowed                2.614     5.118    
+                         net (fo=2493, routed)        1.464     2.643    design_1_i/top_0/inst/tdc1/initial_bufs[0]
+    SLICE_X53Y90         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[34]/G
+                         clock pessimism              0.000     2.643    
+                         clock uncertainty           -0.631     2.012    
+                         time borrowed                2.425     4.437    
   -------------------------------------------------------------------
-                         required time                          5.118    
-                         arrival time                          -5.118    
+                         required time                          4.437    
+                         arrival time                          -4.437    
   -------------------------------------------------------------------
                          slack                                  0.000    
 
 Slack (MET) :             0.000ns  (required time - arrival time)
   Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[7]/D
-                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[25]/D
+                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@21.000ns period=41.999ns})
   Path Group:             clk_fpga_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
-  Data Path Delay:        5.115ns  (logic 0.225ns (4.399%)  route 4.890ns (95.601%))
+  Data Path Delay:        4.423ns  (logic 0.225ns (5.087%)  route 4.198ns (94.913%))
   Logic Levels:           2  (BUFG=1 LUT1=1)
-  Clock Path Skew:        2.658ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    2.658ns
+  Clock Path Skew:        2.643ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.643ns
     Source Clock Delay      (SCD):    0.000ns
     Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+  Clock Uncertainty:      0.631ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.300ns
+    Total Input Jitter      (TIJ):    1.260ns
     Discrete Jitter          (DJ):    0.000ns
     Phase Error              (PE):    0.000ns
   Time Borrowing:         
-    Nominal pulse width:              5.000ns
+    Nominal pulse width:              21.000ns
     Library setup time:              -0.070ns
-    Computed max time borrow:         4.930ns
-    Time borrowed from endpoint:      2.611ns
-    Open edge uncertainty:           -0.154ns
-    Time given to startpoint:         2.457ns
+    Computed max time borrow:         20.930ns
+    Time borrowed from endpoint:      2.411ns
+    Open edge uncertainty:           -0.631ns
+    Time given to startpoint:         1.780ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -434,10 +392,10 @@ Slack (MET) :             0.000ns  (required time - arrival time)
     PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.193     1.193    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         2.283     3.577    design_1_i/top_0/inst/tdc1/initial_bufs[45]
-    SLICE_X48Y104        LUT1 (Prop_lut1_I0_O)        0.124     3.701 r  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
-                         net (fo=46, routed)          1.414     5.115    design_1_i/top_0/inst/tdc1/delay_bufs[7]
-    SLICE_X45Y99         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[7]/D
+                         net (fo=2493, routed)        2.090     3.384    design_1_i/top_0/inst/tdc1/initial_bufs[255]
+    SLICE_X48Y92         LUT1 (Prop_lut1_I0_O)        0.124     3.508 r  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
+                         net (fo=63, routed)          0.915     4.423    design_1_i/top_0/inst/tdc1/delay_bufs[25]
+    SLICE_X52Y89         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[25]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 rise edge)
@@ -445,43 +403,267 @@ Slack (MET) :             0.000ns  (required time - arrival time)
     PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.088     1.088    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         1.479     2.658    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X45Y99         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[7]/G
-                         clock pessimism              0.000     2.658    
-                         clock uncertainty           -0.154     2.504    
-                         time borrowed                2.611     5.115    
+                         net (fo=2493, routed)        1.464     2.643    design_1_i/top_0/inst/tdc1/initial_bufs[0]
+    SLICE_X52Y89         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[25]/G
+                         clock pessimism              0.000     2.643    
+                         clock uncertainty           -0.631     2.012    
+                         time borrowed                2.411     4.423    
   -------------------------------------------------------------------
-                         required time                          5.115    
-                         arrival time                          -5.115    
+                         required time                          4.423    
+                         arrival time                          -4.423    
   -------------------------------------------------------------------
                          slack                                  0.000    
 
 Slack (MET) :             0.000ns  (required time - arrival time)
   Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@5.000ns period=10.000ns})
+                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[55]/D
+                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        4.373ns  (logic 0.225ns (5.146%)  route 4.148ns (94.854%))
+  Logic Levels:           2  (BUFG=1 LUT1=1)
+  Clock Path Skew:        2.654ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.654ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.631ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    1.260ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Time Borrowing:         
+    Nominal pulse width:              21.000ns
+    Library setup time:              -0.070ns
+    Computed max time borrow:         20.930ns
+    Time borrowed from endpoint:      2.350ns
+    Open edge uncertainty:           -0.631ns
+    Time given to startpoint:         1.719ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        2.090     3.384    design_1_i/top_0/inst/tdc1/initial_bufs[255]
+    SLICE_X48Y92         LUT1 (Prop_lut1_I0_O)        0.124     3.508 r  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
+                         net (fo=63, routed)          0.865     4.373    design_1_i/top_0/inst/tdc1/delay_bufs[55]
+    SLICE_X45Y88         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[55]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088     1.088    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        1.475     2.654    design_1_i/top_0/inst/tdc1/initial_bufs[0]
+    SLICE_X45Y88         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[55]/G
+                         clock pessimism              0.000     2.654    
+                         clock uncertainty           -0.631     2.023    
+                         time borrowed                2.350     4.373    
+  -------------------------------------------------------------------
+                         required time                          4.373    
+                         arrival time                          -4.373    
+  -------------------------------------------------------------------
+                         slack                                  0.000    
+
+Slack (MET) :             0.000ns  (required time - arrival time)
+  Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[61]/D
+                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        4.346ns  (logic 0.225ns (5.177%)  route 4.121ns (94.823%))
+  Logic Levels:           2  (BUFG=1 LUT1=1)
+  Clock Path Skew:        2.655ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.655ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.631ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    1.260ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Time Borrowing:         
+    Nominal pulse width:              21.000ns
+    Library setup time:              -0.050ns
+    Computed max time borrow:         20.950ns
+    Time borrowed from endpoint:      2.323ns
+    Open edge uncertainty:           -0.631ns
+    Time given to startpoint:         1.692ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        2.090     3.384    design_1_i/top_0/inst/tdc1/initial_bufs[255]
+    SLICE_X48Y92         LUT1 (Prop_lut1_I0_O)        0.124     3.508 r  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
+                         net (fo=63, routed)          0.839     4.346    design_1_i/top_0/inst/tdc1/delay_bufs[61]
+    SLICE_X47Y89         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[61]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088     1.088    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        1.476     2.655    design_1_i/top_0/inst/tdc1/initial_bufs[0]
+    SLICE_X47Y89         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[61]/G
+                         clock pessimism              0.000     2.655    
+                         clock uncertainty           -0.631     2.024    
+                         time borrowed                2.323     4.346    
+  -------------------------------------------------------------------
+                         required time                          4.346    
+                         arrival time                          -4.346    
+  -------------------------------------------------------------------
+                         slack                                  0.000    
+
+Slack (MET) :             0.000ns  (required time - arrival time)
+  Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[42]/D
+                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        4.333ns  (logic 0.225ns (5.193%)  route 4.108ns (94.807%))
+  Logic Levels:           2  (BUFG=1 LUT1=1)
+  Clock Path Skew:        2.643ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.643ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.631ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    1.260ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Time Borrowing:         
+    Nominal pulse width:              21.000ns
+    Library setup time:              -0.041ns
+    Computed max time borrow:         20.958ns
+    Time borrowed from endpoint:      2.321ns
+    Open edge uncertainty:           -0.631ns
+    Time given to startpoint:         1.690ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        2.090     3.384    design_1_i/top_0/inst/tdc1/initial_bufs[255]
+    SLICE_X48Y92         LUT1 (Prop_lut1_I0_O)        0.124     3.508 r  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
+                         net (fo=63, routed)          0.825     4.333    design_1_i/top_0/inst/tdc1/delay_bufs[42]
+    SLICE_X50Y90         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[42]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088     1.088    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        1.464     2.643    design_1_i/top_0/inst/tdc1/initial_bufs[0]
+    SLICE_X50Y90         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[42]/G
+                         clock pessimism              0.000     2.643    
+                         clock uncertainty           -0.631     2.012    
+                         time borrowed                2.321     4.333    
+  -------------------------------------------------------------------
+                         required time                          4.333    
+                         arrival time                          -4.333    
+  -------------------------------------------------------------------
+                         slack                                  0.000    
+
+Slack (MET) :             0.000ns  (required time - arrival time)
+  Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[36]/D
+                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        4.330ns  (logic 0.225ns (5.196%)  route 4.105ns (94.804%))
+  Logic Levels:           2  (BUFG=1 LUT1=1)
+  Clock Path Skew:        2.643ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.643ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.631ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    1.260ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+  Time Borrowing:         
+    Nominal pulse width:              21.000ns
+    Library setup time:              -0.050ns
+    Computed max time borrow:         20.950ns
+    Time borrowed from endpoint:      2.318ns
+    Open edge uncertainty:           -0.631ns
+    Time given to startpoint:         1.687ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        2.090     3.384    design_1_i/top_0/inst/tdc1/initial_bufs[255]
+    SLICE_X48Y92         LUT1 (Prop_lut1_I0_O)        0.124     3.508 r  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
+                         net (fo=63, routed)          0.822     4.330    design_1_i/top_0/inst/tdc1/delay_bufs[36]
+    SLICE_X51Y90         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[36]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088     1.088    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        1.464     2.643    design_1_i/top_0/inst/tdc1/initial_bufs[0]
+    SLICE_X51Y90         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[36]/G
+                         clock pessimism              0.000     2.643    
+                         clock uncertainty           -0.631     2.012    
+                         time borrowed                2.318     4.330    
+  -------------------------------------------------------------------
+                         required time                          4.330    
+                         arrival time                          -4.330    
+  -------------------------------------------------------------------
+                         slack                                  0.000    
+
+Slack (MET) :             0.000ns  (required time - arrival time)
+  Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@21.000ns period=41.999ns})
   Destination:            design_1_i/top_0/inst/tdc1/latches_reg[44]/D
-                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@21.000ns period=41.999ns})
   Path Group:             clk_fpga_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
-  Data Path Delay:        5.191ns  (logic 0.225ns (4.334%)  route 4.966ns (95.666%))
+  Data Path Delay:        4.330ns  (logic 0.225ns (5.196%)  route 4.105ns (94.804%))
   Logic Levels:           2  (BUFG=1 LUT1=1)
-  Clock Path Skew:        2.830ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    2.830ns
+  Clock Path Skew:        2.643ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.643ns
     Source Clock Delay      (SCD):    0.000ns
     Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+  Clock Uncertainty:      0.631ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.300ns
+    Total Input Jitter      (TIJ):    1.260ns
     Discrete Jitter          (DJ):    0.000ns
     Phase Error              (PE):    0.000ns
   Time Borrowing:         
-    Nominal pulse width:              5.000ns
-    Library setup time:              -0.050ns
-    Computed max time borrow:         4.950ns
-    Time borrowed from endpoint:      2.515ns
-    Open edge uncertainty:           -0.154ns
-    Time given to startpoint:         2.361ns
+    Nominal pulse width:              21.000ns
+    Library setup time:              -0.024ns
+    Computed max time borrow:         20.976ns
+    Time borrowed from endpoint:      2.318ns
+    Open edge uncertainty:           -0.631ns
+    Time given to startpoint:         1.687ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -490,10 +672,10 @@ Slack (MET) :             0.000ns  (required time - arrival time)
     PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.193     1.193    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         2.283     3.577    design_1_i/top_0/inst/tdc1/initial_bufs[45]
-    SLICE_X48Y104        LUT1 (Prop_lut1_I0_O)        0.124     3.701 r  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
-                         net (fo=46, routed)          1.490     5.191    design_1_i/top_0/inst/tdc1/delay_bufs[44]
-    SLICE_X48Y104        LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[44]/D
+                         net (fo=2493, routed)        2.090     3.384    design_1_i/top_0/inst/tdc1/initial_bufs[255]
+    SLICE_X48Y92         LUT1 (Prop_lut1_I0_O)        0.124     3.508 r  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
+                         net (fo=63, routed)          0.822     4.330    design_1_i/top_0/inst/tdc1/delay_bufs[44]
+    SLICE_X50Y90         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[44]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 rise edge)
@@ -501,43 +683,43 @@ Slack (MET) :             0.000ns  (required time - arrival time)
     PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.088     1.088    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         1.651     2.830    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X48Y104        LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[44]/G
-                         clock pessimism              0.000     2.830    
-                         clock uncertainty           -0.154     2.676    
-                         time borrowed                2.515     5.191    
+                         net (fo=2493, routed)        1.464     2.643    design_1_i/top_0/inst/tdc1/initial_bufs[0]
+    SLICE_X50Y90         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[44]/G
+                         clock pessimism              0.000     2.643    
+                         clock uncertainty           -0.631     2.012    
+                         time borrowed                2.318     4.330    
   -------------------------------------------------------------------
-                         required time                          5.191    
-                         arrival time                          -5.191    
+                         required time                          4.330    
+                         arrival time                          -4.330    
   -------------------------------------------------------------------
                          slack                                  0.000    
 
 Slack (MET) :             0.000ns  (required time - arrival time)
   Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[19]/D
-                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[23]/D
+                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@21.000ns period=41.999ns})
   Path Group:             clk_fpga_0
   Path Type:              Setup (Max at Slow Process Corner)
   Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
-  Data Path Delay:        5.178ns  (logic 0.225ns (4.345%)  route 4.953ns (95.655%))
+  Data Path Delay:        4.322ns  (logic 0.225ns (5.206%)  route 4.097ns (94.794%))
   Logic Levels:           2  (BUFG=1 LUT1=1)
-  Clock Path Skew:        2.832ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    2.832ns
+  Clock Path Skew:        2.643ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.643ns
     Source Clock Delay      (SCD):    0.000ns
     Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+  Clock Uncertainty:      0.631ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.300ns
+    Total Input Jitter      (TIJ):    1.260ns
     Discrete Jitter          (DJ):    0.000ns
     Phase Error              (PE):    0.000ns
   Time Borrowing:         
-    Nominal pulse width:              5.000ns
-    Library setup time:              -0.027ns
-    Computed max time borrow:         4.973ns
-    Time borrowed from endpoint:      2.500ns
-    Open edge uncertainty:           -0.154ns
-    Time given to startpoint:         2.346ns
+    Nominal pulse width:              21.000ns
+    Library setup time:              -0.056ns
+    Computed max time borrow:         20.944ns
+    Time borrowed from endpoint:      2.310ns
+    Open edge uncertainty:           -0.631ns
+    Time given to startpoint:         1.679ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
@@ -546,10 +728,10 @@ Slack (MET) :             0.000ns  (required time - arrival time)
     PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.193     1.193    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         2.283     3.577    design_1_i/top_0/inst/tdc1/initial_bufs[45]
-    SLICE_X48Y104        LUT1 (Prop_lut1_I0_O)        0.124     3.701 r  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
-                         net (fo=46, routed)          1.477     5.178    design_1_i/top_0/inst/tdc1/delay_bufs[19]
-    SLICE_X46Y100        LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[19]/D
+                         net (fo=2493, routed)        2.090     3.384    design_1_i/top_0/inst/tdc1/initial_bufs[255]
+    SLICE_X48Y92         LUT1 (Prop_lut1_I0_O)        0.124     3.508 r  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
+                         net (fo=63, routed)          0.814     4.322    design_1_i/top_0/inst/tdc1/delay_bufs[23]
+    SLICE_X51Y90         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[23]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 rise edge)
@@ -557,238 +739,14 @@ Slack (MET) :             0.000ns  (required time - arrival time)
     PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           1.088     1.088    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         1.653     2.832    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X46Y100        LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[19]/G
-                         clock pessimism              0.000     2.832    
-                         clock uncertainty           -0.154     2.678    
-                         time borrowed                2.500     5.178    
+                         net (fo=2493, routed)        1.464     2.643    design_1_i/top_0/inst/tdc1/initial_bufs[0]
+    SLICE_X51Y90         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[23]/G
+                         clock pessimism              0.000     2.643    
+                         clock uncertainty           -0.631     2.012    
+                         time borrowed                2.310     4.322    
   -------------------------------------------------------------------
-                         required time                          5.178    
-                         arrival time                          -5.178    
-  -------------------------------------------------------------------
-                         slack                                  0.000    
-
-Slack (MET) :             0.000ns  (required time - arrival time)
-  Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[17]/D
-                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk_fpga_0
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
-  Data Path Delay:        5.169ns  (logic 0.225ns (4.353%)  route 4.944ns (95.647%))
-  Logic Levels:           2  (BUFG=1 LUT1=1)
-  Clock Path Skew:        2.831ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    2.831ns
-    Source Clock Delay      (SCD):    0.000ns
-    Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.300ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-  Time Borrowing:         
-    Nominal pulse width:              5.000ns
-    Library setup time:              -0.050ns
-    Computed max time borrow:         4.950ns
-    Time borrowed from endpoint:      2.492ns
-    Open edge uncertainty:           -0.154ns
-    Time given to startpoint:         2.338ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.193     1.193    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         2.283     3.577    design_1_i/top_0/inst/tdc1/initial_bufs[45]
-    SLICE_X48Y104        LUT1 (Prop_lut1_I0_O)        0.124     3.701 r  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
-                         net (fo=46, routed)          1.468     5.169    design_1_i/top_0/inst/tdc1/delay_bufs[17]
-    SLICE_X48Y100        LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[17]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.088     1.088    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         1.652     2.831    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X48Y100        LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[17]/G
-                         clock pessimism              0.000     2.831    
-                         clock uncertainty           -0.154     2.677    
-                         time borrowed                2.492     5.169    
-  -------------------------------------------------------------------
-                         required time                          5.169    
-                         arrival time                          -5.169    
-  -------------------------------------------------------------------
-                         slack                                  0.000    
-
-Slack (MET) :             0.000ns  (required time - arrival time)
-  Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[29]/D
-                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk_fpga_0
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
-  Data Path Delay:        5.160ns  (logic 0.225ns (4.360%)  route 4.935ns (95.640%))
-  Logic Levels:           2  (BUFG=1 LUT1=1)
-  Clock Path Skew:        2.832ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    2.832ns
-    Source Clock Delay      (SCD):    0.000ns
-    Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.300ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-  Time Borrowing:         
-    Nominal pulse width:              5.000ns
-    Library setup time:              -0.050ns
-    Computed max time borrow:         4.950ns
-    Time borrowed from endpoint:      2.482ns
-    Open edge uncertainty:           -0.154ns
-    Time given to startpoint:         2.328ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.193     1.193    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         2.283     3.577    design_1_i/top_0/inst/tdc1/initial_bufs[45]
-    SLICE_X48Y104        LUT1 (Prop_lut1_I0_O)        0.124     3.701 r  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
-                         net (fo=46, routed)          1.459     5.160    design_1_i/top_0/inst/tdc1/delay_bufs[29]
-    SLICE_X45Y102        LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[29]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.088     1.088    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         1.653     2.832    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X45Y102        LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[29]/G
-                         clock pessimism              0.000     2.832    
-                         clock uncertainty           -0.154     2.678    
-                         time borrowed                2.482     5.160    
-  -------------------------------------------------------------------
-                         required time                          5.160    
-                         arrival time                          -5.160    
-  -------------------------------------------------------------------
-                         slack                                  0.000    
-
-Slack (MET) :             0.000ns  (required time - arrival time)
-  Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[4]/D
-                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk_fpga_0
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
-  Data Path Delay:        4.978ns  (logic 0.225ns (4.520%)  route 4.753ns (95.480%))
-  Logic Levels:           2  (BUFG=1 LUT1=1)
-  Clock Path Skew:        2.658ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    2.658ns
-    Source Clock Delay      (SCD):    0.000ns
-    Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.300ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-  Time Borrowing:         
-    Nominal pulse width:              5.000ns
-    Library setup time:              -0.047ns
-    Computed max time borrow:         4.953ns
-    Time borrowed from endpoint:      2.474ns
-    Open edge uncertainty:           -0.154ns
-    Time given to startpoint:         2.320ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.193     1.193    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         2.283     3.577    design_1_i/top_0/inst/tdc1/initial_bufs[45]
-    SLICE_X48Y104        LUT1 (Prop_lut1_I0_O)        0.124     3.701 r  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
-                         net (fo=46, routed)          1.277     4.978    design_1_i/top_0/inst/tdc1/delay_bufs[4]
-    SLICE_X47Y99         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[4]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.088     1.088    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         1.479     2.658    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X47Y99         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[4]/G
-                         clock pessimism              0.000     2.658    
-                         clock uncertainty           -0.154     2.504    
-                         time borrowed                2.474     4.978    
-  -------------------------------------------------------------------
-                         required time                          4.978    
-                         arrival time                          -4.978    
-  -------------------------------------------------------------------
-                         slack                                  0.000    
-
-Slack (MET) :             0.000ns  (required time - arrival time)
-  Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[45]/D
-                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk_fpga_0
-  Path Type:              Setup (Max at Slow Process Corner)
-  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
-  Data Path Delay:        5.035ns  (logic 0.225ns (4.468%)  route 4.810ns (95.532%))
-  Logic Levels:           2  (BUFG=1 LUT1=1)
-  Clock Path Skew:        2.830ns (DCD - SCD + CPR)
-    Destination Clock Delay (DCD):    2.830ns
-    Source Clock Delay      (SCD):    0.000ns
-    Clock Pessimism Removal (CPR):    0.000ns
-  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.300ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-  Time Borrowing:         
-    Nominal pulse width:              5.000ns
-    Library setup time:              -0.047ns
-    Computed max time borrow:         4.953ns
-    Time borrowed from endpoint:      2.359ns
-    Open edge uncertainty:           -0.154ns
-    Time given to startpoint:         2.205ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.193     1.193    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         2.283     3.577    design_1_i/top_0/inst/tdc1/initial_bufs[45]
-    SLICE_X48Y104        LUT1 (Prop_lut1_I0_O)        0.124     3.701 r  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
-                         net (fo=46, routed)          1.334     5.035    design_1_i/top_0/inst/tdc1/delay_bufs[45]
-    SLICE_X48Y104        LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[45]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           1.088     1.088    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091     1.179 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         1.651     2.830    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X48Y104        LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[45]/G
-                         clock pessimism              0.000     2.830    
-                         clock uncertainty           -0.154     2.676    
-                         time borrowed                2.359     5.035    
-  -------------------------------------------------------------------
-                         required time                          5.035    
-                         arrival time                          -5.035    
+                         required time                          4.322    
+                         arrival time                          -4.322    
   -------------------------------------------------------------------
                          slack                                  0.000    
 
@@ -798,487 +756,495 @@ Slack (MET) :             0.000ns  (required time - arrival time)
 
 Min Delay Paths
 --------------------------------------------------------------------------------------
-Slack (VIOLATED) :        -0.354ns  (arrival time - required time)
+Slack (VIOLATED) :        -0.828ns  (arrival time - required time)
   Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@5.000ns period=10.000ns})
+                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[2]/D
+                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 fall@21.000ns - clk_fpga_0 fall@21.000ns)
+  Data Path Delay:        1.083ns  (logic 0.071ns (6.553%)  route 1.012ns (93.447%))
+  Logic Levels:           2  (BUFG=1 LUT1=1)
+  Clock Path Skew:        1.189ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.189ns = ( 22.189 - 21.000 ) 
+    Source Clock Delay      (SCD):    0.000ns = ( 21.000 - 21.000 ) 
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.631ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    1.260ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 fall edge)
+                                                     21.000    21.000 f  
+    PS7_X0Y0             PS7                          0.000    21.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310    21.309    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    21.335 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        0.703    22.038    design_1_i/top_0/inst/tdc1/initial_bufs[255]
+    SLICE_X48Y92         LUT1 (Prop_lut1_I0_O)        0.045    22.083 f  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
+                         net (fo=63, routed)          0.000    22.083    design_1_i/top_0/inst/tdc1/delay_bufs[2]
+    SLICE_X48Y92         LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 fall edge)
+                                                     21.000    21.000 f  
+    PS7_X0Y0             PS7                          0.000    21.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337    21.337    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    21.365 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        0.823    22.188    design_1_i/top_0/inst/tdc1/initial_bufs[0]
+    SLICE_X48Y92         LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[2]/G
+                         clock pessimism              0.000    22.188    
+                         clock uncertainty            0.631    22.819    
+    SLICE_X48Y92         LDCE (Hold_ldce_G_D)         0.091    22.910    design_1_i/top_0/inst/tdc1/latches_reg[2]
+  -------------------------------------------------------------------
+                         required time                        -22.910    
+                         arrival time                          22.083    
+  -------------------------------------------------------------------
+                         slack                                 -0.828    
+
+Slack (VIOLATED) :        -0.564ns  (arrival time - required time)
+  Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[0]/D
+                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 fall@21.000ns - clk_fpga_0 fall@21.000ns)
+  Data Path Delay:        1.326ns  (logic 0.071ns (5.354%)  route 1.255ns (94.646%))
+  Logic Levels:           2  (BUFG=1 LUT1=1)
+  Clock Path Skew:        1.189ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.189ns = ( 22.189 - 21.000 ) 
+    Source Clock Delay      (SCD):    0.000ns = ( 21.000 - 21.000 ) 
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.631ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    1.260ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 fall edge)
+                                                     21.000    21.000 f  
+    PS7_X0Y0             PS7                          0.000    21.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310    21.309    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    21.335 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        0.703    22.038    design_1_i/top_0/inst/tdc1/initial_bufs[255]
+    SLICE_X48Y92         LUT1 (Prop_lut1_I0_O)        0.045    22.083 f  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
+                         net (fo=63, routed)          0.243    22.326    design_1_i/top_0/inst/tdc1/delay_bufs[0]
+    SLICE_X47Y91         LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 fall edge)
+                                                     21.000    21.000 f  
+    PS7_X0Y0             PS7                          0.000    21.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337    21.337    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    21.365 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        0.823    22.188    design_1_i/top_0/inst/tdc1/initial_bufs[0]
+    SLICE_X47Y91         LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[0]/G
+                         clock pessimism              0.000    22.188    
+                         clock uncertainty            0.631    22.819    
+    SLICE_X47Y91         LDCE (Hold_ldce_G_D)         0.070    22.889    design_1_i/top_0/inst/tdc1/latches_reg[0]
+  -------------------------------------------------------------------
+                         required time                        -22.889    
+                         arrival time                          22.326    
+  -------------------------------------------------------------------
+                         slack                                 -0.564    
+
+Slack (VIOLATED) :        -0.544ns  (arrival time - required time)
+  Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[47]/D
+                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 fall@21.000ns - clk_fpga_0 fall@21.000ns)
+  Data Path Delay:        1.348ns  (logic 0.071ns (5.268%)  route 1.277ns (94.732%))
+  Logic Levels:           2  (BUFG=1 LUT1=1)
+  Clock Path Skew:        1.189ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.189ns = ( 22.189 - 21.000 ) 
+    Source Clock Delay      (SCD):    0.000ns = ( 21.000 - 21.000 ) 
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.631ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    1.260ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 fall edge)
+                                                     21.000    21.000 f  
+    PS7_X0Y0             PS7                          0.000    21.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310    21.309    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    21.335 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        0.703    22.038    design_1_i/top_0/inst/tdc1/initial_bufs[255]
+    SLICE_X48Y92         LUT1 (Prop_lut1_I0_O)        0.045    22.083 f  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
+                         net (fo=63, routed)          0.264    22.347    design_1_i/top_0/inst/tdc1/delay_bufs[47]
+    SLICE_X47Y91         LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[47]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 fall edge)
+                                                     21.000    21.000 f  
+    PS7_X0Y0             PS7                          0.000    21.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337    21.337    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    21.365 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        0.823    22.188    design_1_i/top_0/inst/tdc1/initial_bufs[0]
+    SLICE_X47Y91         LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[47]/G
+                         clock pessimism              0.000    22.188    
+                         clock uncertainty            0.631    22.819    
+    SLICE_X47Y91         LDCE (Hold_ldce_G_D)         0.072    22.891    design_1_i/top_0/inst/tdc1/latches_reg[47]
+  -------------------------------------------------------------------
+                         required time                        -22.891    
+                         arrival time                          22.347    
+  -------------------------------------------------------------------
+                         slack                                 -0.544    
+
+Slack (VIOLATED) :        -0.529ns  (arrival time - required time)
+  Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@21.000ns period=41.999ns})
   Destination:            design_1_i/top_0/inst/tdc1/latches_reg[26]/D
-                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@21.000ns period=41.999ns})
   Path Group:             clk_fpga_0
   Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk_fpga_0 fall@5.000ns - clk_fpga_0 fall@5.000ns)
-  Data Path Delay:        1.167ns  (logic 0.071ns (6.085%)  route 1.096ns (93.915%))
+  Requirement:            0.000ns  (clk_fpga_0 fall@21.000ns - clk_fpga_0 fall@21.000ns)
+  Data Path Delay:        1.361ns  (logic 0.071ns (5.216%)  route 1.290ns (94.784%))
   Logic Levels:           2  (BUFG=1 LUT1=1)
-  Clock Path Skew:        1.276ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.276ns = ( 6.276 - 5.000 ) 
-    Source Clock Delay      (SCD):    0.000ns = ( 5.000 - 5.000 ) 
+  Clock Path Skew:        1.189ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.189ns = ( 22.189 - 21.000 ) 
+    Source Clock Delay      (SCD):    0.000ns = ( 21.000 - 21.000 ) 
     Clock Pessimism Removal (CPR):    -0.000ns
-  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+  Clock Uncertainty:      0.631ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.300ns
+    Total Input Jitter      (TIJ):    1.260ns
     Discrete Jitter          (DJ):    0.000ns
     Phase Error              (PE):    0.000ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clk_fpga_0 fall edge)
-                                                      5.000     5.000 f  
-    PS7_X0Y0             PS7                          0.000     5.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           0.310     5.310    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     5.336 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         0.786     6.122    design_1_i/top_0/inst/tdc1/initial_bufs[45]
-    SLICE_X48Y104        LUT1 (Prop_lut1_I0_O)        0.045     6.167 f  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
-                         net (fo=46, routed)          0.000     6.167    design_1_i/top_0/inst/tdc1/delay_bufs[26]
-    SLICE_X48Y104        LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[26]/D
+                                                     21.000    21.000 f  
+    PS7_X0Y0             PS7                          0.000    21.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310    21.309    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    21.335 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        0.703    22.038    design_1_i/top_0/inst/tdc1/initial_bufs[255]
+    SLICE_X48Y92         LUT1 (Prop_lut1_I0_O)        0.045    22.083 f  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
+                         net (fo=63, routed)          0.278    22.361    design_1_i/top_0/inst/tdc1/delay_bufs[26]
+    SLICE_X48Y90         LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[26]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 fall edge)
-                                                      5.000     5.000 f  
-    PS7_X0Y0             PS7                          0.000     5.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           0.337     5.337    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     5.366 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         0.910     6.276    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X48Y104        LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[26]/G
-                         clock pessimism              0.000     6.276    
-                         clock uncertainty            0.154     6.430    
-    SLICE_X48Y104        LDCE (Hold_ldce_G_D)         0.091     6.521    design_1_i/top_0/inst/tdc1/latches_reg[26]
+                                                     21.000    21.000 f  
+    PS7_X0Y0             PS7                          0.000    21.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337    21.337    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    21.365 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        0.823    22.188    design_1_i/top_0/inst/tdc1/initial_bufs[0]
+    SLICE_X48Y90         LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[26]/G
+                         clock pessimism              0.000    22.188    
+                         clock uncertainty            0.631    22.819    
+    SLICE_X48Y90         LDCE (Hold_ldce_G_D)         0.070    22.889    design_1_i/top_0/inst/tdc1/latches_reg[26]
   -------------------------------------------------------------------
-                         required time                         -6.521    
-                         arrival time                           6.167    
+                         required time                        -22.889    
+                         arrival time                          22.361    
   -------------------------------------------------------------------
-                         slack                                 -0.354    
+                         slack                                 -0.529    
 
-Slack (VIOLATED) :        -0.146ns  (arrival time - required time)
+Slack (VIOLATED) :        -0.512ns  (arrival time - required time)
   Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[24]/D
-                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[51]/D
+                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@21.000ns period=41.999ns})
   Path Group:             clk_fpga_0
   Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk_fpga_0 fall@5.000ns - clk_fpga_0 fall@5.000ns)
-  Data Path Delay:        1.354ns  (logic 0.071ns (5.245%)  route 1.283ns (94.755%))
+  Requirement:            0.000ns  (clk_fpga_0 fall@21.000ns - clk_fpga_0 fall@21.000ns)
+  Data Path Delay:        1.378ns  (logic 0.071ns (5.152%)  route 1.307ns (94.848%))
   Logic Levels:           2  (BUFG=1 LUT1=1)
-  Clock Path Skew:        1.276ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.276ns = ( 6.276 - 5.000 ) 
-    Source Clock Delay      (SCD):    0.000ns = ( 5.000 - 5.000 ) 
+  Clock Path Skew:        1.189ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.189ns = ( 22.189 - 21.000 ) 
+    Source Clock Delay      (SCD):    0.000ns = ( 21.000 - 21.000 ) 
     Clock Pessimism Removal (CPR):    -0.000ns
-  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+  Clock Uncertainty:      0.631ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.300ns
+    Total Input Jitter      (TIJ):    1.260ns
     Discrete Jitter          (DJ):    0.000ns
     Phase Error              (PE):    0.000ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clk_fpga_0 fall edge)
-                                                      5.000     5.000 f  
-    PS7_X0Y0             PS7                          0.000     5.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           0.310     5.310    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     5.336 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         0.786     6.122    design_1_i/top_0/inst/tdc1/initial_bufs[45]
-    SLICE_X48Y104        LUT1 (Prop_lut1_I0_O)        0.045     6.167 f  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
-                         net (fo=46, routed)          0.187     6.354    design_1_i/top_0/inst/tdc1/delay_bufs[24]
-    SLICE_X49Y103        LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[24]/D
+                                                     21.000    21.000 f  
+    PS7_X0Y0             PS7                          0.000    21.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310    21.309    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    21.335 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        0.703    22.038    design_1_i/top_0/inst/tdc1/initial_bufs[255]
+    SLICE_X48Y92         LUT1 (Prop_lut1_I0_O)        0.045    22.083 f  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
+                         net (fo=63, routed)          0.295    22.378    design_1_i/top_0/inst/tdc1/delay_bufs[51]
+    SLICE_X49Y91         LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[51]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 fall edge)
-                                                      5.000     5.000 f  
-    PS7_X0Y0             PS7                          0.000     5.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           0.337     5.337    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     5.366 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         0.910     6.276    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X49Y103        LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[24]/G
-                         clock pessimism              0.000     6.276    
-                         clock uncertainty            0.154     6.430    
-    SLICE_X49Y103        LDCE (Hold_ldce_G_D)         0.070     6.500    design_1_i/top_0/inst/tdc1/latches_reg[24]
+                                                     21.000    21.000 f  
+    PS7_X0Y0             PS7                          0.000    21.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337    21.337    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    21.365 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        0.823    22.188    design_1_i/top_0/inst/tdc1/initial_bufs[0]
+    SLICE_X49Y91         LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[51]/G
+                         clock pessimism              0.000    22.188    
+                         clock uncertainty            0.631    22.819    
+    SLICE_X49Y91         LDCE (Hold_ldce_G_D)         0.070    22.889    design_1_i/top_0/inst/tdc1/latches_reg[51]
   -------------------------------------------------------------------
-                         required time                         -6.500    
-                         arrival time                           6.354    
+                         required time                        -22.889    
+                         arrival time                          22.378    
   -------------------------------------------------------------------
-                         slack                                 -0.146    
+                         slack                                 -0.512    
 
-Slack (VIOLATED) :        -0.082ns  (arrival time - required time)
+Slack (VIOLATED) :        -0.508ns  (arrival time - required time)
   Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[31]/D
-                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[50]/D
+                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@21.000ns period=41.999ns})
   Path Group:             clk_fpga_0
   Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk_fpga_0 fall@5.000ns - clk_fpga_0 fall@5.000ns)
-  Data Path Delay:        1.421ns  (logic 0.071ns (4.995%)  route 1.350ns (95.005%))
+  Requirement:            0.000ns  (clk_fpga_0 fall@21.000ns - clk_fpga_0 fall@21.000ns)
+  Data Path Delay:        1.378ns  (logic 0.071ns (5.152%)  route 1.307ns (94.848%))
   Logic Levels:           2  (BUFG=1 LUT1=1)
-  Clock Path Skew:        1.277ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.277ns = ( 6.277 - 5.000 ) 
-    Source Clock Delay      (SCD):    0.000ns = ( 5.000 - 5.000 ) 
+  Clock Path Skew:        1.189ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.189ns = ( 22.189 - 21.000 ) 
+    Source Clock Delay      (SCD):    0.000ns = ( 21.000 - 21.000 ) 
     Clock Pessimism Removal (CPR):    -0.000ns
-  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+  Clock Uncertainty:      0.631ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.300ns
+    Total Input Jitter      (TIJ):    1.260ns
     Discrete Jitter          (DJ):    0.000ns
     Phase Error              (PE):    0.000ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clk_fpga_0 fall edge)
-                                                      5.000     5.000 f  
-    PS7_X0Y0             PS7                          0.000     5.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           0.310     5.310    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     5.336 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         0.786     6.122    design_1_i/top_0/inst/tdc1/initial_bufs[45]
-    SLICE_X48Y104        LUT1 (Prop_lut1_I0_O)        0.045     6.167 f  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
-                         net (fo=46, routed)          0.254     6.421    design_1_i/top_0/inst/tdc1/delay_bufs[31]
-    SLICE_X45Y102        LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[31]/D
+                                                     21.000    21.000 f  
+    PS7_X0Y0             PS7                          0.000    21.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310    21.309    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    21.335 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        0.703    22.038    design_1_i/top_0/inst/tdc1/initial_bufs[255]
+    SLICE_X48Y92         LUT1 (Prop_lut1_I0_O)        0.045    22.083 f  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
+                         net (fo=63, routed)          0.295    22.378    design_1_i/top_0/inst/tdc1/delay_bufs[50]
+    SLICE_X49Y91         LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[50]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 fall edge)
-                                                      5.000     5.000 f  
-    PS7_X0Y0             PS7                          0.000     5.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           0.337     5.337    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     5.366 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         0.911     6.277    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X45Y102        LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[31]/G
-                         clock pessimism              0.000     6.277    
-                         clock uncertainty            0.154     6.431    
-    SLICE_X45Y102        LDCE (Hold_ldce_G_D)         0.072     6.503    design_1_i/top_0/inst/tdc1/latches_reg[31]
+                                                     21.000    21.000 f  
+    PS7_X0Y0             PS7                          0.000    21.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337    21.337    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    21.365 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        0.823    22.188    design_1_i/top_0/inst/tdc1/initial_bufs[0]
+    SLICE_X49Y91         LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[50]/G
+                         clock pessimism              0.000    22.188    
+                         clock uncertainty            0.631    22.819    
+    SLICE_X49Y91         LDCE (Hold_ldce_G_D)         0.066    22.885    design_1_i/top_0/inst/tdc1/latches_reg[50]
   -------------------------------------------------------------------
-                         required time                         -6.503    
-                         arrival time                           6.421    
+                         required time                        -22.885    
+                         arrival time                          22.378    
   -------------------------------------------------------------------
-                         slack                                 -0.082    
+                         slack                                 -0.508    
 
-Slack (VIOLATED) :        -0.026ns  (arrival time - required time)
+Slack (VIOLATED) :        -0.499ns  (arrival time - required time)
   Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[25]/D
-                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk_fpga_0
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk_fpga_0 fall@5.000ns - clk_fpga_0 fall@5.000ns)
-  Data Path Delay:        1.470ns  (logic 0.071ns (4.830%)  route 1.399ns (95.170%))
-  Logic Levels:           2  (BUFG=1 LUT1=1)
-  Clock Path Skew:        1.276ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.276ns = ( 6.276 - 5.000 ) 
-    Source Clock Delay      (SCD):    0.000ns = ( 5.000 - 5.000 ) 
-    Clock Pessimism Removal (CPR):    -0.000ns
-  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.300ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_fpga_0 fall edge)
-                                                      5.000     5.000 f  
-    PS7_X0Y0             PS7                          0.000     5.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           0.310     5.310    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     5.336 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         0.786     6.122    design_1_i/top_0/inst/tdc1/initial_bufs[45]
-    SLICE_X48Y104        LUT1 (Prop_lut1_I0_O)        0.045     6.167 f  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
-                         net (fo=46, routed)          0.303     6.470    design_1_i/top_0/inst/tdc1/delay_bufs[25]
-    SLICE_X49Y103        LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[25]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk_fpga_0 fall edge)
-                                                      5.000     5.000 f  
-    PS7_X0Y0             PS7                          0.000     5.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           0.337     5.337    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     5.366 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         0.910     6.276    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X49Y103        LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[25]/G
-                         clock pessimism              0.000     6.276    
-                         clock uncertainty            0.154     6.430    
-    SLICE_X49Y103        LDCE (Hold_ldce_G_D)         0.066     6.496    design_1_i/top_0/inst/tdc1/latches_reg[25]
-  -------------------------------------------------------------------
-                         required time                         -6.496    
-                         arrival time                           6.470    
-  -------------------------------------------------------------------
-                         slack                                 -0.026    
-
-Slack (VIOLATED) :        -0.013ns  (arrival time - required time)
-  Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[34]/D
-                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk_fpga_0
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk_fpga_0 fall@5.000ns - clk_fpga_0 fall@5.000ns)
-  Data Path Delay:        1.483ns  (logic 0.071ns (4.786%)  route 1.412ns (95.214%))
-  Logic Levels:           2  (BUFG=1 LUT1=1)
-  Clock Path Skew:        1.276ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.276ns = ( 6.276 - 5.000 ) 
-    Source Clock Delay      (SCD):    0.000ns = ( 5.000 - 5.000 ) 
-    Clock Pessimism Removal (CPR):    -0.000ns
-  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.300ns
-    Discrete Jitter          (DJ):    0.000ns
-    Phase Error              (PE):    0.000ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_fpga_0 fall edge)
-                                                      5.000     5.000 f  
-    PS7_X0Y0             PS7                          0.000     5.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           0.310     5.310    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     5.336 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         0.786     6.122    design_1_i/top_0/inst/tdc1/initial_bufs[45]
-    SLICE_X48Y104        LUT1 (Prop_lut1_I0_O)        0.045     6.167 f  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
-                         net (fo=46, routed)          0.317     6.483    design_1_i/top_0/inst/tdc1/delay_bufs[34]
-    SLICE_X44Y104        LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[34]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk_fpga_0 fall edge)
-                                                      5.000     5.000 f  
-    PS7_X0Y0             PS7                          0.000     5.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           0.337     5.337    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     5.366 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         0.910     6.276    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X44Y104        LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[34]/G
-                         clock pessimism              0.000     6.276    
-                         clock uncertainty            0.154     6.430    
-    SLICE_X44Y104        LDCE (Hold_ldce_G_D)         0.066     6.496    design_1_i/top_0/inst/tdc1/latches_reg[34]
-  -------------------------------------------------------------------
-                         required time                         -6.496    
-                         arrival time                           6.483    
-  -------------------------------------------------------------------
-                         slack                                 -0.013    
-
-Slack (VIOLATED) :        -0.010ns  (arrival time - required time)
-  Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@5.000ns period=10.000ns})
+                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@21.000ns period=41.999ns})
   Destination:            design_1_i/top_0/inst/tdc1/latches_reg[33]/D
-                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@21.000ns period=41.999ns})
   Path Group:             clk_fpga_0
   Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk_fpga_0 fall@5.000ns - clk_fpga_0 fall@5.000ns)
-  Data Path Delay:        1.491ns  (logic 0.071ns (4.763%)  route 1.420ns (95.237%))
+  Requirement:            0.000ns  (clk_fpga_0 fall@21.000ns - clk_fpga_0 fall@21.000ns)
+  Data Path Delay:        1.382ns  (logic 0.071ns (5.136%)  route 1.311ns (94.864%))
   Logic Levels:           2  (BUFG=1 LUT1=1)
-  Clock Path Skew:        1.276ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.276ns = ( 6.276 - 5.000 ) 
-    Source Clock Delay      (SCD):    0.000ns = ( 5.000 - 5.000 ) 
+  Clock Path Skew:        1.185ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.185ns = ( 22.185 - 21.000 ) 
+    Source Clock Delay      (SCD):    0.000ns = ( 21.000 - 21.000 ) 
     Clock Pessimism Removal (CPR):    -0.000ns
-  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+  Clock Uncertainty:      0.631ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.300ns
+    Total Input Jitter      (TIJ):    1.260ns
     Discrete Jitter          (DJ):    0.000ns
     Phase Error              (PE):    0.000ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clk_fpga_0 fall edge)
-                                                      5.000     5.000 f  
-    PS7_X0Y0             PS7                          0.000     5.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           0.310     5.310    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     5.336 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         0.786     6.122    design_1_i/top_0/inst/tdc1/initial_bufs[45]
-    SLICE_X48Y104        LUT1 (Prop_lut1_I0_O)        0.045     6.167 f  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
-                         net (fo=46, routed)          0.324     6.491    design_1_i/top_0/inst/tdc1/delay_bufs[33]
-    SLICE_X47Y103        LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[33]/D
+                                                     21.000    21.000 f  
+    PS7_X0Y0             PS7                          0.000    21.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310    21.309    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    21.335 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        0.703    22.038    design_1_i/top_0/inst/tdc1/initial_bufs[255]
+    SLICE_X48Y92         LUT1 (Prop_lut1_I0_O)        0.045    22.083 f  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
+                         net (fo=63, routed)          0.299    22.382    design_1_i/top_0/inst/tdc1/delay_bufs[33]
+    SLICE_X51Y91         LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[33]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 fall edge)
-                                                      5.000     5.000 f  
-    PS7_X0Y0             PS7                          0.000     5.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           0.337     5.337    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     5.366 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         0.910     6.276    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X47Y103        LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[33]/G
-                         clock pessimism              0.000     6.276    
-                         clock uncertainty            0.154     6.430    
-    SLICE_X47Y103        LDCE (Hold_ldce_G_D)         0.070     6.500    design_1_i/top_0/inst/tdc1/latches_reg[33]
+                                                     21.000    21.000 f  
+    PS7_X0Y0             PS7                          0.000    21.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337    21.337    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    21.365 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        0.819    22.184    design_1_i/top_0/inst/tdc1/initial_bufs[0]
+    SLICE_X51Y91         LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[33]/G
+                         clock pessimism              0.000    22.184    
+                         clock uncertainty            0.631    22.815    
+    SLICE_X51Y91         LDCE (Hold_ldce_G_D)         0.066    22.881    design_1_i/top_0/inst/tdc1/latches_reg[33]
   -------------------------------------------------------------------
-                         required time                         -6.500    
-                         arrival time                           6.491    
+                         required time                        -22.881    
+                         arrival time                          22.382    
   -------------------------------------------------------------------
-                         slack                                 -0.010    
+                         slack                                 -0.499    
 
-Slack (MET) :             0.005ns  (arrival time - required time)
+Slack (VIOLATED) :        -0.499ns  (arrival time - required time)
   Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[30]/D
-                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[48]/D
+                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@21.000ns period=41.999ns})
   Path Group:             clk_fpga_0
   Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk_fpga_0 fall@5.000ns - clk_fpga_0 fall@5.000ns)
-  Data Path Delay:        1.505ns  (logic 0.071ns (4.717%)  route 1.434ns (95.283%))
+  Requirement:            0.000ns  (clk_fpga_0 fall@21.000ns - clk_fpga_0 fall@21.000ns)
+  Data Path Delay:        1.391ns  (logic 0.071ns (5.106%)  route 1.320ns (94.894%))
   Logic Levels:           2  (BUFG=1 LUT1=1)
-  Clock Path Skew:        1.276ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.276ns = ( 6.276 - 5.000 ) 
-    Source Clock Delay      (SCD):    0.000ns = ( 5.000 - 5.000 ) 
+  Clock Path Skew:        1.189ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.189ns = ( 22.189 - 21.000 ) 
+    Source Clock Delay      (SCD):    0.000ns = ( 21.000 - 21.000 ) 
     Clock Pessimism Removal (CPR):    -0.000ns
-  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+  Clock Uncertainty:      0.631ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.300ns
+    Total Input Jitter      (TIJ):    1.260ns
     Discrete Jitter          (DJ):    0.000ns
     Phase Error              (PE):    0.000ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clk_fpga_0 fall edge)
-                                                      5.000     5.000 f  
-    PS7_X0Y0             PS7                          0.000     5.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           0.310     5.310    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     5.336 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         0.786     6.122    design_1_i/top_0/inst/tdc1/initial_bufs[45]
-    SLICE_X48Y104        LUT1 (Prop_lut1_I0_O)        0.045     6.167 f  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
-                         net (fo=46, routed)          0.338     6.505    design_1_i/top_0/inst/tdc1/delay_bufs[30]
-    SLICE_X44Y104        LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[30]/D
+                                                     21.000    21.000 f  
+    PS7_X0Y0             PS7                          0.000    21.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310    21.309    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    21.335 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        0.703    22.038    design_1_i/top_0/inst/tdc1/initial_bufs[255]
+    SLICE_X48Y92         LUT1 (Prop_lut1_I0_O)        0.045    22.083 f  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
+                         net (fo=63, routed)          0.307    22.390    design_1_i/top_0/inst/tdc1/delay_bufs[48]
+    SLICE_X45Y91         LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[48]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 fall edge)
-                                                      5.000     5.000 f  
-    PS7_X0Y0             PS7                          0.000     5.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           0.337     5.337    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     5.366 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         0.910     6.276    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X44Y104        LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[30]/G
-                         clock pessimism              0.000     6.276    
-                         clock uncertainty            0.154     6.430    
-    SLICE_X44Y104        LDCE (Hold_ldce_G_D)         0.070     6.500    design_1_i/top_0/inst/tdc1/latches_reg[30]
+                                                     21.000    21.000 f  
+    PS7_X0Y0             PS7                          0.000    21.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337    21.337    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    21.365 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        0.823    22.188    design_1_i/top_0/inst/tdc1/initial_bufs[0]
+    SLICE_X45Y91         LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[48]/G
+                         clock pessimism              0.000    22.188    
+                         clock uncertainty            0.631    22.819    
+    SLICE_X45Y91         LDCE (Hold_ldce_G_D)         0.070    22.889    design_1_i/top_0/inst/tdc1/latches_reg[48]
   -------------------------------------------------------------------
-                         required time                         -6.500    
-                         arrival time                           6.505    
+                         required time                        -22.889    
+                         arrival time                          22.390    
   -------------------------------------------------------------------
-                         slack                                  0.005    
+                         slack                                 -0.499    
 
-Slack (MET) :             0.053ns  (arrival time - required time)
+Slack (VIOLATED) :        -0.489ns  (arrival time - required time)
   Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[43]/D
-                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[29]/D
+                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@21.000ns period=41.999ns})
   Path Group:             clk_fpga_0
   Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk_fpga_0 fall@5.000ns - clk_fpga_0 fall@5.000ns)
-  Data Path Delay:        1.549ns  (logic 0.071ns (4.582%)  route 1.478ns (95.418%))
+  Requirement:            0.000ns  (clk_fpga_0 fall@21.000ns - clk_fpga_0 fall@21.000ns)
+  Data Path Delay:        1.393ns  (logic 0.071ns (5.098%)  route 1.322ns (94.902%))
   Logic Levels:           2  (BUFG=1 LUT1=1)
-  Clock Path Skew:        1.276ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.276ns = ( 6.276 - 5.000 ) 
-    Source Clock Delay      (SCD):    0.000ns = ( 5.000 - 5.000 ) 
+  Clock Path Skew:        1.185ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.185ns = ( 22.185 - 21.000 ) 
+    Source Clock Delay      (SCD):    0.000ns = ( 21.000 - 21.000 ) 
     Clock Pessimism Removal (CPR):    -0.000ns
-  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+  Clock Uncertainty:      0.631ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
     Total System Jitter     (TSJ):    0.071ns
-    Total Input Jitter      (TIJ):    0.300ns
+    Total Input Jitter      (TIJ):    1.260ns
     Discrete Jitter          (DJ):    0.000ns
     Phase Error              (PE):    0.000ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
                          (clock clk_fpga_0 fall edge)
-                                                      5.000     5.000 f  
-    PS7_X0Y0             PS7                          0.000     5.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           0.310     5.310    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     5.336 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         0.786     6.122    design_1_i/top_0/inst/tdc1/initial_bufs[45]
-    SLICE_X48Y104        LUT1 (Prop_lut1_I0_O)        0.045     6.167 f  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
-                         net (fo=46, routed)          0.383     6.549    design_1_i/top_0/inst/tdc1/delay_bufs[43]
-    SLICE_X48Y104        LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[43]/D
+                                                     21.000    21.000 f  
+    PS7_X0Y0             PS7                          0.000    21.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310    21.309    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    21.335 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        0.703    22.038    design_1_i/top_0/inst/tdc1/initial_bufs[255]
+    SLICE_X48Y92         LUT1 (Prop_lut1_I0_O)        0.045    22.083 f  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
+                         net (fo=63, routed)          0.309    22.392    design_1_i/top_0/inst/tdc1/delay_bufs[29]
+    SLICE_X52Y92         LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[29]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_fpga_0 fall edge)
-                                                      5.000     5.000 f  
-    PS7_X0Y0             PS7                          0.000     5.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           0.337     5.337    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     5.366 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         0.910     6.276    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X48Y104        LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[43]/G
-                         clock pessimism              0.000     6.276    
-                         clock uncertainty            0.154     6.430    
-    SLICE_X48Y104        LDCE (Hold_ldce_G_D)         0.066     6.496    design_1_i/top_0/inst/tdc1/latches_reg[43]
+                                                     21.000    21.000 f  
+    PS7_X0Y0             PS7                          0.000    21.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337    21.337    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    21.365 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        0.819    22.184    design_1_i/top_0/inst/tdc1/initial_bufs[0]
+    SLICE_X52Y92         LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[29]/G
+                         clock pessimism              0.000    22.184    
+                         clock uncertainty            0.631    22.815    
+    SLICE_X52Y92         LDCE (Hold_ldce_G_D)         0.066    22.881    design_1_i/top_0/inst/tdc1/latches_reg[29]
   -------------------------------------------------------------------
-                         required time                         -6.496    
-                         arrival time                           6.549    
+                         required time                        -22.881    
+                         arrival time                          22.392    
   -------------------------------------------------------------------
-                         slack                                  0.053    
+                         slack                                 -0.489    
 
-Slack (MET) :             0.053ns  (arrival time - required time)
-  Source:                 design_1_i/top_0/inst/tdc1/latches_reg[17]/G
-                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            design_1_i/top_0/inst/tdc1/delay_reg[17]/D
-                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+Slack (VIOLATED) :        -0.487ns  (arrival time - required time)
+  Source:                 design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                            (clock source 'clk_fpga_0'  {rise@0.000ns fall@21.000ns period=41.999ns})
+  Destination:            design_1_i/top_0/inst/tdc1/latches_reg[4]/D
+                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@21.000ns period=41.999ns})
   Path Group:             clk_fpga_0
   Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
-  Data Path Delay:        0.306ns  (logic 0.158ns (51.597%)  route 0.148ns (48.403%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.182ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.191ns
-    Source Clock Delay      (SCD):    0.974ns
-    Clock Pessimism Removal (CPR):    0.035ns
+  Requirement:            0.000ns  (clk_fpga_0 fall@21.000ns - clk_fpga_0 fall@21.000ns)
+  Data Path Delay:        1.399ns  (logic 0.071ns (5.075%)  route 1.328ns (94.925%))
+  Logic Levels:           2  (BUFG=1 LUT1=1)
+  Clock Path Skew:        1.189ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.189ns = ( 22.189 - 21.000 ) 
+    Source Clock Delay      (SCD):    0.000ns = ( 21.000 - 21.000 ) 
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.631ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    1.260ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           0.310     0.310    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         0.638     0.974    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X48Y100        LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[17]/G
-  -------------------------------------------------------------------    -------------------
-    SLICE_X48Y100        LDCE (EnToQ_ldce_G_Q)        0.158     1.132 r  design_1_i/top_0/inst/tdc1/latches_reg[17]/Q
-                         net (fo=1, routed)           0.148     1.280    design_1_i/top_0/inst/tdc1/latches[17]
-    SLICE_X48Y99         FDRE                                         r  design_1_i/top_0/inst/tdc1/delay_reg[17]/D
+                         (clock clk_fpga_0 fall edge)
+                                                     21.000    21.000 f  
+    PS7_X0Y0             PS7                          0.000    21.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310    21.309    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026    21.335 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        0.703    22.038    design_1_i/top_0/inst/tdc1/initial_bufs[255]
+    SLICE_X48Y92         LUT1 (Prop_lut1_I0_O)        0.045    22.083 f  design_1_i/top_0/inst/tdc1/initial_bufs_inst/O
+                         net (fo=63, routed)          0.315    22.398    design_1_i/top_0/inst/tdc1/delay_bufs[4]
+    SLICE_X48Y92         LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[4]/D
   -------------------------------------------------------------------    -------------------
 
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           0.337     0.337    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         0.825     1.191    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X48Y99         FDRE                                         r  design_1_i/top_0/inst/tdc1/delay_reg[17]/C
-                         clock pessimism             -0.035     1.156    
-    SLICE_X48Y99         FDRE (Hold_fdre_C_D)         0.071     1.227    design_1_i/top_0/inst/tdc1/delay_reg[17]
+                         (clock clk_fpga_0 fall edge)
+                                                     21.000    21.000 f  
+    PS7_X0Y0             PS7                          0.000    21.000 f  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337    21.337    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029    21.365 f  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2493, routed)        0.823    22.188    design_1_i/top_0/inst/tdc1/initial_bufs[0]
+    SLICE_X48Y92         LDCE                                         f  design_1_i/top_0/inst/tdc1/latches_reg[4]/G
+                         clock pessimism              0.000    22.188    
+                         clock uncertainty            0.631    22.819    
+    SLICE_X48Y92         LDCE (Hold_ldce_G_D)         0.066    22.885    design_1_i/top_0/inst/tdc1/latches_reg[4]
   -------------------------------------------------------------------
-                         required time                         -1.227    
-                         arrival time                           1.280    
+                         required time                        -22.885    
+                         arrival time                          22.398    
   -------------------------------------------------------------------
-                         slack                                  0.053    
-
-Slack (MET) :             0.055ns  (arrival time - required time)
-  Source:                 design_1_i/top_0/inst/tdc1/latches_reg[12]/G
-                            (positive level-sensitive latch clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Destination:            design_1_i/top_0/inst/tdc1/delay_reg[12]/D
-                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
-  Path Group:             clk_fpga_0
-  Path Type:              Hold (Min at Fast Process Corner)
-  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
-  Data Path Delay:        0.393ns  (logic 0.178ns (45.343%)  route 0.215ns (54.657%))
-  Logic Levels:           0  
-  Clock Path Skew:        0.267ns (DCD - SCD - CPR)
-    Destination Clock Delay (DCD):    1.191ns
-    Source Clock Delay      (SCD):    0.889ns
-    Clock Pessimism Removal (CPR):    0.035ns
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           0.310     0.310    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         0.553     0.889    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X50Y99         LDCE                                         r  design_1_i/top_0/inst/tdc1/latches_reg[12]/G
-  -------------------------------------------------------------------    -------------------
-    SLICE_X50Y99         LDCE (EnToQ_ldce_G_Q)        0.178     1.067 r  design_1_i/top_0/inst/tdc1/latches_reg[12]/Q
-                         net (fo=1, routed)           0.215     1.281    design_1_i/top_0/inst/tdc1/latches[12]
-    SLICE_X49Y99         FDRE                                         r  design_1_i/top_0/inst/tdc1/delay_reg[12]/D
-  -------------------------------------------------------------------    -------------------
-
-                         (clock clk_fpga_0 rise edge)
-                                                      0.000     0.000 r  
-    PS7_X0Y0             PS7                          0.000     0.000 r  design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
-                         net (fo=1, routed)           0.337     0.337    design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
-    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=901, routed)         0.825     1.191    design_1_i/top_0/inst/tdc1/initial_bufs[0]
-    SLICE_X49Y99         FDRE                                         r  design_1_i/top_0/inst/tdc1/delay_reg[12]/C
-                         clock pessimism             -0.035     1.156    
-    SLICE_X49Y99         FDRE (Hold_fdre_C_D)         0.070     1.226    design_1_i/top_0/inst/tdc1/delay_reg[12]
-  -------------------------------------------------------------------
-                         required time                         -1.226    
-                         arrival time                           1.281    
-  -------------------------------------------------------------------
-                         slack                                  0.055    
+                         slack                                 -0.487    
 
 
 
@@ -1287,41 +1253,41 @@ Slack (MET) :             0.055ns  (arrival time - required time)
 Pulse Width Checks
 --------------------------------------------------------------------------------------
 Clock Name:         clk_fpga_0
-Waveform(ns):       { 0.000 5.000 }
-Period(ns):         10.000
+Waveform(ns):       { 0.000 21.000 }
+Period(ns):         41.999
 Sources:            { design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0] }
 
 Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
-Min Period        n/a     BUFG/I       n/a            2.155         10.000      7.845      BUFGCTRL_X0Y16  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/I
-Min Period        n/a     FDSE/C       n/a            1.000         10.000      9.000      SLICE_X31Y97    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/cnt_read_reg[0]/C
-Min Period        n/a     FDSE/C       n/a            1.000         10.000      9.000      SLICE_X31Y97    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/cnt_read_reg[1]/C
-Min Period        n/a     FDSE/C       n/a            1.000         10.000      9.000      SLICE_X31Y97    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/cnt_read_reg[2]/C
-Min Period        n/a     FDSE/C       n/a            1.000         10.000      9.000      SLICE_X31Y97    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/cnt_read_reg[3]/C
-Min Period        n/a     FDSE/C       n/a            1.000         10.000      9.000      SLICE_X31Y97    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/cnt_read_reg[4]/C
-Min Period        n/a     FDRE/C       n/a            1.000         10.000      9.000      SLICE_X30Y98    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/skid_buffer_reg[17]/C
-Min Period        n/a     FDRE/C       n/a            1.000         10.000      9.000      SLICE_X30Y98    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/skid_buffer_reg[18]/C
-Min Period        n/a     FDRE/C       n/a            1.000         10.000      9.000      SLICE_X30Y98    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/skid_buffer_reg[19]/C
-Min Period        n/a     FDRE/C       n/a            1.000         10.000      9.000      SLICE_X30Y91    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/skid_buffer_reg[1]/C
-Low Pulse Width   Slow    SRL16E/CLK   n/a            0.980         5.000       4.020      SLICE_X38Y106   design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][0]_srl4/CLK
-Low Pulse Width   Slow    SRL16E/CLK   n/a            0.980         5.000       4.020      SLICE_X38Y106   design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][1]_srl4/CLK
-Low Pulse Width   Slow    SRL16E/CLK   n/a            0.980         5.000       4.020      SLICE_X38Y106   design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][2]_srl4/CLK
-Low Pulse Width   Slow    SRL16E/CLK   n/a            0.980         5.000       4.020      SLICE_X38Y106   design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][3]_srl4/CLK
-Low Pulse Width   Slow    SRLC32E/CLK  n/a            0.980         5.000       4.020      SLICE_X34Y92    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][0]_srl32/CLK
-Low Pulse Width   Fast    SRLC32E/CLK  n/a            0.980         5.000       4.020      SLICE_X34Y92    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][0]_srl32/CLK
-Low Pulse Width   Fast    SRLC32E/CLK  n/a            0.980         5.000       4.020      SLICE_X34Y95    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][11]_srl32/CLK
-Low Pulse Width   Fast    SRLC32E/CLK  n/a            0.980         5.000       4.020      SLICE_X34Y93    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][13]_srl32/CLK
-Low Pulse Width   Fast    SRLC32E/CLK  n/a            0.980         5.000       4.020      SLICE_X34Y98    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][14]_srl32/CLK
-Low Pulse Width   Fast    SRLC32E/CLK  n/a            0.980         5.000       4.020      SLICE_X34Y95    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][15]_srl32/CLK
-High Pulse Width  Slow    SRLC32E/CLK  n/a            0.980         5.000       4.020      SLICE_X34Y95    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][11]_srl32/CLK
-High Pulse Width  Slow    SRLC32E/CLK  n/a            0.980         5.000       4.020      SLICE_X34Y93    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][13]_srl32/CLK
-High Pulse Width  Slow    SRLC32E/CLK  n/a            0.980         5.000       4.020      SLICE_X34Y98    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][14]_srl32/CLK
-High Pulse Width  Slow    SRLC32E/CLK  n/a            0.980         5.000       4.020      SLICE_X34Y95    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][15]_srl32/CLK
-High Pulse Width  Slow    SRLC32E/CLK  n/a            0.980         5.000       4.020      SLICE_X34Y95    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][16]_srl32/CLK
-High Pulse Width  Slow    SRLC32E/CLK  n/a            0.980         5.000       4.020      SLICE_X34Y96    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][17]_srl32/CLK
-High Pulse Width  Slow    SRLC32E/CLK  n/a            0.980         5.000       4.020      SLICE_X34Y95    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][18]_srl32/CLK
-High Pulse Width  Slow    SRLC32E/CLK  n/a            0.980         5.000       4.020      SLICE_X34Y96    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][19]_srl32/CLK
-High Pulse Width  Slow    SRLC32E/CLK  n/a            0.980         5.000       4.020      SLICE_X34Y96    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][20]_srl32/CLK
-High Pulse Width  Slow    SRLC32E/CLK  n/a            0.980         5.000       4.020      SLICE_X32Y94    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][21]_srl32/CLK
+Min Period        n/a     BUFG/I       n/a            2.155         41.999      39.844     BUFGCTRL_X0Y16  design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/I
+Min Period        n/a     FDRE/C       n/a            1.000         41.999      40.999     SLICE_X28Y95    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[13]/C
+Min Period        n/a     FDRE/C       n/a            1.000         41.999      40.999     SLICE_X28Y95    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[14]/C
+Min Period        n/a     FDRE/C       n/a            1.000         41.999      40.999     SLICE_X27Y95    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[15]/C
+Min Period        n/a     FDRE/C       n/a            1.000         41.999      40.999     SLICE_X27Y95    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[16]/C
+Min Period        n/a     FDRE/C       n/a            1.000         41.999      40.999     SLICE_X27Y95    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[17]/C
+Min Period        n/a     FDRE/C       n/a            1.000         41.999      40.999     SLICE_X27Y95    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[18]/C
+Min Period        n/a     FDRE/C       n/a            1.000         41.999      40.999     SLICE_X27Y95    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[19]/C
+Min Period        n/a     FDRE/C       n/a            1.000         41.999      40.999     SLICE_X32Y84    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[1]/C
+Min Period        n/a     FDRE/C       n/a            1.000         41.999      40.999     SLICE_X27Y95    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[20]/C
+Low Pulse Width   Slow    SRL16E/CLK   n/a            0.980         21.000      20.019     SLICE_X42Y89    design_1_i/rst_ps7_0_100M/U0/EXT_LPF/POR_SRL_I/CLK
+Low Pulse Width   Fast    SRL16E/CLK   n/a            0.980         21.000      20.019     SLICE_X42Y89    design_1_i/rst_ps7_0_100M/U0/EXT_LPF/POR_SRL_I/CLK
+Low Pulse Width   Fast    SRLC32E/CLK  n/a            0.980         21.000      20.019     SLICE_X34Y88    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][0]_srl32/CLK
+Low Pulse Width   Fast    SRLC32E/CLK  n/a            0.980         21.000      20.019     SLICE_X34Y89    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][10]_srl32/CLK
+Low Pulse Width   Slow    SRLC32E/CLK  n/a            0.980         21.000      20.019     SLICE_X30Y91    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][11]_srl32/CLK
+Low Pulse Width   Fast    SRLC32E/CLK  n/a            0.980         21.000      20.019     SLICE_X30Y91    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][11]_srl32/CLK
+Low Pulse Width   Fast    SRLC32E/CLK  n/a            0.980         21.000      20.019     SLICE_X34Y89    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][12]_srl32/CLK
+Low Pulse Width   Slow    SRLC32E/CLK  n/a            0.980         21.000      20.019     SLICE_X30Y91    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][14]_srl32/CLK
+Low Pulse Width   Fast    SRLC32E/CLK  n/a            0.980         21.000      20.019     SLICE_X30Y91    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][14]_srl32/CLK
+Low Pulse Width   Slow    SRLC32E/CLK  n/a            0.980         21.000      20.019     SLICE_X30Y91    design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][16]_srl32/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.980         21.000      20.019     SLICE_X30Y101   design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][10]_srl4/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.980         21.000      20.019     SLICE_X30Y101   design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][11]_srl4/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.980         21.000      20.019     SLICE_X30Y101   design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][12]_srl4/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.980         21.000      20.019     SLICE_X30Y101   design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][13]_srl4/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.980         21.000      20.019     SLICE_X30Y101   design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][14]_srl4/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.980         21.000      20.019     SLICE_X30Y101   design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][15]_srl4/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.980         21.000      20.019     SLICE_X30Y103   design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][16]_srl4/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.980         21.000      20.019     SLICE_X30Y103   design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][17]_srl4/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.980         21.000      20.019     SLICE_X30Y103   design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][18]_srl4/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.980         21.000      20.019     SLICE_X30Y103   design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/memory_reg[3][19]_srl4/CLK
 
 
 

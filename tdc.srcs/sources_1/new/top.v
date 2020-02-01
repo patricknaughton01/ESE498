@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module top#(parameter C_S_AXI_ADDR_WIDTH = 10, C_S_AXI_DATA_WIDTH = 32, INITIAL=46, DELAY=64, READ_MAX=100, VIRUS=1024)(
+module top#(parameter C_S_AXI_ADDR_WIDTH = 10, C_S_AXI_DATA_WIDTH = 32, INITIAL=256, DELAY=63, READ_MAX=10000, VIRUS=5000, VIRUS_START=500)(
     // Axi4Lite Bus
     input       S_AXI_ACLK,
     input       S_AXI_ARESETN,
@@ -53,7 +53,7 @@ wire rd;
 wire [DELAY-1:0] tdcOut;
 
 reg  virusEn;
-reg  [VIRUS-1:0] virusOut;
+wire [VIRUS-1:0] virusOut;
 
 Axi4LiteSupporter#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH))AxiSupporter1(
     // Simple Bus
@@ -100,7 +100,7 @@ virus#(.SIZE(VIRUS)) virus1(
 parameter IDLE=0, READ=1;
 reg [7:0] state, nextState;
 reg [5:0] mem[READ_MAX-1:0];
-reg [9:0] counterD, counterQ;
+reg [15:0] counterD, counterQ;
 reg [DELAY-1:0] tdcClean;
 reg [5:0] total;
 
@@ -109,16 +109,24 @@ always @ * begin
     counterD = counterQ;
     nextState = state;
     virusEn = 0;
+    rdData = 0;
+    total = 0;
     case(state)
         IDLE:begin
-            if(rd && rdAddr < READ_MAX)begin
-                rdData = mem[rdAddr];
+            if(rd && rdAddr < (READ_MAX<<2))begin
+                rdData = mem[rdAddr>>2];
+                rdData[C_S_AXI_DATA_WIDTH-1] = 1; 
             end else if(wr) begin
                 counterD = 0;
                 nextState = READ;
             end
         end
         READ:begin
+        
+            if(counterQ >= VIRUS_START)begin
+                virusEn = 1;
+            end
+        
             if(counterQ < READ_MAX)begin
                 tdcClean[0] = tdcOut[0];
                 // Clean tdcOut to eliminate glitches
@@ -130,7 +138,6 @@ always @ * begin
                 for(i = 0; i < DELAY; i = i + 1)begin
                     total = total + tdcClean[i];
                 end
-                mem[counterQ] = total;
                 counterD = counterQ + 1;
             end else begin
                 counterD = 0;
@@ -141,12 +148,20 @@ always @ * begin
 end
 
 always @ (posedge S_AXI_ACLK)begin
-    if(S_AXI_ACLK)begin
+    if(S_AXI_ARESETN == 1)begin
         state <= nextState;
         counterQ <= counterD;
+        if(state == READ)begin
+            if(counterQ < READ_MAX)begin
+                mem[counterQ] <= total;
+            end
+        end
     end else begin
         state <= IDLE;
         counterQ <= 0;
+        for(i = 0; i<READ_MAX; i = i + 1)begin
+            mem[i] <= 0;
+        end
     end
 end
 

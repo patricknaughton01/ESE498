@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_tb_func_impl.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="2453fs"></ZoomEndTime>
+      <Cursor1Time time="5000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="194"></NameColumnWidth>
+      <ValueColumnWidth column_width="76"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="22" />
+   <wvobject type="logic" fp_name="/top_tb/S_AXI_ACLK">
+      <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/S_AXI_ARESETN">
+      <obj_property name="ElementShortName">S_AXI_ARESETN</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARESETN</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider36" type="divider">
+      <obj_property name="label">Manager Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/wrAddr">
+      <obj_property name="ElementShortName">wrAddr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">wrAddr[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/wrData">
+      <obj_property name="ElementShortName">wrData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wrData[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/wr">
+      <obj_property name="ElementShortName">wr</obj_property>
+      <obj_property name="ObjectShortName">wr</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/wrDone">
+      <obj_property name="ElementShortName">wrDone</obj_property>
+      <obj_property name="ObjectShortName">wrDone</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/rdAddr">
+      <obj_property name="ElementShortName">rdAddr[9:0]</obj_property>
+      <obj_property name="ObjectShortName">rdAddr[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/rdData">
+      <obj_property name="ElementShortName">rdData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rdData[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/rd">
+      <obj_property name="ElementShortName">rd</obj_property>
+      <obj_property name="ObjectShortName">rd</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/rdDone">
+      <obj_property name="ElementShortName">rdDone</obj_property>
+      <obj_property name="ObjectShortName">rdDone</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider37" type="divider">
+      <obj_property name="label">Top module</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/state">
+      <obj_property name="ElementShortName">state[7:0]</obj_property>
+      <obj_property name="ObjectShortName">state[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/nextState">
+      <obj_property name="ElementShortName">nextState[7:0]</obj_property>
+      <obj_property name="ObjectShortName">nextState[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/counterD">
+      <obj_property name="ElementShortName">counterD[15:0]</obj_property>
+      <obj_property name="ObjectShortName">counterD[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/counterQ">
+      <obj_property name="ElementShortName">counterQ[15:0]</obj_property>
+      <obj_property name="ObjectShortName">counterQ[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top1/virusEn">
+      <obj_property name="ElementShortName">virusEn</obj_property>
+      <obj_property name="ObjectShortName">virusEn</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/virusOut">
+      <obj_property name="ElementShortName">virusOut[18719:0]</obj_property>
+      <obj_property name="ObjectShortName">virusOut[18719:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/mem">
+      <obj_property name="ElementShortName">mem[999:0][5:0]</obj_property>
+      <obj_property name="ObjectShortName">mem[999:0][5:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/tdc1/delay">
+      <obj_property name="ElementShortName">delay[63:0]</obj_property>
+      <obj_property name="ObjectShortName">delay[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/tdc1/delay_bufs">
+      <obj_property name="ElementShortName">delay_bufs[63:0]</obj_property>
+      <obj_property name="ObjectShortName">delay_bufs[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/tdc1/latches">
+      <obj_property name="ElementShortName">latches[63:0]</obj_property>
+      <obj_property name="ObjectShortName">latches[63:0]</obj_property>
+   </wvobject>
+</wave_config>

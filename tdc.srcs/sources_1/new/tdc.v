@@ -35,8 +35,10 @@ reg[DELAY-1:0] delayD;
 generate
     genvar k;
     for(k = 1; k < INITIAL; k = k + 1)begin
-        (* dont_touch = "true" *) buffer(initial_bufs[k], initial_bufs[k-1]);
-        (* dont_touch = "true" *) buffer(delay_bufs[k], delay_bufs[k-1]);
+        (* dont_touch = "true" *) buffer init(initial_bufs[k], initial_bufs[k-1]);
+    end
+    for(k = 1; k < DELAY; k = k + 1)begin
+        (* dont_touch = "true" *) buffer delay(delay_bufs[k], delay_bufs[k-1]);
     end
 endgenerate
 

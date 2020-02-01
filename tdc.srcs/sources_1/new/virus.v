@@ -28,7 +28,7 @@ module virus#(parameter SIZE=1024)(
 genvar k;
 generate
     for (k = 0; k<SIZE; k = k + 1)begin
-        (* dont_touch="true" *)ro(out[k], enable);
+        (* dont_touch="true" *)ro ringOsc(out[k], enable);
     end
 endgenerate
 

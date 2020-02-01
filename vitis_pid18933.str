@@ -1,0 +1,436 @@
+/*
+
+Xilinx Vitis v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov 6 21:40:25 MST 2019
+
+Process ID (PID): 18933
+License: Customer
+
+Current time: 	Fri Jan 31 16:47:56 CST 2020
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Ubuntu
+OS Version: 5.3.0-26-generic
+OS Architecture: amd64
+Available processors (cores): 12
+
+Display: :1
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Available disk space: 318 GB
+
+Java version: 	9.0.4 64-bit
+Java home: 	/tools/Xilinx/Vitis/2019.2/tps/lnx64/jre9.0.4
+Java executable location: 	/tools/Xilinx/Vitis/2019.2/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	64 MB
+Java maximum memory (-Xmx):	 4 GB
+
+Java library paths: /tools/Xilinx/Vitis/2019.2/lib/lnx64.o/Ubuntu/18:/tools/Xilinx/Vitis/2019.2/lib/lnx64.o/Ubuntu:/tools/Xilinx/Vitis/2019.2/lib/lnx64.o:/tools/Xilinx/Vitis/2019.2/tps/lnx64/jre9.0.4/lib/:/tools/Xilinx/Vitis/2019.2/tps/lnx64/jre9.0.4/lib//server:/tools/Xilinx/Vitis/2019.2/lib/lnx64.o:/tools/Xilinx/Vitis/2019.2/lib/lnx64.o/Ubuntu/18:/tools/Xilinx/Vitis/2019.2/lib/lnx64.o/Ubuntu:/tools/Xilinx/Vitis/2019.2/lib/lnx64.o:/tools/Xilinx/Vitis/2019.2/lib/lnx64.o/Ubuntu/18:/tools/Xilinx/Vitis/2019.2/lib/lnx64.o/Ubuntu:/tools/Xilinx/Vitis/2019.2/lib/lnx64.o:/tools/Xilinx/Vitis/2019.2/runtime/lib/x86_64:/tools/Xilinx/Vivado/2019.2/bin/../lnx64/tools/dot/lib:/tools/Xilinx/Vitis/2019.2/bin/../lnx64/tools/dot/lib:/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+
+Java class paths: /tools/Xilinx/Vitis/2019.2/eclipse/lnx64.o//plugins/org.eclipse.equinox.launcher_1.5.0.v20180512-1130.jar
+LD_LIBRARY_PATH: /tools/Xilinx/Vitis
+
+User name: 	patricknaughton01
+User home directory: /home/patricknaughton01
+User working directory: /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vitis
+HDI_APPROOT: /tools/Xilinx/Vitis/2019.2
+RDI_DATADIR: /tools/Xilinx/Vitis/2019.2/data
+RDI_BINDIR: /tools/Xilinx/Vitis/2019.2/bin
+
+Vitis preferences directory: /home/patricknaughton01/.Xilinx/Vitis/2019.2/
+Vitis workspace directory: /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.vitis
+Vitis workspace log file location: /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.vitis/.metadata/.log
+Engine tmp dir: 	./.Xil/sdx-18933-patricknaughton01
+
+Xilinx Environment Variables
+----------------------------
+XILINX_DSP: 
+XILINX_ENABLE_SCOUT_HLS: 0
+XILINX_HLS: /tools/Xilinx/Vivado/2019.2
+XILINX_PLANAHEAD: /tools/Xilinx/Vitis/2019.2
+XILINX_SDK: /tools/Xilinx/Vitis/2019.2
+XILINX_VITIS: /tools/Xilinx/Vitis/2019.2
+XILINX_VIVADO: /tools/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2019.2
+_RDI_DONT_SET_XILINX_AS_PATH: True
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+selectMenuItem("Window", "monitor", "WorkbenchWindow", "MenuItem.WINDOW");
+selectMenuItem("Design Perspective", "monitor", "WorkbenchWindow", "MenuItem.DESIGN_PERSPECTIVE");
+selectTreeTable("design_1_wrapper", EventType.POPUP_TRIGGER_CLICK, "Assistant", "SDXAssistantView", "TreeViewer.AssistantContentProvider");
+selectMenuItem("Delete", "Assistant", "SDXAssistantView", "MenuItem.DELETE");
+selectCheckBox("Delete project contents on disk", Boolean.TRUE, "Delete Resources", "RefactoringWizardDialog2", "Button.DELETE_PROJECT_CONTENTS");
+selectButton("OK", "Delete Resources", "RefactoringWizardDialog2", "Button.OK");
+selectToolBarMenuButton("New", "monitor", "WorkbenchWindow", "ToolItem.NEW");
+selectMenuItem("Platform Project", "Assistant", "WorkbenchWindow", "MenuItem.PLATFORM_PROJECT");
+setTextField("monitor_hw", "New Platform Project (Create new platform project)", "NewPlatformProjectWizard", "Text.PROJECT_NAME");
+selectButton("Next", "New Platform Project (Create new platform project)", "NewPlatformProjectWizard", "Button.NEXT");
+selectButton("Next", "New Platform Project (Platform Project)", "NewPlatformProjectWizard", "Button.NEXT");
+selectButton("Browse", "New Platform Project (Platform Project Specification)", "NewPlatformProjectWizard", "Button.BROWSE");
+setFileDialog("/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/design_1_wrapper.xsa", "Hardware Specification File", "SDXFileDialog", "Button.OK");
+selectButton("Finish", "New Platform Project (Platform Project Specification)", "NewPlatformProjectWizard", "Button.FINISH");
+selectTree("monitor_hw", "Assistant", "SDXAssistantView", "Tree");
+activateView("helloworld.c", "monitor/src/helloworld.c", "CEditor", "CTabItem.HELLOWORLD_C");
+closeView("helloworld.c", "monitor/src/helloworld.c", "CEditor", "CTabItem.HELLOWORLD_C");
+closeView("monitor_hw", "monitor_hw/platform.spr", "ScwEditor", "CTabItem.MONITOR_HW");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectToolBarButton("Build Debug for project monitor_system", "monitor_system", "WorkbenchWindow", "ToolItem.BUILD_DEBUG_FOR");
+selectButton("Change referred platform", "Platform Invalid", "MessageDialog", "Button.CHANGE_REFERRED");
+selectButton("OK", "monitor", "PlatformDialog", "Button.OK");
+selectButton("Yes", "Change platform", "MessageDialog", "Button.YES");
+selectButton("OK", "Platform Invalid", "MessageDialog", "Button.OK");
+selectToolBarButton("Connect to serial port", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CONNECT_TO_SERIAL");
+selectButton("OK", "Connect to serial port", "SerialConnectionDialog", "Button.OK");
+selectToolBarButton("Clear Console", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CLEAR_CONSOLE");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectToolBarButton("Build Debug for project monitor_system", "monitor_system", "WorkbenchWindow", "ToolItem.BUILD_DEBUG_FOR");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+selectTree("monitor_hw", "Explorer", "ProjectExplorer", "Tree");
+selectTree("monitor_system", "Explorer", "ProjectExplorer", "Tree");
+selectToolBarButton("Connect to serial port", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CONNECT_TO_SERIAL");
+setCombo("/dev/ttyACM1", "Connect to serial port", "SerialConnectionDialog", "ComboViewer.PORT");
+selectButton("OK", "Connect to serial port", "SerialConnectionDialog", "Button.OK");
+selectToolBarButton("Remove a serial port from the monitor", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.REMOVE_A_SERIAL");
+selectToolBarButton("Connect to serial port", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CONNECT_TO_SERIAL");
+selectButton("OK", "Connect to serial port", "SerialConnectionDialog", "Button.OK");
+selectToolBarButton("Connect to serial port", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CONNECT_TO_SERIAL");
+selectButton("Cancel", "Connect to serial port", "SerialConnectionDialog", "Button.CANCEL");
+selectToolBarButton("Clear Console", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CLEAR_CONSOLE");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+selectButton("OK", "Error Launching Program", "ErrorDialog", "Button.OK");
+selectToolBarButton("Connect to serial port", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CONNECT_TO_SERIAL");
+setCombo("/dev/ttyACM0", "Connect to serial port", "SerialConnectionDialog", "ComboViewer.PORT");
+selectButton("OK", "Connect to serial port", "SerialConnectionDialog", "Button.OK");
+selectToolBarButton("Remove a serial port from the monitor", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.REMOVE_A_SERIAL");
+selectToolBarButton("Clear Console", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CLEAR_CONSOLE");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "Error Launching Program", "ErrorDialog", "Button.OK");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectToolBarButton("Connect to serial port", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CONNECT_TO_SERIAL");
+selectButton("OK", "Connect to serial port", "SerialConnectionDialog", "Button.OK");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Debug As", "Explorer", "ProjectExplorer", "MenuItem.DEBUG_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+selectButton("OK", "Error", "MessageDialog", "Button.OK");
+selectToolBarButton("Debug", "monitor", "WorkbenchWindow", "ToolItem.DEBUG");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+closeView("Disassembly", "DisassemblyEditor", "CTabItem.DISASSEMBLY");
+selectTree("monitor_hw", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Window", "monitor_hw", "WorkbenchWindow", "MenuItem.WINDOW");
+selectMenuItem("Design Perspective", "monitor_hw", "WorkbenchWindow", "MenuItem.DESIGN_PERSPECTIVE");
+selectTree("monitor_hw", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Update Hardware Specification", "Explorer", "WorkbenchWindow", "MenuItem.UPDATE_HARDWARE");
+selectButton("OK", "Update Hardware Specification", "ScwSyncHwSpecDialog", "Button.OK");
+selectButton("OK", "Update Hardware Specification", "MessageDialog", "Button.OK");
+selectToolBarButton("Debug", "monitor_hw", "WorkbenchWindow", "ToolItem.DEBUG");
+selectButton("OK", "Application Launcher", "MessageDialog", "Button.OK");
+selectToolBarButton("Build Configuration for project monitor_hw", "monitor_hw", "WorkbenchWindow", "ToolItem.BUILD_CONFIGURATION");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Debug As", "Explorer", "ProjectExplorer", "MenuItem.DEBUG_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+activateView("Vitis Serial Terminal", "SDKTerminalView", "CTabItem.VITIS_SERIAL_TERMINAL");
+selectToolBarButton("Remove a serial port from the monitor", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.REMOVE_A_SERIAL");
+selectToolBarButton("Clear Console", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CLEAR_CONSOLE");
+selectToolBarButton("Remove a serial port from the monitor", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.REMOVE_A_SERIAL");
+selectToolBarButton("Connect to serial port", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CONNECT_TO_SERIAL");
+selectButton("OK", "Connect to serial port", "SerialConnectionDialog", "Button.OK");
+selectToolBarButton("Resume", "monitor", "WorkbenchWindow", "ToolItem.RESUME");
+selectMenuItem("Window", "monitor", "WorkbenchWindow", "MenuItem.WINDOW");
+selectMenuItem("Design Perspective", "monitor", "WorkbenchWindow", "MenuItem.DESIGN_PERSPECTIVE");
+selectTree("monitor_hw", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Update Hardware Specification", "Explorer", "ProjectExplorer", "MenuItem.UPDATE_HARDWARE");
+selectButton("OK", "Update Hardware Specification", "ScwSyncHwSpecDialog", "Button.OK");
+selectButton("OK", "Update Hardware Specification", "MessageDialog", "Button.OK");
+selectToolBarButton("Clear Console", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CLEAR_CONSOLE");
+selectToolBarButton("Build Configuration for project monitor_hw", "monitor", "WorkbenchWindow", "ToolItem.BUILD_CONFIGURATION");
+selectTree("monitor_system", "Explorer", "ProjectExplorer", "Tree");
+selectToolBarButton("Build Debug for project monitor_system", "monitor_system", "WorkbenchWindow", "ToolItem.BUILD_DEBUG_FOR");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Build Project", "Explorer", "ProjectExplorer", "MenuItem.BUILD_PROJECT");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Debug As", "Explorer", "ProjectExplorer", "MenuItem.DEBUG_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+activateView("Vitis Serial Terminal", "SDKTerminalView", "CTabItem.VITIS_SERIAL_TERMINAL");
+selectToolBarButton("Resume", "monitor", "WorkbenchWindow", "ToolItem.RESUME");
+selectMenuItem("Window", "monitor", "WorkbenchWindow", "MenuItem.WINDOW");
+selectMenuItem("Design Perspective", "monitor", "WorkbenchWindow", "MenuItem.DESIGN_PERSPECTIVE");
+selectTree("monitor_hw", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Update Hardware Specification", "Explorer", "ProjectExplorer", "MenuItem.UPDATE_HARDWARE");
+selectButton("OK", "Update Hardware Specification", "ScwSyncHwSpecDialog", "Button.OK");
+selectButton("OK", "Update Hardware Specification", "MessageDialog", "Button.OK");
+selectToolBarButton("Clear Console", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CLEAR_CONSOLE");
+selectToolBarButton("Build Configuration for project monitor_hw", "monitor", "WorkbenchWindow", "ToolItem.BUILD_CONFIGURATION");
+selectTree("monitor_system", "Explorer", "ProjectExplorer", "Tree");
+selectToolBarButton("Build Debug for project monitor_system", "monitor_system", "WorkbenchWindow", "ToolItem.BUILD_DEBUG_FOR");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Debug As", "Explorer", "ProjectExplorer", "MenuItem.DEBUG_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+activateView("Vitis Serial Terminal", "SDKTerminalView", "CTabItem.VITIS_SERIAL_TERMINAL");
+selectToolBarButton("Resume", "monitor", "WorkbenchWindow", "ToolItem.RESUME");
+setText("Starting read", "Vitis Serial Terminal", "SDKTerminalView", "StyledText.CONNECTED_TO_SERIAL_(__DEV_TTYACM0,_115200,_0,_8_)");
+selectMenuItem("Window", "monitor", "WorkbenchWindow", "MenuItem.WINDOW");
+selectMenuItem("Design Perspective", "monitor", "WorkbenchWindow", "MenuItem.DESIGN_PERSPECTIVE");
+selectTreeTable("monitor_hw", EventType.POPUP_TRIGGER_CLICK, "Assistant", "SDXAssistantView", "TreeViewer.AssistantContentProvider");
+selectMenuItem("Delete", "Assistant", "WorkbenchWindow", "MenuItem.DELETE");
+selectCheckBox("Delete project contents on disk", Boolean.TRUE, "Delete Resources", "RefactoringWizardDialog2", "Button.DELETE_PROJECT_CONTENTS");
+selectButton("OK", "Delete Resources", "RefactoringWizardDialog2", "Button.OK");
+selectToolBarMenuButton("New", "monitor", "WorkbenchWindow", "ToolItem.NEW");
+selectMenuItem("Platform Project", "Vitis Serial Terminal", "WorkbenchWindow", "MenuItem.PLATFORM_PROJECT");
+setTextField("monitor_hw2", "New Platform Project (Create new platform project)", "NewPlatformProjectWizard", "Text.PROJECT_NAME");
+selectButton("Next", "New Platform Project (Create new platform project)", "NewPlatformProjectWizard", "Button.NEXT");
+selectButton("Next", "New Platform Project (Platform Project)", "NewPlatformProjectWizard", "Button.NEXT");
+selectButton("Browse", "New Platform Project (Platform Project Specification)", "NewPlatformProjectWizard", "Button.BROWSE");
+setFileDialog("/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/design_1_wrapper.xsa", "Hardware Specification File", "SDXFileDialog", "Button.OK");
+selectButton("Finish", "New Platform Project (Platform Project Specification)", "NewPlatformProjectWizard", "Button.FINISH");
+selectTree("monitor_hw2", "Explorer", "ProjectExplorer", "Tree");
+selectToolBarButton("Build Configuration for project monitor_hw2", "monitor_hw2", "WorkbenchWindow", "ToolItem.BUILD_CONFIGURATION");
+selectTree("Board Support Package", "monitor_hw2 > ps7_cortexa9_0 > zynq_fsbl", "monitor_hw2", "ScwEditor", "Tree");
+selectTree("Board Support Package", "monitor_hw2 > ps7_cortexa9_0 > standalone on ps7_cortexa9_0", "monitor_hw2", "ScwEditor", "Tree");
+selectTree("ps7_cortexa9_0", "monitor_hw2", "monitor_hw2", "ScwEditor", "Tree");
+selectTree("monitor_hw2", "monitor_hw2", "monitor_hw2", "ScwEditor", "Tree");
+closeView("monitor_hw2", "monitor_hw2/platform.spr", "ScwEditor", "CTabItem.MONITOR_HW2");
+selectTree("monitor_system", "monitor_hw2", "Explorer", "ProjectExplorer", "Tree");
+selectToolBarButton("Build Debug for project monitor_system", "monitor_system", "WorkbenchWindow", "ToolItem.BUILD_DEBUG_FOR");
+selectButton("OK", "Platform Invalid", "MessageDialog", "Button.OK");
+selectTreeTable("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Assistant", "SDXAssistantView", "TreeViewer.AssistantContentProvider");
+selectMenuItem("Update Hardware Specification", "Assistant", "SDXAssistantView", "MenuItem.UPDATE_HARDWARE");
+selectButton("OK", "Error", "ErrorDialog", "Button.OK");
+selectTreeTable("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Assistant", "SDXAssistantView", "TreeViewer.AssistantContentProvider");
+selectToolBarButton("Build Debug for project monitor_system", "monitor_system", "WorkbenchWindow", "ToolItem.BUILD_DEBUG_FOR");
+selectButton("OK", "Platform Invalid", "MessageDialog", "Button.OK");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Properties", "Explorer", "ProjectExplorer", "MenuItem.PROPERTIES");
+selectTree("Project Natures", "Properties for monitor_system", "PropertyDialog", "Tree.PropertyPageManager");
+selectTree("Project References", "Properties for monitor_system", "PropertyDialog", "Tree.PropertyPageManager");
+selectTable("monitor_hw2", "Properties for monitor_system", "PropertyDialog", "Table.PROJECTS_MAY_REFER_TO_OTHER_PROJECTS_IN_THE_WORKSPA");
+selectTable("monitor", "Properties for monitor_system", "PropertyDialog", "Table.PROJECTS_MAY_REFER_TO_OTHER_PROJECTS_IN_THE_WORKSPA");
+selectButton("Apply and Close", "Properties for monitor_system", "PropertyDialog", "Button.APPLY_AND_CLOSE");
+selectToolBarButton("Build Debug for project monitor_system", "monitor_system", "WorkbenchWindow", "ToolItem.BUILD_DEBUG_FOR");
+selectButton("OK", "Platform Invalid", "MessageDialog", "Button.OK");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Properties", "Explorer", "ProjectExplorer", "MenuItem.PROPERTIES");
+selectTree("Validation", "Properties for monitor_system", "PropertyDialog", "Tree.PropertyPageManager");
+selectTree("Project References", "Properties for monitor_system", "PropertyDialog", "Tree.PropertyPageManager");
+selectTree("Run/Debug Settings", "Properties for monitor_system", "PropertyDialog", "Tree.PropertyPageManager");
+selectTree("Builders", "Properties for monitor_system", "PropertyDialog", "Tree.PropertyPageManager");
+selectTree("Resource", "Properties for monitor_system", "PropertyDialog", "Tree.PropertyPageManager");
+selectTree("Builders", "Properties for monitor_system", "PropertyDialog", "Tree.PropertyPageManager");
+selectTree("C/C++ Build", "Properties for monitor_system", "PropertyDialog", "Tree.PropertyPageManager");
+selectTab("Builder Settings", "Properties for monitor_system", "PropertyDialog", "TabItem.BUILDER_SETTINGS");
+selectTree("C/C++ General", "Properties for monitor_system", "PropertyDialog", "Tree.PropertyPageManager");
+selectButton("Cancel", "Properties for monitor_system", "PropertyDialog", "Button.CANCEL");
+selectTree("monitor_hw2", EventType.DOUBLE_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectTree("bitstream", "monitor_hw2", "Explorer", "ProjectExplorer", "Tree");
+selectTree("monitor_hw2", "monitor_hw2", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectTree("export", "monitor_hw2", "Explorer", "ProjectExplorer", "Tree");
+selectTree("monitor", "monitor_system", "Explorer", "ProjectExplorer", "Tree");
+selectTree("monitor_system", "monitor_system", "Explorer", "ProjectExplorer", "Tree");
+selectTree("monitor", "monitor_system", "Explorer", "ProjectExplorer", "Tree");
+selectTree("monitor_system", "monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Clean Project", "Explorer", "ProjectExplorer", "MenuItem.CLEAN_PROJECT");
+selectButton("OK", "Platform Invalid", "MessageDialog", "Button.OK");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Build Project", "Explorer", "ProjectExplorer", "MenuItem.BUILD_PROJECT");
+selectButton("OK", "Platform Invalid", "MessageDialog", "Button.OK");
+selectTreeTable("monitor", "monitor_system", "Assistant", "SDXAssistantView", "TreeViewer.AssistantContentProvider");
+selectTreeTable("Debug", "monitor_system > monitor", EventType.DOUBLE_CLICK, "Assistant", "SDXAssistantView", "TreeViewer.AssistantContentProvider");
+activateView("monitor", "monitor/monitor.prj", "SDXSettingsEditor", "CTabItem.MONITOR");
+selectIconButton("Change target platform for the current project", "monitor", "SDXSettingsEditor", "Button.CHANGE_TARGET_PLATFORM");
+selectTreeTable("monitor_hw2", EventType.DOUBLE_CLICK, "monitor", "PlatformDialog", "TreeViewer.ArrayTreeContentProvider");
+selectButton("OK", "monitor", "PlatformDialog", "Button.OK");
+selectButton("Yes", "Change platform", "MessageDialog", "Button.YES");
+selectTree("monitor_system", "Explorer", "ProjectExplorer", "Tree");
+selectToolBarButton("Build Debug for project monitor_system", "monitor_system", "WorkbenchWindow", "ToolItem.BUILD_DEBUG_FOR");
+selectToolBarButton("Clear Console", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CLEAR_CONSOLE");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Debug As", "Explorer", "ProjectExplorer", "MenuItem.DEBUG_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+activateView("monitor.c", "monitor/src/monitor.c", "CEditor", "CTabItem.MONITOR_C");
+selectToolBarButton("Resume", "monitor", "WorkbenchWindow", "ToolItem.RESUME");
+activateView("Vitis Serial Terminal", "SDKTerminalView", "CTabItem.VITIS_SERIAL_TERMINAL");
+selectMenuItem("Window", "monitor", "WorkbenchWindow", "MenuItem.WINDOW");
+selectMenuItem("Design Perspective", "monitor", "WorkbenchWindow", "MenuItem.DESIGN_PERSPECTIVE");
+selectTree("monitor_system", "Explorer", "ProjectExplorer", "Tree");
+selectTree("monitor_hw2", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Update Hardware Specification", "Explorer", "ProjectExplorer", "MenuItem.UPDATE_HARDWARE");
+selectButton("OK", "Update Hardware Specification", "ScwSyncHwSpecDialog", "Button.OK");
+selectButton("OK", "Update Hardware Specification", "MessageDialog", "Button.OK");
+selectToolBarButton("Build Configuration for project monitor_hw2", "monitor_hw2", "WorkbenchWindow", "ToolItem.BUILD_CONFIGURATION");
+selectToolBarButton("Clear Console", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CLEAR_CONSOLE");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectToolBarButton("Build Debug for project monitor_system", "monitor_system", "WorkbenchWindow", "ToolItem.BUILD_DEBUG_FOR");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+selectTree("monitor_hw2", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Update Hardware Specification", "Explorer", "ProjectExplorer", "MenuItem.UPDATE_HARDWARE");
+selectButton("OK", "Update Hardware Specification", "ScwSyncHwSpecDialog", "Button.OK");
+selectToolBarButton("Clear Console", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CLEAR_CONSOLE");
+selectButton("OK", "Update Hardware Specification", "MessageDialog", "Button.OK");
+selectToolBarMenuButton("Build Configuration for project monitor_hw2", "monitor", "WorkbenchWindow", "ToolItem.BUILD_CONFIGURATION");
+selectToolBarButton("Build Configuration for project monitor_hw2", "monitor", "WorkbenchWindow", "ToolItem.BUILD_CONFIGURATION");
+selectTree("monitor_system", "Explorer", "ProjectExplorer", "Tree");
+selectToolBarButton("Build Debug for project monitor_system", "monitor_system", "WorkbenchWindow", "ToolItem.BUILD_DEBUG_FOR");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectToolBarButton("Build Debug for project monitor_system", "monitor_system", "WorkbenchWindow", "ToolItem.BUILD_DEBUG_FOR");
+selectTree("Debug", "monitor_system > monitor", "Explorer", "ProjectExplorer", "Tree");
+selectTree("monitor_system", "monitor_system > monitor", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+selectToolBarButton("Clear Console", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CLEAR_CONSOLE");
+selectTree("monitor_hw2", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Update Hardware Specification", "Explorer", "ProjectExplorer", "MenuItem.UPDATE_HARDWARE");
+selectButton("OK", "Update Hardware Specification", "ScwSyncHwSpecDialog", "Button.OK");
+selectButton("OK", "Update Hardware Specification", "MessageDialog", "Button.OK");
+selectToolBarButton("Build Configuration for project monitor_hw2", "monitor_hw2", "WorkbenchWindow", "ToolItem.BUILD_CONFIGURATION");
+selectTree("monitor_system", "Explorer", "ProjectExplorer", "Tree");
+selectToolBarButton("Build Debug for project monitor_system", "monitor_system", "WorkbenchWindow", "ToolItem.BUILD_DEBUG_FOR");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+selectTree("monitor_hw2", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Update Hardware Specification", "Explorer", "ProjectExplorer", "MenuItem.UPDATE_HARDWARE");
+selectButton("OK", "Update Hardware Specification", "ScwSyncHwSpecDialog", "Button.OK");
+selectToolBarButton("Clear Console", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CLEAR_CONSOLE");
+selectButton("OK", "Update Hardware Specification", "MessageDialog", "Button.OK");
+selectToolBarButton("Build Configuration for project monitor_hw2", "monitor", "WorkbenchWindow", "ToolItem.BUILD_CONFIGURATION");
+selectTreeTable("monitor_system", "Assistant", "SDXAssistantView", "TreeViewer.AssistantContentProvider");
+selectTree("monitor_system", "Explorer", "ProjectExplorer", "Tree");
+selectToolBarButton("Build Debug for project monitor_system", "monitor_system", "WorkbenchWindow", "ToolItem.BUILD_DEBUG_FOR");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Debug As", "Explorer", "ProjectExplorer", "MenuItem.DEBUG_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+selectMenuItem("Window", "monitor", "WorkbenchWindow", "MenuItem.WINDOW");
+selectMenuItem("Design Perspective", "monitor", "WorkbenchWindow", "MenuItem.DESIGN_PERSPECTIVE");
+selectTree("monitor_hw2", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Update Hardware Specification", "Explorer", "ProjectExplorer", "MenuItem.UPDATE_HARDWARE");
+selectButton("OK", "Update Hardware Specification", "ScwSyncHwSpecDialog", "Button.OK");
+selectButton("OK", "Update Hardware Specification", "MessageDialog", "Button.OK");
+selectToolBarButton("Build Configuration for project monitor_hw2", "monitor_hw2", "WorkbenchWindow", "ToolItem.BUILD_CONFIGURATION");
+selectTree("monitor_system", "Explorer", "ProjectExplorer", "Tree");
+selectToolBarButton("Build Debug for project monitor_system", "monitor_system", "WorkbenchWindow", "ToolItem.BUILD_DEBUG_FOR");
+setText("18:19:23 **** Incremental Build of configuration De", "Console", "ConsoleView", "StyledText");
+selectToolBarButton("Clear Console", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CLEAR_CONSOLE");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+selectToolBarButton("Remove a serial port from the monitor", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.REMOVE_A_SERIAL");
+selectToolBarButton("Connect to serial port", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CONNECT_TO_SERIAL");
+selectButton("OK", "Connect to serial port", "SerialConnectionDialog", "Button.OK");
+selectToolBarButton("Connect to serial port", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CONNECT_TO_SERIAL");
+selectButton("OK", "Connect to serial port", "SerialConnectionDialog", "Button.OK");
+selectToolBarButton("Clear Console", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CLEAR_CONSOLE");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+selectToolBarButton("Clear Console", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CLEAR_CONSOLE");
+selectTree("monitor_hw2", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Update Hardware Specification", "Explorer", "ProjectExplorer", "MenuItem.UPDATE_HARDWARE");
+selectButton("OK", "Update Hardware Specification", "ScwSyncHwSpecDialog", "Button.OK");
+selectButton("OK", "Update Hardware Specification", "MessageDialog", "Button.OK");
+selectToolBarButton("Build Configuration for project monitor_hw2", "monitor_hw2", "WorkbenchWindow", "ToolItem.BUILD_CONFIGURATION");
+selectTree("monitor_system", "Explorer", "ProjectExplorer", "Tree");
+selectToolBarButton("Build Debug for project monitor_system", "monitor_system", "WorkbenchWindow", "ToolItem.BUILD_DEBUG_FOR");
+selectTree("monitor", "monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectTree("monitor_system", "monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+selectToolBarButton("Build Debug for project monitor_system", "monitor_system", "WorkbenchWindow", "ToolItem.BUILD_DEBUG_FOR");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+selectToolBarButton("Remove a serial port from the monitor", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.REMOVE_A_SERIAL");
+selectToolBarButton("Connect to serial port", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CONNECT_TO_SERIAL");
+selectButton("OK", "Connect to serial port", "SerialConnectionDialog", "Button.OK");
+selectToolBarButton("Connect to serial port", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CONNECT_TO_SERIAL");
+selectButton("OK", "Connect to serial port", "SerialConnectionDialog", "Button.OK");
+selectToolBarButton("Clear Console", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CLEAR_CONSOLE");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectToolBarButton("Remove a serial port from the monitor", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.REMOVE_A_SERIAL");
+selectToolBarButton("Clear Console", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CLEAR_CONSOLE");
+selectToolBarButton("Connect to serial port", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CONNECT_TO_SERIAL");
+selectButton("OK", "Connect to serial port", "SerialConnectionDialog", "Button.OK");
+selectToolBarButton("Clear Console", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CLEAR_CONSOLE");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+selectTree("monitor_hw2", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Update Hardware Specification", "Explorer", "ProjectExplorer", "MenuItem.UPDATE_HARDWARE");
+selectButton("OK", "Update Hardware Specification", "ScwSyncHwSpecDialog", "Button.OK");
+selectButton("OK", "Update Hardware Specification", "MessageDialog", "Button.OK");
+selectToolBarButton("Build Configuration for project monitor_hw2", "monitor_hw2", "WorkbenchWindow", "ToolItem.BUILD_CONFIGURATION");
+selectTree("monitor_system", "Explorer", "ProjectExplorer", "Tree");
+selectToolBarButton("Build Debug for project monitor_system", "monitor_system", "WorkbenchWindow", "ToolItem.BUILD_DEBUG_FOR");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectToolBarButton("Clear Console", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CLEAR_CONSOLE");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");
+selectTree("monitor_hw2", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Update Hardware Specification", "Explorer", "ProjectExplorer", "MenuItem.UPDATE_HARDWARE");
+selectButton("OK", "Update Hardware Specification", "ScwSyncHwSpecDialog", "Button.OK");
+selectButton("OK", "Update Hardware Specification", "MessageDialog", "Button.OK");
+selectToolBarButton("Build Configuration for project monitor_hw2", "monitor_hw2", "WorkbenchWindow", "ToolItem.BUILD_CONFIGURATION");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Build Project", "Explorer", "ProjectExplorer", "MenuItem.BUILD_PROJECT");
+selectToolBarButton("Clear Console", "Vitis Serial Terminal", "SDKTerminalView", "ToolItem.CLEAR_CONSOLE");
+selectTree("monitor_system", EventType.POPUP_TRIGGER_CLICK, "Explorer", "ProjectExplorer", "Tree");
+selectMenuItem("Run As", "Explorer", "ProjectExplorer", "MenuItem.RUN_AS");
+selectMenuItem("1 Launch on Hardware", "monitor_system", "WorkbenchWindow", "MenuItem.1_LAUNCH_ON_HARDWARE");
+selectButton("OK", "WARNING", "MessageDialogWithToggle", "Button.OK");

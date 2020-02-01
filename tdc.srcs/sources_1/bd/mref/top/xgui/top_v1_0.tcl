@@ -8,6 +8,8 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "DELAY" -parent ${Page_0}
   ipgui::add_param $IPINST -name "INITIAL" -parent ${Page_0}
   ipgui::add_param $IPINST -name "READ_MAX" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "VIRUS" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "VIRUS_START" -parent ${Page_0}
 
 
 }
@@ -57,6 +59,24 @@ proc validate_PARAM_VALUE.READ_MAX { PARAM_VALUE.READ_MAX } {
 	return true
 }
 
+proc update_PARAM_VALUE.VIRUS { PARAM_VALUE.VIRUS } {
+	# Procedure called to update VIRUS when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.VIRUS { PARAM_VALUE.VIRUS } {
+	# Procedure called to validate VIRUS
+	return true
+}
+
+proc update_PARAM_VALUE.VIRUS_START { PARAM_VALUE.VIRUS_START } {
+	# Procedure called to update VIRUS_START when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.VIRUS_START { PARAM_VALUE.VIRUS_START } {
+	# Procedure called to validate VIRUS_START
+	return true
+}
+
 
 proc update_MODELPARAM_VALUE.C_S_AXI_ADDR_WIDTH { MODELPARAM_VALUE.C_S_AXI_ADDR_WIDTH PARAM_VALUE.C_S_AXI_ADDR_WIDTH } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
@@ -81,5 +101,15 @@ proc update_MODELPARAM_VALUE.DELAY { MODELPARAM_VALUE.DELAY PARAM_VALUE.DELAY } 
 proc update_MODELPARAM_VALUE.READ_MAX { MODELPARAM_VALUE.READ_MAX PARAM_VALUE.READ_MAX } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.READ_MAX}] ${MODELPARAM_VALUE.READ_MAX}
+}
+
+proc update_MODELPARAM_VALUE.VIRUS { MODELPARAM_VALUE.VIRUS PARAM_VALUE.VIRUS } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.VIRUS}] ${MODELPARAM_VALUE.VIRUS}
+}
+
+proc update_MODELPARAM_VALUE.VIRUS_START { MODELPARAM_VALUE.VIRUS_START PARAM_VALUE.VIRUS_START } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.VIRUS_START}] ${MODELPARAM_VALUE.VIRUS_START}
 }
 

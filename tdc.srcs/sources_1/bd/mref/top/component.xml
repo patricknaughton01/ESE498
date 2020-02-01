@@ -223,7 +223,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>1aac7d0a</spirit:value>
+            <spirit:value>e044528b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -236,7 +236,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>1aac7d0a</spirit:value>
+            <spirit:value>e044528b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -567,17 +567,27 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>INITIAL</spirit:name>
         <spirit:displayName>Initial</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.INITIAL">46</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.INITIAL">256</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>DELAY</spirit:name>
         <spirit:displayName>Delay</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DELAY">64</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DELAY">63</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>READ_MAX</spirit:name>
         <spirit:displayName>Read Max</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.READ_MAX">100</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.READ_MAX">10000</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>VIRUS</spirit:name>
+        <spirit:displayName>Virus</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.VIRUS">5000</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>VIRUS_START</spirit:name>
+        <spirit:displayName>Virus Start</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.VIRUS_START">500</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -594,7 +604,7 @@
       <spirit:file>
         <spirit:name>xgui/top_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_fd56cb18</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_48e7a20b</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -614,17 +624,27 @@
     <spirit:parameter>
       <spirit:name>INITIAL</spirit:name>
       <spirit:displayName>Initial</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.INITIAL">46</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.INITIAL">256</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>DELAY</spirit:name>
       <spirit:displayName>Delay</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DELAY">64</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DELAY">63</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>READ_MAX</spirit:name>
       <spirit:displayName>Read Max</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.READ_MAX">100</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.READ_MAX">10000</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>VIRUS</spirit:name>
+      <spirit:displayName>Virus</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.VIRUS">5000</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>VIRUS_START</spirit:name>
+      <spirit:displayName>Virus Start</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.VIRUS_START">500</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
@@ -646,7 +666,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2020-01-24T23:52:52Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2020-02-01T00:38:45Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
