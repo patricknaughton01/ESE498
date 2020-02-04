@@ -20,7 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module top#(parameter C_S_AXI_ADDR_WIDTH = 10, C_S_AXI_DATA_WIDTH = 32, INITIAL=256, DELAY=63, READ_MAX=10000, VIRUS=5000, VIRUS_START=500)(
+module top#(parameter C_S_AXI_ADDR_WIDTH = 32, C_S_AXI_DATA_WIDTH = 32, INITIAL=512, DELAY=127, READ_MAX=10000, 
+    VIRUS=5000, VIRUS_START=500, MEM_WIDTH=16)(
     // Axi4Lite Bus
     input       S_AXI_ACLK,
     input       S_AXI_ARESETN,
@@ -97,10 +98,22 @@ virus#(.SIZE(VIRUS)) virus1(
     .enable(virusEn)
 );
 
+reg  memWe;
+reg  [C_S_AXI_ADDR_WIDTH-1:0] memAddr;
+reg  [MEM_WIDTH-1:0] memDi;
+wire [MEM_WIDTH-1:0] memDo;
+
+RAM#(.DEPTH()) ram1(
+    .clk(S_AXI_ACLK),
+    .we(memWe),
+    .a(memAddr),
+    .di(memDi),
+    .do(memDo)
+);
+
 parameter IDLE=0, READ=1;
 reg [7:0] state, nextState;
-reg [5:0] mem[READ_MAX-1:0];
-reg [15:0] counterD, counterQ;
+reg [32:0] counterD, counterQ;
 reg [DELAY-1:0] tdcClean;
 reg [5:0] total;
 
@@ -111,10 +124,15 @@ always @ * begin
     virusEn = 0;
     rdData = 0;
     total = 0;
+    memWe = 0;
+    memAddr = 0;
+    memDi = 0;
+    
     case(state)
         IDLE:begin
             if(rd && rdAddr < (READ_MAX<<2))begin
-                rdData = mem[rdAddr>>2];
+                memAddr = rdAddr;
+                rdData = memDo;
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1; 
             end else if(wr) begin
                 counterD = 0;
@@ -138,6 +156,10 @@ always @ * begin
                 for(i = 0; i < DELAY; i = i + 1)begin
                     total = total + tdcClean[i];
                 end
+                // Write to the memory
+                memWe = 1;
+                memAddr = counterQ << 2;
+                memDi = total;
                 counterD = counterQ + 1;
             end else begin
                 counterD = 0;
@@ -151,17 +173,9 @@ always @ (posedge S_AXI_ACLK)begin
     if(S_AXI_ARESETN == 1)begin
         state <= nextState;
         counterQ <= counterD;
-        if(state == READ)begin
-            if(counterQ < READ_MAX)begin
-                mem[counterQ] <= total;
-            end
-        end
     end else begin
         state <= IDLE;
         counterQ <= 0;
-        for(i = 0; i<READ_MAX; i = i + 1)begin
-            mem[i] <= 0;
-        end
     end
 end
 

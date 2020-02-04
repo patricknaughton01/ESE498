@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Fri Jan 31 17:31:25 2020
+-- Date        : Fri Jan 24 18:03:31 2020
 -- Host        : patricknaughton01 running 64-bit Ubuntu 18.04.3 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/bd/design_1/ip/design_1_xbar_1/design_1_xbar_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_xbar_1 -prefix
+--               design_1_xbar_1_ design_1_xbar_1_stub.vhdl
 -- Design      : design_1_xbar_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1

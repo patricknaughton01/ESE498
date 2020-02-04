@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Fri Jan 31 18:38:55 2020
+//Date        : Sat Feb  1 18:26:42 2020
 //Host        : patricknaughton01 running 64-bit Ubuntu 18.04.3 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -279,11 +279,11 @@ module design_1
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
   design_1_top_0_0 top_0
        (.S_AXI_ACLK(processing_system7_0_FCLK_CLK0),
-        .S_AXI_ARADDR(ps7_0_axi_periph_M01_AXI_ARADDR[9:0]),
+        .S_AXI_ARADDR(ps7_0_axi_periph_M01_AXI_ARADDR),
         .S_AXI_ARESETN(rst_ps7_0_100M_peripheral_aresetn),
         .S_AXI_ARREADY(ps7_0_axi_periph_M01_AXI_ARREADY),
         .S_AXI_ARVALID(ps7_0_axi_periph_M01_AXI_ARVALID),
-        .S_AXI_AWADDR(ps7_0_axi_periph_M01_AXI_AWADDR[9:0]),
+        .S_AXI_AWADDR(ps7_0_axi_periph_M01_AXI_AWADDR),
         .S_AXI_AWREADY(ps7_0_axi_periph_M01_AXI_AWREADY),
         .S_AXI_AWVALID(ps7_0_axi_periph_M01_AXI_AWVALID),
         .S_AXI_BREADY(ps7_0_axi_periph_M01_AXI_BREADY),

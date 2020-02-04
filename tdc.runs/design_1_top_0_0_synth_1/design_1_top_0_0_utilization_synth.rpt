@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Fri Jan 31 18:40:49 2020
+| Date         : Sat Feb  1 18:28:08 2020
 | Host         : patricknaughton01 running 64-bit Ubuntu 18.04.3 LTS
 | Command      : report_utilization -file design_1_top_0_0_utilization_synth.rpt -pb design_1_top_0_0_utilization_synth.pb
 | Design       : design_1_top_0_0
@@ -27,18 +27,20 @@ Table of Contents
 1. Slice Logic
 --------------
 
-+-------------------------+------+-------+-----------+-------+
-|        Site Type        | Used | Fixed | Available | Util% |
-+-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 5824 |     0 |     53200 | 10.95 |
-|   LUT as Logic          | 5824 |     0 |     53200 | 10.95 |
-|   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         | 1689 |     0 |    106400 |  1.59 |
-|   Register as Flip Flop | 1626 |     0 |    106400 |  1.53 |
-|   Register as Latch     |   63 |     0 |    106400 |  0.06 |
-| F7 Muxes                |  204 |     0 |     26600 |  0.77 |
-| F8 Muxes                |  102 |     0 |     13300 |  0.77 |
-+-------------------------+------+-------+-----------+-------+
++----------------------------+------+-------+-----------+-------+
+|          Site Type         | Used | Fixed | Available | Util% |
++----------------------------+------+-------+-----------+-------+
+| Slice LUTs*                | 5212 |     0 |     53200 |  9.80 |
+|   LUT as Logic             | 5205 |     0 |     53200 |  9.78 |
+|   LUT as Memory            |    7 |     0 |     17400 |  0.04 |
+|     LUT as Distributed RAM |    7 |     0 |           |       |
+|     LUT as Shift Register  |    0 |     0 |           |       |
+| Slice Registers            |  279 |     0 |    106400 |  0.26 |
+|   Register as Flip Flop    |  152 |     0 |    106400 |  0.14 |
+|   Register as Latch        |  127 |     0 |    106400 |  0.12 |
+| F7 Muxes                   |    0 |     0 |     26600 |  0.00 |
+| F8 Muxes                   |    0 |     0 |     13300 |  0.00 |
++----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
 
@@ -55,9 +57,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 63    |          Yes |           - |        Reset |
+| 127   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 1626  |          Yes |       Reset |            - |
+| 152   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -146,16 +148,15 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT2     | 5022 |                 LUT |
-| FDRE     | 1626 |        Flop & Latch |
-| LUT6     |  460 |                 LUT |
-| LUT5     |  277 |                 LUT |
-| MUXF7    |  204 |               MuxFx |
-| MUXF8    |  102 |               MuxFx |
-| LDCE     |   63 |        Flop & Latch |
-| LUT4     |   60 |                 LUT |
-| LUT3     |   51 |                 LUT |
-| CARRY4   |    4 |          CarryLogic |
+| LUT2     | 5024 |                 LUT |
+| FDRE     |  152 |        Flop & Latch |
+| LDCE     |  127 |        Flop & Latch |
+| LUT6     |   93 |                 LUT |
+| LUT4     |   83 |                 LUT |
+| LUT3     |   44 |                 LUT |
+| LUT5     |   15 |                 LUT |
+| RAMS64E  |    7 |  Distributed Memory |
+| CARRY4   |    6 |          CarryLogic |
 | LUT1     |    2 |                 LUT |
 +----------+------+---------------------+
 

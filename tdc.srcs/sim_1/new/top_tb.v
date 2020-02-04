@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module top_tb#(parameter C_S_AXI_ADDR_WIDTH = 10, C_S_AXI_DATA_WIDTH = 32, INITIAL=46, DELAY=64, READ_MAX=1000, VIRUS=18720, CLK_PERIOD=10)();
+module top_tb#(parameter C_S_AXI_ADDR_WIDTH = 32, C_S_AXI_DATA_WIDTH = 32, CLK_PERIOD=10, READ_MAX=10000)();
 
 // Axi4Lite signals
 reg  S_AXI_ACLK ;
@@ -52,8 +52,7 @@ wire    [C_S_AXI_DATA_WIDTH-1:0]    rdData ;
 reg                                 rd ;
 wire                                rdDone ;
 
-top#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH), .INITIAL(INITIAL), 
-    .DELAY(DELAY), .READ_MAX(READ_MAX), .VIRUS(VIRUS)) top1(
+top#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH)) top1(
     // Axi4Lite Bus
     S_AXI_ACLK,
     S_AXI_ARESETN,

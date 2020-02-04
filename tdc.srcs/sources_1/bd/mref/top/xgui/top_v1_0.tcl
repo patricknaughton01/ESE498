@@ -7,6 +7,7 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "C_S_AXI_DATA_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "DELAY" -parent ${Page_0}
   ipgui::add_param $IPINST -name "INITIAL" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "MEM_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "READ_MAX" -parent ${Page_0}
   ipgui::add_param $IPINST -name "VIRUS" -parent ${Page_0}
   ipgui::add_param $IPINST -name "VIRUS_START" -parent ${Page_0}
@@ -47,6 +48,15 @@ proc update_PARAM_VALUE.INITIAL { PARAM_VALUE.INITIAL } {
 
 proc validate_PARAM_VALUE.INITIAL { PARAM_VALUE.INITIAL } {
 	# Procedure called to validate INITIAL
+	return true
+}
+
+proc update_PARAM_VALUE.MEM_WIDTH { PARAM_VALUE.MEM_WIDTH } {
+	# Procedure called to update MEM_WIDTH when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.MEM_WIDTH { PARAM_VALUE.MEM_WIDTH } {
+	# Procedure called to validate MEM_WIDTH
 	return true
 }
 
@@ -111,5 +121,10 @@ proc update_MODELPARAM_VALUE.VIRUS { MODELPARAM_VALUE.VIRUS PARAM_VALUE.VIRUS } 
 proc update_MODELPARAM_VALUE.VIRUS_START { MODELPARAM_VALUE.VIRUS_START PARAM_VALUE.VIRUS_START } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.VIRUS_START}] ${MODELPARAM_VALUE.VIRUS_START}
+}
+
+proc update_MODELPARAM_VALUE.MEM_WIDTH { MODELPARAM_VALUE.MEM_WIDTH PARAM_VALUE.MEM_WIDTH } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.MEM_WIDTH}] ${MODELPARAM_VALUE.MEM_WIDTH}
 }
 
