@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module top#(parameter C_S_AXI_ADDR_WIDTH = 32, C_S_AXI_DATA_WIDTH = 32, INITIAL=512, DELAY=127, READ_MAX=10000, 
+module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=32, DELAY=63, READ_MAX=10000, 
     VIRUS=5000, VIRUS_START=500, MEM_WIDTH=16)(
     // Axi4Lite Bus
     input       S_AXI_ACLK,
@@ -115,7 +115,7 @@ parameter IDLE=0, READ=1;
 reg [7:0] state, nextState;
 reg [32:0] counterD, counterQ;
 reg [DELAY-1:0] tdcClean;
-reg [5:0] total;
+reg [6:0] total;
 
 integer i;
 always @ * begin
@@ -132,8 +132,8 @@ always @ * begin
         IDLE:begin
             if(rd && rdAddr < (READ_MAX<<2))begin
                 memAddr = rdAddr;
-                rdData = memDo;
-                rdData[C_S_AXI_DATA_WIDTH-1] = 1; 
+                rdData = memDo | (1<<31);
+                //rdData[C_S_AXI_DATA_WIDTH-1] = 1; 
             end else if(wr) begin
                 counterD = 0;
                 nextState = READ;

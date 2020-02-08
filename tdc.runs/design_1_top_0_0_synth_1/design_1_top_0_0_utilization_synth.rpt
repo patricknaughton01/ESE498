@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Sat Feb  1 18:28:08 2020
-| Host         : patricknaughton01 running 64-bit Ubuntu 18.04.3 LTS
+| Date         : Sat Feb  8 11:01:43 2020
+| Host         : patricknaughton01 running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_utilization -file design_1_top_0_0_utilization_synth.rpt -pb design_1_top_0_0_utilization_synth.pb
 | Design       : design_1_top_0_0
 | Device       : 7z020clg484-1
@@ -30,16 +30,16 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 5212 |     0 |     53200 |  9.80 |
-|   LUT as Logic             | 5205 |     0 |     53200 |  9.78 |
-|   LUT as Memory            |    7 |     0 |     17400 |  0.04 |
-|     LUT as Distributed RAM |    7 |     0 |           |       |
+| Slice LUTs*                | 6583 |     0 |     53200 | 12.37 |
+|   LUT as Logic             | 5484 |     0 |     53200 | 10.31 |
+|   LUT as Memory            | 1099 |     0 |     17400 |  6.32 |
+|     LUT as Distributed RAM | 1099 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            |  279 |     0 |    106400 |  0.26 |
-|   Register as Flip Flop    |  152 |     0 |    106400 |  0.14 |
-|   Register as Latch        |  127 |     0 |    106400 |  0.12 |
-| F7 Muxes                   |    0 |     0 |     26600 |  0.00 |
-| F8 Muxes                   |    0 |     0 |     13300 |  0.00 |
+| Slice Registers            |  151 |     0 |    106400 |  0.14 |
+|   Register as Flip Flop    |   88 |     0 |    106400 |  0.08 |
+|   Register as Latch        |   63 |     0 |    106400 |  0.06 |
+| F7 Muxes                   |  546 |     0 |     26600 |  2.05 |
+| F8 Muxes                   |  273 |     0 |     13300 |  2.05 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -57,9 +57,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 127   |          Yes |           - |        Reset |
+| 63    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 152   |          Yes |       Reset |            - |
+| 88    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -148,16 +148,19 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT2     | 5024 |                 LUT |
-| FDRE     |  152 |        Flop & Latch |
-| LDCE     |  127 |        Flop & Latch |
-| LUT6     |   93 |                 LUT |
-| LUT4     |   83 |                 LUT |
-| LUT3     |   44 |                 LUT |
-| LUT5     |   15 |                 LUT |
-| RAMS64E  |    7 |  Distributed Memory |
-| CARRY4   |    6 |          CarryLogic |
-| LUT1     |    2 |                 LUT |
+| LUT2     | 5018 |                 LUT |
+| RAMS64E  | 1092 |  Distributed Memory |
+| MUXF7    |  546 |               MuxFx |
+| MUXF8    |  273 |               MuxFx |
+| LUT1     |  188 |                 LUT |
+| LUT6     |  147 |                 LUT |
+| LUT4     |   98 |                 LUT |
+| FDRE     |   88 |        Flop & Latch |
+| LDCE     |   63 |        Flop & Latch |
+| LUT5     |   38 |                 LUT |
+| LUT3     |   37 |                 LUT |
+| RAMS32   |    7 |  Distributed Memory |
+| CARRY4   |    4 |          CarryLogic |
 +----------+------+---------------------+
 
 

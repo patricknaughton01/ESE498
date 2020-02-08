@@ -24,5 +24,7 @@ module buffer(
     output      out,
     input       in
 );
-(* dont_touch = "true" *)buf(out, in);
+(* dont_touch = "true" *)wire tmp;
+(* dont_touch = "true" *)not(tmp, in);
+(* dont_touch = "true" *)not(out, tmp);
 endmodule

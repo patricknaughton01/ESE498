@@ -20,11 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module RAM#(parameter DEPTH=10000, ADDR_WIDTH=32)(clk, we, a, di, do);
+module RAM#(parameter DEPTH=10000, ADDR_WIDTH=16)(clk, we, a, di, do);
 
     input clk;
     input we;
-    input [5:0] a;
+    input [ADDR_WIDTH-1:0] a;
     input [15:0] di;
     output [15:0] do;
     
@@ -32,9 +32,9 @@ module RAM#(parameter DEPTH=10000, ADDR_WIDTH=32)(clk, we, a, di, do);
     
     always @(posedge clk) begin
         if (we)
-            ram[a] <= di;
+            ram[a>>2] <= di;
     end
     
-    assign do = ram[a];
+    assign do = ram[a>>2];
 
 endmodule

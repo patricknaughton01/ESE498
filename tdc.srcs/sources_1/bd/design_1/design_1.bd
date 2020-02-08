@@ -19,6 +19,7 @@
         "m01_couplers": {}
       },
       "rst_ps7_0_100M": "",
+      "ila_0": "",
       "top_0": ""
     },
     "interface_ports": {
@@ -1041,16 +1042,16 @@
               }
             },
             "interface_nets": {
-              "s00_couplers_to_auto_pc": {
-                "interface_ports": [
-                  "S_AXI",
-                  "auto_pc/S_AXI"
-                ]
-              },
               "auto_pc_to_s00_couplers": {
                 "interface_ports": [
                   "M_AXI",
                   "auto_pc/M_AXI"
+                ]
+              },
+              "s00_couplers_to_auto_pc": {
+                "interface_ports": [
+                  "S_AXI",
+                  "auto_pc/S_AXI"
                 ]
               }
             },
@@ -1179,22 +1180,10 @@
           }
         },
         "interface_nets": {
-          "m00_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
-            ]
-          },
           "m01_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
               "M01_AXI",
               "m01_couplers/M_AXI"
-            ]
-          },
-          "xbar_to_m00_couplers": {
-            "interface_ports": [
-              "xbar/M00_AXI",
-              "m00_couplers/S_AXI"
             ]
           },
           "ps7_0_axi_periph_to_s00_couplers": {
@@ -1203,16 +1192,28 @@
               "s00_couplers/S_AXI"
             ]
           },
+          "s00_couplers_to_xbar": {
+            "interface_ports": [
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
+            ]
+          },
           "xbar_to_m01_couplers": {
             "interface_ports": [
               "xbar/M01_AXI",
               "m01_couplers/S_AXI"
             ]
           },
-          "s00_couplers_to_xbar": {
+          "xbar_to_m00_couplers": {
             "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
+              "xbar/M00_AXI",
+              "m00_couplers/S_AXI"
+            ]
+          },
+          "m00_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M00_AXI",
+              "m00_couplers/M_AXI"
             ]
           }
         },
@@ -1247,6 +1248,10 @@
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "design_1_rst_ps7_0_100M_1"
       },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "design_1_ila_0_0"
+      },
       "top_0": {
         "vlnv": "xilinx.com:module_ref:top:1.0",
         "xci_name": "design_1_top_0_0",
@@ -1278,7 +1283,7 @@
                 "value_src": "constant"
               },
               "ADDR_WIDTH": {
-                "value": "32",
+                "value": "16",
                 "value_src": "auto"
               },
               "AWUSER_WIDTH": {
@@ -1366,7 +1371,7 @@
               "AWADDR": {
                 "physical_name": "S_AXI_AWADDR",
                 "direction": "I",
-                "left": "31",
+                "left": "15",
                 "right": "0"
               },
               "AWVALID": {
@@ -1414,7 +1419,7 @@
               "ARADDR": {
                 "physical_name": "S_AXI_ARADDR",
                 "direction": "I",
-                "left": "31",
+                "left": "15",
                 "right": "0"
               },
               "ARVALID": {
@@ -1491,22 +1496,23 @@
           "processing_system7_0/DDR"
         ]
       },
-      "processing_system7_0_M_AXI_GP0": {
-        "interface_ports": [
-          "processing_system7_0/M_AXI_GP0",
-          "ps7_0_axi_periph/S00_AXI"
-        ]
-      },
       "processing_system7_0_FIXED_IO": {
         "interface_ports": [
           "FIXED_IO",
           "processing_system7_0/FIXED_IO"
         ]
       },
+      "processing_system7_0_M_AXI_GP0": {
+        "interface_ports": [
+          "processing_system7_0/M_AXI_GP0",
+          "ps7_0_axi_periph/S00_AXI"
+        ]
+      },
       "ps7_0_axi_periph_M01_AXI": {
         "interface_ports": [
           "ps7_0_axi_periph/M01_AXI",
-          "top_0/S_AXI"
+          "top_0/S_AXI",
+          "ila_0/SLOT_0_AXI"
         ]
       }
     },
@@ -1520,6 +1526,7 @@
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/ACLK",
           "ps7_0_axi_periph/M01_ACLK",
+          "ila_0/clk",
           "top_0/S_AXI_ACLK"
         ]
       },

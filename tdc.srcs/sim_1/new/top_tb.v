@@ -131,6 +131,11 @@ initial begin
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * (READ_MAX + 10));
+    rd = 1;
+    rdAddr = 'h4;
+    #CLK_PERIOD;
+    rd = 0;
+    #(CLK_PERIOD*10);
     $stop;
 end
 

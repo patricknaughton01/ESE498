@@ -28,7 +28,7 @@ int main() {
 			// Check a flag bit
 			int32_t *addr = peripheral + validRead;
 			value = *addr;
-			if ((value & 0x80000000) != 0) {
+			if ((value & (1<<31)) != 0) {
 				value &= 0xFF;
 				validRead++;
 				xil_printf("%d\n", value);

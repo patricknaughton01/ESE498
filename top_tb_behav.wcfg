@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="15255846fs"></ZoomEndTime>
-      <Cursor1Time time="35095000fs"></Cursor1Time>
+      <ZoomStartTime time="100112200fs"></ZoomStartTime>
+      <ZoomEndTime time="100227401fs"></ZoomEndTime>
+      <Cursor1Time time="100275000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="194"></NameColumnWidth>
-      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+      <ValueColumnWidth column_width="162"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="25" />
+   <WVObjectSize size="32" />
    <wvobject type="logic" fp_name="/top_tb/S_AXI_ACLK">
       <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
       <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
@@ -91,8 +91,8 @@
       <obj_property name="ObjectShortName">virusEn</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/top_tb/top1/virusOut">
-      <obj_property name="ElementShortName">virusOut[6999:0]</obj_property>
-      <obj_property name="ObjectShortName">virusOut[6999:0]</obj_property>
+      <obj_property name="ElementShortName">virusOut[4999:0]</obj_property>
+      <obj_property name="ObjectShortName">virusOut[4999:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/top_tb/top1/tdc1/delay">
       <obj_property name="ElementShortName">delay[126:0]</obj_property>
@@ -122,5 +122,33 @@
    <wvobject type="array" fp_name="/top_tb/top1/memDo">
       <obj_property name="ElementShortName">memDo[15:0]</obj_property>
       <obj_property name="ObjectShortName">memDo[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider26" type="divider">
+      <obj_property name="label">Supporter Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/AxiSupporter1/wrAddr">
+      <obj_property name="ElementShortName">wrAddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wrAddr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/AxiSupporter1/wrData">
+      <obj_property name="ElementShortName">wrData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wrData[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top1/AxiSupporter1/wr">
+      <obj_property name="ElementShortName">wr</obj_property>
+      <obj_property name="ObjectShortName">wr</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/AxiSupporter1/rdAddr">
+      <obj_property name="ElementShortName">rdAddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rdAddr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/AxiSupporter1/rdData">
+      <obj_property name="ElementShortName">rdData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rdData[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top1/AxiSupporter1/rd">
+      <obj_property name="ElementShortName">rd</obj_property>
+      <obj_property name="ObjectShortName">rd</obj_property>
    </wvobject>
 </wave_config>
