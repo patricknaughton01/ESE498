@@ -4,20 +4,18 @@
 #include <stdio.h>
 #include "platform.h"
 #include "xil_printf.h"
+#include "xparameters.h"
+#include "xuartps.h"
 #include "monitor.h"
 
 void makeMeasurement();
 
 int main() {
 	init_platform();
-	int i = 0;
 	while(1){
-		fflush(stdin);
-		getchar();
-		getchar();
-		fflush(stdin);
+		XUartPs_RecvByte(XPAR_PS7_UART_1_BASEADDR);
 		makeMeasurement();
-		xil_printf("%d\n", ++i);
+		//xil_printf("%d\n", ++i);
 	}
 
 
@@ -36,11 +34,14 @@ void makeMeasurement(){
 	// How long to wait between streams of measurements in ns
 	const long delay = 100000000;
 	// How many times to read from the monitor
-	const int32_t numReads = 1000;
+	const int32_t numReads = 10000;
 	*read_addr = numReads;
-	for(int i = 1000; i>=1000; i-=100){
-		*freq_addr = i;	// Set the frequency of the virus
-		*rec_addr = 0;	// Start recording
+	int32_t freq = 5000;
+	int32_t numFreq = 4;
+	for(int i = 0; i<1; i++){
+		*freq_addr = freq;	// Set the frequency of the virus
+		freq *= 10;			// Log freq response
+		*rec_addr = 0;		// Start recording
 
 		// Read from monitor
 		validRead = 0;

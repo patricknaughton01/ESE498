@@ -50,28 +50,28 @@ def main():
 	
 	timestamp = datetime.datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
 	filename = prefix + "/" + args.o + "_" + timestamp + ".txt"
-	with open(filename, "w") as out_file:
-			try:
-				if not s.is_open:
-					s.open()
-				# C program on the Zynq won't start until we send it some byte
-				s.write(b'c')
-				values_read = 0
-				print("Collecting data")
-				print("Press Ctrl-C to stop and save current data")
-				while True:
-					print("reading")
-					#value = s.read_until(b'\n').decode("utf-8")
-					value = s.read()
-					print("read")
-					out_file.write(value)
-					values_read += 1
-					sys.stdout.write("\033[K")
-					print("\rRead {} values".format(values_read), end="")
-			except KeyboardInterrupt:
-				print("Saving data")
-				s.close()
-		
+	out_file = open(filename, "w")
+	values_read = 0
+	try:
+		if not s.is_open:
+			s.open()
+		# C program on the Zynq won't start until we send it some byte
+		s.write(b'c')
+		print("Collecting data")
+		print("Press Ctrl-C to stop and save current data")
+		while True:
+			value = s.read_until(b'\n').decode("utf-8")
+			out_file.write(value)
+			values_read += 1
+			sys.stdout.write("\033[K")
+			print("\rRead {} values".format(values_read), end="")
+	except KeyboardInterrupt:
+		if values_read > 0:
+			print("\nSaving data")
+			s.close()
+		else:
+			print("\nNothing read, deleting file")
+
 
 if __name__ == "__main__":
 	main()
