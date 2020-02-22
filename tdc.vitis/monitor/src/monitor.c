@@ -37,32 +37,31 @@ void makeMeasurement(){
 	// How many times to read from the monitor
 	const int32_t numReads = 10000;
 	*read_addr = numReads;
-	int32_t freq = 100;
-	for(int i = 2; i<15; i++){
-		*virus_addr = (1<<i) - 1;	// Generate a bitmask of i 1's
-		*freq_addr = freq;	// Set the frequency of the virus
-		*rec_addr = 1;		// Start recording step response
+	int32_t freq = 500;
 
-		// Read from monitor
-		validRead = 0;
-		while(validRead < numReads) {
-			// Check a flag bit
-			int32_t *addr = peripheral + validRead;
-			value = *addr;
-			if ((value & (1<<31)) != 0) {
-				value &= 0xFF;
-				xil_printf("%d %d %d\n", i, validRead, value);
-				validRead++;
-			}
+	*virus_addr = (1<<14) - 1;	// Generate a bitmask of all 1's
+	*freq_addr = freq;	// Set the frequency of the virus
+	*rec_addr = 2;		// Start recording ramp response
+
+	// Read from monitor
+	validRead = 0;
+	while(validRead < numReads) {
+		// Check a flag bit
+		int32_t *addr = peripheral + validRead;
+		value = *addr;
+		if ((value & (1<<31)) != 0) {
+			value &= 0xFF;
+			xil_printf("%d %d %d\n", 0, validRead, value);
+			validRead++;
 		}
+	}
 
-		// Wait for time
-		XTime_GetTime(&end);
-		end += (delay * COUNTS_PER_SECOND) / 1000000000;
+	// Wait for time
+	XTime_GetTime(&end);
+	end += (delay * COUNTS_PER_SECOND) / 1000000000;
 
+	XTime_GetTime(&ts);
+	while (ts < end) {
 		XTime_GetTime(&ts);
-		while (ts < end) {
-			XTime_GetTime(&ts);
-		}
 	}
 }

@@ -179,7 +179,7 @@ always @ * begin
             end else begin
                 virusEnD = 0;
             end
-        
+            
             if(counterQ < maxQ)begin
                 tdcClean[0] = tdcOut[0];
                 // Clean tdcOut to eliminate glitches
@@ -207,6 +207,7 @@ always @ * begin
             end else begin
                 virusCounterD = virusCounterQ + 1;
             end
+            
             if(counterQ < maxQ)begin
                 tdcClean[0] = tdcOut[0];
                 // Clean tdcOut to eliminate glitches
@@ -229,7 +230,40 @@ always @ * begin
             end
         end
         READ_RAMP:begin
-            nextState = IDLE;
+            if(virusCounterQ >= freqQ-1)begin
+                virusCounterD = 0;
+                // If we haven't reached the final mask, add another 1 (turn another group on)
+                if(virusEnQ < virusMaskQ)begin
+                    if (virusEnQ == 0)begin
+                        virusEnD = 1;
+                    end else begin
+                        virusEnD = (virusEnQ << 1) | 1;
+                    end
+                end
+            end else begin
+                virusCounterD = virusCounterQ + 1;
+            end
+            
+            if(counterQ < maxQ)begin
+                tdcClean[0] = tdcOut[0];
+                // Clean tdcOut to eliminate glitches
+                for(i = 1; i < DELAY; i = i + 1)begin
+                    tdcClean[i] = tdcOut[i-1] && tdcOut[i];
+                end
+                total = 0;
+                // Find top bit of tdc
+                for(i = 0; i < DELAY; i = i + 1)begin
+                    total = total + tdcClean[i];
+                end
+                // Write to the memory
+                memWe = 1;
+                memAddr = counterQ << 2;
+                memDi = total;
+                counterD = counterQ + 1;
+            end else begin
+                counterD = 0;
+                nextState = IDLE;
+            end
         end
     endcase
 end

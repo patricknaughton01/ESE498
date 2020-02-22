@@ -150,7 +150,7 @@ initial begin
     // Start the measurement
     wr = 1;
     wrAddr = 'hFFFC;
-    wrData = 1;
+    wrData = 2;
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * 5);
