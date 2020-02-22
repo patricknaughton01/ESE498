@@ -136,14 +136,21 @@ initial begin
     // Write the frequency of the virus
     wr = 1;
     wrAddr = 'hFFF8;
-    wrData = 100;
+    wrData = 50;
+    #CLK_PERIOD;
+    wr = 0;
+    #(CLK_PERIOD * 5);
+    // Write the number of virus groups to start
+    wr = 1;
+    wrAddr = 'hFFF0;
+    wrData = 'h00FF;
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * 5);
     // Start the measurement
     wr = 1;
     wrAddr = 'hFFFC;
-    wrData = 0;
+    wrData = 1;
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * 5);

@@ -31,17 +31,17 @@ void makeMeasurement(){
 	int32_t * const rec_addr = (int32_t*)0x43C0FFFC;
 	int32_t * const freq_addr = (int32_t*)0x43C0FFF8;
 	int32_t * const read_addr = (int32_t*)0x43C0FFF4;
+	int32_t * const virus_addr = (int32_t*)0x43C0FFF0;
 	// How long to wait between streams of measurements in ns
 	const long delay = 100000000;
 	// How many times to read from the monitor
 	const int32_t numReads = 10000;
 	*read_addr = numReads;
-	int32_t freq = 5000;
-	int32_t numFreq = 4;
-	for(int i = 0; i<1; i++){
+	int32_t freq = 100;
+	for(int i = 2; i<15; i++){
+		*virus_addr = (1<<i) - 1;	// Generate a bitmask of i 1's
 		*freq_addr = freq;	// Set the frequency of the virus
-		freq *= 10;			// Log freq response
-		*rec_addr = 0;		// Start recording
+		*rec_addr = 1;		// Start recording step response
 
 		// Read from monitor
 		validRead = 0;

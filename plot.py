@@ -29,7 +29,7 @@ def main():
 					if int(f) in traces:
 						plt.plot(traces[int(f)], label="10^" + str(f))
 			elif args.f is not None and int(args.f) in traces:
-				plt.plot(traces[int(args.f)], label="10^" + str(freq))
+				plt.plot(traces[int(args.f)], label="10^" + args.f)
 			else:
 				# If they didn't display 
 				for freq in traces:
