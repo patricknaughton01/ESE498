@@ -37,11 +37,11 @@ void makeMeasurement(){
 	// How many times to read from the monitor
 	const int32_t numReads = 10000;
 	*read_addr = numReads;
-	int32_t freq = 500;
+	int32_t freq = 1;
 
-	*virus_addr = (1<<14) - 1;	// Generate a bitmask of all 1's
+	*virus_addr = (1<<12) - 1;	// Generate a bitmask of 12 1's
 	*freq_addr = freq;	// Set the frequency of the virus
-	*rec_addr = 2;		// Start recording ramp response
+	*rec_addr = 0;		// Start recording square response
 
 	// Read from monitor
 	validRead = 0;
@@ -51,7 +51,7 @@ void makeMeasurement(){
 		value = *addr;
 		if ((value & (1<<31)) != 0) {
 			value &= 0xFF;
-			xil_printf("%d %d %d\n", 0, validRead, value);
+			xil_printf("%d %d %d\n", 1, validRead, value);
 			validRead++;
 		}
 	}
