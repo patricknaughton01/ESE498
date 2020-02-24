@@ -40,7 +40,7 @@ generate
     for(k = 0; k < DELAY/4; k = k + 1)begin
          (* dont_touch = "true" *) CARRY4 delay_k (
             .DI(delay_bufs[k*4+3:k*4]),
-            .S('b0000),
+            .S('b1111),
             .CYINIT('b0),
             .CI('b0),
             .CO(delay_bufs[k*4+4:k*4+1])
