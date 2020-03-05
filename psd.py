@@ -1,9 +1,10 @@
 import argparse
 import sys
 import matplotlib.pyplot as plt
+import numpy as np
 
 def main():
-	parser = argparse.ArgumentParser(description='Plot TDC values')
+	parser = argparse.ArgumentParser(description='Plot Fourier transform of TDC values')
 
 	parser.add_argument("filename", type=str, help="filename to read from")
 	parser.add_argument("-f", type=str, help='"freq" to display')
@@ -23,20 +24,24 @@ def main():
 					traces[freq].append(count)
 				else:
 					traces[freq] = [count]
+			p = {k:(np.absolute(np.fft.fft(np.array(v)))[1:len(v)//2])**2 for (k, v) in traces.items() }
+			total = {k:sum(v) for (k, v) in p.items()}
+			print("Total Powers: {}".format(total))
+			
 			if args.f is not None and "," in args.f:
 				to_plot = args.f.split(",")
 				for f in to_plot:
 					if int(f) in traces:
-						plt.plot(traces[int(f)], label=str(f))
+						plt.plot(p[int(f)], label=str(f))
 			elif args.f is not None and int(args.f) in traces:
-				plt.plot(traces[int(args.f)], label=args.f)
+				plt.plot(p[int(args.f)], label=args.f)
 			else:
 				# If they didn't display 
 				for freq in traces:
-					plt.plot(traces[freq], label=str(freq))
+				    plt.plot(p[freq], label=str(freq))
 			plt.legend(loc='upper right', shadow=True)
-			plt.xlabel('Time (clock ticks)')
-			plt.ylabel('Delay line count')
+			plt.xlabel('Frequency (clock ticks/s)')
+			plt.ylabel('Power')
 			plt.show()
 	except IOError:
 		print("Couldn't open file {}".format(args.filename))
