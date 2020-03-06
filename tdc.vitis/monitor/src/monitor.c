@@ -38,11 +38,11 @@ void makeMeasurement(){
 	// How many times to read from the monitor
 	const int32_t numReads = 10000;
 	// How many frequencies to test
-	const int32_t num_freq = 10;
+	const int32_t num_freq = 20;
 	// Factor to multiply the period value by
-	const int32_t period_mul = 2;
+	const double period_mul = 1.4;
 	*read_addr = numReads;
-	int32_t period = 1;
+	int32_t period = 2;
 	*virus_addr = (1<<10) - 1;	// Generate a bitmask of 12 1's
 	for(int i = 0; i<num_freq; i++){
 		*freq_addr = period;	// Set the frequency of the virus
@@ -61,6 +61,6 @@ void makeMeasurement(){
 				validRead++;
 			}
 		}
-		period *= period_mul;	// Change the period on the next run
+		period = (int32_t)((period * period_mul) + 1);	// Change the period on the next run
 	}
 }

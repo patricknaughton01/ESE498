@@ -43,12 +43,12 @@ def main():
                 s_r.sort(key=lambda i:i[0])
                 s_r_x = np.array([i[0] for i in s_r])
                 s_r_y = np.array([i[1] for i in s_r])
-                responses.append((s_r_x, s_r_y))
+                responses.append((s_r_x, s_r_y, get_prefix(path)))
         except IOError:
             print("Couldn't open file {}".format(args.filename))
             sys.exit()
     for r in responses:
-        plt.plot(r[0], r[1])
+        plt.plot(r[0], r[1], label=r[2])
     if args.x:
         plt.xscale("log")
     plt.xlabel("Frequency (Hz)")
@@ -58,7 +58,12 @@ def main():
     plt.ylabel(y_label)
     plt.title(
         "Frequency power response ({})".format(args.title))
+    plt.legend(loc='upper right', shadow=True)
     plt.show()
+
+def get_prefix(path):
+    filename = path.split("/")[-1]
+    return filename[0]
 
 if __name__ == "__main__":
     main()
