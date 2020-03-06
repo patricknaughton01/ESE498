@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Fri Feb 21 21:12:57 2020
+// Date        : Fri Mar  6 09:56:04 2020
 // Host        : patricknaughton01 running 64-bit Ubuntu 18.04.4 LTS
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_top_0_0_sim_netlist.v
@@ -8040,444 +8040,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__30
 endmodule
 
 (* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__31
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__32
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__33
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__34
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__35
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__36
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__37
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__38
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__39
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__4
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__40
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__41
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__42
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__43
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__44
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__45
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__46
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__47
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__48
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__49
    (out,
     in);
   output out;
@@ -8523,467 +8086,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__5
 endmodule
 
 (* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__50
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__51
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__52
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__53
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__54
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__55
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__56
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__57
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__58
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__59
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__6
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__60
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__61
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__62
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__63
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__64
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__65
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__66
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__67
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__68
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__69
    (out,
     in);
   output out;
@@ -9029,236 +8132,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__7
 endmodule
 
 (* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__70
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__71
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__72
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__73
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__74
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__75
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__76
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__77
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__78
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__79
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__8
    (out,
     in);
@@ -9282,306 +8155,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__8
 endmodule
 
 (* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__80
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__81
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__82
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__83
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__84
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__85
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__86
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__87
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__88
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__89
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__9
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__90
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__91
-   (out,
-    in);
-  output out;
-  input in;
-
-  wire in;
-  wire out;
-  (* DONT_TOUCH *) wire tmp;
-
-  LUT1 #(
-    .INIT(2'h1)) 
-    out_INST_0
-       (.I0(tmp),
-        .O(out));
-  LUT1 #(
-    .INIT(2'h1)) 
-    tmp_inferred_i_1
-       (.I0(in),
-        .O(tmp));
-endmodule
-
-(* ORIG_REF_NAME = "buffer" *) 
-module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__92
    (out,
     in);
   output out;
@@ -157199,7 +155773,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_tdc
   wire \FSM_onehot_state_reg[2]_2 ;
   wire [0:0]SR;
   wire S_AXI_ARESETN;
-  (* DONT_TOUCH *) wire [62:0]delay_bufs;
+  (* DONT_TOUCH *) wire [63:0]delay_bufs;
   (* DONT_TOUCH *) wire [31:0]initial_bufs;
   wire [62:0]latches;
   wire [1:0]memDi;
@@ -157303,6 +155877,21 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_tdc
   wire ram_reg_0_255_4_4_i_8_n_0;
   wire ram_reg_0_255_4_4_i_9_n_0;
   wire [62:0]tdcOut;
+  wire [3:0]\NLW_genblk2[0].delay_k_O_UNCONNECTED ;
+  wire [3:0]\NLW_genblk2[10].delay_k_O_UNCONNECTED ;
+  wire [3:0]\NLW_genblk2[11].delay_k_O_UNCONNECTED ;
+  wire [3:0]\NLW_genblk2[12].delay_k_O_UNCONNECTED ;
+  wire [3:0]\NLW_genblk2[13].delay_k_O_UNCONNECTED ;
+  wire [3:0]\NLW_genblk2[14].delay_k_O_UNCONNECTED ;
+  wire [3:0]\NLW_genblk2[1].delay_k_O_UNCONNECTED ;
+  wire [3:0]\NLW_genblk2[2].delay_k_O_UNCONNECTED ;
+  wire [3:0]\NLW_genblk2[3].delay_k_O_UNCONNECTED ;
+  wire [3:0]\NLW_genblk2[4].delay_k_O_UNCONNECTED ;
+  wire [3:0]\NLW_genblk2[5].delay_k_O_UNCONNECTED ;
+  wire [3:0]\NLW_genblk2[6].delay_k_O_UNCONNECTED ;
+  wire [3:0]\NLW_genblk2[7].delay_k_O_UNCONNECTED ;
+  wire [3:0]\NLW_genblk2[8].delay_k_O_UNCONNECTED ;
+  wire [3:0]\NLW_genblk2[9].delay_k_O_UNCONNECTED ;
 
   assign initial_bufs[0] = S_AXI_ACLK;
   LUT1 #(
@@ -157781,7 +156370,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_tdc
        (.in(initial_bufs[29]),
         .out(initial_bufs[30]));
   (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__31 \genblk1[31].init 
+  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer \genblk1[31].init 
        (.in(initial_bufs[30]),
         .out(initial_bufs[31]));
   (* DONT_TOUCH *) 
@@ -157812,254 +156401,156 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_tdc
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__9 \genblk1[9].init 
        (.in(initial_bufs[8]),
         .out(initial_bufs[9]));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__41 \genblk2[10].delay 
-       (.in(delay_bufs[9]),
-        .out(delay_bufs[10]));
+  CARRY4 \genblk2[0].delay_k 
+       (.CI(1'b0),
+        .CO(delay_bufs[4:1]),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,delay_bufs[0]}),
+        .O(\NLW_genblk2[0].delay_k_O_UNCONNECTED [3:0]),
+        .S({1'b1,1'b1,1'b1,1'b0}));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__42 \genblk2[11].delay 
-       (.in(delay_bufs[10]),
-        .out(delay_bufs[11]));
+  CARRY4 \genblk2[10].delay_k 
+       (.CI(1'b0),
+        .CO(delay_bufs[44:41]),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,delay_bufs[40]}),
+        .O(\NLW_genblk2[10].delay_k_O_UNCONNECTED [3:0]),
+        .S({1'b1,1'b1,1'b1,1'b0}));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__43 \genblk2[12].delay 
-       (.in(delay_bufs[11]),
-        .out(delay_bufs[12]));
+  CARRY4 \genblk2[11].delay_k 
+       (.CI(1'b0),
+        .CO(delay_bufs[48:45]),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,delay_bufs[44]}),
+        .O(\NLW_genblk2[11].delay_k_O_UNCONNECTED [3:0]),
+        .S({1'b1,1'b1,1'b1,1'b0}));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__44 \genblk2[13].delay 
-       (.in(delay_bufs[12]),
-        .out(delay_bufs[13]));
+  CARRY4 \genblk2[12].delay_k 
+       (.CI(1'b0),
+        .CO(delay_bufs[52:49]),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,delay_bufs[48]}),
+        .O(\NLW_genblk2[12].delay_k_O_UNCONNECTED [3:0]),
+        .S({1'b1,1'b1,1'b1,1'b0}));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__45 \genblk2[14].delay 
-       (.in(delay_bufs[13]),
-        .out(delay_bufs[14]));
+  CARRY4 \genblk2[13].delay_k 
+       (.CI(1'b0),
+        .CO(delay_bufs[56:53]),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,delay_bufs[52]}),
+        .O(\NLW_genblk2[13].delay_k_O_UNCONNECTED [3:0]),
+        .S({1'b1,1'b1,1'b1,1'b0}));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__46 \genblk2[15].delay 
-       (.in(delay_bufs[14]),
-        .out(delay_bufs[15]));
+  CARRY4 \genblk2[14].delay_k 
+       (.CI(1'b0),
+        .CO(delay_bufs[60:57]),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,delay_bufs[56]}),
+        .O(\NLW_genblk2[14].delay_k_O_UNCONNECTED [3:0]),
+        .S({1'b1,1'b1,1'b1,1'b0}));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__47 \genblk2[16].delay 
-       (.in(delay_bufs[15]),
-        .out(delay_bufs[16]));
+  CARRY4 \genblk2[1].delay_k 
+       (.CI(1'b0),
+        .CO(delay_bufs[8:5]),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,delay_bufs[4]}),
+        .O(\NLW_genblk2[1].delay_k_O_UNCONNECTED [3:0]),
+        .S({1'b1,1'b1,1'b1,1'b0}));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__48 \genblk2[17].delay 
-       (.in(delay_bufs[16]),
-        .out(delay_bufs[17]));
+  CARRY4 \genblk2[2].delay_k 
+       (.CI(1'b0),
+        .CO(delay_bufs[12:9]),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,delay_bufs[8]}),
+        .O(\NLW_genblk2[2].delay_k_O_UNCONNECTED [3:0]),
+        .S({1'b1,1'b1,1'b1,1'b0}));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__49 \genblk2[18].delay 
-       (.in(delay_bufs[17]),
-        .out(delay_bufs[18]));
+  CARRY4 \genblk2[3].delay_k 
+       (.CI(1'b0),
+        .CO(delay_bufs[16:13]),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,delay_bufs[12]}),
+        .O(\NLW_genblk2[3].delay_k_O_UNCONNECTED [3:0]),
+        .S({1'b1,1'b1,1'b1,1'b0}));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__50 \genblk2[19].delay 
-       (.in(delay_bufs[18]),
-        .out(delay_bufs[19]));
+  CARRY4 \genblk2[4].delay_k 
+       (.CI(1'b0),
+        .CO(delay_bufs[20:17]),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,delay_bufs[16]}),
+        .O(\NLW_genblk2[4].delay_k_O_UNCONNECTED [3:0]),
+        .S({1'b1,1'b1,1'b1,1'b0}));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__32 \genblk2[1].delay 
-       (.in(delay_bufs[0]),
-        .out(delay_bufs[1]));
+  CARRY4 \genblk2[5].delay_k 
+       (.CI(1'b0),
+        .CO(delay_bufs[24:21]),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,delay_bufs[20]}),
+        .O(\NLW_genblk2[5].delay_k_O_UNCONNECTED [3:0]),
+        .S({1'b1,1'b1,1'b1,1'b0}));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__51 \genblk2[20].delay 
-       (.in(delay_bufs[19]),
-        .out(delay_bufs[20]));
+  CARRY4 \genblk2[6].delay_k 
+       (.CI(1'b0),
+        .CO(delay_bufs[28:25]),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,delay_bufs[24]}),
+        .O(\NLW_genblk2[6].delay_k_O_UNCONNECTED [3:0]),
+        .S({1'b1,1'b1,1'b1,1'b0}));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__52 \genblk2[21].delay 
-       (.in(delay_bufs[20]),
-        .out(delay_bufs[21]));
+  CARRY4 \genblk2[7].delay_k 
+       (.CI(1'b0),
+        .CO(delay_bufs[32:29]),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,delay_bufs[28]}),
+        .O(\NLW_genblk2[7].delay_k_O_UNCONNECTED [3:0]),
+        .S({1'b1,1'b1,1'b1,1'b0}));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__53 \genblk2[22].delay 
-       (.in(delay_bufs[21]),
-        .out(delay_bufs[22]));
+  CARRY4 \genblk2[8].delay_k 
+       (.CI(1'b0),
+        .CO(delay_bufs[36:33]),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,delay_bufs[32]}),
+        .O(\NLW_genblk2[8].delay_k_O_UNCONNECTED [3:0]),
+        .S({1'b1,1'b1,1'b1,1'b0}));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__54 \genblk2[23].delay 
-       (.in(delay_bufs[22]),
-        .out(delay_bufs[23]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__55 \genblk2[24].delay 
-       (.in(delay_bufs[23]),
-        .out(delay_bufs[24]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__56 \genblk2[25].delay 
-       (.in(delay_bufs[24]),
-        .out(delay_bufs[25]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__57 \genblk2[26].delay 
-       (.in(delay_bufs[25]),
-        .out(delay_bufs[26]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__58 \genblk2[27].delay 
-       (.in(delay_bufs[26]),
-        .out(delay_bufs[27]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__59 \genblk2[28].delay 
-       (.in(delay_bufs[27]),
-        .out(delay_bufs[28]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__60 \genblk2[29].delay 
-       (.in(delay_bufs[28]),
-        .out(delay_bufs[29]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__33 \genblk2[2].delay 
-       (.in(delay_bufs[1]),
-        .out(delay_bufs[2]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__61 \genblk2[30].delay 
-       (.in(delay_bufs[29]),
-        .out(delay_bufs[30]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__62 \genblk2[31].delay 
-       (.in(delay_bufs[30]),
-        .out(delay_bufs[31]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__63 \genblk2[32].delay 
-       (.in(delay_bufs[31]),
-        .out(delay_bufs[32]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__64 \genblk2[33].delay 
-       (.in(delay_bufs[32]),
-        .out(delay_bufs[33]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__65 \genblk2[34].delay 
-       (.in(delay_bufs[33]),
-        .out(delay_bufs[34]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__66 \genblk2[35].delay 
-       (.in(delay_bufs[34]),
-        .out(delay_bufs[35]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__67 \genblk2[36].delay 
-       (.in(delay_bufs[35]),
-        .out(delay_bufs[36]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__68 \genblk2[37].delay 
-       (.in(delay_bufs[36]),
-        .out(delay_bufs[37]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__69 \genblk2[38].delay 
-       (.in(delay_bufs[37]),
-        .out(delay_bufs[38]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__70 \genblk2[39].delay 
-       (.in(delay_bufs[38]),
-        .out(delay_bufs[39]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__34 \genblk2[3].delay 
-       (.in(delay_bufs[2]),
-        .out(delay_bufs[3]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__71 \genblk2[40].delay 
-       (.in(delay_bufs[39]),
-        .out(delay_bufs[40]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__72 \genblk2[41].delay 
-       (.in(delay_bufs[40]),
-        .out(delay_bufs[41]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__73 \genblk2[42].delay 
-       (.in(delay_bufs[41]),
-        .out(delay_bufs[42]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__74 \genblk2[43].delay 
-       (.in(delay_bufs[42]),
-        .out(delay_bufs[43]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__75 \genblk2[44].delay 
-       (.in(delay_bufs[43]),
-        .out(delay_bufs[44]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__76 \genblk2[45].delay 
-       (.in(delay_bufs[44]),
-        .out(delay_bufs[45]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__77 \genblk2[46].delay 
-       (.in(delay_bufs[45]),
-        .out(delay_bufs[46]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__78 \genblk2[47].delay 
-       (.in(delay_bufs[46]),
-        .out(delay_bufs[47]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__79 \genblk2[48].delay 
-       (.in(delay_bufs[47]),
-        .out(delay_bufs[48]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__80 \genblk2[49].delay 
-       (.in(delay_bufs[48]),
-        .out(delay_bufs[49]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__35 \genblk2[4].delay 
-       (.in(delay_bufs[3]),
-        .out(delay_bufs[4]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__81 \genblk2[50].delay 
-       (.in(delay_bufs[49]),
-        .out(delay_bufs[50]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__82 \genblk2[51].delay 
-       (.in(delay_bufs[50]),
-        .out(delay_bufs[51]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__83 \genblk2[52].delay 
-       (.in(delay_bufs[51]),
-        .out(delay_bufs[52]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__84 \genblk2[53].delay 
-       (.in(delay_bufs[52]),
-        .out(delay_bufs[53]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__85 \genblk2[54].delay 
-       (.in(delay_bufs[53]),
-        .out(delay_bufs[54]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__86 \genblk2[55].delay 
-       (.in(delay_bufs[54]),
-        .out(delay_bufs[55]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__87 \genblk2[56].delay 
-       (.in(delay_bufs[55]),
-        .out(delay_bufs[56]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__88 \genblk2[57].delay 
-       (.in(delay_bufs[56]),
-        .out(delay_bufs[57]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__89 \genblk2[58].delay 
-       (.in(delay_bufs[57]),
-        .out(delay_bufs[58]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__90 \genblk2[59].delay 
-       (.in(delay_bufs[58]),
-        .out(delay_bufs[59]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__36 \genblk2[5].delay 
-       (.in(delay_bufs[4]),
-        .out(delay_bufs[5]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__91 \genblk2[60].delay 
-       (.in(delay_bufs[59]),
-        .out(delay_bufs[60]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__92 \genblk2[61].delay 
-       (.in(delay_bufs[60]),
-        .out(delay_bufs[61]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer \genblk2[62].delay 
-       (.in(delay_bufs[61]),
-        .out(delay_bufs[62]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__37 \genblk2[6].delay 
-       (.in(delay_bufs[5]),
-        .out(delay_bufs[6]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__38 \genblk2[7].delay 
-       (.in(delay_bufs[6]),
-        .out(delay_bufs[7]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__39 \genblk2[8].delay 
-       (.in(delay_bufs[7]),
-        .out(delay_bufs[8]));
-  (* DONT_TOUCH *) 
-  decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_buffer__40 \genblk2[9].delay 
-       (.in(delay_bufs[8]),
-        .out(delay_bufs[9]));
+  CARRY4 \genblk2[9].delay_k 
+       (.CI(1'b0),
+        .CO(delay_bufs[40:37]),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,delay_bufs[36]}),
+        .O(\NLW_genblk2[9].delay_k_O_UNCONNECTED [3:0]),
+        .S({1'b1,1'b1,1'b1,1'b0}));
+  LUT1 #(
+    .INIT(2'h2)) 
+    i_0
+       (.I0(1'b0),
+        .O(delay_bufs[63]));
+  LUT1 #(
+    .INIT(2'h2)) 
+    i_1
+       (.I0(1'b0),
+        .O(delay_bufs[62]));
+  LUT1 #(
+    .INIT(2'h2)) 
+    i_2
+       (.I0(1'b0),
+        .O(delay_bufs[61]));
   LUT1 #(
     .INIT(2'h2)) 
     initial_bufs_inst

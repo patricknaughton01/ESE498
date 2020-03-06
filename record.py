@@ -48,6 +48,10 @@ def main():
 			sys.exit()
 	assert (s is not None), "Couldn't open a serial port"
 	
+	# Clear the input buffer so that we read cleanly
+	while(s.in_waiting > 0):
+	    s.reset_input_buffer()
+	
 	timestamp = datetime.datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
 	filename = prefix + "/" + args.o + "_" + timestamp + ".txt"
 	out_file = open(filename, "w")
