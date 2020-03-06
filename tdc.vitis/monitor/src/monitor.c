@@ -15,8 +15,10 @@ void makeMeasurement();
 int main() {
 	init_platform();
 	while(1){
-		XUartPs_RecvByte(XPAR_PS7_UART_1_BASEADDR);
-		makeMeasurement();
+		char go = XUartPs_RecvByte(XPAR_PS7_UART_1_BASEADDR);
+		if(go == 'c'){
+			makeMeasurement();
+		}
 		//xil_printf("%d\n", ++i);
 	}
 
@@ -44,7 +46,6 @@ void makeMeasurement(){
 	*virus_addr = (1<<10) - 1;	// Generate a bitmask of 12 1's
 	for(int i = 0; i<num_freq; i++){
 		*freq_addr = period;	// Set the frequency of the virus
-		period *= period_mul;	// Change the period on the next run
 		*rec_addr = 0;			// Start recording square response
 
 		// Read from monitor
@@ -60,5 +61,6 @@ void makeMeasurement(){
 				validRead++;
 			}
 		}
+		period *= period_mul;	// Change the period on the next run
 	}
 }
