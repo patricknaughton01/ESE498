@@ -1,4 +1,5 @@
 import argparse
+import os
 
 parser = argparse.ArgumentParser(
     description="Automatically generate constraints to allow combo loops"
@@ -10,7 +11,11 @@ parser.add_argument("s", type=int, help="Size of each group")
 
 args = parser.parse_args()
 
-path = "tdc.srcs/constrs_1/new/loops.xdc"
+prefix = "tdc.srcs/constrs_1/new/"
+path = prefix + "loops.xdc"
+
+if not os.path.exists(prefix):
+    os.makedirs(prefix)
 
 with open(path, "w") as f:
     for i in range(args.g):
