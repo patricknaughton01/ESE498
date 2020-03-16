@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 01/25/2020 12:40:09 PM
+// Create Date: 02/21/2020 01:12:33 PM
 // Design Name: 
 // Module Name: virus
 // Project Name: 
@@ -20,16 +20,16 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module virus#(parameter SIZE=1024)(
-    (* dont_touch = "true" *)output[SIZE-1:0]    out,
-    input               enable
+module virus#(parameter NUM=16, SIZE=512)(
+    output  wire[(NUM*SIZE)-1:0]    out,
+    input   wire[NUM-1:0]           enable
 );
 
 genvar k;
 generate
-    for (k = 0; k<SIZE; k = k + 1)begin
-        (* dont_touch="true" *)ro ringOsc(out[k], enable);
+    for(k = 0; k < NUM; k = k + 1)begin
+        virus_group#(.SIZE(SIZE)) vg(out[((NUM-k)*SIZE) - 1:(NUM-k-1)*SIZE], enable[k]);
     end
-endgenerate
+endgenerate;
 
 endmodule

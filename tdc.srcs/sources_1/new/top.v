@@ -173,7 +173,7 @@ always @ * begin
                         virusMaskD[C_S_AXI_DATA_WIDTH-1:0] = wrData;
                     end else if (wrAddr[3:2] == 1) begin
                         virusMaskD[2*C_S_AXI_DATA_WIDTH-1:C_S_AXI_DATA_WIDTH] = wrData;
-                    end else if (wrAddr[3:2] == 1) begin
+                    end else if (wrAddr[3:2] == 2) begin
                         virusMaskD[3*C_S_AXI_DATA_WIDTH-1:2*C_S_AXI_DATA_WIDTH] = wrData;
                     end else begin
                         virusMaskD[4*C_S_AXI_DATA_WIDTH-1:3*C_S_AXI_DATA_WIDTH] = wrData;

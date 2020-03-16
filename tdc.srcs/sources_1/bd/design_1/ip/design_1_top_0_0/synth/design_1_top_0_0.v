@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "top,Vivado 2019.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_top_0_0,top,{}" *)
-(* CORE_GENERATION_INFO = "design_1_top_0_0,top,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_ADDR_WIDTH=16,C_S_AXI_DATA_WIDTH=32,INITIAL=32,DELAY=63,READ_MAX=10000,VIRUS=5000,VIRUS_START=500,MEM_WIDTH=16}" *)
+(* CORE_GENERATION_INFO = "design_1_top_0_0,top,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_ADDR_WIDTH=16,C_S_AXI_DATA_WIDTH=32,INITIAL=32,DELAY=63,READ_MAX_ADDR=0x0000FFF4,REC_ADDR=0x0000FFFC,FREQ_ADDR=0x0000FFF8,VIRUS_ADDR=0x0000FFE0,MEM_WIDTH=16,ABS_READ_MAX=10000,VIRUS_NUM_B=128,VIRUS_B_SIZE=128}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_top_0_0 (
@@ -74,7 +74,8 @@ module design_1_top_0_0 (
   S_AXI_RDATA,
   S_AXI_RRESP,
   S_AXI_RVALID,
-  S_AXI_RREADY
+  S_AXI_RREADY,
+  trigger
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET S_AXI_ARESETN, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_1_FCLK_CLK0, INSERT_VIP 0" *)
@@ -119,16 +120,21 @@ output wire S_AXI_RVALID;
 S 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *)
 input wire S_AXI_RREADY;
+output wire trigger;
 
   top #(
     .C_S_AXI_ADDR_WIDTH(16),
     .C_S_AXI_DATA_WIDTH(32),
     .INITIAL(32),
     .DELAY(63),
-    .READ_MAX(10000),
-    .VIRUS(5000),
-    .VIRUS_START(500),
-    .MEM_WIDTH(16)
+    .READ_MAX_ADDR(32'H0000FFF4),
+    .REC_ADDR(32'H0000FFFC),
+    .FREQ_ADDR(32'H0000FFF8),
+    .VIRUS_ADDR(32'H0000FFE0),
+    .MEM_WIDTH(16),
+    .ABS_READ_MAX(10000),
+    .VIRUS_NUM_B(128),
+    .VIRUS_B_SIZE(128)
   ) inst (
     .S_AXI_ACLK(S_AXI_ACLK),
     .S_AXI_ARESETN(S_AXI_ARESETN),
@@ -148,6 +154,7 @@ input wire S_AXI_RREADY;
     .S_AXI_RDATA(S_AXI_RDATA),
     .S_AXI_RRESP(S_AXI_RRESP),
     .S_AXI_RVALID(S_AXI_RVALID),
-    .S_AXI_RREADY(S_AXI_RREADY)
+    .S_AXI_RREADY(S_AXI_RREADY),
+    .trigger(trigger)
   );
 endmodule
