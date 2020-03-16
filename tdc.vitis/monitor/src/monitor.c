@@ -43,7 +43,7 @@ void makeMeasurement(){
 	// How many frequencies to test
 	const int32_t num_freq = 500;
 	// Factor to multiply the period value by
-	const double period_mul = 1.4;
+	const double period_mul = 1.01;
 	*read_addr = numReads;
 	int32_t period = 2;			// Actually half the period
 //	*virus_addr = (1<<10) - 1;	// Generate a bitmask of 12 1's
@@ -67,13 +67,13 @@ void makeMeasurement(){
 //		period = (int32_t)((period * period_mul) + 1);	// Change the period on the next run
 //	}
 
-	*virus_addr = 0x000003ff;
+	*virus_addr = 0x000001ff;
 	*(virus_addr + 1) = 0x000003ff;
 	*(virus_addr + 2) = 0x000003ff;
 	*(virus_addr + 3) = 0x000003ff;
 	for (int j=0; j<10; j++) {
 		for(int i = 0; i<num_freq; i++){
-			*freq_addr = period;	// Set the frequency of the virus
+			*freq_addr = (int32_t)period;	// Set the frequency of the virus
 			*rec_addr = 0;			// Start recording square response
 
 			// Wait until the response is done being collected
@@ -84,7 +84,7 @@ void makeMeasurement(){
 
 			xil_printf("%d %d\n", CLK_SPEED/(2*((value & 0x7fffffc0) >> 6)), (value & 0x3f));
 			addr++;
-			period++;	// Change the period on the next run
+			period = period + 1;	// Change the period on the next run
 		}
 		period = 2;
 	}

@@ -57,6 +57,7 @@ def main():
 
 def get_prefix(path):
     filename = path.split("/")[-1]
+    filename = filename.split("_")
     return filename[0]
 
 if __name__ == "__main__":
