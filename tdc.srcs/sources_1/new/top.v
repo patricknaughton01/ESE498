@@ -20,8 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=32, DELAY=63, READ_MAX=10000, 
-    VIRUS=5000, VIRUS_START=500, MEM_WIDTH=16)(
+module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=32, DELAY=63, READ_MAX_ADDR='hFFF4, 
+    REC_ADDR='hFFFC, FREQ_ADDR='hFFF8, VIRUS_ADDR='hFFE0, MEM_WIDTH=16, ABS_READ_MAX=10000, VIRUS_NUM_B=128, VIRUS_B_SIZE=128)(
     // Axi4Lite Bus
     input       S_AXI_ACLK,
     input       S_AXI_ARESETN,
@@ -41,7 +41,8 @@ module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=
     output      [C_S_AXI_DATA_WIDTH-1:0] S_AXI_RDATA,
     output      [1:0] S_AXI_RRESP,
     output      S_AXI_RVALID,
-    input       S_AXI_RREADY
+    input       S_AXI_RREADY,
+    output  reg trigger
 );
 
 wire [C_S_AXI_ADDR_WIDTH-1:0] wrAddr;
@@ -53,8 +54,9 @@ wire rd;
 
 wire [DELAY-1:0] tdcOut;
 
-reg  virusEn;
-wire [VIRUS-1:0] virusOut;
+reg[VIRUS_NUM_B-1:0] virusEnD, virusEnQ, virusMaskD, virusMaskQ;
+reg virusFlagD, virusFlagQ;
+wire [(VIRUS_NUM_B*VIRUS_B_SIZE)-1:0] virusOut;
 
 Axi4LiteSupporter#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH))AxiSupporter1(
     // Simple Bus
@@ -93,9 +95,9 @@ tdc#(.INITIAL(INITIAL), .DELAY(DELAY)) tdc1(
     .delay(tdcOut)
 );
 
-virus#(.SIZE(VIRUS)) virus1(
+virus#(.NUM(VIRUS_NUM_B), .SIZE(VIRUS_B_SIZE)) virus1(
     .out(virusOut),
-    .enable(virusEn)
+    .enable(virusEnQ)
 );
 
 reg  memWe;
@@ -103,7 +105,7 @@ reg  [C_S_AXI_ADDR_WIDTH-1:0] memAddr;
 reg  [MEM_WIDTH-1:0] memDi;
 wire [MEM_WIDTH-1:0] memDo;
 
-RAM#(.DEPTH()) ram1(
+RAM#(.DEPTH(ABS_READ_MAX)) ram1(
     .clk(S_AXI_ACLK),
     .we(memWe),
     .a(memAddr),
@@ -111,41 +113,169 @@ RAM#(.DEPTH()) ram1(
     .do(memDo)
 );
 
-parameter IDLE=0, READ=1;
+parameter IDLE=0, READ=1, READ_ONCE=2, READ_RAMP=3;
 reg [7:0] state, nextState;
-reg [32:0] counterD, counterQ;
+reg [32:0] counterD, counterQ, virusCounterD, virusCounterQ, freqD, freqQ,
+           maxD, maxQ, memCounterD, memCounterQ;
 reg [DELAY-1:0] tdcClean;
-reg [6:0] total;
+reg [6:0] total, diffMaxD, diffMaxQ, diffMinD, diffMinQ;
 
 integer i;
 always @ * begin
     counterD = counterQ;
+    virusCounterD = virusCounterQ;
+    freqD = freqQ;
+    maxD = maxQ;
     nextState = state;
-    virusEn = 0;
+    virusEnD = virusEnQ;
+    virusMaskD = virusMaskQ;
+    virusFlagD = virusFlagQ;
+    diffMaxD = diffMaxQ;
+    diffMinD = diffMinQ;
+    memCounterD = memCounterQ;
     rdData = 0;
     total = 0;
     memWe = 0;
     memAddr = 0;
     memDi = 0;
+    trigger = 0;
     
     case(state)
         IDLE:begin
-            if(rd && rdAddr < (READ_MAX<<2))begin
-                memAddr = rdAddr;
-                rdData = memDo | (1<<31);
+            virusEnD = 0;
+            virusFlagD = 0;
+            if(rd && rdAddr < (ABS_READ_MAX<<2))begin
+                if (rdAddr < memCounterQ) begin
+                    memAddr = rdAddr;
+                    rdData = memDo | (1<<31);
+                end else begin
+                    rdData = 0;
+                end
                 //rdData[C_S_AXI_DATA_WIDTH-1] = 1; 
             end else if(wr) begin
-                counterD = 0;
-                nextState = READ;
+                if(wrAddr == REC_ADDR)begin
+                    counterD = 0;
+                    virusCounterD = 0;
+                    trigger = 1;    // Trigger scope when we start recording
+                    if(wrData == 0)begin
+                        nextState = READ;
+                    end else if (wrData== 1) begin
+                        nextState = READ_ONCE;
+                    end else begin
+                        nextState = READ_RAMP;
+                    end
+                end else if(wrAddr == FREQ_ADDR) begin
+                    freqD = wrData;
+                end else if(wrAddr == READ_MAX_ADDR)begin
+                    maxD = wrData;
+                end else if(wrAddr[C_S_AXI_ADDR_WIDTH-1:4] == VIRUS_ADDR[C_S_AXI_ADDR_WIDTH-1:4])begin
+                    if (wrAddr[3:2] == 0) begin
+                        virusMaskD[C_S_AXI_DATA_WIDTH-1:0] = wrData;
+                    end else if (wrAddr[3:2] == 1) begin
+                        virusMaskD[2*C_S_AXI_DATA_WIDTH-1:C_S_AXI_DATA_WIDTH] = wrData;
+                    end else if (wrAddr[3:2] == 1) begin
+                        virusMaskD[3*C_S_AXI_DATA_WIDTH-1:2*C_S_AXI_DATA_WIDTH] = wrData;
+                    end else begin
+                        virusMaskD[4*C_S_AXI_DATA_WIDTH-1:3*C_S_AXI_DATA_WIDTH] = wrData;
+                    end
+                end
             end
         end
         READ:begin
-        
-            if(counterQ >= VIRUS_START)begin
-                virusEn = 1;
+            if(virusCounterQ == (freqQ-1))begin
+                virusFlagD = ~virusFlagQ;
+                virusCounterD = 0;
+            end else begin
+                virusCounterD = virusCounterQ + 1;
             end
-        
-            if(counterQ < READ_MAX)begin
+            
+            if(virusFlagQ == 1)begin
+                virusEnD = virusMaskQ;
+            end else begin
+                virusEnD = 0;
+            end
+            
+            if(counterQ < maxQ)begin
+                tdcClean[0] = tdcOut[0];
+                // Clean tdcOut to eliminate glitches
+                for(i = 1; i < DELAY; i = i + 1)begin
+                    tdcClean[i] = tdcOut[i-1] && tdcOut[i];
+                end
+                total = 0;
+                // Find top bit of tdc
+                for(i = 0; i < DELAY; i = i + 1)begin
+                    total = total + tdcClean[i];
+                end
+                
+                // Decide if this is a new min or max
+                if (total > diffMaxQ) begin
+                    diffMaxD = total;
+                end
+                if (total < diffMinQ) begin
+                    diffMinD = total;
+                end
+                
+//                // Write to the memory
+//                memWe = 1;
+//                memAddr = counterQ << 2;
+//                memDi = total;
+                counterD = counterQ + 1;
+            end else begin
+                counterD = 0;
+                // Write to memory
+                memWe = 1;
+                memAddr = memCounterQ;
+                memCounterD = memCounterQ + 4;
+                diffMaxD = 0;
+                diffMinD = 'h3f;
+                memDi = (diffMaxQ - diffMinQ) + (freqQ << 6);       // Store amplitude and frequency at the memory address
+                nextState = IDLE;
+            end
+        end
+        READ_ONCE:begin
+            if(virusCounterQ >= freqQ-1)begin
+                virusEnD = virusMaskQ;
+            end else begin
+                virusCounterD = virusCounterQ + 1;
+            end
+            
+            if(counterQ < maxQ)begin
+                tdcClean[0] = tdcOut[0];
+                // Clean tdcOut to eliminate glitches
+                for(i = 1; i < DELAY; i = i + 1)begin
+                    tdcClean[i] = tdcOut[i-1] && tdcOut[i];
+                end
+                total = 0;
+                // Find top bit of tdc
+                for(i = 0; i < DELAY; i = i + 1)begin
+                    total = total + tdcClean[i];
+                end
+                // Write to the memory
+                memWe = 1;
+                memAddr = counterQ << 2;
+                memDi = total;
+                counterD = counterQ + 1;
+            end else begin
+                counterD = 0;
+                nextState = IDLE;
+            end
+        end
+        READ_RAMP:begin
+            if(virusCounterQ >= freqQ-1)begin
+                virusCounterD = 0;
+                // If we haven't reached the final mask, add another 1 (turn another group on)
+                if(virusEnQ < virusMaskQ)begin
+                    if (virusEnQ == 0)begin
+                        virusEnD = 1;
+                    end else begin
+                        virusEnD = (virusEnQ << 1) | 1;
+                    end
+                end
+            end else begin
+                virusCounterD = virusCounterQ + 1;
+            end
+            
+            if(counterQ < maxQ)begin
                 tdcClean[0] = tdcOut[0];
                 // Clean tdcOut to eliminate glitches
                 for(i = 1; i < DELAY; i = i + 1)begin
@@ -173,9 +303,27 @@ always @ (posedge S_AXI_ACLK)begin
     if(S_AXI_ARESETN == 1)begin
         state <= nextState;
         counterQ <= counterD;
+        virusCounterQ <= virusCounterD;
+        freqQ <= freqD;
+        virusEnQ <= virusEnD;
+        virusMaskQ <= virusMaskD;
+        virusFlagQ <= virusFlagD;
+        maxQ <= maxD;
+        diffMaxQ <= diffMaxD;
+        diffMinQ <= diffMinD;
+        memCounterQ <= memCounterD;
     end else begin
         state <= IDLE;
         counterQ <= 0;
+        virusCounterQ <= 0;
+        freqQ <= 0;
+        virusEnQ <= 0;
+        virusMaskQ <= 0;
+        virusFlagQ <= 0;
+        maxQ <= 0;
+        diffMaxQ <= 0;
+        diffMinQ <= 'h3f;               // This stores a min value, so initialize it to max
+        memCounterQ <= 0;
     end
 end
 
