@@ -82,9 +82,10 @@ void makeMeasurement(){
 				value = *addr;
 			}
 
-			xil_printf("%d, %d\n", CLK_SPEED/(2*((value & 0x7fffffc0) >> 6)), (value & 0x3f));
+			xil_printf("%d %d\n", CLK_SPEED/(2*((value & 0x7fffffc0) >> 6)), (value & 0x3f));
 			addr++;
-			period = period << 1;	// Change the period on the next run
+			period++;	// Change the period on the next run
 		}
+		period = 2;
 	}
 }
