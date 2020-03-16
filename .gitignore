@@ -1,0 +1,11 @@
+/*
+
+!.gitngore
+!*.py
+!*.c
+!*.h
+!*.v
+!/output
+!*.ods
+!*.xdc
+!/docs
