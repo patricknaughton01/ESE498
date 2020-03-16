@@ -20,7 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module top_tb#(parameter C_S_AXI_ADDR_WIDTH = 32, C_S_AXI_DATA_WIDTH = 32, CLK_PERIOD=10, READ_MAX=10000)();
+module top_tb#(parameter C_S_AXI_ADDR_WIDTH = 32, C_S_AXI_DATA_WIDTH = 32, CLK_PERIOD=10, READ_MAX=10000,
+    TO_READ=1000)();
 
 // Axi4Lite signals
 reg  S_AXI_ACLK ;
@@ -125,12 +126,35 @@ initial begin
     #(CLK_PERIOD*5);
     S_AXI_ARESETN = 1;
     #(CLK_PERIOD*10);
+    // Write number of measurements to make
     wr = 1;
-    wrAddr = 0;
-    wrData = 0;
+    wrAddr = 'hFFF4;
+    wrData = TO_READ;
     #CLK_PERIOD;
     wr = 0;
-    #(CLK_PERIOD * (READ_MAX + 10));
+    #(CLK_PERIOD*3);
+    // Write the frequency of the virus
+    wr = 1;
+    wrAddr = 'hFFF8;
+    wrData = 50;
+    #CLK_PERIOD;
+    wr = 0;
+    #(CLK_PERIOD * 5);
+    // Write the number of virus groups to start
+    wr = 1;
+    wrAddr = 'hFFF0;
+    wrData = 'h00FF;
+    #CLK_PERIOD;
+    wr = 0;
+    #(CLK_PERIOD * 5);
+    // Start the measurement
+    wr = 1;
+    wrAddr = 'hFFFC;
+    wrData = 2;
+    #CLK_PERIOD;
+    wr = 0;
+    #(CLK_PERIOD * 5);
+    #(CLK_PERIOD * (TO_READ + 10));
     rd = 1;
     rdAddr = 'h4;
     #CLK_PERIOD;
