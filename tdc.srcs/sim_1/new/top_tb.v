@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module top_tb#(parameter C_S_AXI_ADDR_WIDTH = 32, C_S_AXI_DATA_WIDTH = 32, CLK_PERIOD=10, READ_MAX=10000,
+module top_tb#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, CLK_PERIOD=10, READ_MAX=10000,
     TO_READ=1000)();
 
 // Axi4Lite signals
@@ -141,22 +141,47 @@ initial begin
     wr = 0;
     #(CLK_PERIOD * 5);
     // Write the number of virus groups to start
+    // Must be done in 4 groups b/c mask is 128 bits
     wr = 1;
-    wrAddr = 'hFFF0;
-    wrData = 'h00FF;
+    wrAddr = 'hFFD8;
+    wrData = 'hDEADDEAD;
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * 5);
-    // Start the measurement
+    wr = 1;
+    wrAddr = 'hFFDC;
+    wrData = 'hBEEFBEEF;
+    #CLK_PERIOD;
+    wr = 0;
+    #(CLK_PERIOD * 5);
+    wr = 1;
+    wrAddr = 'hFFE0;
+    wrData = 'hFEEDFEED;
+    #CLK_PERIOD;
+    wr = 0;
+    #(CLK_PERIOD * 5);
+    wr = 1;
+    wrAddr = 'hFFE4;
+    wrData = 'hDEAFDEAF;
+    #CLK_PERIOD;
+    wr = 0;
+    #(CLK_PERIOD * 5);
+    // Start the measurement - square wave
     wr = 1;
     wrAddr = 'hFFFC;
-    wrData = 2;
+    wrData = 0;
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * 5);
     #(CLK_PERIOD * (TO_READ + 10));
     rd = 1;
     rdAddr = 'h4;
+    #CLK_PERIOD;
+    rd = 0;
+    #(CLK_PERIOD*10);
+    // Read PP value
+    rd = 1;
+    rdAddr = 'hFFF0;
     #CLK_PERIOD;
     rd = 0;
     #(CLK_PERIOD*10);

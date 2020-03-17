@@ -92,6 +92,7 @@ def main():
 			    s.close()
 		    else:
 			    print("\nNothing read, deleting file")
+			    os.remove(filename)
 
 
 if __name__ == "__main__":

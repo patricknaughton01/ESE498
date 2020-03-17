@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="999995fs"></ZoomStartTime>
+      <ZoomEndTime time="1000002fs"></ZoomEndTime>
+      <Cursor1Time time="1000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="194"></NameColumnWidth>
+      <ValueColumnWidth column_width="138"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="36" />
+   <wvobject type="logic" fp_name="/top_tb/S_AXI_ACLK">
+      <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/S_AXI_ARESETN">
+      <obj_property name="ElementShortName">S_AXI_ARESETN</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARESETN</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/S_AXI_AWADDR">
+      <obj_property name="ElementShortName">S_AXI_AWADDR[15:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWADDR[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/S_AXI_AWVALID">
+      <obj_property name="ElementShortName">S_AXI_AWVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/S_AXI_AWREADY">
+      <obj_property name="ElementShortName">S_AXI_AWREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_AWREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/S_AXI_WDATA">
+      <obj_property name="ElementShortName">S_AXI_WDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/S_AXI_WSTRB">
+      <obj_property name="ElementShortName">S_AXI_WSTRB[3:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WSTRB[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/S_AXI_WVALID">
+      <obj_property name="ElementShortName">S_AXI_WVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/S_AXI_WREADY">
+      <obj_property name="ElementShortName">S_AXI_WREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_WREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/S_AXI_BRESP">
+      <obj_property name="ElementShortName">S_AXI_BRESP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_BRESP[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/S_AXI_BVALID">
+      <obj_property name="ElementShortName">S_AXI_BVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_BVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/S_AXI_BREADY">
+      <obj_property name="ElementShortName">S_AXI_BREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_BREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/S_AXI_ARADDR">
+      <obj_property name="ElementShortName">S_AXI_ARADDR[15:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARADDR[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/S_AXI_ARVALID">
+      <obj_property name="ElementShortName">S_AXI_ARVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/S_AXI_ARREADY">
+      <obj_property name="ElementShortName">S_AXI_ARREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_ARREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/S_AXI_RDATA">
+      <obj_property name="ElementShortName">S_AXI_RDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RDATA[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/S_AXI_RRESP">
+      <obj_property name="ElementShortName">S_AXI_RRESP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RRESP[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/S_AXI_RVALID">
+      <obj_property name="ElementShortName">S_AXI_RVALID</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RVALID</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/S_AXI_RREADY">
+      <obj_property name="ElementShortName">S_AXI_RREADY</obj_property>
+      <obj_property name="ObjectShortName">S_AXI_RREADY</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/wrAddr">
+      <obj_property name="ElementShortName">wrAddr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">wrAddr[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/wrData">
+      <obj_property name="ElementShortName">wrData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wrData[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/wr">
+      <obj_property name="ElementShortName">wr</obj_property>
+      <obj_property name="ObjectShortName">wr</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/wrDone">
+      <obj_property name="ElementShortName">wrDone</obj_property>
+      <obj_property name="ObjectShortName">wrDone</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/rdAddr">
+      <obj_property name="ElementShortName">rdAddr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">rdAddr[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/rdData">
+      <obj_property name="ElementShortName">rdData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rdData[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/rd">
+      <obj_property name="ElementShortName">rd</obj_property>
+      <obj_property name="ObjectShortName">rd</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/rdDone">
+      <obj_property name="ElementShortName">rdDone</obj_property>
+      <obj_property name="ObjectShortName">rdDone</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/C_S_AXI_ADDR_WIDTH">
+      <obj_property name="ElementShortName">C_S_AXI_ADDR_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_S_AXI_ADDR_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/C_S_AXI_DATA_WIDTH">
+      <obj_property name="ElementShortName">C_S_AXI_DATA_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">C_S_AXI_DATA_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/CLK_PERIOD">
+      <obj_property name="ElementShortName">CLK_PERIOD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/READ_MAX">
+      <obj_property name="ElementShortName">READ_MAX[31:0]</obj_property>
+      <obj_property name="ObjectShortName">READ_MAX[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/TO_READ">
+      <obj_property name="ElementShortName">TO_READ[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TO_READ[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/CLK_PERIOD_2">
+      <obj_property name="ElementShortName">CLK_PERIOD_2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CLK_PERIOD_2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/virusMaskD">
+      <obj_property name="ElementShortName">virusMaskD[127:0]</obj_property>
+      <obj_property name="ObjectShortName">virusMaskD[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/virusMaskQ">
+      <obj_property name="ElementShortName">virusMaskQ[127:0]</obj_property>
+      <obj_property name="ObjectShortName">virusMaskQ[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/oneMask">
+      <obj_property name="ElementShortName">oneMask[31:0]</obj_property>
+      <obj_property name="ObjectShortName">oneMask[31:0]</obj_property>
+   </wvobject>
+</wave_config>

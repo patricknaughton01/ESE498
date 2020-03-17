@@ -47,78 +47,148 @@
 #define alloca _alloca
 #endif
 typedef void (*funcp)(char *, char *);
-extern void execute_8318(char*, char *);
-extern void execute_8319(char*, char *);
-extern void execute_16724(char*, char *);
-extern void execute_16725(char*, char *);
-extern void execute_16726(char*, char *);
-extern void execute_16727(char*, char *);
-extern void execute_16728(char*, char *);
-extern void execute_16729(char*, char *);
-extern void execute_16730(char*, char *);
-extern void execute_16731(char*, char *);
-extern void execute_16732(char*, char *);
-extern void execute_16733(char*, char *);
-extern void execute_16734(char*, char *);
-extern void execute_16735(char*, char *);
-extern void execute_16736(char*, char *);
-extern void execute_16737(char*, char *);
-extern void execute_16738(char*, char *);
-extern void execute_16739(char*, char *);
-extern void execute_16740(char*, char *);
-extern void execute_16741(char*, char *);
-extern void execute_16742(char*, char *);
-extern void execute_16743(char*, char *);
-extern void execute_16744(char*, char *);
-extern void execute_8313(char*, char *);
-extern void execute_8314(char*, char *);
-extern void execute_16705(char*, char *);
-extern void execute_16706(char*, char *);
-extern void execute_16707(char*, char *);
-extern void execute_16708(char*, char *);
-extern void execute_16709(char*, char *);
-extern void execute_16710(char*, char *);
-extern void execute_16711(char*, char *);
-extern void execute_16712(char*, char *);
-extern void execute_16713(char*, char *);
-extern void execute_16714(char*, char *);
-extern void execute_16715(char*, char *);
-extern void execute_16716(char*, char *);
-extern void execute_16717(char*, char *);
-extern void execute_16718(char*, char *);
-extern void execute_16719(char*, char *);
-extern void execute_16720(char*, char *);
-extern void execute_16721(char*, char *);
-extern void execute_16722(char*, char *);
-extern void execute_16723(char*, char *);
+extern void execute_16575(char*, char *);
+extern void execute_16576(char*, char *);
+extern void execute_33244(char*, char *);
+extern void execute_33245(char*, char *);
+extern void execute_33246(char*, char *);
+extern void execute_33247(char*, char *);
+extern void execute_33248(char*, char *);
+extern void execute_33249(char*, char *);
+extern void execute_33250(char*, char *);
+extern void execute_33251(char*, char *);
+extern void execute_33252(char*, char *);
+extern void execute_33253(char*, char *);
+extern void execute_33254(char*, char *);
+extern void execute_33255(char*, char *);
+extern void execute_33256(char*, char *);
+extern void execute_33257(char*, char *);
+extern void execute_33258(char*, char *);
+extern void execute_33259(char*, char *);
+extern void execute_33260(char*, char *);
+extern void execute_33261(char*, char *);
+extern void execute_33262(char*, char *);
+extern void execute_33263(char*, char *);
+extern void execute_33264(char*, char *);
+extern void execute_16570(char*, char *);
+extern void execute_16571(char*, char *);
+extern void execute_33225(char*, char *);
+extern void execute_33226(char*, char *);
+extern void execute_33227(char*, char *);
+extern void execute_33228(char*, char *);
+extern void execute_33229(char*, char *);
+extern void execute_33230(char*, char *);
+extern void execute_33231(char*, char *);
+extern void execute_33232(char*, char *);
+extern void execute_33233(char*, char *);
+extern void execute_33234(char*, char *);
+extern void execute_33235(char*, char *);
+extern void execute_33236(char*, char *);
+extern void execute_33237(char*, char *);
+extern void execute_33238(char*, char *);
+extern void execute_33239(char*, char *);
+extern void execute_33240(char*, char *);
+extern void execute_33241(char*, char *);
+extern void execute_33242(char*, char *);
+extern void execute_33243(char*, char *);
 extern void execute_4(char*, char *);
 extern void execute_5(char*, char *);
-extern void execute_100(char*, char *);
-extern void execute_101(char*, char *);
-extern void execute_8510(char*, char *);
-extern void execute_8511(char*, char *);
-extern void execute_8324(char*, char *);
-extern void execute_8325(char*, char *);
-extern void execute_8512(char*, char *);
-extern void execute_8312(char*, char *);
-extern void execute_16704(char*, char *);
-extern void execute_8316(char*, char *);
-extern void execute_8317(char*, char *);
-extern void execute_8321(char*, char *);
-extern void execute_8322(char*, char *);
-extern void execute_8323(char*, char *);
-extern void execute_16745(char*, char *);
-extern void execute_16746(char*, char *);
-extern void execute_16747(char*, char *);
-extern void execute_16748(char*, char *);
-extern void execute_16749(char*, char *);
+extern void execute_53(char*, char *);
+extern void execute_54(char*, char *);
+extern void execute_16778(char*, char *);
+extern void execute_16779(char*, char *);
+extern void execute_16780(char*, char *);
+extern void execute_16781(char*, char *);
+extern void execute_16782(char*, char *);
+extern void execute_16783(char*, char *);
+extern void execute_16784(char*, char *);
+extern void execute_16785(char*, char *);
+extern void execute_16786(char*, char *);
+extern void execute_16787(char*, char *);
+extern void execute_16788(char*, char *);
+extern void execute_16789(char*, char *);
+extern void execute_16790(char*, char *);
+extern void execute_16791(char*, char *);
+extern void execute_16792(char*, char *);
+extern void execute_16793(char*, char *);
+extern void execute_16794(char*, char *);
+extern void execute_16795(char*, char *);
+extern void execute_16796(char*, char *);
+extern void execute_16797(char*, char *);
+extern void execute_16798(char*, char *);
+extern void execute_16799(char*, char *);
+extern void execute_16800(char*, char *);
+extern void execute_16801(char*, char *);
+extern void execute_16802(char*, char *);
+extern void execute_16803(char*, char *);
+extern void execute_16804(char*, char *);
+extern void execute_16805(char*, char *);
+extern void execute_16806(char*, char *);
+extern void execute_16807(char*, char *);
+extern void execute_16808(char*, char *);
+extern void execute_16809(char*, char *);
+extern void execute_16810(char*, char *);
+extern void execute_16811(char*, char *);
+extern void execute_16812(char*, char *);
+extern void execute_16813(char*, char *);
+extern void execute_16814(char*, char *);
+extern void execute_16815(char*, char *);
+extern void execute_16816(char*, char *);
+extern void execute_16817(char*, char *);
+extern void execute_16818(char*, char *);
+extern void execute_16819(char*, char *);
+extern void execute_16820(char*, char *);
+extern void execute_16821(char*, char *);
+extern void execute_16822(char*, char *);
+extern void execute_16823(char*, char *);
+extern void execute_16824(char*, char *);
+extern void execute_16825(char*, char *);
+extern void execute_16826(char*, char *);
+extern void execute_16827(char*, char *);
+extern void execute_16828(char*, char *);
+extern void execute_16829(char*, char *);
+extern void execute_16830(char*, char *);
+extern void execute_16831(char*, char *);
+extern void execute_16832(char*, char *);
+extern void execute_16833(char*, char *);
+extern void execute_16834(char*, char *);
+extern void execute_16835(char*, char *);
+extern void execute_16836(char*, char *);
+extern void execute_16837(char*, char *);
+extern void execute_16838(char*, char *);
+extern void execute_16839(char*, char *);
+extern void execute_16581(char*, char *);
+extern void execute_16582(char*, char *);
+extern void execute_16643(char*, char *);
+extern void execute_16644(char*, char *);
+extern void execute_16645(char*, char *);
+extern void vlog_simple_process_execute_0_fast_no_reg_no_agg(char*, char*, char*);
+extern void execute_16648(char*, char *);
+extern void execute_16649(char*, char *);
+extern void execute_16650(char*, char *);
+extern void execute_16651(char*, char *);
+extern void execute_16840(char*, char *);
+extern void execute_16569(char*, char *);
+extern void execute_33224(char*, char *);
+extern void execute_16573(char*, char *);
+extern void execute_16574(char*, char *);
+extern void execute_16578(char*, char *);
+extern void execute_16579(char*, char *);
+extern void execute_16580(char*, char *);
+extern void execute_33265(char*, char *);
+extern void execute_33266(char*, char *);
+extern void execute_33267(char*, char *);
+extern void execute_33268(char*, char *);
+extern void execute_33269(char*, char *);
 extern void vlog_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
-funcp funcTab[66] = {(funcp)execute_8318, (funcp)execute_8319, (funcp)execute_16724, (funcp)execute_16725, (funcp)execute_16726, (funcp)execute_16727, (funcp)execute_16728, (funcp)execute_16729, (funcp)execute_16730, (funcp)execute_16731, (funcp)execute_16732, (funcp)execute_16733, (funcp)execute_16734, (funcp)execute_16735, (funcp)execute_16736, (funcp)execute_16737, (funcp)execute_16738, (funcp)execute_16739, (funcp)execute_16740, (funcp)execute_16741, (funcp)execute_16742, (funcp)execute_16743, (funcp)execute_16744, (funcp)execute_8313, (funcp)execute_8314, (funcp)execute_16705, (funcp)execute_16706, (funcp)execute_16707, (funcp)execute_16708, (funcp)execute_16709, (funcp)execute_16710, (funcp)execute_16711, (funcp)execute_16712, (funcp)execute_16713, (funcp)execute_16714, (funcp)execute_16715, (funcp)execute_16716, (funcp)execute_16717, (funcp)execute_16718, (funcp)execute_16719, (funcp)execute_16720, (funcp)execute_16721, (funcp)execute_16722, (funcp)execute_16723, (funcp)execute_4, (funcp)execute_5, (funcp)execute_100, (funcp)execute_101, (funcp)execute_8510, (funcp)execute_8511, (funcp)execute_8324, (funcp)execute_8325, (funcp)execute_8512, (funcp)execute_8312, (funcp)execute_16704, (funcp)execute_8316, (funcp)execute_8317, (funcp)execute_8321, (funcp)execute_8322, (funcp)execute_8323, (funcp)execute_16745, (funcp)execute_16746, (funcp)execute_16747, (funcp)execute_16748, (funcp)execute_16749, (funcp)vlog_transfunc_eventcallback};
-const int NumRelocateId= 66;
+extern void transaction_36(char*, char*, unsigned, unsigned, unsigned);
+extern void transaction_68(char*, char*, unsigned, unsigned, unsigned);
+funcp funcTab[136] = {(funcp)execute_16575, (funcp)execute_16576, (funcp)execute_33244, (funcp)execute_33245, (funcp)execute_33246, (funcp)execute_33247, (funcp)execute_33248, (funcp)execute_33249, (funcp)execute_33250, (funcp)execute_33251, (funcp)execute_33252, (funcp)execute_33253, (funcp)execute_33254, (funcp)execute_33255, (funcp)execute_33256, (funcp)execute_33257, (funcp)execute_33258, (funcp)execute_33259, (funcp)execute_33260, (funcp)execute_33261, (funcp)execute_33262, (funcp)execute_33263, (funcp)execute_33264, (funcp)execute_16570, (funcp)execute_16571, (funcp)execute_33225, (funcp)execute_33226, (funcp)execute_33227, (funcp)execute_33228, (funcp)execute_33229, (funcp)execute_33230, (funcp)execute_33231, (funcp)execute_33232, (funcp)execute_33233, (funcp)execute_33234, (funcp)execute_33235, (funcp)execute_33236, (funcp)execute_33237, (funcp)execute_33238, (funcp)execute_33239, (funcp)execute_33240, (funcp)execute_33241, (funcp)execute_33242, (funcp)execute_33243, (funcp)execute_4, (funcp)execute_5, (funcp)execute_53, (funcp)execute_54, (funcp)execute_16778, (funcp)execute_16779, (funcp)execute_16780, (funcp)execute_16781, (funcp)execute_16782, (funcp)execute_16783, (funcp)execute_16784, (funcp)execute_16785, (funcp)execute_16786, (funcp)execute_16787, (funcp)execute_16788, (funcp)execute_16789, (funcp)execute_16790, (funcp)execute_16791, (funcp)execute_16792, (funcp)execute_16793, (funcp)execute_16794, (funcp)execute_16795, (funcp)execute_16796, (funcp)execute_16797, (funcp)execute_16798, (funcp)execute_16799, (funcp)execute_16800, (funcp)execute_16801, (funcp)execute_16802, (funcp)execute_16803, (funcp)execute_16804, (funcp)execute_16805, (funcp)execute_16806, (funcp)execute_16807, (funcp)execute_16808, (funcp)execute_16809, (funcp)execute_16810, (funcp)execute_16811, (funcp)execute_16812, (funcp)execute_16813, (funcp)execute_16814, (funcp)execute_16815, (funcp)execute_16816, (funcp)execute_16817, (funcp)execute_16818, (funcp)execute_16819, (funcp)execute_16820, (funcp)execute_16821, (funcp)execute_16822, (funcp)execute_16823, (funcp)execute_16824, (funcp)execute_16825, (funcp)execute_16826, (funcp)execute_16827, (funcp)execute_16828, (funcp)execute_16829, (funcp)execute_16830, (funcp)execute_16831, (funcp)execute_16832, (funcp)execute_16833, (funcp)execute_16834, (funcp)execute_16835, (funcp)execute_16836, (funcp)execute_16837, (funcp)execute_16838, (funcp)execute_16839, (funcp)execute_16581, (funcp)execute_16582, (funcp)execute_16643, (funcp)execute_16644, (funcp)execute_16645, (funcp)vlog_simple_process_execute_0_fast_no_reg_no_agg, (funcp)execute_16648, (funcp)execute_16649, (funcp)execute_16650, (funcp)execute_16651, (funcp)execute_16840, (funcp)execute_16569, (funcp)execute_33224, (funcp)execute_16573, (funcp)execute_16574, (funcp)execute_16578, (funcp)execute_16579, (funcp)execute_16580, (funcp)execute_33265, (funcp)execute_33266, (funcp)execute_33267, (funcp)execute_33268, (funcp)execute_33269, (funcp)vlog_transfunc_eventcallback, (funcp)transaction_36, (funcp)transaction_68};
+const int NumRelocateId= 136;
 
 void relocate(char *dp)
 {
-	iki_relocate(dp, "xsim.dir/top_tb_behav/xsim.reloc",  (void **)funcTab, 66);
+	iki_relocate(dp, "xsim.dir/top_tb_behav/xsim.reloc",  (void **)funcTab, 136);
 
 	/*Populate the transaction function pointer field in the whole net structure */
 }
@@ -128,10 +198,19 @@ void sensitize(char *dp)
 	iki_sensitize(dp, "xsim.dir/top_tb_behav/xsim.reloc");
 }
 
+	// Initialize Verilog nets in mixed simulation, for the cases when the value at time 0 should be propagated from the mixed language Vhdl net
+
+void wrapper_func_0(char *dp)
+
+{
+
+}
+
 void simulate(char *dp)
 {
 		iki_schedule_processes_at_time_zero(dp, "xsim.dir/top_tb_behav/xsim.reloc");
-	// Initialize Verilog nets in mixed simulation, for the cases when the value at time 0 should be propagated from the mixed language Vhdl net
+	wrapper_func_0(dp);
+
 	iki_execute_processes();
 
 	// Schedule resolution functions for the multiply driven Verilog nets that have strength

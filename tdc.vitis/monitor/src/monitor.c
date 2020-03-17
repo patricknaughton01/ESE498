@@ -12,7 +12,6 @@
 #define CLK_SPEED 100000000
 
 int32_t * const peripheral = (int32_t*)0x43C00000;
-int32_t *addr = peripheral;
 
 void makeMeasurement();
 
@@ -34,10 +33,11 @@ int main() {
 void makeMeasurement(){
 	int32_t validRead;
 	int32_t value;
-	int32_t * const rec_addr = (int32_t*)0x43C0FFFC;
-	int32_t * const freq_addr = (int32_t*)0x43C0FFF8;
-	int32_t * const read_addr = (int32_t*)0x43C0FFF4;
-	int32_t * const virus_addr = (int32_t*)0x43C0FFE0;
+	int32_t * const rec_addr 	= (int32_t*)0x43C0FFFC;
+	int32_t * const freq_addr 	= (int32_t*)0x43C0FFF8;
+	int32_t * const read_addr 	= (int32_t*)0x43C0FFF4;
+	int32_t * const pp_addr 	= (int32_t*)0x43C0FFF0;
+	int32_t * const virus_addr 	= (int32_t*)0x43C0FFD8;
 	// How many times to read from the monitor
 	const int32_t numReads = 10000;
 	// How many frequencies to test
@@ -67,7 +67,7 @@ void makeMeasurement(){
 //		period = (int32_t)((period * period_mul) + 1);	// Change the period on the next run
 //	}
 
-	*virus_addr = 0x000001ff;
+	*virus_addr = 0x000003ff;
 	*(virus_addr + 1) = 0x000003ff;
 	*(virus_addr + 2) = 0x000003ff;
 	*(virus_addr + 3) = 0x000003ff;
@@ -77,13 +77,12 @@ void makeMeasurement(){
 			*rec_addr = 0;			// Start recording square response
 
 			// Wait until the response is done being collected
-			value = *addr;
-			while((value & (1<<31)) == 0) {
-				value = *addr;
+			value = *pp_addr;
+			while(( value & (1<<31)) == 0) {
+				value = *pp_addr;
 			}
 
-			xil_printf("%d %d\n", CLK_SPEED/(2*((value & 0x7fffffc0) >> 6)), (value & 0x3f));
-			addr++;
+			xil_printf("%d %d\n", CLK_SPEED/(2*period), (value & 0x3f));
 			period = period + 1;	// Change the period on the next run
 		}
 		period = 2;

@@ -21,7 +21,8 @@
 
 
 module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=32, DELAY=63, READ_MAX_ADDR='hFFF4, 
-    REC_ADDR='hFFFC, FREQ_ADDR='hFFF8, VIRUS_ADDR='hFFE0, MEM_WIDTH=16, ABS_READ_MAX=10000, VIRUS_NUM_B=128, VIRUS_B_SIZE=128)(
+    REC_ADDR='hFFFC, FREQ_ADDR='hFFF8, VIRUS_ADDR='hFFD8, MEM_WIDTH=16, PP_ADDR='hFFF0,
+    ABS_READ_MAX=10000, VIRUS_NUM_B=128, VIRUS_B_SIZE=128)(
     // Axi4Lite Bus
     input       S_AXI_ACLK,
     input       S_AXI_ARESETN,
@@ -115,8 +116,9 @@ RAM#(.DEPTH(ABS_READ_MAX)) ram1(
 
 parameter IDLE=0, READ=1, READ_ONCE=2, READ_RAMP=3;
 reg [7:0] state, nextState;
-reg [32:0] counterD, counterQ, virusCounterD, virusCounterQ, freqD, freqQ,
-           maxD, maxQ, memCounterD, memCounterQ;
+reg [C_S_AXI_DATA_WIDTH-1:0] counterD, counterQ, virusCounterD, virusCounterQ, freqD, freqQ,
+           maxD, maxQ, ppD, ppQ;
+reg [C_S_AXI_DATA_WIDTH-1:0] oneMask;
 reg [DELAY-1:0] tdcClean;
 reg [6:0] total, diffMaxD, diffMaxQ, diffMinD, diffMinQ;
 
@@ -132,26 +134,26 @@ always @ * begin
     virusFlagD = virusFlagQ;
     diffMaxD = diffMaxQ;
     diffMinD = diffMinQ;
-    memCounterD = memCounterQ;
+    ppD = ppQ;
     rdData = 0;
     total = 0;
     memWe = 0;
     memAddr = 0;
     memDi = 0;
     trigger = 0;
+    oneMask = -1;   // Mask of all 1's (C_S_AXI_DATA_WIDTH wide)
     
     case(state)
         IDLE:begin
             virusEnD = 0;
             virusFlagD = 0;
             if(rd && rdAddr < (ABS_READ_MAX<<2))begin
-                if (rdAddr < memCounterQ) begin
-                    memAddr = rdAddr;
-                    rdData = memDo | (1<<31);
-                end else begin
-                    rdData = 0;
-                end
-                //rdData[C_S_AXI_DATA_WIDTH-1] = 1; 
+                memAddr = rdAddr;
+                rdData = memDo;
+                rdData[C_S_AXI_DATA_WIDTH-1] = 1; 
+            end else if(rd && rdAddr == PP_ADDR)begin
+                rdData = ppQ;
+                rdData[C_S_AXI_DATA_WIDTH-1] = 1;
             end else if(wr) begin
                 if(wrAddr == REC_ADDR)begin
                     counterD = 0;
@@ -168,8 +170,9 @@ always @ * begin
                     freqD = wrData;
                 end else if(wrAddr == READ_MAX_ADDR)begin
                     maxD = wrData;
-                end else if(wrAddr[C_S_AXI_ADDR_WIDTH-1:4] == VIRUS_ADDR[C_S_AXI_ADDR_WIDTH-1:4])begin
-                    if (wrAddr[3:2] == 0) begin
+                end else if(wrAddr >= VIRUS_ADDR && wrAddr < VIRUS_ADDR + 4*4)begin
+                    virusMaskD = (virusMaskQ & ~(oneMask << ((wrAddr - VIRUS_ADDR)<<3))) | (wrData << ((wrAddr - VIRUS_ADDR)<<3));
+                    /*if (wrAddr[3:2] == 0) begin
                         virusMaskD[C_S_AXI_DATA_WIDTH-1:0] = wrData;
                     end else if (wrAddr[3:2] == 1) begin
                         virusMaskD[2*C_S_AXI_DATA_WIDTH-1:C_S_AXI_DATA_WIDTH] = wrData;
@@ -177,7 +180,7 @@ always @ * begin
                         virusMaskD[3*C_S_AXI_DATA_WIDTH-1:2*C_S_AXI_DATA_WIDTH] = wrData;
                     end else begin
                         virusMaskD[4*C_S_AXI_DATA_WIDTH-1:3*C_S_AXI_DATA_WIDTH] = wrData;
-                    end
+                    end*/
                 end
             end
         end
@@ -215,20 +218,17 @@ always @ * begin
                     diffMinD = total;
                 end
                 
-//                // Write to the memory
-//                memWe = 1;
-//                memAddr = counterQ << 2;
-//                memDi = total;
+                // Write to the memory
+                memWe = 1;
+                memAddr = counterQ << 2;
+                memDi = total;
                 counterD = counterQ + 1;
             end else begin
+                // Write to the PP register
                 counterD = 0;
-                // Write to memory
-                memWe = 1;
-                memAddr = memCounterQ;
-                memCounterD = memCounterQ + 4;
                 diffMaxD = 0;
                 diffMinD = 'h3f;
-                memDi = (diffMaxQ - diffMinQ) + (freqQ << 6);       // Store amplitude and frequency at the memory address
+                ppD = (diffMaxQ - diffMinQ);
                 nextState = IDLE;
             end
         end
@@ -311,7 +311,7 @@ always @ (posedge S_AXI_ACLK)begin
         maxQ <= maxD;
         diffMaxQ <= diffMaxD;
         diffMinQ <= diffMinD;
-        memCounterQ <= memCounterD;
+        ppQ <= ppD;
     end else begin
         state <= IDLE;
         counterQ <= 0;
@@ -323,7 +323,7 @@ always @ (posedge S_AXI_ACLK)begin
         maxQ <= 0;
         diffMaxQ <= 0;
         diffMinQ <= 'h3f;               // This stores a min value, so initialize it to max
-        memCounterQ <= 0;
+        ppQ <= 0;
     end
 end
 
