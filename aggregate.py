@@ -11,6 +11,7 @@ def main():
     parser.add_argument("-f", type=str, help="file prefix to read", default="")
     parser.add_argument("-l", action="store_true", help="log-scale")
     parser.add_argument("-x", action="store_true", help="x log-scale")
+    parser.add_argument("-b", action="store_true", help="integrate whole bandwidth")
     parser.add_argument("--title", type=str, default="", help="title information")
 
     args = parser.parse_args()
@@ -34,11 +35,11 @@ def main():
                         traces[freq] = [count]
                 p = {k:(np.absolute(np.fft.fft(np.array(v)))[1:len(v)//2])**2 
                     for (k, v) in traces.items() }
-                total = {k:sum(v) for (k, v) in p.items()}
-                if args.l:
-                    p = {k:np.log10(v) for (k, v) in p.items()}
-                    total = {k:np.log10(v) for (k, v) in total.items()}
-                
+                total = None
+                if args.b:
+                    total = {k:sum(v) for (k, v) in p.items()}
+                else:
+                    total = {k:v[k//10000 + 1] for (k,v) in p.items()}
                 s_r = list(total.items())
                 s_r.sort(key=lambda i:i[0])
                 s_r_x = np.array([i[0] for i in s_r])
@@ -54,6 +55,7 @@ def main():
     plt.xlabel("Frequency (Hz)")
     y_label = "Power response"
     if args.l:
+        plt.yscale("log")
         y_label += " (log)"
     plt.ylabel(y_label)
     plt.title(
