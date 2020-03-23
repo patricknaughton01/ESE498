@@ -43,7 +43,7 @@ void makeMeasurement(){
 	// How many times to read from the monitor
 	const int32_t numReads = 10000;
 	// How many frequencies to test
-	const int32_t num_freq = 500;
+	const int32_t num_freq = 1;
 	// Factor to multiply the period value by
 	const double period_mul = 1.01;
 	*read_addr = numReads;

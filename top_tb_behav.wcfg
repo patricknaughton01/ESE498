@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="100693969fs"></ZoomStartTime>
-      <ZoomEndTime time="100885290fs"></ZoomEndTime>
-      <Cursor1Time time="100760000fs"></Cursor1Time>
+      <ZoomStartTime time="341580000fs"></ZoomStartTime>
+      <ZoomEndTime time="341730101fs"></ZoomEndTime>
+      <Cursor1Time time="341705000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="194"></NameColumnWidth>
-      <ValueColumnWidth column_width="118"></ValueColumnWidth>
+      <ValueColumnWidth column_width="114"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="35" />
    <wvobject type="logic" fp_name="/top_tb/S_AXI_ACLK">
@@ -130,6 +130,7 @@
    <wvobject type="array" fp_name="/top_tb/top1/fftAccQ">
       <obj_property name="ElementShortName">fftAccQ[31:0]</obj_property>
       <obj_property name="ObjectShortName">fftAccQ[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/top_tb/top1/M_TDATA">
       <obj_property name="ElementShortName">M_TDATA[15:0]</obj_property>
@@ -148,8 +149,8 @@
       <obj_property name="ObjectShortName">M_TVALID</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/top_tb/top1/S_TDATA">
-      <obj_property name="ElementShortName">S_TDATA[15:0]</obj_property>
-      <obj_property name="ObjectShortName">S_TDATA[15:0]</obj_property>
+      <obj_property name="ElementShortName">S_TDATA[47:0]</obj_property>
+      <obj_property name="ObjectShortName">S_TDATA[47:0]</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/top_tb/top1/S_TLAST">
       <obj_property name="ElementShortName">S_TLAST</obj_property>

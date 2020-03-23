@@ -1,22 +1,10 @@
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 |       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[92]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/virusMaskQ_reg[124]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/virusMaskQ_reg[125]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/virusMaskQ_reg[123]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[91]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                      design_1_i/top_0/inst/state_reg[0]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                      design_1_i/top_0/inst/state_reg[2]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/virusMaskQ_reg[120]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/state_reg[0]_rep__0/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/virusMaskQ_reg[127]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[95]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[93]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[88]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[58]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/virusMaskQ_reg[126]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                      design_1_i/top_0/inst/state_reg[1]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[45]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[32]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                        design_1_i/top_0/inst/axis_manager1/dataQ_reg[0]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/virusMaskQ_reg[118]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/virusMaskQ_reg[115]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[99]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[51]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[36]/D|
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
