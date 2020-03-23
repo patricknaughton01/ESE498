@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="100692600fs"></ZoomStartTime>
-      <ZoomEndTime time="100754201fs"></ZoomEndTime>
-      <Cursor1Time time="100770000fs"></Cursor1Time>
+      <ZoomStartTime time="100693969fs"></ZoomStartTime>
+      <ZoomEndTime time="100885290fs"></ZoomEndTime>
+      <Cursor1Time time="100760000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="194"></NameColumnWidth>
-      <ValueColumnWidth column_width="122"></ValueColumnWidth>
+      <ValueColumnWidth column_width="118"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="24" />
+   <WVObjectSize size="35" />
    <wvobject type="logic" fp_name="/top_tb/S_AXI_ACLK">
       <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
       <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
@@ -102,11 +102,6 @@
       <obj_property name="ObjectShortName">rmsAccQ[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/top_tb/top1/total_2">
-      <obj_property name="ElementShortName">total_2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">total_2[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
    <wvobject type="array" fp_name="/top_tb/top1/total">
       <obj_property name="ElementShortName">total[6:0]</obj_property>
       <obj_property name="ObjectShortName">total[6:0]</obj_property>
@@ -119,5 +114,53 @@
    <wvobject type="array" fp_name="/top_tb/top1/tdcOut">
       <obj_property name="ElementShortName">tdcOut[62:0]</obj_property>
       <obj_property name="ObjectShortName">tdcOut[62:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/state">
+      <obj_property name="ElementShortName">state[7:0]</obj_property>
+      <obj_property name="ObjectShortName">state[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/nextState">
+      <obj_property name="ElementShortName">nextState[7:0]</obj_property>
+      <obj_property name="ObjectShortName">nextState[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/fftAccD">
+      <obj_property name="ElementShortName">fftAccD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fftAccD[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/fftAccQ">
+      <obj_property name="ElementShortName">fftAccQ[31:0]</obj_property>
+      <obj_property name="ObjectShortName">fftAccQ[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/M_TDATA">
+      <obj_property name="ElementShortName">M_TDATA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">M_TDATA[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top1/M_TLAST">
+      <obj_property name="ElementShortName">M_TLAST</obj_property>
+      <obj_property name="ObjectShortName">M_TLAST</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top1/M_TREADY">
+      <obj_property name="ElementShortName">M_TREADY</obj_property>
+      <obj_property name="ObjectShortName">M_TREADY</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top1/M_TVALID">
+      <obj_property name="ElementShortName">M_TVALID</obj_property>
+      <obj_property name="ObjectShortName">M_TVALID</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/S_TDATA">
+      <obj_property name="ElementShortName">S_TDATA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">S_TDATA[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top1/S_TLAST">
+      <obj_property name="ElementShortName">S_TLAST</obj_property>
+      <obj_property name="ObjectShortName">S_TLAST</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top1/S_TREADY">
+      <obj_property name="ElementShortName">S_TREADY</obj_property>
+      <obj_property name="ObjectShortName">S_TREADY</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top1/S_TVALID">
+      <obj_property name="ElementShortName">S_TVALID</obj_property>
+      <obj_property name="ObjectShortName">S_TVALID</obj_property>
    </wvobject>
 </wave_config>

@@ -1,24 +1,22 @@
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 |       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
-|               clk_fpga_0 |               clk_fpga_0 |                                                     design_1_i/top_0/inst/AxiSupporter1/rdDataQ_reg[15]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                     design_1_i/top_0/inst/AxiSupporter1/rdDataQ_reg[11]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                      design_1_i/top_0/inst/AxiSupporter1/rdDataQ_reg[0]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                      design_1_i/top_0/inst/AxiSupporter1/rdDataQ_reg[6]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/virusMaskQ_reg[124]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[94]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/virusMaskQ_reg[122]/D|
 |               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[92]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/virusMaskQ_reg[126]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[38]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[89]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/virusMaskQ_reg[124]/D|
 |               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/virusMaskQ_reg[125]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[61]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/virusMaskQ_reg[123]/D|
 |               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[91]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[60]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[37]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/virusMaskQ_reg[121]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                                      design_1_i/top_0/inst/state_reg[0]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                                      design_1_i/top_0/inst/state_reg[2]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/virusMaskQ_reg[120]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/state_reg[0]_rep__0/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/virusMaskQ_reg[127]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[95]/D|
 |               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[93]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[54]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[62]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[88]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[58]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/virusMaskQ_reg[126]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                                      design_1_i/top_0/inst/state_reg[1]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[45]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/virusMaskQ_reg[32]/D|
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

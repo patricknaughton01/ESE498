@@ -586,14 +586,29 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: xfft_0, and set properties
+  set xfft_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xfft:9.1 xfft_0 ]
+  set_property -dict [ list \
+   CONFIG.aresetn {false} \
+   CONFIG.implementation_options {radix_4_burst_io} \
+   CONFIG.input_width {8} \
+   CONFIG.number_of_stages_using_block_ram_for_data_and_phase_factors {0} \
+   CONFIG.output_ordering {natural_order} \
+   CONFIG.scaling_options {unscaled} \
+   CONFIG.target_clock_frequency {100} \
+   CONFIG.transform_length {8192} \
+ ] $xfft_0
+
   # Create interface connections
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins ps7_0_axi_periph/M00_AXI] [get_bd_intf_pins top_0/S_AXI]
+  connect_bd_intf_net -intf_net top_0_M [get_bd_intf_pins top_0/M] [get_bd_intf_pins xfft_0/S_AXIS_DATA]
+  connect_bd_intf_net -intf_net xfft_0_M_AXIS_DATA [get_bd_intf_pins top_0/S] [get_bd_intf_pins xfft_0/M_AXIS_DATA]
 
   # Create port connections
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins top_0/S_AXI_ACLK]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins top_0/S_AXI_ACLK] [get_bd_pins xfft_0/aclk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
   connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins top_0/S_AXI_ARESETN]
   connect_bd_net -net top_0_trigger [get_bd_ports trigger_0] [get_bd_pins top_0/trigger]

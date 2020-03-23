@@ -22,7 +22,7 @@
 
 module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=32, DELAY=63, READ_MAX_ADDR='hFFF4, 
     REC_ADDR='hFFFC, FREQ_ADDR='hFFF8, VIRUS_ADDR='hFFD8, MEM_WIDTH=16, PP_ADDR='hFFF0, RMS_ADDR = 'hFFEC, FFT_ADDR='hFFE8,
-    ABS_READ_MAX=10000, VIRUS_NUM_B=128, VIRUS_B_SIZE=128, SIM=0)(
+    ABS_READ_MAX=10000, VIRUS_NUM_B=128, VIRUS_B_SIZE=128, SIM=0, M_TDATA_WIDTH=16, S_TDATA_WIDTH=48, FFT_WIDTH=8192)(
     // Axi4Lite Bus
     input       S_AXI_ACLK,
     input       S_AXI_ARESETN,
@@ -43,7 +43,18 @@ module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=
     output      [1:0] S_AXI_RRESP,
     output      S_AXI_RVALID,
     input       S_AXI_RREADY,
-    output  reg trigger
+    output  reg trigger,
+    // AxiS bus Manager
+    output  wire[M_TDATA_WIDTH-1:0] M_TDATA,
+    output  wire                    M_TLAST,
+    input   wire                    M_TREADY,
+    output  wire                    M_TVALID,
+    
+    // AxiS bus Supporter
+    input   wire[S_TDATA_WIDTH-1:0] S_TDATA,
+    input                           S_TLAST,
+    output  reg                     S_TREADY,
+    input                           S_TVALID
 );
 
 wire [C_S_AXI_ADDR_WIDTH-1:0] wrAddr;
@@ -52,6 +63,12 @@ wire wr;
 wire [C_S_AXI_ADDR_WIDTH-1:0] rdAddr;
 reg  [C_S_AXI_DATA_WIDTH-1:0] rdData;
 wire rd;
+
+
+// FFT Manager Simple bus
+reg[M_TDATA_WIDTH-1:0]   fft_wrData;
+wire    fft_wrDone;
+reg     fft_wr;
 
 wire [DELAY-1:0] tdcOut;
 
@@ -89,6 +106,20 @@ Axi4LiteSupporter#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(
     .S_AXI_RREADY(S_AXI_RREADY)         // input
 );
 
+axis_manager#(.TDATA_WIDTH(M_TDATA_WIDTH)) axis_manager1(
+    // Simple bus
+    .wrData(fft_wrData),
+    .wrDone(fft_wrDone),
+    .wr(fft_wr),
+    // AxiS bus
+    .CLK(S_AXI_ACLK),
+    .RESET_L(S_AXI_ARESETN),
+    .TDATA(M_TDATA),
+    .TLAST(M_TLAST),
+    .TREADY(M_TREADY),
+    .TVALID(M_TVALID)
+);
+
 tdc#(.INITIAL(INITIAL), .DELAY(DELAY)) tdc1(
     .clk(S_AXI_ACLK),
     .reset(S_AXI_ARESETN),
@@ -114,14 +145,14 @@ RAM#(.DEPTH(ABS_READ_MAX)) ram1(
     .do(memDo)
 );
 
-parameter IDLE=0, READ=1, READ_ONCE=2, READ_RAMP=3, RMS=4;
+parameter IDLE=0, READ=1, READ_ONCE=2, READ_RAMP=3, RMS=4, FFT_WR=5, FFT_WR1=6, FFT_RD=7;
 reg [7:0] state, nextState;
 reg [C_S_AXI_DATA_WIDTH-1:0] counterD, counterQ, virusCounterD, virusCounterQ, freqD, freqQ,
            maxD, maxQ, ppD, ppQ;
 reg [C_S_AXI_DATA_WIDTH-1:0] oneMask;
 reg [DELAY-1:0] tdcClean;
 reg [6:0] total, diffMaxD, diffMaxQ, diffMinD, diffMinQ;
-reg [C_S_AXI_DATA_WIDTH-1:0] rmsAccD, rmsAccQ;
+reg [C_S_AXI_DATA_WIDTH-1:0] rmsAccD, rmsAccQ, fftAccD, fftAccQ, fftRe, fftIm;
 
 integer i;
 always @ * begin
@@ -137,6 +168,11 @@ always @ * begin
     diffMinD = diffMinQ;
     ppD = ppQ;
     rmsAccD = rmsAccQ;
+    fftAccD = fftAccQ;
+    fftRe = 0;
+    fftIm = 0;
+    fft_wr = 0;
+    fft_wrData = 0;
     rdData = 0;
     total = 0;
     memWe = 0;
@@ -158,6 +194,9 @@ always @ * begin
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
             end else if(rd && rdAddr == RMS_ADDR)begin
                 rdData = rmsAccQ;
+                rdData[C_S_AXI_DATA_WIDTH-1] = 1;
+            end else if(rd && rdAddr == FFT_ADDR)begin
+                rdData = fftAccQ;
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
             end else if(wr) begin
                 if(wrAddr == REC_ADDR)begin
@@ -233,19 +272,39 @@ always @ * begin
                 diffMaxD = 0;
                 diffMinD = 'h3f;
                 ppD = (diffMaxQ - diffMinQ);
+                nextState = FFT_WR;
+            end
+        end
+        FFT_WR:begin
+            if(counterQ < FFT_WIDTH)begin
+                fft_wr = 1;
+                memAddr = counterQ << 2;
+                fft_wrData = memDo;
+                counterD = counterQ + 1;
+                nextState = FFT_WR1;
+            end else begin
+                counterD = 0;
+                nextState = FFT_RD;
+            end
+        end
+        FFT_WR1:begin
+            if(fft_wrDone)begin
+                nextState = FFT_WR;
+            end
+        end
+        FFT_RD:begin
+            if(counterQ < FFT_WIDTH)begin
+                if(S_TVALID)begin
+                    S_TREADY = 1;
+                    counterD = counterQ + 1;
+                    fftRe = S_TDATA[(S_TDATA_WIDTH>>1)-1:0];
+                    fftIm = S_TDATA[S_TDATA_WIDTH-1:S_TDATA_WIDTH>>1];
+                    fftAccD = fftAccQ + (fftRe*fftRe) + (fftIm*fftIm);
+                end
+            end else begin
                 nextState = IDLE;
             end
         end
-        /*RMS:begin
-            if(counterQ < maxQ)begin
-                memAddr = counterQ << 2;
-                rmsAccD = rmsAccQ + (memDo * memDo);
-                counterD = counterQ + 1;
-            end else begin
-                counterD = 0;
-                nextState = IDLE;
-            end
-        end*/
         READ_ONCE:begin
             if(virusCounterQ >= freqQ-1)begin
                 virusEnD = virusMaskQ;
@@ -327,6 +386,7 @@ always @ (posedge S_AXI_ACLK)begin
         diffMinQ <= diffMinD;
         ppQ <= ppD;
         rmsAccQ <= rmsAccD;
+        fftAccQ <= fftAccD;
     end else begin
         state <= IDLE;
         counterQ <= 0;
@@ -340,6 +400,7 @@ always @ (posedge S_AXI_ACLK)begin
         diffMinQ <= 'h3f;               // This stores a min value, so initialize it to max
         ppQ <= 0;
         rmsAccQ <= 0;
+        fftAccQ <= 0;
     end
 end
 

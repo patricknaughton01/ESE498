@@ -21,7 +21,7 @@
 
 
 module top_tb#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, CLK_PERIOD=10, READ_MAX=10000,
-    TO_READ=10000)();
+    TO_READ=10000, M_TDATA_WIDTH=16, S_TDATA_WIDTH=48, FFT_WIDTH=8192)();
 
 // Axi4Lite signals
 reg  S_AXI_ACLK ;
@@ -53,7 +53,22 @@ wire    [C_S_AXI_DATA_WIDTH-1:0]    rdData ;
 reg                                 rd ;
 wire                                rdDone ;
 
-top#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH), .SIM(40)) top1(
+// AxiS bus Manager
+wire[M_TDATA_WIDTH-1:0] M_TDATA;
+wire                    M_TLAST;
+reg                     M_TREADY;
+wire                    M_TVALID;
+
+// AxiS bus Supporter
+reg [S_TDATA_WIDTH-1:0] S_TDATA;
+reg                     S_TLAST;
+wire                    S_TREADY;
+reg                     S_TVALID;
+
+wire trigger;
+
+top#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH), .SIM(40),
+    .M_TDATA_WIDTH(M_TDATA_WIDTH), .S_TDATA_WIDTH(S_TDATA_WIDTH), .FFT_WIDTH(FFT_WIDTH)) top1(
     // Axi4Lite Bus
     S_AXI_ACLK,
     S_AXI_ARESETN,
@@ -73,7 +88,16 @@ top#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_W
     S_AXI_RDATA,
     S_AXI_RRESP,
     S_AXI_RVALID,
-    S_AXI_RREADY
+    S_AXI_RREADY,
+    trigger,
+    M_TDATA,
+    M_TLAST,
+    M_TREADY,
+    M_TVALID,
+    S_TDATA,
+    S_TLAST,
+    S_TREADY,
+    S_TVALID
 );
 
 Axi4LiteManager #(.C_M_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_M_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH)) Axi4LiteManager1
@@ -115,6 +139,7 @@ always begin
     #CLK_PERIOD_2 S_AXI_ACLK = ~S_AXI_ACLK;
 end
 
+integer i;
 initial begin
     S_AXI_ARESETN = 0;
     S_AXI_ACLK = 0;
@@ -175,14 +200,27 @@ initial begin
     #(CLK_PERIOD * 5);
     #(CLK_PERIOD * (TO_READ + 10));
     // Allow RMS to accumulate
-    //#(CLK_PERIOD*(TO_READ + 10));
+    #(CLK_PERIOD*((TO_READ<<1) + 10));
+    // Provide fake FFT values
+    for(i = 0; i<FFT_WIDTH; i = i + 1)begin
+        S_TDATA = 'h000010_000010;
+        S_TVALID = 1;
+        #CLK_PERIOD;
+    end
     // Read PP value
     rd = 1;
-    rdAddr = 'hFFEC;
+    rdAddr = 'hFFE8;
     #CLK_PERIOD;
     rd = 0;
     #(CLK_PERIOD*10);
     $stop;
+end
+
+always @ * begin
+    M_TREADY = 0;
+    if(M_TVALID == 1)begin
+        M_TREADY = 1;
+    end
 end
 
 endmodule
