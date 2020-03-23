@@ -10,6 +10,7 @@
 #include "monitor.h"
 
 #define CLK_SPEED 100000000
+#define FFT_SIZE 8192
 
 int32_t * const peripheral = (int32_t*)0x43C00000;
 
@@ -37,6 +38,7 @@ void makeMeasurement(){
 	int32_t * const freq_addr 	= (int32_t*)0x43C0FFF8;
 	int32_t * const read_addr 	= (int32_t*)0x43C0FFF4;
 	int32_t * const pp_addr 	= (int32_t*)0x43C0FFF0;
+	int32_t * const rms_addr	= (int32_t*)0x43C0FFEC;
 	int32_t * const virus_addr 	= (int32_t*)0x43C0FFD8;
 	// How many times to read from the monitor
 	const int32_t numReads = 10000;
@@ -77,12 +79,12 @@ void makeMeasurement(){
 			*rec_addr = 0;			// Start recording square response
 
 			// Wait until the response is done being collected
-			value = *pp_addr;
+			value = *rms_addr;
 			while(( value & (1<<31)) == 0) {
-				value = *pp_addr;
+				value = *rms_addr;
 			}
 
-			xil_printf("%d %d\n", CLK_SPEED/(2*period), (value & 0x3f));
+			xil_printf("%d %d\n", CLK_SPEED/(2*period), (value ^ (1<<31)));
 			period = period + 1;	// Change the period on the next run
 		}
 		period = 2;

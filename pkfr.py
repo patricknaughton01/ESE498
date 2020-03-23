@@ -4,12 +4,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def main():
-    parser = argparse.ArgumentParser(description='Plot Pk-Pk FR')
+    parser = argparse.ArgumentParser(description='Plot FR')
 
     parser.add_argument("filename", type=str, help="filename to read from")
     parser.add_argument("-l", action="store_true", help="log-scale")
     parser.add_argument("-x", action="store_true", help="x log-scale")
-
+    parser.add_argument("-m", type=str, default="p", help="mode")
+    parser.add_argument("-t", type=str, default="Pk-Pk", help="title")
+    
     args = parser.parse_args()
 
     try:
@@ -20,6 +22,8 @@ def main():
                 line = line.split(" ")
                 freq = int(line[0])
                 count = int(line[1])
+                if args.m == "r":
+                    count = (count / 10000)**0.5
                 if freq in traces:
                     traces[freq].append(count)
                 else:
@@ -35,7 +39,7 @@ def main():
                 plt.xscale("log")
             if args.l:
                 plt.yscale("log")
-            plt.title("Pk-Pk Frequency response")
+            plt.title("Frequency response ({})".format(args.t))
             plt.show()
     except IOError:
         print("Couldn't open file {}".format(args.filename))

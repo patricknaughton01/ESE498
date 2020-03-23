@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "top,Vivado 2019.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_top_0_1,top,{}" *)
-(* CORE_GENERATION_INFO = "design_1_top_0_1,top,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_ADDR_WIDTH=16,C_S_AXI_DATA_WIDTH=32,INITIAL=32,DELAY=63,READ_MAX_ADDR=0x0000FFF4,REC_ADDR=0x0000FFFC,FREQ_ADDR=0x0000FFF8,VIRUS_ADDR=0x0000FFD8,MEM_WIDTH=16,PP_ADDR=0x0000FFF0,ABS_READ_MAX=10000,VIRUS_NUM_B=128,VIRUS_B_SIZE=128}" *)
+(* CORE_GENERATION_INFO = "design_1_top_0_1,top,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_ADDR_WIDTH=16,C_S_AXI_DATA_WIDTH=32,INITIAL=32,DELAY=63,READ_MAX_ADDR=0x0000FFF4,REC_ADDR=0x0000FFFC,FREQ_ADDR=0x0000FFF8,VIRUS_ADDR=0x0000FFD8,MEM_WIDTH=16,PP_ADDR=0x0000FFF0,RMS_ADDR=0x0000FFEC,FFT_ADDR=0x0000FFE8,ABS_READ_MAX=10000,VIRUS_NUM_B=128,VIRUS_B_SIZE=128,SIM=0}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_top_0_1 (
@@ -133,9 +133,12 @@ output wire trigger;
     .VIRUS_ADDR(32'H0000FFD8),
     .MEM_WIDTH(16),
     .PP_ADDR(32'H0000FFF0),
+    .RMS_ADDR(32'H0000FFEC),
+    .FFT_ADDR(32'H0000FFE8),
     .ABS_READ_MAX(10000),
     .VIRUS_NUM_B(128),
-    .VIRUS_B_SIZE(128)
+    .VIRUS_B_SIZE(128),
+    .SIM(0)
   ) inst (
     .S_AXI_ACLK(S_AXI_ACLK),
     .S_AXI_ARESETN(S_AXI_ARESETN),

@@ -21,7 +21,7 @@
 
 
 module top_tb#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, CLK_PERIOD=10, READ_MAX=10000,
-    TO_READ=1000)();
+    TO_READ=10000)();
 
 // Axi4Lite signals
 reg  S_AXI_ACLK ;
@@ -53,7 +53,7 @@ wire    [C_S_AXI_DATA_WIDTH-1:0]    rdData ;
 reg                                 rd ;
 wire                                rdDone ;
 
-top#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH)) top1(
+top#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH), .SIM(40)) top1(
     // Axi4Lite Bus
     S_AXI_ACLK,
     S_AXI_ARESETN,
@@ -174,14 +174,11 @@ initial begin
     wr = 0;
     #(CLK_PERIOD * 5);
     #(CLK_PERIOD * (TO_READ + 10));
-    rd = 1;
-    rdAddr = 'h4;
-    #CLK_PERIOD;
-    rd = 0;
-    #(CLK_PERIOD*10);
+    // Allow RMS to accumulate
+    //#(CLK_PERIOD*(TO_READ + 10));
     // Read PP value
     rd = 1;
-    rdAddr = 'hFFF0;
+    rdAddr = 'hFFEC;
     #CLK_PERIOD;
     rd = 0;
     #(CLK_PERIOD*10);

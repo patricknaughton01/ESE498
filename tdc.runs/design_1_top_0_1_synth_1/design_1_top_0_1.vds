@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue Mar 17 14:48:01 2020
-# Process ID: 3028
+# Start of session at: Sun Mar 22 18:22:53 2020
+# Process ID: 4398
 # Current directory: /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1
 # Command line: vivado -log design_1_top_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_top_0_1.tcl
 # Log file: /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1/design_1_top_0_1.vds
@@ -18,11 +18,11 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 3071 
+INFO: Helper process launched with PID 4441 
 WARNING: [Synth 8-2507] parameter declaration becomes local in Axi4LiteSupporter with formal parameter declaration list [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/imports/axi4lite/axi4litesupporter.v:36]
 WARNING: [Synth 8-2507] parameter declaration becomes local in top with formal parameter declaration list [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:117]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2008.621 ; gain = 207.621 ; free physical = 13492 ; free virtual = 23705
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2008.652 ; gain = 207.621 ; free physical = 12698 ; free virtual = 24837
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_top_0_1' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/bd/design_1/ip/design_1_top_0_1/synth/design_1_top_0_1.v:58]
 INFO: [Synth 8-6157] synthesizing module 'top' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:23]
@@ -36,13 +36,17 @@ INFO: [Synth 8-6157] synthesizing module 'top' [/home/patricknaughton01/Document
 	Parameter VIRUS_ADDR bound to: 65496 - type: integer 
 	Parameter MEM_WIDTH bound to: 16 - type: integer 
 	Parameter PP_ADDR bound to: 65520 - type: integer 
+	Parameter RMS_ADDR bound to: 65516 - type: integer 
+	Parameter FFT_ADDR bound to: 65512 - type: integer 
 	Parameter ABS_READ_MAX bound to: 10000 - type: integer 
 	Parameter VIRUS_NUM_B bound to: 128 - type: integer 
 	Parameter VIRUS_B_SIZE bound to: 128 - type: integer 
+	Parameter SIM bound to: 0 - type: integer 
 	Parameter IDLE bound to: 0 - type: integer 
 	Parameter READ bound to: 1 - type: integer 
 	Parameter READ_ONCE bound to: 2 - type: integer 
 	Parameter READ_RAMP bound to: 3 - type: integer 
+	Parameter RMS bound to: 4 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'Axi4LiteSupporter' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/imports/axi4lite/axi4litesupporter.v:3]
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 16 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -106,7 +110,7 @@ INFO: [Synth 8-6157] synthesizing module 'RAM' [/home/patricknaughton01/Document
 	Parameter DEPTH bound to: 10000 - type: integer 
 	Parameter ADDR_WIDTH bound to: 16 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'RAM' (8#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/ram.v:23]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:146]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:148]
 INFO: [Synth 8-6155] done synthesizing module 'top' (9#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_top_0_1' (10#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/bd/design_1/ip/design_1_top_0_1/synth/design_1_top_0_1.v:58]
 WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[3]
@@ -116,7 +120,7 @@ WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTR
 WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WVALID
 WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_BREADY
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2054.496 ; gain = 253.496 ; free physical = 13524 ; free virtual = 23739
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2054.527 ; gain = 253.496 ; free physical = 12730 ; free virtual = 24870
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -129,12 +133,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2071.340 ; gain = 270.340 ; free physical = 13522 ; free virtual = 23735
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2072.340 ; gain = 271.309 ; free physical = 12730 ; free virtual = 24869
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2071.340 ; gain = 270.340 ; free physical = 13522 ; free virtual = 23735
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2072.340 ; gain = 271.309 ; free physical = 12730 ; free virtual = 24869
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2083.246 ; gain = 0.000 ; free physical = 13472 ; free virtual = 23685
+Netlist sorting complete. Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2080.277 ; gain = 0.000 ; free physical = 12650 ; free virtual = 24790
 INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -143,31 +147,30 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2287.902 ; gain = 0.000 ; free physical = 13371 ; free virtual = 23585
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2288.934 ; gain = 0.000 ; free physical = 12443 ; free virtual = 24598
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.44 ; elapsed = 00:00:00.24 . Memory (MB): peak = 2297.809 ; gain = 9.906 ; free physical = 13362 ; free virtual = 23576
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:00.25 . Memory (MB): peak = 2299.840 ; gain = 10.906 ; free physical = 12413 ; free virtual = 24568
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2297.809 ; gain = 496.809 ; free physical = 13409 ; free virtual = 23626
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2299.840 ; gain = 498.809 ; free physical = 12543 ; free virtual = 24698
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2297.809 ; gain = 496.809 ; free physical = 13409 ; free virtual = 23626
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2299.840 ; gain = 498.809 ; free physical = 12543 ; free virtual = 24698
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2297.809 ; gain = 496.809 ; free physical = 13409 ; free virtual = 23626
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2299.840 ; gain = 498.809 ; free physical = 12543 ; free virtual = 24698
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Axi4LiteSupporter'
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'top'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -178,17 +181,8 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'top'
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Axi4LiteSupporter'
 WARNING: [Synth 8-327] inferring latch for variable 'latches_reg' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:58]
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                    IDLE |                             0001 |                         00000000
-                    READ |                             0010 |                         00000001
-               READ_ONCE |                             0100 |                         00000010
-               READ_RAMP |                             1000 |                         00000011
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'top'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2297.809 ; gain = 496.809 ; free physical = 13392 ; free virtual = 23608
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2299.840 ; gain = 498.809 ; free physical = 12533 ; free virtual = 24691
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -207,28 +201,29 @@ Detailed RTL Component Info :
 +---Registers : 
 	              128 Bit    Registers := 2     
 	               64 Bit    Registers := 1     
-	               32 Bit    Registers := 6     
+	               32 Bit    Registers := 8     
 	                7 Bit    Registers := 2     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input    128 Bit        Muxes := 3     
+	   2 Input    128 Bit        Muxes := 4     
 	   4 Input    128 Bit        Muxes := 1     
 	   3 Input     32 Bit        Muxes := 2     
-	   2 Input     32 Bit        Muxes := 5     
-	   4 Input     32 Bit        Muxes := 3     
-	   2 Input     16 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 11    
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 3     
 	   3 Input     16 Bit        Muxes := 2     
 	   4 Input     16 Bit        Muxes := 1     
-	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 2     
 	   4 Input      7 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 1     
-	   3 Input      4 Bit        Muxes := 1     
 	   3 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 22    
 	   3 Input      1 Bit        Muxes := 4     
-	   4 Input      1 Bit        Muxes := 16    
-	   6 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 17    
+	   7 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -260,23 +255,25 @@ Detailed RTL Component Info :
 	  63 Input      7 Bit       Adders := 1     
 +---Registers : 
 	              128 Bit    Registers := 2     
-	               32 Bit    Registers := 5     
+	               32 Bit    Registers := 7     
 	                7 Bit    Registers := 2     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input    128 Bit        Muxes := 3     
+	   2 Input    128 Bit        Muxes := 4     
 	   4 Input    128 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 5     
-	   4 Input     32 Bit        Muxes := 3     
-	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 11    
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 2     
 	   4 Input     16 Bit        Muxes := 1     
-	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 2     
 	   4 Input      7 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 1     
-	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 9     
-	   4 Input      1 Bit        Muxes := 16    
-	   6 Input      1 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 21    
+	   4 Input      1 Bit        Muxes := 17    
+	   7 Input      1 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -293,61 +290,45 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5545] ROM "D1" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-4471] merging register 'rmsAccQ_reg[31:0]' into 'rmsAccQ_reg[31:0]' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:329]
 WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[3]
 WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[2]
 WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[1]
 WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[0]
 WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WVALID
 WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_BREADY
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[7]' (FDRE) to 'inst/ppQ_reg[8]'
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[8]' (FDRE) to 'inst/ppQ_reg[9]'
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[9]' (FDRE) to 'inst/ppQ_reg[10]'
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[10]' (FDRE) to 'inst/ppQ_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[11]' (FDRE) to 'inst/ppQ_reg[12]'
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[12]' (FDRE) to 'inst/ppQ_reg[13]'
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[13]' (FDRE) to 'inst/ppQ_reg[14]'
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[14]' (FDRE) to 'inst/ppQ_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[15]' (FDRE) to 'inst/ppQ_reg[16]'
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[16]' (FDRE) to 'inst/ppQ_reg[17]'
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[17]' (FDRE) to 'inst/ppQ_reg[18]'
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[18]' (FDRE) to 'inst/ppQ_reg[19]'
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[19]' (FDRE) to 'inst/ppQ_reg[20]'
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[20]' (FDRE) to 'inst/ppQ_reg[21]'
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[21]' (FDRE) to 'inst/ppQ_reg[22]'
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[22]' (FDRE) to 'inst/ppQ_reg[23]'
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[23]' (FDRE) to 'inst/ppQ_reg[24]'
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[24]' (FDRE) to 'inst/ppQ_reg[25]'
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[25]' (FDRE) to 'inst/ppQ_reg[26]'
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[26]' (FDRE) to 'inst/ppQ_reg[27]'
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[27]' (FDRE) to 'inst/ppQ_reg[28]'
-INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[28]' (FDRE) to 'inst/ppQ_reg[29]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[7]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[8]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[9]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[10]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[11]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[12]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[13]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[14]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[15]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[16]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[17]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[18]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[19]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[20]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[21]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[22]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[23]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[24]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[25]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[26]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[27]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[28]' (FDRE) to 'inst/ppQ_reg[30]'
 INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[29]' (FDRE) to 'inst/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[7]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[8]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[8]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[9]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[9]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[10]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[10]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[11]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[12]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[12]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[13]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[13]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[14]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[14]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[16]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[17]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[17]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[18]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[18]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[19]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[19]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[20]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[20]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[21]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[21]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[22]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[22]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[23]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[23]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[24]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[24]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[25]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[25]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[26]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[26]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[27]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[27]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[28]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[28]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[29]'
-INFO: [Synth 8-3886] merging instance 'inst/AxiSupporter1/rdDataQ_reg[29]' (FDE) to 'inst/AxiSupporter1/rdDataQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/state_reg[7]' (FDRE) to 'inst/state_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/state_reg[6]' (FDRE) to 'inst/state_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/state_reg[5]' (FDRE) to 'inst/state_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/state_reg[4]' (FDRE) to 'inst/state_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/state_reg[3]' (FDRE) to 'inst/state_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/state_reg[2] )
 INFO: [Synth 8-3332] Sequential element (inst/tdc1/latches_reg[63]) is unused and will be removed from module design_1_top_0_1.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:57 . Memory (MB): peak = 2297.809 ; gain = 496.809 ; free physical = 14195 ; free virtual = 24416
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:57 . Memory (MB): peak = 2299.840 ; gain = 498.809 ; free physical = 13363 ; free virtual = 25528
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -374,13 +355,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:01:04 . Memory (MB): peak = 2297.809 ; gain = 496.809 ; free physical = 14019 ; free virtual = 24262
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:01:04 . Memory (MB): peak = 2299.840 ; gain = 498.809 ; free physical = 13213 ; free virtual = 25379
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:01:06 . Memory (MB): peak = 2297.809 ; gain = 496.809 ; free physical = 14030 ; free virtual = 24259
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:01:05 . Memory (MB): peak = 2299.840 ; gain = 498.809 ; free physical = 13211 ; free virtual = 25376
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -406,7 +387,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:01:49 . Memory (MB): peak = 2331.684 ; gain = 530.684 ; free physical = 14068 ; free virtual = 24290
+Finished Technology Mapping : Time (s): cpu = 00:00:57 ; elapsed = 00:01:49 . Memory (MB): peak = 2335.832 ; gain = 534.801 ; free physical = 13227 ; free virtual = 25395
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -433,13 +414,13 @@ INFO: [Synth 8-3295] tying undriven pin inst/tdc1/delay_bufs_inferred:in0[63] to
 INFO: [Synth 8-3295] tying undriven pin inst/tdc1/delay_bufs_inferred:in0[62] to constant 0
 INFO: [Synth 8-3295] tying undriven pin inst/tdc1/delay_bufs_inferred:in0[61] to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:01 ; elapsed = 00:01:54 . Memory (MB): peak = 2331.684 ; gain = 530.684 ; free physical = 14070 ; free virtual = 24292
+Finished IO Insertion : Time (s): cpu = 00:01:02 ; elapsed = 00:01:54 . Memory (MB): peak = 2335.832 ; gain = 534.801 ; free physical = 13233 ; free virtual = 25401
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:01 ; elapsed = 00:01:54 . Memory (MB): peak = 2331.684 ; gain = 530.684 ; free physical = 14071 ; free virtual = 24292
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:02 ; elapsed = 00:01:54 . Memory (MB): peak = 2335.832 ; gain = 534.801 ; free physical = 13233 ; free virtual = 25401
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -458,25 +439,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:02 ; elapsed = 00:01:55 . Memory (MB): peak = 2331.684 ; gain = 530.684 ; free physical = 14069 ; free virtual = 24291
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:55 . Memory (MB): peak = 2335.832 ; gain = 534.801 ; free physical = 13231 ; free virtual = 25399
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:02 ; elapsed = 00:01:56 . Memory (MB): peak = 2331.684 ; gain = 530.684 ; free physical = 14069 ; free virtual = 24291
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:55 . Memory (MB): peak = 2335.832 ; gain = 534.801 ; free physical = 13231 ; free virtual = 25399
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:01:57 . Memory (MB): peak = 2331.684 ; gain = 530.684 ; free physical = 14075 ; free virtual = 24297
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:05 ; elapsed = 00:01:57 . Memory (MB): peak = 2335.832 ; gain = 534.801 ; free physical = 13238 ; free virtual = 25406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:04 ; elapsed = 00:01:57 . Memory (MB): peak = 2331.684 ; gain = 530.684 ; free physical = 14075 ; free virtual = 24297
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:05 ; elapsed = 00:01:57 . Memory (MB): peak = 2335.832 ; gain = 534.801 ; free physical = 13238 ; free virtual = 25406
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -492,17 +473,17 @@ Report Cell Usage:
 +------+----------+------+
 |      |Cell      |Count |
 +------+----------+------+
-|1     |CARRY4    |    88|
-|2     |LUT1      |   100|
-|3     |LUT2      | 16476|
-|4     |LUT3      |   111|
-|5     |LUT4      |   286|
-|6     |LUT5      |   335|
-|7     |LUT6      |   410|
+|1     |CARRY4    |   105|
+|2     |LUT1      |   101|
+|3     |LUT2      | 16539|
+|4     |LUT3      |   136|
+|5     |LUT4      |   342|
+|6     |LUT5      |   183|
+|7     |LUT6      |   569|
 |8     |RAM16X1S  |     8|
 |9     |RAM256X1S |   312|
-|10    |FDRE      |   481|
-|11    |FDSE      |     7|
+|10    |FDRE      |   522|
+|11    |FDSE      |    21|
 |12    |LD        |    63|
 +------+----------+------+
 
@@ -510,11 +491,11 @@ Report Instance Areas:
 +------+-------------------------------+------------------+------+
 |      |Instance                       |Module            |Cells |
 +------+-------------------------------+------------------+------+
-|1     |top                            |                  | 18677|
-|2     |  inst                         |top               | 18677|
-|3     |    AxiSupporter1              |Axi4LiteSupporter |   546|
-|4     |    ram1                       |RAM               |   434|
-|5     |    tdc1                       |tdc               |   350|
+|1     |top                            |                  | 18901|
+|2     |  inst                         |top               | 18901|
+|3     |    AxiSupporter1              |Axi4LiteSupporter |   609|
+|4     |    ram1                       |RAM               |   442|
+|5     |    tdc1                       |tdc               |   411|
 |6     |      \genblk1[1].init         |buffer__1         |     2|
 |7     |      \genblk1[2].init         |buffer__2         |     2|
 |8     |      \genblk1[3].init         |buffer__3         |     2|
@@ -17061,18 +17042,18 @@ Report Instance Areas:
 |16549 |        \genblk1[127].ringOsc  |ro__10            |     1|
 +------+-------------------------------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:01:57 . Memory (MB): peak = 2331.684 ; gain = 530.684 ; free physical = 14072 ; free virtual = 24298
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:05 ; elapsed = 00:01:57 . Memory (MB): peak = 2335.832 ; gain = 534.801 ; free physical = 13235 ; free virtual = 25407
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:00 ; elapsed = 00:01:54 . Memory (MB): peak = 2331.684 ; gain = 304.215 ; free physical = 14129 ; free virtual = 24355
-Synthesis Optimization Complete : Time (s): cpu = 00:01:04 ; elapsed = 00:01:57 . Memory (MB): peak = 2331.691 ; gain = 530.684 ; free physical = 14129 ; free virtual = 24355
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:01 ; elapsed = 00:01:54 . Memory (MB): peak = 2335.832 ; gain = 307.301 ; free physical = 13292 ; free virtual = 25464
+Synthesis Optimization Complete : Time (s): cpu = 00:01:05 ; elapsed = 00:01:57 . Memory (MB): peak = 2335.840 ; gain = 534.801 ; free physical = 13292 ; free virtual = 25464
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2331.691 ; gain = 0.000 ; free physical = 14187 ; free virtual = 24413
-INFO: [Netlist 29-17] Analyzing 471 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2335.840 ; gain = 0.000 ; free physical = 13351 ; free virtual = 25523
+INFO: [Netlist 29-17] Analyzing 488 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2363.699 ; gain = 0.000 ; free physical = 14138 ; free virtual = 24364
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2367.848 ; gain = 0.000 ; free physical = 13302 ; free virtual = 25474
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 383 instances were transformed.
   LD => LDCE: 63 instances
@@ -17080,18 +17061,18 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 312 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-92 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
+74 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:12 ; elapsed = 00:02:08 . Memory (MB): peak = 2363.699 ; gain = 822.172 ; free physical = 14300 ; free virtual = 24526
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2363.699 ; gain = 0.000 ; free physical = 14300 ; free virtual = 24526
+synth_design: Time (s): cpu = 00:01:13 ; elapsed = 00:02:07 . Memory (MB): peak = 2367.848 ; gain = 826.320 ; free physical = 13464 ; free virtual = 25636
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2367.848 ; gain = 0.000 ; free physical = 13464 ; free virtual = 25636
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1/design_1_top_0_1.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
 INFO: [Coretcl 2-1174] Renamed 16548 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2387.711 ; gain = 0.000 ; free physical = 14267 ; free virtual = 24520
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2391.859 ; gain = 0.000 ; free physical = 13429 ; free virtual = 25628
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1/design_1_top_0_1.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_top_0_1_utilization_synth.rpt -pb design_1_top_0_1_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 17 14:50:26 2020...
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 22 18:25:18 2020...

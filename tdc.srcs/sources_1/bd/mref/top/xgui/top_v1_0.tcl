@@ -7,12 +7,15 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "C_S_AXI_ADDR_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "C_S_AXI_DATA_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "DELAY" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "FFT_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "FREQ_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "INITIAL" -parent ${Page_0}
   ipgui::add_param $IPINST -name "MEM_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "PP_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "READ_MAX_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "REC_ADDR" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "RMS_ADDR" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "SIM" -parent ${Page_0}
   ipgui::add_param $IPINST -name "VIRUS_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "VIRUS_B_SIZE" -parent ${Page_0}
   ipgui::add_param $IPINST -name "VIRUS_NUM_B" -parent ${Page_0}
@@ -53,6 +56,15 @@ proc update_PARAM_VALUE.DELAY { PARAM_VALUE.DELAY } {
 
 proc validate_PARAM_VALUE.DELAY { PARAM_VALUE.DELAY } {
 	# Procedure called to validate DELAY
+	return true
+}
+
+proc update_PARAM_VALUE.FFT_ADDR { PARAM_VALUE.FFT_ADDR } {
+	# Procedure called to update FFT_ADDR when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.FFT_ADDR { PARAM_VALUE.FFT_ADDR } {
+	# Procedure called to validate FFT_ADDR
 	return true
 }
 
@@ -107,6 +119,24 @@ proc update_PARAM_VALUE.REC_ADDR { PARAM_VALUE.REC_ADDR } {
 
 proc validate_PARAM_VALUE.REC_ADDR { PARAM_VALUE.REC_ADDR } {
 	# Procedure called to validate REC_ADDR
+	return true
+}
+
+proc update_PARAM_VALUE.RMS_ADDR { PARAM_VALUE.RMS_ADDR } {
+	# Procedure called to update RMS_ADDR when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.RMS_ADDR { PARAM_VALUE.RMS_ADDR } {
+	# Procedure called to validate RMS_ADDR
+	return true
+}
+
+proc update_PARAM_VALUE.SIM { PARAM_VALUE.SIM } {
+	# Procedure called to update SIM when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.SIM { PARAM_VALUE.SIM } {
+	# Procedure called to validate SIM
 	return true
 }
 
@@ -188,6 +218,16 @@ proc update_MODELPARAM_VALUE.PP_ADDR { MODELPARAM_VALUE.PP_ADDR PARAM_VALUE.PP_A
 	set_property value [get_property value ${PARAM_VALUE.PP_ADDR}] ${MODELPARAM_VALUE.PP_ADDR}
 }
 
+proc update_MODELPARAM_VALUE.RMS_ADDR { MODELPARAM_VALUE.RMS_ADDR PARAM_VALUE.RMS_ADDR } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.RMS_ADDR}] ${MODELPARAM_VALUE.RMS_ADDR}
+}
+
+proc update_MODELPARAM_VALUE.FFT_ADDR { MODELPARAM_VALUE.FFT_ADDR PARAM_VALUE.FFT_ADDR } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.FFT_ADDR}] ${MODELPARAM_VALUE.FFT_ADDR}
+}
+
 proc update_MODELPARAM_VALUE.ABS_READ_MAX { MODELPARAM_VALUE.ABS_READ_MAX PARAM_VALUE.ABS_READ_MAX } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.ABS_READ_MAX}] ${MODELPARAM_VALUE.ABS_READ_MAX}
@@ -201,5 +241,10 @@ proc update_MODELPARAM_VALUE.VIRUS_NUM_B { MODELPARAM_VALUE.VIRUS_NUM_B PARAM_VA
 proc update_MODELPARAM_VALUE.VIRUS_B_SIZE { MODELPARAM_VALUE.VIRUS_B_SIZE PARAM_VALUE.VIRUS_B_SIZE } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.VIRUS_B_SIZE}] ${MODELPARAM_VALUE.VIRUS_B_SIZE}
+}
+
+proc update_MODELPARAM_VALUE.SIM { MODELPARAM_VALUE.SIM PARAM_VALUE.SIM } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.SIM}] ${MODELPARAM_VALUE.SIM}
 }
 

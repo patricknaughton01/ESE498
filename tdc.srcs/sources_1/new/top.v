@@ -21,8 +21,8 @@
 
 
 module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=32, DELAY=63, READ_MAX_ADDR='hFFF4, 
-    REC_ADDR='hFFFC, FREQ_ADDR='hFFF8, VIRUS_ADDR='hFFD8, MEM_WIDTH=16, PP_ADDR='hFFF0,
-    ABS_READ_MAX=10000, VIRUS_NUM_B=128, VIRUS_B_SIZE=128)(
+    REC_ADDR='hFFFC, FREQ_ADDR='hFFF8, VIRUS_ADDR='hFFD8, MEM_WIDTH=16, PP_ADDR='hFFF0, RMS_ADDR = 'hFFEC, FFT_ADDR='hFFE8,
+    ABS_READ_MAX=10000, VIRUS_NUM_B=128, VIRUS_B_SIZE=128, SIM=0)(
     // Axi4Lite Bus
     input       S_AXI_ACLK,
     input       S_AXI_ARESETN,
@@ -114,13 +114,14 @@ RAM#(.DEPTH(ABS_READ_MAX)) ram1(
     .do(memDo)
 );
 
-parameter IDLE=0, READ=1, READ_ONCE=2, READ_RAMP=3;
+parameter IDLE=0, READ=1, READ_ONCE=2, READ_RAMP=3, RMS=4;
 reg [7:0] state, nextState;
 reg [C_S_AXI_DATA_WIDTH-1:0] counterD, counterQ, virusCounterD, virusCounterQ, freqD, freqQ,
            maxD, maxQ, ppD, ppQ;
 reg [C_S_AXI_DATA_WIDTH-1:0] oneMask;
 reg [DELAY-1:0] tdcClean;
 reg [6:0] total, diffMaxD, diffMaxQ, diffMinD, diffMinQ;
+reg [C_S_AXI_DATA_WIDTH-1:0] rmsAccD, rmsAccQ;
 
 integer i;
 always @ * begin
@@ -135,6 +136,7 @@ always @ * begin
     diffMaxD = diffMaxQ;
     diffMinD = diffMinQ;
     ppD = ppQ;
+    rmsAccD = rmsAccQ;
     rdData = 0;
     total = 0;
     memWe = 0;
@@ -154,9 +156,13 @@ always @ * begin
             end else if(rd && rdAddr == PP_ADDR)begin
                 rdData = ppQ;
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
+            end else if(rd && rdAddr == RMS_ADDR)begin
+                rdData = rmsAccQ;
+                rdData[C_S_AXI_DATA_WIDTH-1] = 1;
             end else if(wr) begin
                 if(wrAddr == REC_ADDR)begin
                     counterD = 0;
+                    rmsAccD = 0;
                     virusCounterD = 0;
                     trigger = 1;    // Trigger scope when we start recording
                     if(wrData == 0)begin
@@ -172,15 +178,6 @@ always @ * begin
                     maxD = wrData;
                 end else if(wrAddr >= VIRUS_ADDR && wrAddr < VIRUS_ADDR + 4*4)begin
                     virusMaskD = (virusMaskQ & ~(oneMask << ((wrAddr - VIRUS_ADDR)<<3))) | (wrData << ((wrAddr - VIRUS_ADDR)<<3));
-                    /*if (wrAddr[3:2] == 0) begin
-                        virusMaskD[C_S_AXI_DATA_WIDTH-1:0] = wrData;
-                    end else if (wrAddr[3:2] == 1) begin
-                        virusMaskD[2*C_S_AXI_DATA_WIDTH-1:C_S_AXI_DATA_WIDTH] = wrData;
-                    end else if (wrAddr[3:2] == 2) begin
-                        virusMaskD[3*C_S_AXI_DATA_WIDTH-1:2*C_S_AXI_DATA_WIDTH] = wrData;
-                    end else begin
-                        virusMaskD[4*C_S_AXI_DATA_WIDTH-1:3*C_S_AXI_DATA_WIDTH] = wrData;
-                    end*/
                 end
             end
         end
@@ -210,6 +207,13 @@ always @ * begin
                     total = total + tdcClean[i];
                 end
                 
+                // Give total a value so that we can simulate
+                if(SIM != 0)begin
+                    total = SIM;
+                end
+                
+                rmsAccD = rmsAccQ + (total * total);
+                
                 // Decide if this is a new min or max
                 if (total > diffMaxQ) begin
                     diffMaxD = total;
@@ -232,6 +236,16 @@ always @ * begin
                 nextState = IDLE;
             end
         end
+        /*RMS:begin
+            if(counterQ < maxQ)begin
+                memAddr = counterQ << 2;
+                rmsAccD = rmsAccQ + (memDo * memDo);
+                counterD = counterQ + 1;
+            end else begin
+                counterD = 0;
+                nextState = IDLE;
+            end
+        end*/
         READ_ONCE:begin
             if(virusCounterQ >= freqQ-1)begin
                 virusEnD = virusMaskQ;
@@ -312,6 +326,7 @@ always @ (posedge S_AXI_ACLK)begin
         diffMaxQ <= diffMaxD;
         diffMinQ <= diffMinD;
         ppQ <= ppD;
+        rmsAccQ <= rmsAccD;
     end else begin
         state <= IDLE;
         counterQ <= 0;
@@ -324,6 +339,7 @@ always @ (posedge S_AXI_ACLK)begin
         diffMaxQ <= 0;
         diffMinQ <= 'h3f;               // This stores a min value, so initialize it to max
         ppQ <= 0;
+        rmsAccQ <= 0;
     end
 end
 

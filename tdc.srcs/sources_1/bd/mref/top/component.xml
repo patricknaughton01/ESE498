@@ -223,7 +223,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c574acdc</spirit:value>
+            <spirit:value>6f4c4bf7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -236,7 +236,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c574acdc</spirit:value>
+            <spirit:value>6f4c4bf7</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -618,6 +618,16 @@
         <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.PP_ADDR" spirit:bitStringLength="32">0x0000FFF0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>RMS_ADDR</spirit:name>
+        <spirit:displayName>Rms Addr</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.RMS_ADDR" spirit:bitStringLength="32">0x0000FFEC</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>FFT_ADDR</spirit:name>
+        <spirit:displayName>Fft Addr</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.FFT_ADDR" spirit:bitStringLength="32">0x0000FFE8</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>ABS_READ_MAX</spirit:name>
         <spirit:displayName>Abs Read Max</spirit:displayName>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ABS_READ_MAX">10000</spirit:value>
@@ -631,6 +641,11 @@
         <spirit:name>VIRUS_B_SIZE</spirit:name>
         <spirit:displayName>Virus B Size</spirit:displayName>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.VIRUS_B_SIZE">128</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>SIM</spirit:name>
+        <spirit:displayName>Sim</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SIM">0</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -647,7 +662,7 @@
       <spirit:file>
         <spirit:name>xgui/top_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_6b1c2e3d</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_876f6cee</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -705,6 +720,16 @@
       <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.PP_ADDR" spirit:bitStringLength="32">0x0000FFF0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
+      <spirit:name>RMS_ADDR</spirit:name>
+      <spirit:displayName>Rms Addr</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.RMS_ADDR" spirit:bitStringLength="32">0x0000FFEC</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>FFT_ADDR</spirit:name>
+      <spirit:displayName>Fft Addr</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.FFT_ADDR" spirit:bitStringLength="32">0x0000FFE8</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
       <spirit:name>ABS_READ_MAX</spirit:name>
       <spirit:displayName>Abs Read Max</spirit:displayName>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.ABS_READ_MAX">10000</spirit:value>
@@ -718,6 +743,11 @@
       <spirit:name>VIRUS_B_SIZE</spirit:name>
       <spirit:displayName>Virus B Size</spirit:displayName>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.VIRUS_B_SIZE">128</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>SIM</spirit:name>
+      <spirit:displayName>Sim</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.SIM">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
@@ -739,7 +769,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2020-03-17T19:47:37Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2020-03-22T23:19:28Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>
