@@ -92,4 +92,5 @@
 #Docs and Outputs
 #########
 #!output/**
+output
 !docs/**
