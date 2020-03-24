@@ -20,15 +20,15 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module RAM#(parameter DEPTH=10000, ADDR_WIDTH=16)(clk, we, a, di, do);
+module RAM#(parameter DEPTH=10000, ADDR_WIDTH=16, WIDTH=32)(clk, we, a, di, do);
 
     input clk;
     input we;
     input [ADDR_WIDTH-1:0] a;
-    input [15:0] di;
-    output [15:0] do;
+    input [WIDTH-1:0] di;
+    output [WIDTH-1:0] do;
     
-    reg [15:0] ram [DEPTH-1:0];
+    reg [WIDTH-1:0] ram [DEPTH-1:0];
     
     always @(posedge clk) begin
         if (we)

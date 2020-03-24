@@ -34,16 +34,16 @@ def main():
             if args.m == "f":
                 ft = {k:np.absolute(np.fft.fft(np.array(v)))[1:len(v)//2] 
                     for (k, v) in traces.items() }
-                if args.l:
-                    ft = {k:np.log10(v) for (k, v) in ft.items()}
+                """if args.l:
+                    ft = {k:np.log10(v) for (k, v) in ft.items()}"""
                 to_plot = ft
             elif args.m == "p":
                 p = {k:(np.absolute(np.fft.fft(np.array(v)))[1:len(v)//2])**2 
                     for (k, v) in traces.items() }
                 total = {k:sum(v) for (k, v) in p.items()}
-                if args.l:
+                """if args.l:
                     p = {k:np.log10(v) for (k, v) in p.items()}
-                    total = {k:np.log10(v) for (k, v) in total.items()}
+                    total = {k:np.log10(v) for (k, v) in total.items()}"""
                 to_plot = p
                 if args.r:
                     f_response = total
@@ -71,6 +71,7 @@ def main():
                 plt.xlabel(x_label)
                 y_label = args.m
                 if args.l:
+                    plt.yscale("log")
                     y_label += " (log-scale)"
                 plt.ylabel(y_label)
                 plt.title("TDC runs")

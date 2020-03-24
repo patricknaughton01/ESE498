@@ -297,9 +297,12 @@ always @ * begin
                 if(S_TVALID)begin
                     S_TREADY = 1;
                     counterD = counterQ + 1;
+                    fftRe = S_TDATA[(S_TDATA_WIDTH>>1)-1:0];
+                    fftIm = S_TDATA[S_TDATA_WIDTH-1:S_TDATA_WIDTH>>1];
+                    memAddr = counterQ << 2;
+                    memDi = (fftRe*fftRe) + (fftIm*fftIm);
+                    memWe = 1;
                     if(counterQ > 0 && counterQ < FFT_WIDTH/2)begin
-                        fftRe = S_TDATA[(S_TDATA_WIDTH>>1)-1:0];
-                        fftIm = S_TDATA[S_TDATA_WIDTH-1:S_TDATA_WIDTH>>1];
                         fftAccD = fftAccQ + (fftRe*fftRe) + (fftIm*fftIm);
                     end
                 end
