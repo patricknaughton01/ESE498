@@ -9,7 +9,7 @@
 #include "xuartps.h"
 #include "monitor.h"
 
-#define CLK_SPEED 100000000
+#define CLK_SPEED 250000000
 
 int32_t * const peripheral = (int32_t*)0x43C00000;
 int32_t *addr = peripheral;
@@ -38,6 +38,7 @@ void makeMeasurement(){
 	int32_t * const freq_addr = (int32_t*)0x43C0FFF8;
 	int32_t * const read_addr = (int32_t*)0x43C0FFF4;
 	int32_t * const virus_addr = (int32_t*)0x43C0FFE0;
+	int32_t * const rms_addr	= (int32_t*)0x43C0FFEC;
 	// How many times to read from the monitor
 	const int32_t numReads = 10000;
 	// How many frequencies to test
@@ -67,24 +68,26 @@ void makeMeasurement(){
 //		period = (int32_t)((period * period_mul) + 1);	// Change the period on the next run
 //	}
 
-	*virus_addr = 0x000003ff;
-	*(virus_addr + 1) = 0x000003ff;
-	*(virus_addr + 2) = 0x000003ff;
-	*(virus_addr + 3) = 0x000003ff;
-	for (int j=0; j<10; j++) {
-		for(int i = 0; i<num_freq; i++){
-			*freq_addr = period;	// Set the frequency of the virus
-			*rec_addr = 0;			// Start recording square response
+	*virus_addr = 0x0000ffff;
+	*(virus_addr + 1) = 0x0000ffff;
+	*(virus_addr + 2) = 0x0000ffff;
+	*(virus_addr + 3) = 0x0000ffff;
+	for (int j=0; j<1; j++) {
+			for(int i = 0; i<num_freq; i++){
+				*freq_addr = (int32_t)period;	// Set the frequency of the virus
+				*rec_addr = 0;			// Start recording square response
 
-			// Wait until the response is done being collected
-			value = *addr;
-			while((value & (1<<31)) == 0) {
-				value = *addr;
+				// Wait until the response is done being collected
+//				for(int k = 0; k<numReads; k++){
+					do{
+						value = *rms_addr;
+					}while((value & 1<<31)==0);
+//					xil_printf("%d %d %d\n", CLK_SPEED/(2*period), k, (value ^ (1<<31)));
+//				}
+
+				xil_printf("%d\t%d\n", CLK_SPEED/(2*period), (value ^ (1<<31)));
+				period = period + 1;	// Change the period on the next run
 			}
-
-			xil_printf("%d\n", CLK_SPEED/(2*((value & 0x7fffffc0) >> 6)), (value & 0x3f));
-			addr++;
-			period++;	// Change the period on the next run
+			period = 2;
 		}
-	}
 }
