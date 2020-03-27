@@ -17,7 +17,7 @@ def main():
             lines = in_file.readlines()
             traces = {}
             for line in lines:
-                line = line.split(" ")
+                line = line.split()
                 freq = int(line[0])
                 count = int(line[1])
                 if freq in traces:
