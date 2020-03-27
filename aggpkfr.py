@@ -52,7 +52,7 @@ def main():
     plt.ylabel(y_label)
     plt.title(
         "Frequency power response ({})".format(args.title))
-    plt.legend(loc='upper right', shadow=True)
+    #plt.legend(loc='upper right', shadow=True)
     plt.show()
 
 def get_prefix(path):

@@ -22,8 +22,6 @@ def main():
                 line = line.split(" ")
                 freq = int(line[0])
                 count = int(line[1])
-                if args.m == "r":
-                    count = (count / 10000)**0.5
                 if freq in traces:
                     traces[freq].append(count)
                 else:
