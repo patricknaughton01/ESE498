@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "top,Vivado 2019.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_top_0_1,top,{}" *)
-(* CORE_GENERATION_INFO = "design_1_top_0_1,top,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_ADDR_WIDTH=16,C_S_AXI_DATA_WIDTH=32,INITIAL=32,DELAY=63,READ_MAX_ADDR=0x0000FFF4,REC_ADDR=0x0000FFFC,FREQ_ADDR=0x0000FFF8,VIRUS_ADDR=0x0000FFD8,MEM_WIDTH=16,PP_ADDR=0x0000FFF0,RMS_ADDR=0x0000FFEC,FFT_ADDR=0x0000FFE8,ABS_READ_MAX=10000,VIRUS_NUM_B=128,VIRUS_B_SIZE=128,SIM=0,M_TDATA_WIDTH=16,S_TDATA_WIDTH=48,\
+(* CORE_GENERATION_INFO = "design_1_top_0_1,top,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_ADDR_WIDTH=16,C_S_AXI_DATA_WIDTH=32,INITIAL=32,DELAY=63,READ_MAX_ADDR=0x0000FFF4,REC_ADDR=0x0000FFFC,FREQ_ADDR=0x0000FFF8,VIRUS_ADDR=0x0000FFD8,MEM_WIDTH=16,PP_ADDR=0x0000FFF0,RMS_ADDR=0x0000FFEC,SUM_ADDR=0x0000FFE8,ABS_READ_MAX=10000,VIRUS_NUM_B=128,VIRUS_B_SIZE=128,SIM=0,M_TDATA_WIDTH=16,S_TDATA_WIDTH=48,\
 FFT_WIDTH=8192}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
@@ -76,15 +76,7 @@ module design_1_top_0_1 (
   S_AXI_RRESP,
   S_AXI_RVALID,
   S_AXI_RREADY,
-  trigger,
-  M_TDATA,
-  M_TLAST,
-  M_TREADY,
-  M_TVALID,
-  S_TDATA,
-  S_TLAST,
-  S_TREADY,
-  S_TVALID
+  trigger
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET S_AXI_ARESETN, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_2_FCLK_CLK0, INSERT_VIP 0" *)
@@ -130,39 +122,6 @@ S 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_V
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *)
 input wire S_AXI_RREADY;
 output wire trigger;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M TDATA" *)
-output wire [15 : 0] M_TDATA;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M TLAST" *)
-output wire M_TLAST;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M TREADY" *)
-input wire M_TREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M, TDATA_NUM_BYTES 2, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, LAYERED_METADATA undef, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 M TVALID" *)
-output wire M_TVALID;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S TDATA" *)
-input wire [47 : 0] S_TDATA;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S TLAST" *)
-input wire S_TLAST;
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S TREADY" *)
-output wire S_TREADY;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S, TDATA_NUM_BYTES 6, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 393214} bitoffset {attribs {resolve_type immediate dependency {} f\
-ormat long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value chan} size {attribs {resolve_type generated dependency chan_size format long minimum {} maximum {}} value 1} stride {attribs {resolve_type generated dependency chan_stride format long minimum {} maximum {}} value 48} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resol\
-ve_type automatic dependency {} format long minimum {} maximum {}} value 393214} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_xn_re {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value xn_re} enabled {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximu\
-m {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 393190} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} size {attribs {resolve_type generated dependency frame_size format long minimum {} maximum {}} value 8192} stride {attribs {resolve_type generated dependency frame_str\
-ide format long minimum {} maximum {}} value 48} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency xn_width format long minimum {} maximum {}} value 22} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type generated dependency xn_fractwidth format long minimum {} maximum {}} value 7} signed {\
-attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}} field_xn_im {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value xn_im} enabled {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum\
- {} maximum {}} value 393190} bitoffset {attribs {resolve_type generated dependency xn_im_offset format long minimum {} maximum {}} value 24} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} size {attribs {resolve_type generated dependency frame_size format long minimum {} maximum {}} value 8192} stride {attribs {resolve_type generated dependency frame_stride format long minimum {} maximum {}} value 48} datatype {name {attribs {resolv\
-e_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency xn_width format long minimum {} maximum {}} value 22} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type generated dependency xn_fractwidth format long minimum {} maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}}\
- value true}}}}}}}}}}}} TDATA_WIDTH 48 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_xk_index {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value xk_index} enabled {attrib\
-s {resolve_type generated dependency xk_index_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency xk_index_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool m\
-inimum {} maximum {}} value false}}}} field_blk_exp {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value blk_exp} enabled {attribs {resolve_type generated dependency blk_exp_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 5} bitoffset {attribs\
- {resolve_type generated dependency blk_exp_offset format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} size {attribs {resolve_type generated dependency chan_size format long minimum {} maximum {}} value 1} stride {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximu\
-m {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 5} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}} field_ovflo {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value ovflo} enabled {attribs {resolve_type generated dependency \
-ovflo_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type generated dependency ovflo_offset format long minimum {} maximum {}} value 0} array_type {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} size {a\
-ttribs {resolve_type generated dependency chan_size format long minimum {} maximum {}} value 1} stride {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value\
- 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}}}} TUSER_WIDTH 0}, INSERT_VIP 0" *)
-(* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 S TVALID" *)
-input wire S_TVALID;
 
   top #(
     .C_S_AXI_ADDR_WIDTH(16),
@@ -176,7 +135,7 @@ input wire S_TVALID;
     .MEM_WIDTH(16),
     .PP_ADDR(32'H0000FFF0),
     .RMS_ADDR(32'H0000FFEC),
-    .FFT_ADDR(32'H0000FFE8),
+    .SUM_ADDR(32'H0000FFE8),
     .ABS_READ_MAX(10000),
     .VIRUS_NUM_B(128),
     .VIRUS_B_SIZE(128),
@@ -204,14 +163,6 @@ input wire S_TVALID;
     .S_AXI_RRESP(S_AXI_RRESP),
     .S_AXI_RVALID(S_AXI_RVALID),
     .S_AXI_RREADY(S_AXI_RREADY),
-    .trigger(trigger),
-    .M_TDATA(M_TDATA),
-    .M_TLAST(M_TLAST),
-    .M_TREADY(M_TREADY),
-    .M_TVALID(M_TVALID),
-    .S_TDATA(S_TDATA),
-    .S_TLAST(S_TLAST),
-    .S_TREADY(S_TREADY),
-    .S_TVALID(S_TVALID)
+    .trigger(trigger)
   );
 endmodule

@@ -200,14 +200,20 @@ initial begin
     #(CLK_PERIOD * 5);
     #(CLK_PERIOD * (TO_READ + 10));
     // Allow RMS to accumulate
-    #(CLK_PERIOD*((TO_READ<<1) + 10));
+    /*#(CLK_PERIOD*((TO_READ<<1) + 10));
     // Provide fake FFT values
     for(i = 0; i<FFT_WIDTH; i = i + 1)begin
         S_TDATA = 'h000010_000010;
         S_TVALID = 1;
         #CLK_PERIOD;
-    end
-    // Read PP value
+    end*/
+    // Read RMS value
+    rd = 1;
+    rdAddr = 'hFFEC;
+    #CLK_PERIOD;
+    rd = 0;
+    #(CLK_PERIOD*10);
+    // Read SUM value
     rd = 1;
     rdAddr = 'hFFE8;
     #CLK_PERIOD;

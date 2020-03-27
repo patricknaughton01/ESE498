@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-//Date        : Mon Mar 23 22:30:48 2020
+//Date        : Thu Mar 26 22:09:57 2020
 //Host        : patricknaughton01 running 64-bit Ubuntu 18.04.4 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=7,numReposBlks=5,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,da_board_cnt=3,da_clkrst_cnt=1,da_ps7_cnt=3,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,da_board_cnt=3,da_clkrst_cnt=1,da_ps7_cnt=3,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (DDR_addr,
     DDR_ba,
@@ -135,15 +135,7 @@ module design_1
   wire [3:0]ps7_0_axi_periph_M00_AXI_WSTRB;
   wire ps7_0_axi_periph_M00_AXI_WVALID;
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
-  wire [15:0]top_0_M_TDATA;
-  wire top_0_M_TLAST;
-  wire top_0_M_TREADY;
-  wire top_0_M_TVALID;
   wire top_0_trigger;
-  wire [47:0]xfft_0_M_AXIS_DATA_TDATA;
-  wire xfft_0_M_AXIS_DATA_TLAST;
-  wire xfft_0_M_AXIS_DATA_TREADY;
-  wire xfft_0_M_AXIS_DATA_TVALID;
 
   assign trigger_0 = top_0_trigger;
   design_1_processing_system7_0_2 processing_system7_0
@@ -280,11 +272,7 @@ module design_1
         .peripheral_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
   design_1_top_0_1 top_0
-       (.M_TDATA(top_0_M_TDATA),
-        .M_TLAST(top_0_M_TLAST),
-        .M_TREADY(top_0_M_TREADY),
-        .M_TVALID(top_0_M_TVALID),
-        .S_AXI_ACLK(processing_system7_0_FCLK_CLK0),
+       (.S_AXI_ACLK(processing_system7_0_FCLK_CLK0),
         .S_AXI_ARADDR(ps7_0_axi_periph_M00_AXI_ARADDR[15:0]),
         .S_AXI_ARESETN(rst_ps7_0_100M_peripheral_aresetn),
         .S_AXI_ARREADY(ps7_0_axi_periph_M00_AXI_ARREADY),
@@ -303,23 +291,7 @@ module design_1
         .S_AXI_WREADY(ps7_0_axi_periph_M00_AXI_WREADY),
         .S_AXI_WSTRB(ps7_0_axi_periph_M00_AXI_WSTRB),
         .S_AXI_WVALID(ps7_0_axi_periph_M00_AXI_WVALID),
-        .S_TDATA(xfft_0_M_AXIS_DATA_TDATA),
-        .S_TLAST(xfft_0_M_AXIS_DATA_TLAST),
-        .S_TREADY(xfft_0_M_AXIS_DATA_TREADY),
-        .S_TVALID(xfft_0_M_AXIS_DATA_TVALID),
         .trigger(top_0_trigger));
-  design_1_xfft_0_0 xfft_0
-       (.aclk(processing_system7_0_FCLK_CLK0),
-        .m_axis_data_tdata(xfft_0_M_AXIS_DATA_TDATA),
-        .m_axis_data_tlast(xfft_0_M_AXIS_DATA_TLAST),
-        .m_axis_data_tready(xfft_0_M_AXIS_DATA_TREADY),
-        .m_axis_data_tvalid(xfft_0_M_AXIS_DATA_TVALID),
-        .s_axis_config_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axis_config_tvalid(1'b0),
-        .s_axis_data_tdata(top_0_M_TDATA),
-        .s_axis_data_tlast(top_0_M_TLAST),
-        .s_axis_data_tready(top_0_M_TREADY),
-        .s_axis_data_tvalid(top_0_M_TVALID));
 endmodule
 
 module design_1_ps7_0_axi_periph_2

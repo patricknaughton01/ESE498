@@ -21,7 +21,7 @@
 
 
 module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=32, DELAY=63, READ_MAX_ADDR='hFFF4, 
-    REC_ADDR='hFFFC, FREQ_ADDR='hFFF8, VIRUS_ADDR='hFFD8, MEM_WIDTH=16, PP_ADDR='hFFF0, RMS_ADDR = 'hFFEC, FFT_ADDR='hFFE8,
+    REC_ADDR='hFFFC, FREQ_ADDR='hFFF8, VIRUS_ADDR='hFFD8, MEM_WIDTH=16, PP_ADDR='hFFF0, RMS_ADDR = 'hFFEC, SUM_ADDR='hFFE8,
     ABS_READ_MAX=10000, VIRUS_NUM_B=128, VIRUS_B_SIZE=128, SIM=0, M_TDATA_WIDTH=16, S_TDATA_WIDTH=48, FFT_WIDTH=8192)(
     // Axi4Lite Bus
     input       S_AXI_ACLK,
@@ -43,18 +43,7 @@ module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=
     output      [1:0] S_AXI_RRESP,
     output      S_AXI_RVALID,
     input       S_AXI_RREADY,
-    output  reg trigger,
-    // AxiS bus Manager
-    output  wire[M_TDATA_WIDTH-1:0] M_TDATA,
-    output  wire                    M_TLAST,
-    input   wire                    M_TREADY,
-    output  wire                    M_TVALID,
-    
-    // AxiS bus Supporter
-    input   wire[S_TDATA_WIDTH-1:0] S_TDATA,
-    input                           S_TLAST,
-    output  reg                     S_TREADY,
-    input                           S_TVALID
+    output  reg trigger
 );
 
 wire [C_S_AXI_ADDR_WIDTH-1:0] wrAddr;
@@ -106,20 +95,6 @@ Axi4LiteSupporter#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(
     .S_AXI_RREADY(S_AXI_RREADY)         // input
 );
 
-axis_manager#(.TDATA_WIDTH(M_TDATA_WIDTH)) axis_manager1(
-    // Simple bus
-    .wrData(fft_wrData),
-    .wrDone(fft_wrDone),
-    .wr(fft_wr),
-    // AxiS bus
-    .CLK(S_AXI_ACLK),
-    .RESET_L(S_AXI_ARESETN),
-    .TDATA(M_TDATA),
-    .TLAST(M_TLAST),
-    .TREADY(M_TREADY),
-    .TVALID(M_TVALID)
-);
-
 tdc#(.INITIAL(INITIAL), .DELAY(DELAY)) tdc1(
     .clk(S_AXI_ACLK),
     .reset(S_AXI_ARESETN),
@@ -152,7 +127,7 @@ reg [C_S_AXI_DATA_WIDTH-1:0] counterD, counterQ, virusCounterD, virusCounterQ, f
 reg [C_S_AXI_DATA_WIDTH-1:0] oneMask;
 reg [DELAY-1:0] tdcClean;
 reg [6:0] total, diffMaxD, diffMaxQ, diffMinD, diffMinQ;
-reg [C_S_AXI_DATA_WIDTH-1:0] rmsAccD, rmsAccQ, fftAccD, fftAccQ, fftRe, fftIm;
+reg [C_S_AXI_DATA_WIDTH-1:0] rmsAccD, rmsAccQ, fftAccD, fftAccQ, fftRe, fftIm, sumAccD, sumAccQ;
 
 integer i;
 always @ * begin
@@ -168,6 +143,7 @@ always @ * begin
     diffMinD = diffMinQ;
     ppD = ppQ;
     rmsAccD = rmsAccQ;
+    sumAccD = sumAccQ;
     fftAccD = fftAccQ;
     fftRe = 0;
     fftIm = 0;
@@ -195,13 +171,14 @@ always @ * begin
             end else if(rd && rdAddr == RMS_ADDR)begin
                 rdData = rmsAccQ;
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
-            end else if(rd && rdAddr == FFT_ADDR)begin
-                rdData = fftAccQ;
+            end else if(rd && rdAddr == SUM_ADDR)begin
+                rdData = sumAccQ;
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
             end else if(wr) begin
                 if(wrAddr == REC_ADDR)begin
                     counterD = 0;
                     rmsAccD = 0;
+                    sumAccD = 0;
                     virusCounterD = 0;
                     trigger = 1;    // Trigger scope when we start recording
                     if(wrData == 0)begin
@@ -252,6 +229,7 @@ always @ * begin
                 end
                 
                 rmsAccD = rmsAccQ + (total * total);
+                sumAccD = sumAccQ + total;
                 
                 // Decide if this is a new min or max
                 if (total > diffMaxQ) begin
@@ -272,10 +250,10 @@ always @ * begin
                 diffMaxD = 0;
                 diffMinD = 'h3f;
                 ppD = (diffMaxQ - diffMinQ);
-                nextState = FFT_WR;
+                nextState = IDLE;
             end
         end
-        FFT_WR:begin
+        /*FFT_WR:begin
             if(counterQ < FFT_WIDTH)begin
                 fft_wr = 1;
                 memAddr = counterQ << 2;
@@ -309,7 +287,7 @@ always @ * begin
             end else begin
                 nextState = IDLE;
             end
-        end
+        end*/
         READ_ONCE:begin
             if(virusCounterQ >= freqQ-1)begin
                 virusEnD = virusMaskQ;
@@ -392,6 +370,7 @@ always @ (posedge S_AXI_ACLK)begin
         ppQ <= ppD;
         rmsAccQ <= rmsAccD;
         fftAccQ <= fftAccD;
+        sumAccQ <= sumAccD;
     end else begin
         state <= IDLE;
         counterQ <= 0;
@@ -406,6 +385,7 @@ always @ (posedge S_AXI_ACLK)begin
         ppQ <= 0;
         rmsAccQ <= 0;
         fftAccQ <= 0;
+        sumAccQ <= 0;
     end
 end
 

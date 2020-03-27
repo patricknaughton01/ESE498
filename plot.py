@@ -13,6 +13,7 @@ def main():
     parser.add_argument("-x", action="store_true", help="x log-scale")
     parser.add_argument("-r", action="store_true", 
         help="plot response, only used if -m=p")
+    parser.add_argument("-t", type=str, default="TDC Run", help="plot title")
 
     args = parser.parse_args()
 
@@ -26,21 +27,22 @@ def main():
                 t = int(line[1])
                 count = int(line[2])
                 if freq in traces:
-                    traces[freq].append(count)
+                    traces[freq]['y'].append(count)
+                    traces[freq]['x'].append(t/100)
                 else:
-                    traces[freq] = [count]
+                    traces[freq] = {'x':[t/100], 'y':[count]}
             to_plot = traces
             f_response = None
             if args.m == "f":
-                ft = {k:np.absolute(np.fft.fft(np.array(v)))[1:len(v)//2] 
+                ft = {k:{'x':[i*10000 for i in range(1, len(v['y'])//2)], 'y':np.absolute(np.fft.fft(np.array(v['y'])))[1:len(v['y'])//2]} 
                     for (k, v) in traces.items() }
                 """if args.l:
                     ft = {k:np.log10(v) for (k, v) in ft.items()}"""
                 to_plot = ft
             elif args.m == "p":
-                p = {k:(np.absolute(np.fft.fft(np.array(v)))[1:len(v)//2])**2 
+                p = {k:{'x':[i*10000 for i in range(1, len(v['y'])//2)], 'y':(np.absolute(np.fft.fft(np.array(v['y'])))[1:len(v['y'])//2])**2} 
                     for (k, v) in traces.items() }
-                total = {k:sum(v) for (k, v) in p.items()}
+                total = {k:sum(v['y']) for (k, v) in p.items()}
                 """if args.l:
                     p = {k:np.log10(v) for (k, v) in p.items()}
                     total = {k:np.log10(v) for (k, v) in total.items()}"""
@@ -54,27 +56,29 @@ def main():
                     fs = args.f.split(",")
                     for f in fs:
                         if int(f) in to_plot:
-                            plt.plot(to_plot[int(f)], label=str(f))
+                            plt.plot(to_plot[int(f)]['x'], to_plot[int(f)]['y'], label=str(f))
                 elif args.f is not None and int(args.f) in to_plot:
-                    plt.plot(to_plot[int(args.f)], label=args.f)
+                    plt.plot(to_plot[int(args.f)]['x'], to_plot[int(args.f)]['y'], label=args.f)
                 else:
                     # If they didn't display 
                     for freq in to_plot:
-                        plt.plot(to_plot[freq], label=str(freq))
+                        plt.plot(to_plot[freq]['x'],to_plot[freq]['y'], label=str(freq))
                 plt.legend(loc='upper right', shadow=True)
-                x_label = "Time (clock ticks)"
+                x_label = "Time (us)"
                 if args.m != "t":
-                    x_label = "Frequency (bins)"
+                    x_label = "Frequency (Hz)"
                 if args.x:
                     x_label += " (log-scale)"
                     plt.xscale("log")
                 plt.xlabel(x_label)
                 y_label = args.m
+                if y_label == "t":
+                    y_label = "Propagation Depth"
                 if args.l:
                     plt.yscale("log")
                     y_label += " (log-scale)"
                 plt.ylabel(y_label)
-                plt.title("TDC runs")
+                plt.title(args.t)
                 plt.show()
             
             if args.r and f_response is not None:

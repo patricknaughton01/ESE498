@@ -7,7 +7,6 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "C_S_AXI_ADDR_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "C_S_AXI_DATA_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "DELAY" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "FFT_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "FFT_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "FREQ_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "INITIAL" -parent ${Page_0}
@@ -18,6 +17,7 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "REC_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "RMS_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "SIM" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "SUM_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "S_TDATA_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "VIRUS_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "VIRUS_B_SIZE" -parent ${Page_0}
@@ -59,15 +59,6 @@ proc update_PARAM_VALUE.DELAY { PARAM_VALUE.DELAY } {
 
 proc validate_PARAM_VALUE.DELAY { PARAM_VALUE.DELAY } {
 	# Procedure called to validate DELAY
-	return true
-}
-
-proc update_PARAM_VALUE.FFT_ADDR { PARAM_VALUE.FFT_ADDR } {
-	# Procedure called to update FFT_ADDR when any of the dependent parameters in the arguments change
-}
-
-proc validate_PARAM_VALUE.FFT_ADDR { PARAM_VALUE.FFT_ADDR } {
-	# Procedure called to validate FFT_ADDR
 	return true
 }
 
@@ -158,6 +149,15 @@ proc update_PARAM_VALUE.SIM { PARAM_VALUE.SIM } {
 
 proc validate_PARAM_VALUE.SIM { PARAM_VALUE.SIM } {
 	# Procedure called to validate SIM
+	return true
+}
+
+proc update_PARAM_VALUE.SUM_ADDR { PARAM_VALUE.SUM_ADDR } {
+	# Procedure called to update SUM_ADDR when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.SUM_ADDR { PARAM_VALUE.SUM_ADDR } {
+	# Procedure called to validate SUM_ADDR
 	return true
 }
 
@@ -253,9 +253,9 @@ proc update_MODELPARAM_VALUE.RMS_ADDR { MODELPARAM_VALUE.RMS_ADDR PARAM_VALUE.RM
 	set_property value [get_property value ${PARAM_VALUE.RMS_ADDR}] ${MODELPARAM_VALUE.RMS_ADDR}
 }
 
-proc update_MODELPARAM_VALUE.FFT_ADDR { MODELPARAM_VALUE.FFT_ADDR PARAM_VALUE.FFT_ADDR } {
+proc update_MODELPARAM_VALUE.SUM_ADDR { MODELPARAM_VALUE.SUM_ADDR PARAM_VALUE.SUM_ADDR } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.FFT_ADDR}] ${MODELPARAM_VALUE.FFT_ADDR}
+	set_property value [get_property value ${PARAM_VALUE.SUM_ADDR}] ${MODELPARAM_VALUE.SUM_ADDR}
 }
 
 proc update_MODELPARAM_VALUE.ABS_READ_MAX { MODELPARAM_VALUE.ABS_READ_MAX PARAM_VALUE.ABS_READ_MAX } {

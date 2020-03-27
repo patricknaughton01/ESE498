@@ -58,9 +58,11 @@ def main():
         plt.yscale("log")
         y_label += " (log)"
     plt.ylabel(y_label)
-    plt.title(
-        "Frequency power response ({})".format(args.title))
-    plt.legend(loc='upper right', shadow=True)
+    if args.title == "":
+        plt.title("Frequency power response")
+    else:
+        plt.title(args.title)
+    #plt.legend(loc='upper right', shadow=True)
     plt.show()
 
 def get_prefix(path):

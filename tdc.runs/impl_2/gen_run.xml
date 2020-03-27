@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_2" LaunchPart="xc7z020clg484-1" LaunchTime="1585020653">
+<GenRun Id="impl_2" LaunchPart="xc7z020clg484-1" LaunchTime="1585278602">
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-DRC" Name="design_1_wrapper.drc"/>
   <File Type="BG-BGN" Name="design_1_wrapper.bgn"/>
@@ -86,15 +86,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/new/axis_manager.v">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../fft/fft.srcs/sources_1/new/axis_manager.v"/>
-        <Attr Name="ImportTime" Val="1584638936"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/buffer.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -156,6 +147,16 @@
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/axis_manager.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../fft/fft.srcs/sources_1/new/axis_manager.v"/>
+        <Attr Name="ImportTime" Val="1584638936"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="design_1_wrapper"/>
@@ -197,9 +198,8 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_top_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_xfft_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_top_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps7_0_100M_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_processing_system7_0_2"/>
 </GenRun>
