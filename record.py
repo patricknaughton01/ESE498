@@ -76,7 +76,7 @@ def main():
             if not s.is_open:
                 s.open()
             # C program on the Zynq won't start until we send it some byte
-            s.write(b't')
+            s.write(b'c')
             print("Collecting data for run {}".format(i))
             print("Press Ctrl-C to stop and save current data")
             while True:

@@ -63,8 +63,11 @@ void makeMeasurement(){
 			}while((sum_val & 1<<31) == 0);
 			sum_val ^= (1<<31);
 
-			int64_t energy_val = (int64_t)rms_val;	// Divide by clock ticks to get power
-			int64_t energy_no_dc_val = energy_val*num_reads - (int64_t)sum_val;
+			int32_t energy_val = (int32_t)rms_val;	// Divide by clock ticks to get power
+
+			double energy_no_dc_val =
+					((double)energy_val)
+					- ((double)sum_val * (double)sum_val / (double)num_reads);
 
 			xil_printf("%d %d\n", CLK_SPEED/(2*((int32_t)period)), (int32_t)energy_no_dc_val);
 		}
