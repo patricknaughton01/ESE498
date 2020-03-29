@@ -46,12 +46,11 @@ def main():
     if args.x:
         plt.xscale("log")
     plt.xlabel("Frequency (Hz)")
-    y_label = "Power response"
+    y_label = "Energy Response"
     if args.l:
         plt.yscale("log")
     plt.ylabel(y_label)
-    plt.title(
-        "Frequency power response ({})".format(args.title))
+    plt.title(args.title)
     #plt.legend(loc='upper right', shadow=True)
     plt.show()
 

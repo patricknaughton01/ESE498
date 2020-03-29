@@ -50,9 +50,12 @@ def main():
     """plt.figure(0)
     for i, (k, v) in enumerate(freq_data[0].items()):
         plt.hist(v, histtype='step', label=str(k))
-        if i == 9:
+        if i == 4:
             break
-    plt.legend(loc='upper right', shadow=True)"""
+    plt.legend(loc='upper right', shadow=True)
+    plt.xlabel('Energy')
+    plt.ylabel('Frequency')
+    plt.title('Histogram of Energy Responses')"""
     
     plt.figure(1)
     for r in responses:
