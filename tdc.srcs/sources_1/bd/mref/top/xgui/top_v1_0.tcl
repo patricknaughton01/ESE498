@@ -4,6 +4,9 @@ proc init_gui { IPINST } {
   #Adding Page
   set Page_0 [ipgui::add_page $IPINST -name "Page 0"]
   ipgui::add_param $IPINST -name "ABS_READ_MAX" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "CHALLENGE_ADDR" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "CHALLENGE_TIME" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "CHALLENGE_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "C_S_AXI_ADDR_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "C_S_AXI_DATA_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "DELAY" -parent ${Page_0}
@@ -32,6 +35,33 @@ proc update_PARAM_VALUE.ABS_READ_MAX { PARAM_VALUE.ABS_READ_MAX } {
 
 proc validate_PARAM_VALUE.ABS_READ_MAX { PARAM_VALUE.ABS_READ_MAX } {
 	# Procedure called to validate ABS_READ_MAX
+	return true
+}
+
+proc update_PARAM_VALUE.CHALLENGE_ADDR { PARAM_VALUE.CHALLENGE_ADDR } {
+	# Procedure called to update CHALLENGE_ADDR when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.CHALLENGE_ADDR { PARAM_VALUE.CHALLENGE_ADDR } {
+	# Procedure called to validate CHALLENGE_ADDR
+	return true
+}
+
+proc update_PARAM_VALUE.CHALLENGE_TIME { PARAM_VALUE.CHALLENGE_TIME } {
+	# Procedure called to update CHALLENGE_TIME when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.CHALLENGE_TIME { PARAM_VALUE.CHALLENGE_TIME } {
+	# Procedure called to validate CHALLENGE_TIME
+	return true
+}
+
+proc update_PARAM_VALUE.CHALLENGE_WIDTH { PARAM_VALUE.CHALLENGE_WIDTH } {
+	# Procedure called to update CHALLENGE_WIDTH when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.CHALLENGE_WIDTH { PARAM_VALUE.CHALLENGE_WIDTH } {
+	# Procedure called to validate CHALLENGE_WIDTH
 	return true
 }
 
@@ -291,5 +321,20 @@ proc update_MODELPARAM_VALUE.S_TDATA_WIDTH { MODELPARAM_VALUE.S_TDATA_WIDTH PARA
 proc update_MODELPARAM_VALUE.FFT_WIDTH { MODELPARAM_VALUE.FFT_WIDTH PARAM_VALUE.FFT_WIDTH } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.FFT_WIDTH}] ${MODELPARAM_VALUE.FFT_WIDTH}
+}
+
+proc update_MODELPARAM_VALUE.CHALLENGE_WIDTH { MODELPARAM_VALUE.CHALLENGE_WIDTH PARAM_VALUE.CHALLENGE_WIDTH } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.CHALLENGE_WIDTH}] ${MODELPARAM_VALUE.CHALLENGE_WIDTH}
+}
+
+proc update_MODELPARAM_VALUE.CHALLENGE_TIME { MODELPARAM_VALUE.CHALLENGE_TIME PARAM_VALUE.CHALLENGE_TIME } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.CHALLENGE_TIME}] ${MODELPARAM_VALUE.CHALLENGE_TIME}
+}
+
+proc update_MODELPARAM_VALUE.CHALLENGE_ADDR { MODELPARAM_VALUE.CHALLENGE_ADDR PARAM_VALUE.CHALLENGE_ADDR } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.CHALLENGE_ADDR}] ${MODELPARAM_VALUE.CHALLENGE_ADDR}
 }
 

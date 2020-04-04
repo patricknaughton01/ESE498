@@ -12,7 +12,7 @@
 #define CLK_SPEED 100000000
 #define RUNS 100
 
-int32_t * const peripheral = (int32_t*)0x43C00000;
+int32_t * const peripheral 	= (int32_t*)0x43C00000;
 int32_t * const rec_addr 	= (int32_t*)0x43C0FFFC;
 int32_t * const freq_addr 	= (int32_t*)0x43C0FFF8;
 int32_t * const read_addr 	= (int32_t*)0x43C0FFF4;
@@ -20,9 +20,12 @@ int32_t * const pp_addr 	= (int32_t*)0x43C0FFF0;
 int32_t * const rms_addr	= (int32_t*)0x43C0FFEC;
 int32_t * const sum_addr	= (int32_t*)0x43C0FFE8;
 int32_t * const virus_addr 	= (int32_t*)0x43C0FFD8;
+int32_t * const chal_addr	= (int32_t*)0x43C0FF00;
 const int32_t num_reads = 10000;
 
 void makeMeasurement();
+void stepResponse();
+void challengeResponse();
 
 int main() {
 	init_platform();
@@ -31,10 +34,48 @@ int main() {
 		if(go == 'c'){
 			makeMeasurement();
 		}else if(go == 't'){
-			step();
+			stepResponse();
+		}else if(go == 'r'){
+			challengeResponse();
 		}
 	}
 	return 0;
+}
+
+void challengeResponse(){
+	*read_addr = num_reads;
+	*virus_addr = 0x00001fff;
+	*(virus_addr + 1) = 0x00001fff;
+	*(virus_addr + 2) = 0x00001fff;
+	*(virus_addr + 3) = 0x00001fff;
+	for (int i=0; i<NUM_CHAL; i++) {
+		*chal_addr = challenges[i][0];
+		*(chal_addr + 1) = challenges[i][1];
+		*(chal_addr + 2) = challenges[i][2];
+		*(chal_addr + 3) = challenges[i][3];
+		*rec_addr = 3;					// Start recording challenge response
+
+		int32_t rms_val;
+		// Wait until the response is done being collected
+		do{
+			rms_val = *(rms_addr);
+		}while((rms_val & 1<<31)==0);
+		rms_val ^= (1<<31);
+
+		int32_t sum_val;
+		do{
+			sum_val = *(sum_addr);
+		}while((sum_val & 1<<31) == 0);
+		sum_val ^= (1<<31);
+
+		int32_t energy_val = (int32_t)rms_val;	// Divide by clock ticks to get power
+
+		double energy_no_dc_val =
+				((double)energy_val)
+				- ((double)sum_val * (double)sum_val / (double)num_reads);
+
+		xil_printf("%d %d\n", i, (int32_t)energy_no_dc_val);
+	}
 }
 
 void makeMeasurement(){
@@ -74,7 +115,7 @@ void makeMeasurement(){
 	}
 }
 
-void step(){
+void stepResponse(){
 	*read_addr = num_reads;
 	int32_t freq = 5000;
 

@@ -140,7 +140,10 @@ output wire trigger;
     .SIM(0),
     .M_TDATA_WIDTH(16),
     .S_TDATA_WIDTH(48),
-    .FFT_WIDTH(8192)
+    .FFT_WIDTH(8192),
+    .CHALLENGE_WIDTH(128),
+    .CHALLENGE_TIME(8192),
+    .CHALLENGE_ADDR(32'H0000FF00)
   ) inst (
     .S_AXI_ACLK(S_AXI_ACLK),
     .S_AXI_ARESETN(S_AXI_ARESETN),

@@ -223,7 +223,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f1bb814d</spirit:value>
+            <spirit:value>f7d95732</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -236,7 +236,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f1bb814d</spirit:value>
+            <spirit:value>f7d95732</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -662,6 +662,21 @@
         <spirit:displayName>Fft Width</spirit:displayName>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.FFT_WIDTH">8192</spirit:value>
       </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>CHALLENGE_WIDTH</spirit:name>
+        <spirit:displayName>Challenge Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CHALLENGE_WIDTH">128</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>CHALLENGE_TIME</spirit:name>
+        <spirit:displayName>Challenge Time</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CHALLENGE_TIME">8192</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>CHALLENGE_ADDR</spirit:name>
+        <spirit:displayName>Challenge Addr</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CHALLENGE_ADDR" spirit:bitStringLength="32">0x0000FF00</spirit:value>
+      </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
   <spirit:choices>
@@ -677,7 +692,7 @@
       <spirit:file>
         <spirit:name>xgui/top_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_68b96641</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_622d0d2f</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -780,6 +795,21 @@
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.FFT_WIDTH">8192</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
+      <spirit:name>CHALLENGE_WIDTH</spirit:name>
+      <spirit:displayName>Challenge Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CHALLENGE_WIDTH">128</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>CHALLENGE_TIME</spirit:name>
+      <spirit:displayName>Challenge Time</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CHALLENGE_TIME">8192</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>CHALLENGE_ADDR</spirit:name>
+      <spirit:displayName>Challenge Addr</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.CHALLENGE_ADDR" spirit:bitStringLength="32">0x0000FF00</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">top_v1_0</spirit:value>
     </spirit:parameter>
@@ -799,7 +829,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2020-03-27T03:09:41Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2020-04-04T22:34:41Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>

@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Thu Mar 26 22:10:57 2020
+// Date        : Sat Apr  4 17:36:08 2020
 // Host        : patricknaughton01 running 64-bit Ubuntu 18.04.4 LTS
 // Command     : write_verilog -force -mode funcsim
 //               /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.v

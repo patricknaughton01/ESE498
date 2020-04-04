@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="100618600fs"></ZoomStartTime>
-      <ZoomEndTime time="100745001fs"></ZoomEndTime>
-      <Cursor1Time time="100775000fs"></Cursor1Time>
+      <ZoomStartTime time="861011fs"></ZoomStartTime>
+      <ZoomEndTime time="1027798fs"></ZoomEndTime>
+      <Cursor1Time time="1000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="194"></NameColumnWidth>
-      <ValueColumnWidth column_width="106"></ValueColumnWidth>
+      <ValueColumnWidth column_width="102"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="29" />
+   <WVObjectSize size="35" />
    <wvobject type="logic" fp_name="/top_tb/S_AXI_ACLK">
       <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
       <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
@@ -140,5 +140,29 @@
       <obj_property name="ElementShortName">fftAccQ[31:0]</obj_property>
       <obj_property name="ObjectShortName">fftAccQ[31:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/challengeD">
+      <obj_property name="ElementShortName">challengeD[127:0]</obj_property>
+      <obj_property name="ObjectShortName">challengeD[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/challengeQ">
+      <obj_property name="ElementShortName">challengeQ[127:0]</obj_property>
+      <obj_property name="ObjectShortName">challengeQ[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/virusEnD">
+      <obj_property name="ElementShortName">virusEnD[127:0]</obj_property>
+      <obj_property name="ObjectShortName">virusEnD[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/virusEnQ">
+      <obj_property name="ElementShortName">virusEnQ[127:0]</obj_property>
+      <obj_property name="ObjectShortName">virusEnQ[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top1/virusFlagD">
+      <obj_property name="ElementShortName">virusFlagD</obj_property>
+      <obj_property name="ObjectShortName">virusFlagD</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_tb/top1/virusFlagQ">
+      <obj_property name="ElementShortName">virusFlagQ</obj_property>
+      <obj_property name="ObjectShortName">virusFlagQ</obj_property>
    </wvobject>
 </wave_config>

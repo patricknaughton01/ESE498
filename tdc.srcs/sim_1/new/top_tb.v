@@ -89,15 +89,7 @@ top#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_W
     S_AXI_RRESP,
     S_AXI_RVALID,
     S_AXI_RREADY,
-    trigger,
-    M_TDATA,
-    M_TLAST,
-    M_TREADY,
-    M_TVALID,
-    S_TDATA,
-    S_TLAST,
-    S_TREADY,
-    S_TVALID
+    trigger
 );
 
 Axi4LiteManager #(.C_M_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_M_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH)) Axi4LiteManager1
@@ -191,10 +183,36 @@ initial begin
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * 5);
-    // Start the measurement - square wave
+    // Write the challenge in
+    // Must be done in 4 groups b/c mask is 128 bits
+    wr = 1;
+    wrAddr = 'hFF00;
+    wrData = 'hAAAA_AAAA;
+    #CLK_PERIOD;
+    wr = 0;
+    #(CLK_PERIOD * 5);
+    wr = 1;
+    wrAddr = 'hFF04;
+    wrData = 'hBBBB_BBBB;
+    #CLK_PERIOD;
+    wr = 0;
+    #(CLK_PERIOD * 5);
+    wr = 1;
+    wrAddr = 'hFF08;
+    wrData = 'hCCCC_CCCC;
+    #CLK_PERIOD;
+    wr = 0;
+    #(CLK_PERIOD * 5);
+    wr = 1;
+    wrAddr = 'hFF0C;
+    wrData = 'hDDDD_DDDD;
+    #CLK_PERIOD;
+    wr = 0;
+    #(CLK_PERIOD * 5);
+    // Start the measurement - Challenge
     wr = 1;
     wrAddr = 'hFFFC;
-    wrData = 0;
+    wrData = 3;
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * 5);

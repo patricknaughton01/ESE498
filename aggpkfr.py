@@ -11,6 +11,7 @@ def main():
     parser.add_argument("-f", type=str, help="file prefix to read", default="")
     parser.add_argument("-l", action="store_true", help="log-scale")
     parser.add_argument("-x", action="store_true", help="x log-scale")
+    parser.add_argument("-p", type=str, default="-", help="extra plot commands")
     parser.add_argument("--title", type=str, default="", help="title information")
 
     args = parser.parse_args()
@@ -42,7 +43,7 @@ def main():
             print("Couldn't open file {}".format(args.filename))
             sys.exit()
     for r in responses:
-        plt.plot(r[0], r[1], label=r[2])
+        plt.plot(r[0], r[1], args.p, label=r[2])
     if args.x:
         plt.xscale("log")
     plt.xlabel("Frequency (Hz)")
@@ -51,7 +52,7 @@ def main():
         plt.yscale("log")
     plt.ylabel(y_label)
     plt.title(args.title)
-    #plt.legend(loc='upper right', shadow=True)
+    plt.legend(loc='upper right', shadow=True)
     plt.show()
 
 def get_prefix(path):
