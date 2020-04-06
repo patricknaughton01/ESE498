@@ -1,11 +1,3 @@
-/*
-	This is the header file for testing the voltage monitor
-*/
-
-#include "xil_printf.h"
-#include "xparameters.h"
-#include "xtime_l.h"
-
 #define NUM_CHAL 1000
 int32_t challenges[NUM_CHAL][4] = {
 {0xBD723E8C,0x5467CA5C,0xA6B8BC2A,0xEB438155},

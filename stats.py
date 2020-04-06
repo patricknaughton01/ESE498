@@ -14,6 +14,9 @@ def main():
     parser.add_argument("-x", action="store_true", help="x log-scale")
     parser.add_argument("-k", type=float, default=1.0, 
         help="standard deviation bar multiplier")
+    parser.add_argument("-i", action="store_true", help="plot individually")
+    parser.add_argument("-b", type=str, default="", help="baseline file")
+    parser.add_argument("--histogram", action="store_true", help="plot histogram")
     parser.add_argument("--title", type=str, 
         default="Frequency Reponse", help="title")
 
@@ -22,8 +25,10 @@ def main():
     responses = []
     freq_data = []
     files = glob.glob(args.path + "/" + args.f + "*.txt")
+    if not args.b == "":
+        files.insert(0, args.b)
     print("Found {} files".format(len(files)))
-    for path in files:
+    for i, path in enumerate(files):
         try:
             with open(path, "r") as in_file:
                 lines = in_file.readlines()
@@ -40,6 +45,8 @@ def main():
                 s_r.sort(key=lambda i:i[0])
                 s_r_x = np.array([i[0] for i in s_r])
                 s_r_y = np.array([np.mean(i[1]) for i in s_r])
+                if args.b and i > 0:
+                    s_r_y -= responses[0][1]    # subtract off the baseline
                 std_r_y = np.array([args.k * np.std(i[1]) for i in s_r])
                 responses.append((s_r_x, s_r_y, std_r_y, get_prefix(path)))
                 freq_data.append(traces)
@@ -56,11 +63,27 @@ def main():
     plt.xlabel('Energy')
     plt.ylabel('Frequency')
     plt.title('Histogram of Energy Responses')"""
+
+    if args.b:
+        base_response = responses[0]
+        responses = responses[1:]
+        if args.histogram:
+            plt.figure(0)
+            for r in responses:
+                plt.hist(r[1]/base_response[2], histtype='step', label=r[3], density=True, bins=20)
+                plt.xlabel('Energy (Std. Deviations)')
+                plt.ylabel('Frequency')
+                plt.title('Histogram of distance (std dev) from baseline ' 
+                    'response to different challenges')
+                plt.legend(loc='upper right', shadow=True)
     
     plt.figure(1)
     for r in responses:
-        plt.plot(r[0], r[1], label=r[3])
-        plt.fill_between(r[0], r[1]-r[2], r[1]+r[2], alpha=0.5)
+        if not args.i:
+            plt.plot(r[0], r[1], label=r[3])
+            plt.fill_between(r[0], r[1]-r[2], r[1]+r[2], alpha=0.5)
+        else:
+            plt.errorbar(r[0], r[1], yerr=r[2], fmt="x", label=r[3], capsize=3.0)
     if args.x:
         plt.xscale("log")
     plt.xlabel("Frequency (Hz)")
