@@ -16,7 +16,8 @@
         }
       },
       "rst_ps7_0_100M": "",
-      "top_0": ""
+      "top_0": "",
+      "clk_wiz_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1008,16 +1009,16 @@
               }
             },
             "interface_nets": {
-              "auto_pc_to_s00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_pc/M_AXI"
-                ]
-              },
               "s00_couplers_to_auto_pc": {
                 "interface_ports": [
                   "S_AXI",
                   "auto_pc/S_AXI"
+                ]
+              },
+              "auto_pc_to_s00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_pc/M_AXI"
                 ]
               }
             },
@@ -1324,8 +1325,55 @@
               }
             }
           },
+          "clk2": {
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "250000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
+          },
           "trigger": {
             "direction": "O"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_0_0",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "110.209"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "250.000"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "4.000"
+          },
+          "RESET_PORT": {
+            "value": "resetn"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_LOW"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          },
+          "USE_LOCKED": {
+            "value": "false"
           }
         }
       }
@@ -1365,7 +1413,8 @@
           "rst_ps7_0_100M/slowest_sync_clk",
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/ACLK",
-          "top_0/S_AXI_ACLK"
+          "top_0/S_AXI_ACLK",
+          "clk_wiz_0/clk_in1"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -1380,13 +1429,20 @@
           "ps7_0_axi_periph/S00_ARESETN",
           "ps7_0_axi_periph/M00_ARESETN",
           "ps7_0_axi_periph/ARESETN",
-          "top_0/S_AXI_ARESETN"
+          "top_0/S_AXI_ARESETN",
+          "clk_wiz_0/resetn"
         ]
       },
       "top_0_trigger": {
         "ports": [
           "top_0/trigger",
           "trigger_0"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "top_0/clk2"
         ]
       }
     },
