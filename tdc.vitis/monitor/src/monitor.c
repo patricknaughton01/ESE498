@@ -9,7 +9,7 @@
 #include "xuartps.h"
 #include "monitor.h"
 
-#define CLK_SPEED 100000000
+#define CLK_SPEED 250000000
 #define RUNS 100
 
 int32_t * const peripheral 	= (int32_t*)0x43C00000;
