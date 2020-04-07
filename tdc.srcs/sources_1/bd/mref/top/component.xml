@@ -223,7 +223,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f7d95732</spirit:value>
+            <spirit:value>545cebe1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -236,7 +236,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f7d95732</spirit:value>
+            <spirit:value>545cebe1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -553,6 +553,19 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+        <spirit:name>clk2</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
         <spirit:name>trigger</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
@@ -605,7 +618,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>VIRUS_ADDR</spirit:name>
         <spirit:displayName>Virus Addr</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.VIRUS_ADDR" spirit:bitStringLength="32">0x0000FFD8</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.VIRUS_ADDR" spirit:bitStringLength="32">0x0000FFE0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>MEM_WIDTH</spirit:name>
@@ -692,7 +705,7 @@
       <spirit:file>
         <spirit:name>xgui/top_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_622d0d2f</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_fbeb62e6</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -737,7 +750,7 @@
     <spirit:parameter>
       <spirit:name>VIRUS_ADDR</spirit:name>
       <spirit:displayName>Virus Addr</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.VIRUS_ADDR" spirit:bitStringLength="32">0x0000FFD8</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.VIRUS_ADDR" spirit:bitStringLength="32">0x0000FFE0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>MEM_WIDTH</spirit:name>
@@ -829,7 +842,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2020-04-04T22:34:41Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2020-04-06T17:07:04Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>

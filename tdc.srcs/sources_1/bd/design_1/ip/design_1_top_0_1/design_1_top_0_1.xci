@@ -65,7 +65,7 @@
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.SIM">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.SUM_ADDR">0x0000FFE8</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.S_TDATA_WIDTH">48</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.VIRUS_ADDR">0x0000FFD8</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.VIRUS_ADDR">0x0000FFE0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.VIRUS_B_SIZE">128</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.VIRUS_NUM_B">128</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.ABS_READ_MAX">10000</spirit:configurableElementValue>
@@ -88,7 +88,7 @@
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.SIM">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.SUM_ADDR">0x0000FFE8</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.S_TDATA_WIDTH">48</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.VIRUS_ADDR">0x0000FFD8</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.VIRUS_ADDR">0x0000FFE0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.VIRUS_B_SIZE">128</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.VIRUS_NUM_B">128</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PROJECT_PARAM.ARCHITECTURE">zynq</spirit:configurableElementValue>

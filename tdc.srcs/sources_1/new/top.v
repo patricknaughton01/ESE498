@@ -18,10 +18,8 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-
-
 module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=32, DELAY=63, READ_MAX_ADDR='hFFF4, 
-    REC_ADDR='hFFFC, FREQ_ADDR='hFFF8, VIRUS_ADDR='hFFD8, MEM_WIDTH=16, PP_ADDR='hFFF0, RMS_ADDR = 'hFFEC, SUM_ADDR='hFFE8,
+    REC_ADDR='hFFFC, FREQ_ADDR='hFFF8, VIRUS_ADDR='hFFE0, MEM_WIDTH=16, PP_ADDR='hFFF0, RMS_ADDR = 'hFFEC, SUM_ADDR='hFFE8,
     ABS_READ_MAX=10000, VIRUS_NUM_B=128, VIRUS_B_SIZE=128, SIM=0, M_TDATA_WIDTH=16, S_TDATA_WIDTH=48, FFT_WIDTH=8192,
     CHALLENGE_WIDTH=128, CHALLENGE_TIME=8192, CHALLENGE_ADDR='hFF00)(
     // Axi4Lite Bus
@@ -44,6 +42,7 @@ module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=
     output      [1:0] S_AXI_RRESP,
     output      S_AXI_RVALID,
     input       S_AXI_RREADY,
+    input       clk2,
     output  reg trigger
 );
 
@@ -64,7 +63,7 @@ wire [DELAY-1:0] tdcOut;
 
 reg[VIRUS_NUM_B-1:0] virusEnD, virusEnQ, virusMaskD, virusMaskQ;
 reg virusFlagD, virusFlagQ;
-wire[(VIRUS_NUM_B*VIRUS_B_SIZE)-1:0] virusOut;
+wire [(VIRUS_NUM_B*VIRUS_B_SIZE)-1:0] virusOut;
 reg [CHALLENGE_WIDTH-1:0] challengeD, challengeQ;
 
 Axi4LiteSupporter#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH))AxiSupporter1(
@@ -125,11 +124,11 @@ RAM#(.DEPTH(ABS_READ_MAX)) ram1(
 parameter IDLE=0, READ=1, READ_ONCE=2, READ_RAMP=3, RMS=4, FFT_WR=5, FFT_WR1=6, FFT_RD=7, C_RD=8;
 reg [7:0] state, nextState;
 reg [C_S_AXI_DATA_WIDTH-1:0] counterD, counterQ, virusCounterD, virusCounterQ, freqD, freqQ,
-           maxD, maxQ, ppD, ppQ;
-reg [C_S_AXI_DATA_WIDTH-1:0] oneMask;
+           maxD, maxQ, ppD, ppQ, oneMask;
 reg [DELAY-1:0] tdcClean;
 reg [6:0] total, diffMaxD, diffMaxQ, diffMinD, diffMinQ;
 reg [C_S_AXI_DATA_WIDTH-1:0] rmsAccD, rmsAccQ, fftAccD, fftAccQ, fftRe, fftIm, sumAccD, sumAccQ;
+
 
 integer i;
 always @ * begin
@@ -168,7 +167,7 @@ always @ * begin
                 memAddr = rdAddr;
                 rdData = memDo;
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1; 
-            end else if(rd && rdAddr == PP_ADDR)begin
+             end else if(rd && rdAddr == PP_ADDR)begin
                 rdData = ppQ;
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
             end else if(rd && rdAddr == RMS_ADDR)begin
@@ -419,11 +418,8 @@ always @ (posedge S_AXI_ACLK)begin
     if(S_AXI_ARESETN == 1)begin
         state <= nextState;
         counterQ <= counterD;
-        virusCounterQ <= virusCounterD;
         freqQ <= freqD;
-        virusEnQ <= virusEnD;
         virusMaskQ <= virusMaskD;
-        virusFlagQ <= virusFlagD;
         maxQ <= maxD;
         diffMaxQ <= diffMaxD;
         diffMinQ <= diffMinD;
@@ -435,11 +431,8 @@ always @ (posedge S_AXI_ACLK)begin
     end else begin
         state <= IDLE;
         counterQ <= 0;
-        virusCounterQ <= 0;
         freqQ <= 0;
-        virusEnQ <= 0;
         virusMaskQ <= 0;
-        virusFlagQ <= 0;
         maxQ <= 0;
         diffMaxQ <= 0;
         diffMinQ <= 'h3f;               // This stores a min value, so initialize it to max
@@ -448,6 +441,18 @@ always @ (posedge S_AXI_ACLK)begin
         fftAccQ <= 0;
         sumAccQ <= 0;
         challengeQ <= 0;
+    end
+end
+
+always @ (posedge clk2) begin
+    if(S_AXI_ARESETN == 1)begin
+        virusCounterQ <= virusCounterD;
+        virusFlagQ <= virusFlagD;
+        virusEnQ <= virusEnD;
+    end else begin
+        virusCounterQ <= 0;
+        virusFlagQ <= 0;
+        virusEnQ <= 0;
     end
 end
 
