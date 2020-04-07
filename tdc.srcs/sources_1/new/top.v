@@ -260,9 +260,8 @@ always @ * begin
             end
         end
         C_RD:begin
-            if ((counterQ >> ($clog2(CHALLENGE_TIME/CHALLENGE_WIDTH))) < CHALLENGE_WIDTH)begin
-                virusFlagD = challengeQ[(counterQ >> ($clog2(CHALLENGE_TIME/CHALLENGE_WIDTH)))];
-            end
+            virusFlagD = challengeQ[virusCounterQ & 'b1111111];
+            virusCounterD = virusCounterQ + 1;
             
             if(virusFlagQ == 1)begin
                 virusEnD = virusMaskQ;

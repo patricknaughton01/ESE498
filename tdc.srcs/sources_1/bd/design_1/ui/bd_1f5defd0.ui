@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.751852",
-   "Default View_TopLeft":"0,48",
+   "Default View_TopLeft":"0,-7",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
@@ -11,8 +11,8 @@ preplace port trigger_0 -pg 1 -lvl 4 -x 1230 -y 400 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 1 -x 400 -y 320 -defaultsOSRD
 preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 780 -y 380 -defaultsOSRD
 preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 400 -y 100 -defaultsOSRD
-preplace inst top_0 -pg 1 -lvl 3 -x 1080 -y 400 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 2 -x 780 -y 60 -defaultsOSRD
+preplace inst top_0 -pg 1 -lvl 3 -x 1080 -y 400 -defaultsOSRD
 preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 10 -10 620 500 940J
 preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 20 0 600
 preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 630 510 950J

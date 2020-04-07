@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Mon Apr  6 12:22:33 2020
-# Process ID: 28804
+# Start of session at: Tue Apr  7 10:27:16 2020
+# Process ID: 13768
 # Current directory: C:/Users/ressw/Documents/School/ESE498/merge/ESE498/tdc.runs/impl_2
 # Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
 # Log file: C:/Users/ressw/Documents/School/ESE498/merge/ESE498/tdc.runs/impl_2/design_1_wrapper.vdi
@@ -22,7 +22,7 @@ INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ressw/Documents/School
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ressw/Documents/School/ESE498/merge/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2.dcp' for cell 'design_1_i/rst_ps7_0_100M'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ressw/Documents/School/ESE498/merge/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_top_0_1/design_1_top_0_1.dcp' for cell 'design_1_i/top_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ressw/Documents/School/ESE498/merge/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.364 . Memory (MB): peak = 834.938 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.348 . Memory (MB): peak = 835.973 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 421 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2019.2
@@ -43,14 +43,14 @@ Finished Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/merge/ESE498/t
 Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/merge/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/ressw/Documents/School/ESE498/merge/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [c:/Users/ressw/Documents/School/ESE498/merge/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc:57]
-get_clocks: Time (s): cpu = 00:00:10 ; elapsed = 00:00:17 . Memory (MB): peak = 1581.836 ; gain = 580.270
+get_clocks: Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1581.371 ; gain = 578.852
 Finished Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/merge/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
 Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/merge/ESE498/tdc.srcs/constrs_1/new/zedboard.xdc]
 Finished Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/merge/ESE498/tdc.srcs/constrs_1/new/zedboard.xdc]
 Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/merge/ESE498/tdc.srcs/constrs_1/new/loops.xdc]
 Finished Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/merge/ESE498/tdc.srcs/constrs_1/new/loops.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.140 . Memory (MB): peak = 1638.867 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.149 . Memory (MB): peak = 1637.359 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 280 instances were transformed.
   RAM16X1S => RAM32X1S (RAMS32): 7 instances
@@ -58,7 +58,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 17 Infos, 2 Warnings, 1 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:33 ; elapsed = 00:01:03 . Memory (MB): peak = 1638.867 ; gain = 1157.613
+link_design: Time (s): cpu = 00:00:33 ; elapsed = 00:01:02 . Memory (MB): peak = 1637.359 ; gain = 1156.609
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -177,45 +177,45 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.130 . Memory (MB): peak = 1715.945 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 107e38df9
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.137 . Memory (MB): peak = 1717.113 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 10160453c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.255 . Memory (MB): peak = 1715.945 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.225 . Memory (MB): peak = 1717.113 ; gain = 0.000
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.136 . Memory (MB): peak = 1812.207 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.145 . Memory (MB): peak = 1810.004 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 16b92ab9e
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1a8b14e0c
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1814.230 ; gain = 98.285
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1813.035 ; gain = 95.922
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 23fa97ea7
+Phase 1.3 Build Placer Netlist Model | Checksum: 1e9315bc8
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1822.793 ; gain = 106.848
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1822.934 ; gain = 105.820
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 23fa97ea7
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1e9315bc8
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1822.793 ; gain = 106.848
-Phase 1 Placer Initialization | Checksum: 23fa97ea7
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1822.934 ; gain = 105.820
+Phase 1 Placer Initialization | Checksum: 1e9315bc8
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1822.793 ; gain = 106.848
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1822.934 ; gain = 105.820
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 24f668ea5
+Phase 2.1 Floorplanning | Checksum: 208c1f2cb
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1822.793 ; gain = 106.848
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1822.934 ; gain = 105.820
 
 Phase 2.2 Global Placement Core
 
 Phase 2.2.1 Physical Synthesis In Placer
-INFO: [Physopt 32-1018] Found 16466 candidate LUT instances to create LUTNM shape
-INFO: [Physopt 32-775] End 1 Pass. Optimized 81 nets or cells. Created 62 new cells, deleted 19 existing cells and moved 0 existing cell
+INFO: [Physopt 32-1018] Found 16456 candidate LUT instances to create LUTNM shape
+INFO: [Physopt 32-775] End 1 Pass. Optimized 62 nets or cells. Created 48 new cells, deleted 14 existing cells and moved 0 existing cell
 INFO: [Physopt 32-1022] Very high fanout net 'design_1_i/top_0/inst/AxiSupporter1/A[7]' has -through timing constraint at pin '' or its immediate connected net. To preserve -through timing constraint its fanout number considered in optimization is changed from 1366 to 275 and it is not considered a very high fanout net anymore. Please consider modifying/removing the '-through' timing constraint on the net segment or hierarchy pin.
 INFO: [Physopt 32-1022] Very high fanout net 'design_1_i/top_0/inst/AxiSupporter1/A[6]' has -through timing constraint at pin '' or its immediate connected net. To preserve -through timing constraint its fanout number considered in optimization is changed from 1639 to 275 and it is not considered a very high fanout net anymore. Please consider modifying/removing the '-through' timing constraint on the net segment or hierarchy pin.
 INFO: [Physopt 32-1022] Very high fanout net 'design_1_i/top_0/inst/AxiSupporter1/A[5]' has -through timing constraint at pin '' or its immediate connected net. To preserve -through timing constraint its fanout number considered in optimization is changed from 1093 to 275 and it is not considered a very high fanout net anymore. Please consider modifying/removing the '-through' timing constraint on the net segment or hierarchy pin.
@@ -232,7 +232,7 @@ INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found i
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for HD net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.149 . Memory (MB): peak = 2022.793 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.155 . Memory (MB): peak = 1999.906 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -241,76 +241,76 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |           62  |             19  |                    81  |           0  |           1  |  00:00:02  |
+|  LUT Combining                                    |           48  |             14  |                    62  |           0  |           1  |  00:00:01  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |           62  |             19  |                    81  |           0  |           7  |  00:00:02  |
+|  Total                                            |           48  |             14  |                    62  |           0  |           7  |  00:00:02  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2.1 Physical Synthesis In Placer | Checksum: 1c9b4e3e5
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 15b5e8e86
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 2022.793 ; gain = 306.848
-Phase 2.2 Global Placement Core | Checksum: 1e1871a8c
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1999.906 ; gain = 282.793
+Phase 2.2 Global Placement Core | Checksum: 1ab0b6b00
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:25 . Memory (MB): peak = 2022.793 ; gain = 306.848
-Phase 2 Global Placement | Checksum: 1e1871a8c
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1999.906 ; gain = 282.793
+Phase 2 Global Placement | Checksum: 1ab0b6b00
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:25 . Memory (MB): peak = 2022.793 ; gain = 306.848
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:27 . Memory (MB): peak = 1999.906 ; gain = 282.793
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 18e0f7845
+Phase 3.1 Commit Multi Column Macros | Checksum: 17070fef9
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 2022.793 ; gain = 306.848
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:28 . Memory (MB): peak = 1999.906 ; gain = 282.793
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1bf44e01d
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 8bf4dee7
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 2022.793 ; gain = 306.848
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:30 . Memory (MB): peak = 1999.906 ; gain = 282.793
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1bad6760f
+Phase 3.3 Area Swap Optimization | Checksum: b8211db3
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:28 . Memory (MB): peak = 2022.793 ; gain = 306.848
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:31 . Memory (MB): peak = 1999.906 ; gain = 282.793
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 174c8e5c1
+Phase 3.4 Pipeline Register Optimization | Checksum: 842a3642
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:28 . Memory (MB): peak = 2022.793 ; gain = 306.848
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:31 . Memory (MB): peak = 1999.906 ; gain = 282.793
 
 Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: 17b76441a
+Phase 3.5 Fast Optimization | Checksum: 764c92a8
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:33 . Memory (MB): peak = 2022.793 ; gain = 306.848
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:38 . Memory (MB): peak = 1999.906 ; gain = 282.793
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: 1e06b2cb8
+Phase 3.6 Small Shape Detail Placement | Checksum: 95513e39
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:41 . Memory (MB): peak = 2022.793 ; gain = 306.848
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:45 . Memory (MB): peak = 1999.906 ; gain = 282.793
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 1d3a25671
+Phase 3.7 Re-assign LUT pins | Checksum: d8304206
 
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:43 . Memory (MB): peak = 2022.793 ; gain = 306.848
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 1999.906 ; gain = 282.793
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 289a7c59f
+Phase 3.8 Pipeline Register Optimization | Checksum: 1841b2aaf
 
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:43 . Memory (MB): peak = 2022.793 ; gain = 306.848
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:46 . Memory (MB): peak = 1999.906 ; gain = 282.793
 
 Phase 3.9 Fast Optimization
-Phase 3.9 Fast Optimization | Checksum: 2039eb133
+Phase 3.9 Fast Optimization | Checksum: 11a1fcccf
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:49 . Memory (MB): peak = 2022.793 ; gain = 306.848
-Phase 3 Detail Placement | Checksum: 2039eb133
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:53 . Memory (MB): peak = 1999.906 ; gain = 282.793
+Phase 3 Detail Placement | Checksum: 11a1fcccf
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:49 . Memory (MB): peak = 2022.793 ; gain = 306.848
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:53 . Memory (MB): peak = 1999.906 ; gain = 282.793
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -318,84 +318,84 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: b8549fda
+Post Placement Optimization Initialization | Checksum: 1ed4daf7d
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Phase 4.1.1.1 BUFG Insertion | Checksum: b8549fda
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1ed4daf7d
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:53 . Memory (MB): peak = 2022.793 ; gain = 306.848
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-1.908. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: b2c532f6
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:55 . Memory (MB): peak = 1999.906 ; gain = 282.793
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-2.080. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1e3874bc5
 
-Time (s): cpu = 00:01:15 ; elapsed = 00:01:14 . Memory (MB): peak = 2022.793 ; gain = 306.848
-Phase 4.1 Post Commit Optimization | Checksum: b2c532f6
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:27 . Memory (MB): peak = 1999.906 ; gain = 282.793
+Phase 4.1 Post Commit Optimization | Checksum: 1e3874bc5
 
-Time (s): cpu = 00:01:15 ; elapsed = 00:01:14 . Memory (MB): peak = 2022.793 ; gain = 306.848
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:27 . Memory (MB): peak = 1999.906 ; gain = 282.793
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: b2c532f6
+Phase 4.2 Post Placement Cleanup | Checksum: 1e3874bc5
 
-Time (s): cpu = 00:01:16 ; elapsed = 00:01:14 . Memory (MB): peak = 2022.793 ; gain = 306.848
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:27 . Memory (MB): peak = 1999.906 ; gain = 282.793
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: b2c532f6
+Phase 4.3 Placer Reporting | Checksum: 1e3874bc5
 
-Time (s): cpu = 00:01:16 ; elapsed = 00:01:15 . Memory (MB): peak = 2022.793 ; gain = 306.848
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:27 . Memory (MB): peak = 1999.906 ; gain = 282.793
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.140 . Memory (MB): peak = 2022.793 ; gain = 0.000
-Phase 4.4 Final Placement Cleanup | Checksum: be38579a
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.147 . Memory (MB): peak = 1999.906 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: 1437de00a
 
-Time (s): cpu = 00:01:16 ; elapsed = 00:01:15 . Memory (MB): peak = 2022.793 ; gain = 306.848
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: be38579a
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:28 . Memory (MB): peak = 1999.906 ; gain = 282.793
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1437de00a
 
-Time (s): cpu = 00:01:16 ; elapsed = 00:01:15 . Memory (MB): peak = 2022.793 ; gain = 306.848
-Ending Placer Task | Checksum: b1d3f33a
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:28 . Memory (MB): peak = 1999.906 ; gain = 282.793
+Ending Placer Task | Checksum: fcd12737
 
-Time (s): cpu = 00:01:16 ; elapsed = 00:01:15 . Memory (MB): peak = 2022.793 ; gain = 306.848
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:28 . Memory (MB): peak = 1999.906 ; gain = 282.793
 INFO: [Common 17-83] Releasing license: Implementation
 51 Infos, 102 Warnings, 1 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:01:20 ; elapsed = 00:01:19 . Memory (MB): peak = 2022.793 ; gain = 382.273
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.149 . Memory (MB): peak = 2022.793 ; gain = 0.000
+place_design: Time (s): cpu = 00:01:34 ; elapsed = 00:01:32 . Memory (MB): peak = 1999.906 ; gain = 359.719
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.149 . Memory (MB): peak = 1999.906 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 2022.793 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:02 . Memory (MB): peak = 1999.906 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/ressw/Documents/School/ESE498/merge/ESE498/tdc.runs/impl_2/design_1_wrapper_placed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2022.793 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1999.906 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_io -file design_1_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.396 . Memory (MB): peak = 2022.793 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.412 . Memory (MB): peak = 1999.906 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2022.793 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.080 . Memory (MB): peak = 1999.906 ; gain = 0.000
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.139 . Memory (MB): peak = 2022.793 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.159 . Memory (MB): peak = 2002.285 ; gain = 0.000
 
 Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3691.628 |
-Phase 1 Physical Synthesis Initialization | Checksum: b393e5fe
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3727.605 |
+Phase 1 Physical Synthesis Initialization | Checksum: 23c2b8a4b
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2022.793 ; gain = 0.000
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3691.628 |
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2008.637 ; gain = 6.352
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3727.605 |
 
 Phase 2 DSP Register Optimization
 INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Phase 2 DSP Register Optimization | Checksum: b393e5fe
+Phase 2 DSP Register Optimization | Checksum: 23c2b8a4b
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2022.793 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2008.637 ; gain = 6.352
 
 Phase 3 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3691.628 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3727.605 |
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/latches[60]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[60]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[56]. Optimizations did not improve timing on the net.
@@ -539,250 +539,48 @@ INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/
 INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp_inferred_i_1
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[0].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[0]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[0]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3691.943 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[1].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[1]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[1]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3692.384 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[2].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[2]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[2]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3692.721 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[7].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[7]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[7]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3693.168 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[10].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[10]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[10]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3693.554 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[11].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[11]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[11]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3693.938 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[8].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[8]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[8]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3694.341 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[9].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[9]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[9]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3694.723 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[15].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[15]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[15]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3694.983 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[23].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[23]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[23]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3695.254 |
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/latches[60]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[60]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[56]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[52]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[48]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[44]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[40]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[36]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[32]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[28]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[24]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[20]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[16]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[12]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[8]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[4]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[0].  Did not re-place instance design_1_i/top_0/inst/tdc1/initial_bufs_inst
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[31].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[31].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[31].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[31].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[31].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[31].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[30].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[30].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[30].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[30].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[30].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[30].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[29].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[29].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[29].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[29].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[29].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[29].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[28].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[28].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[28].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[28].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[28].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[28].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[27].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[27].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[27].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[27].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[27].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[27].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[26].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[26].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[26].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[26].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[26].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[26].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[25].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[25].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[25].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[25].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[25].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[25].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[24].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[24].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[24].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[24].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[24].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[24].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[23].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[23].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[23].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[23].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[23].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[23].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[22].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[22].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[22].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[22].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[22].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[22].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[21].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[21].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[21].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[21].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[21].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[21].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[20].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[20].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[20].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[20].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[20].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[20].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[19].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[19].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[19].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[19].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[19].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[19].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[18].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[18].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[18].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[18].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[18].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[18].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[17].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[17].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[17].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[17].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[17].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[17].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[16].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[16].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[16].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[16].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[16].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[16].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[15].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[15].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[15].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[15].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[15].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[15].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[14].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[14].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[14].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[14].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[14].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[14].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[13].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[13].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[13].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[13].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[13].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[13].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[12].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[12].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[12].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[12].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[12].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[12].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[11].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[11].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[11].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[11].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[11].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[11].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[10].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[10].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[10].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[10].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[10].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[10].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[9].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[9].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[9].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[9].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[9].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[9].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[8].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[8].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[8].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[8].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[8].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[8].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[7].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[7].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[7].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[7].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[7].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[7].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[6].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[6].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[6].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[6].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[6].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[6].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[5].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[5].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[5].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[5].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[5].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[5].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[4].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[4].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[4].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[4].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[4].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[4].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[3].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[3].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[3].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[3].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[3].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[3].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[2].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[2].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[2].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[2].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[2].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[2].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[1].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[24].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[24]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[24]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3695.533 |
 INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[25].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[25]
 INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[25]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3695.969 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[18].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[18]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[18]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3696.236 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3728.112 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[27].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[27]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[27]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3728.633 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[28].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[28]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[28]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3729.162 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[6].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[6]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[6]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3729.685 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[11].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[11]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[11]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3730.014 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[9].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[9]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[9]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3730.180 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[10].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[10]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[10]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3730.610 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[23].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[23]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[23]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3731.248 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[26].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[26]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[26]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3732.089 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[30].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[30]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[30]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3733.011 |
 INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[20].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[20]
 INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[20]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3696.524 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[22].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[22]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[22]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3696.797 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3733.735 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[21].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[21]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[21]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3734.983 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[24].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[24]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[24]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3735.599 |
 INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[31].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[31]
 INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[31]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3697.210 |
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[12].  Did not re-place instance design_1_i/top_0/inst/virusCounterQ_reg[12]
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[12]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[38].  Re-placed instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[39]
-INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[38]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3690.490 |
-INFO: [Physopt 32-663] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_0.  Re-placed instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg
-INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3690.058 |
-INFO: [Physopt 32-663] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[37].  Re-placed instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[38]
-INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[37]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3689.482 |
-INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[37].  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[38]
-INFO: [Physopt 32-702] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[37]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_4_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_4
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_4_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_5_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_5
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_5_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3687.306 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_n_0.  Re-placed instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3686.826 |
-INFO: [Physopt 32-663] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/wrap_cmd_0/sel_first_reg_0.  Re-placed instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/wrap_cmd_0/sel_first_reg
-INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/wrap_cmd_0/sel_first_reg_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3686.378 |
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_5_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_5
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_5_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_8_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_8
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_8_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_13_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_13
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_13_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3685.962 |
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_6_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_6
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_6_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3685.802 |
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_9_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_9
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_9_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[5].  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[5]_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[5]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[38]_0.  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_axi_araddr[11]_INST_0_i_2
-INFO: [Physopt 32-702] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[38]_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/state_reg[3]_rep__0[0].  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/virusCounterQ[31]_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/state_reg[3]_rep__0[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3685.802 |
-Phase 3 Critical Path Optimization | Checksum: b393e5fe
-
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 2022.793 ; gain = 0.000
-
-Phase 4 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3685.802 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3736.363 |
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/latches[60]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[60]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[56]. Optimizations did not improve timing on the net.
@@ -926,131 +724,457 @@ INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/
 INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp_inferred_i_1
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[12].  Did not re-place instance design_1_i/top_0/inst/virusCounterQ_reg[12]
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[12]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[37].  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[38]
-INFO: [Physopt 32-572] Net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[37] was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[37]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_n_0.  Re-placed instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3683.146 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[13].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[13]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[13]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3736.627 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[15].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[15]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[15]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3736.935 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[12].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[12]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[12]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3737.574 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[14].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[14]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[14]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3738.201 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[16].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[16]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[16]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3739.181 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[19].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[19]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[19]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3740.055 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[2].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[2]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3740.834 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[3].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[3]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3741.470 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[0].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[0]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3742.291 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[1].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[1]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3743.103 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[4].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[4]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3743.787 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[5].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[5]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3744.472 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[17].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[17]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[17]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3745.364 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[18].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[18]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[18]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3745.934 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[22].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[22]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[22]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3746.479 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[8].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[8]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[8]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3747.025 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[17].  Did not re-place instance design_1_i/top_0/inst/virusCounterQ_reg[17]
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[17]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/wrap_cmd_0/sel_first_reg_0.  Re-placed instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/wrap_cmd_0/sel_first_reg
+INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/wrap_cmd_0/sel_first_reg_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3743.186 |
+INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[38].  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[39]
+INFO: [Physopt 32-702] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[38]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1
-INFO: [Physopt 32-710] Processed net design_1_i/top_0/inst/AxiSupporter1/state_reg[3]_rep__0[0]. Critical path length was reduced through logic transformation on cell design_1_i/top_0/inst/AxiSupporter1/virusCounterQ[31]_i_1_comp.
 INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3673.281 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3727.313 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_2_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_2
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3724.817 |
 INFO: [Physopt 32-663] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[61]_0[38].  Re-placed instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[39]
 INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[61]_0[38]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3667.114 |
-INFO: [Physopt 32-663] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[61]_0[37].  Re-placed instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[38]
-INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[61]_0[37]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3665.927 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_4_n_0.  Re-placed instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_4
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_4_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3665.735 |
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_4_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_4
-INFO: [Physopt 32-710] Processed net design_1_i/top_0/inst/AxiSupporter1/state_reg[3]_rep__0[0]. Critical path length was reduced through logic transformation on cell design_1_i/top_0/inst/AxiSupporter1/virusCounterQ[31]_i_1_comp_1.
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_4_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3663.447 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3716.081 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_2_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_2
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_5_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_5
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3715.857 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_11_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_11
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_13_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_13
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_13_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3715.857 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3714.930 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_10_n_0.  Re-placed instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_10
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_10_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3714.609 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_10_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_10
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_10_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3714.481 |
+INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[61]_0[38].  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[39]
+INFO: [Physopt 32-702] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[61]_0[38]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_3_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_3
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/virusMaskQ[127]_i_3_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/virusMaskQ[127]_i_3
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/virusMaskQ[127]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/challengeQ[127]_i_5_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/challengeQ[127]_i_5
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/challengeQ[127]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/freqQ[31]_i_3_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/freqQ[31]_i_3
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/freqQ[31]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/m_axi_awaddr[8].  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/m_axi_awaddr[8]_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/m_axi_awaddr[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[39]_0.  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_axi_awaddr[11]_INST_0_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[39]_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/state_reg[3]_rep[0].  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/virusCounterQ[31]_i_1
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/state_reg[3]_rep[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3704.977 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/state_reg[3]_rep[0].  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/virusCounterQ[31]_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/state_reg[3]_rep[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3704.977 |
+Phase 3 Critical Path Optimization | Checksum: 23c2b8a4b
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 2014.648 ; gain = 12.363
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3704.977 |
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/latches[60]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[60]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[56]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[52]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[48]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[44]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[40]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[36]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[32]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[28]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[24]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[20]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[16]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[12]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[0].  Did not re-place instance design_1_i/top_0/inst/tdc1/initial_bufs_inst
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[31].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[31].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[31].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[31].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[31].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[31].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[30].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[30].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[30].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[30].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[30].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[30].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[29].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[29].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[29].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[29].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[29].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[29].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[28].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[28].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[28].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[28].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[28].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[28].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[27].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[27].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[27].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[27].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[27].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[27].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[26].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[26].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[26].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[26].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[26].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[26].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[25].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[25].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[25].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[25].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[25].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[25].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[24].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[24].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[24].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[24].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[24].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[24].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[23].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[23].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[23].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[23].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[23].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[23].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[22].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[22].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[22].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[22].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[22].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[22].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[21].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[21].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[21].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[21].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[21].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[21].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[20].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[20].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[20].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[20].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[20].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[20].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[19].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[19].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[19].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[19].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[19].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[19].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[18].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[18].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[18].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[18].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[18].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[18].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[17].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[17].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[17].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[17].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[17].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[17].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[16].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[16].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[16].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[16].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[16].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[16].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[15].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[15].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[15].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[15].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[15].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[15].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[14].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[14].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[14].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[14].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[14].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[14].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[13].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[13].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[13].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[13].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[13].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[13].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[12].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[12].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[12].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[12].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[12].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[12].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[11].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[11].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[11].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[11].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[11].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[11].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[10].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[10].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[10].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[10].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[10].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[10].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[9].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[9].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[9].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[9].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[9].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[9].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[8].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[8].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[8].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[8].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[8].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[8].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[7].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[7].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[7].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[7].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[7].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[7].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[6].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[6].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[6].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[6].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[6].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[6].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[5].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[5].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[5].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[5].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[5].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[5].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[4].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[4].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[4].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[4].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[4].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[4].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[3].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[3].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[3].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[3].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[3].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[3].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[2].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[2].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[2].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[2].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[2].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[2].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[1].init/out_INST_0
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/out. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp_inferred_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[17].  Did not re-place instance design_1_i/top_0/inst/virusCounterQ_reg[17]
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[17]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[61]_0[38].  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[39]
+INFO: [Physopt 32-702] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[61]_0[38]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1
+INFO: [Physopt 32-134] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_3_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_3
+INFO: [Physopt 32-710] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_n_0. Critical path length was reduced through logic transformation on cell design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3703.057 |
+INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[38].  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[39]
+INFO: [Physopt 32-81] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[38]. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[38]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3703.025 |
+INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[38].  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[39]
+INFO: [Physopt 32-702] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[38]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_2_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_2
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3
+INFO: [Physopt 32-81] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_n_0. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3702.962 |
+INFO: [Physopt 32-663] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[37].  Re-placed instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[38]
+INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[37]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3701.905 |
 INFO: [Physopt 32-663] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_0.  Re-placed instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg
 INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3662.519 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_4_n_0_repN.  Re-placed instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_4_comp
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_4_n_0_repN. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3660.855 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[15].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[15]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[15]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3660.888 |
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_4_n_0_repN.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_4_comp
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_4_n_0_repN. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_6_n_0.  Re-placed instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_6
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_6_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3660.792 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_n_0.  Re-placed instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3660.600 |
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_6_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_6
-INFO: [Physopt 32-572] Net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_6_n_0 was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_6_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_8_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_8
-INFO: [Physopt 32-710] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_6_n_0. Critical path length was reduced through logic transformation on cell design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_6_comp.
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_8_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3659.288 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[12].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[12]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[12]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3659.358 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[5].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[5]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[5]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3658.808 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[8].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[8]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[8]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3657.951 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[20].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[20]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[20]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3657.334 |
-INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_0.  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg
-INFO: [Physopt 32-81] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_0. Replicated 1 times.
-INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3656.470 |
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/ram_reg_0_255_0_0_i_15_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/ram_reg_0_255_0_0_i_15
-INFO: [Physopt 32-710] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_4_n_0_repN. Critical path length was reduced through logic transformation on cell design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_4_comp_1.
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/ram_reg_0_255_0_0_i_15_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3656.310 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_9_n_0.  Re-placed instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_9
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_9_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3656.118 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[99].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[99]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[99]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3656.409 |
-INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_0_repN.  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_replica
-INFO: [Physopt 32-572] Net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_0_repN was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3700.849 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_n_0_repN.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_replica
+INFO: [Physopt 32-710] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_2_n_0. Critical path length was reduced through logic transformation on cell design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_2_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3698.834 |
+INFO: [Physopt 32-663] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[37].  Re-placed instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[38]
+INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[37]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3697.345 |
 INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_5_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_5
 INFO: [Physopt 32-572] Net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_5_n_0 was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_5_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/freqQ[31]_i_4_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/freqQ[31]_i_4
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12
 INFO: [Physopt 32-710] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_5_n_0. Critical path length was reduced through logic transformation on cell design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_5_comp.
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/freqQ[31]_i_4_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3655.673 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[13].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[13]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[13]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3656.320 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[2].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[2]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[2]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3655.949 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[3].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[3]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[3]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3655.375 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[7].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[7]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[7]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3654.725 |
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3695.842 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/ram_reg_0_255_0_0_i_16_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/ram_reg_0_255_0_0_i_16
+INFO: [Physopt 32-572] Net design_1_i/top_0/inst/AxiSupporter1/ram_reg_0_255_0_0_i_16_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/ram_reg_0_255_0_0_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/ram_reg_0_255_0_0_i_32_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/ram_reg_0_255_0_0_i_32
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/ram_reg_0_255_0_0_i_32_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3694.114 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_8_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_8
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3693.154 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_5_n_0.  Re-placed instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_5
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3692.321 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_5_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_5
+INFO: [Physopt 32-572] Net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_5_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12
+INFO: [Physopt 32-710] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_5_n_0. Critical path length was reduced through logic transformation on cell design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_5_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3692.097 |
+INFO: [Physopt 32-663] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[37].  Re-placed instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[38]
+INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[37]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3691.137 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/AxiSupporter1/ram_reg_0_255_0_0_i_33_n_0.  Re-placed instance design_1_i/top_0/inst/AxiSupporter1/ram_reg_0_255_0_0_i_33
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/ram_reg_0_255_0_0_i_33_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3687.825 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_n_0_repN.  Re-placed instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_replica_comp
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3687.217 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12_n_0_repN.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12_comp
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_7_n_0.  Re-placed instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_7
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_7_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3686.994 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_n_0_repN.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_replica_comp
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3685.522 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/ram_reg_0_255_0_0_i_32_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/ram_reg_0_255_0_0_i_32
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/ram_reg_0_255_0_0_i_32_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[9].  Re-placed instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[9]_INST_0
+INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[9]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3683.841 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[21].  Did not re-place instance design_1_i/top_0/inst/virusCounterQ_reg[21]
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[21]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/freqQ_reg_n_0_[0].  Re-placed instance design_1_i/top_0/inst/freqQ_reg[0]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/freqQ_reg_n_0_[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3669.008 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/virusMaskQ[127]_i_3_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/virusMaskQ[127]_i_3
+INFO: [Physopt 32-710] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_n_0. Critical path length was reduced through logic transformation on cell design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_comp_1.
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/virusMaskQ[127]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3667.984 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_7_n_0.  Re-placed instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_7
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_7_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3667.921 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12_n_0.  Re-placed instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12_comp_1
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3667.600 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_10_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_10
+INFO: [Physopt 32-572] Net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_10_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[7].  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[7]_INST_0
+INFO: [Physopt 32-710] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_10_n_0. Critical path length was reduced through logic transformation on cell design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_10_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[7]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3667.568 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_n_0_repN.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_replica_comp
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_11_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_11
+INFO: [Physopt 32-710] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_n_0_repN. Critical path length was reduced through logic transformation on cell design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_3_replica_comp_1.
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_11_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3667.569 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_8_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_8
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[0].  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[0]_INST_0
+INFO: [Physopt 32-710] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_8_n_0. Critical path length was reduced through logic transformation on cell design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_8_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3667.424 |
+INFO: [Physopt 32-663] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[61]_0[37].  Re-placed instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[38]
+INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[61]_0[37]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3667.360 |
+INFO: [Physopt 32-663] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[4].  Re-placed instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[4]_INST_0
+INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3667.328 |
+INFO: [Physopt 32-663] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[37].  Re-placed instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[38]
+INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[37]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3666.496 |
+INFO: [Physopt 32-663] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_0.  Re-placed instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg
+INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3666.304 |
+INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[37].  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[38]
+INFO: [Physopt 32-81] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[37]. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[37]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3665.057 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/freqQ_reg_n_0_[5].  Re-placed instance design_1_i/top_0/inst/freqQ_reg[5]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/freqQ_reg_n_0_[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3665.057 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/freqQ_reg_n_0_[1].  Re-placed instance design_1_i/top_0/inst/freqQ_reg[1]
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/freqQ_reg_n_0_[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3648.267 |
+INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[61]_0[37].  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[38]
+INFO: [Physopt 32-702] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[61]_0[37]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_3_n_0_repN.  Re-placed instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_3_comp
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_3_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3648.139 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/AxiSupporter1/ram_reg_0_255_0_0_i_33_n_0.  Re-placed instance design_1_i/top_0/inst/AxiSupporter1/ram_reg_0_255_0_0_i_33
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/ram_reg_0_255_0_0_i_33_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3647.835 |
 INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_6_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_6
 INFO: [Physopt 32-572] Net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_6_n_0 was not replicated.
 Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_6_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12
+INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[0].  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[0]_INST_0
 INFO: [Physopt 32-710] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_6_n_0. Critical path length was reduced through logic transformation on cell design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_6_comp.
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_12_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3654.469 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[0].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[0]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[0]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3654.430 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[11].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[11]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[11]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3654.527 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[9].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[9]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[9]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3653.788 |
-INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[7].  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[7]_INST_0
+INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3647.740 |
+INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_0.  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg
+INFO: [Physopt 32-572] Net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[6].  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[6]_INST_0
+INFO: [Physopt 32-81] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[6]. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[6]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3647.803 |
+INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[9].  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[9]_INST_0
+INFO: [Physopt 32-710] Processed net design_1_i/top_0/inst/AxiSupporter1/ram_reg_0_255_0_0_i_32_n_0. Critical path length was reduced through logic transformation on cell design_1_i/top_0/inst/AxiSupporter1/ram_reg_0_255_0_0_i_32_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[9]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3647.707 |
+INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[9]_repN_1.  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[9]_INST_0_comp_1
+INFO: [Physopt 32-702] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[9]_repN_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-571] Net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_1 was not replicated.
+INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_1.  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[11]_INST_0_i_3
+INFO: [Physopt 32-81] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_1. Replicated 2 times.
+INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3647.451 |
+INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[4].  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[4]_INST_0
 INFO: [Physopt 32-710] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_6_n_0. Critical path length was reduced through logic transformation on cell design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_6_comp_1.
-INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[7]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3652.668 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[53].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[53]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[53]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3652.123 |
+INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3647.323 |
+INFO: [Physopt 32-571] Net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_1 was not replicated.
+INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_1.  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/m_axi_araddr[11]_INST_0_i_3
+INFO: [Physopt 32-572] Net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_1 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-571] Net design_1_i/top_0/inst/AxiSupporter1/state_reg[3]_rep[0] was not replicated.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/state_reg[3]_rep[0].  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/virusCounterQ[31]_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/state_reg[3]_rep[0]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/latches[60]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[60]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[56]. Optimizations did not improve timing on the net.
@@ -1194,42 +1318,49 @@ INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/
 INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp_inferred_i_1
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[47].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[47]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[47]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3651.932 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[105].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[105]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[105]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3652.956 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[108].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[108]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[108]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3653.791 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[109].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[109]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[109]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3654.047 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[112].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[112]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[112]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3654.382 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[114].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[114]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[114]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3654.431 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[116].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[116]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[116]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3654.431 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[106].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[106]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[106]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3655.328 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[118].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[118]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[118]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3656.014 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusEnQ[119].  Re-placed instance design_1_i/top_0/inst/virusEnQ_reg[119]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusEnQ[119]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3657.443 |
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.189 | TNS=-3657.443 |
-Phase 4 Critical Path Optimization | Checksum: b393e5fe
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[17].  Did not re-place instance design_1_i/top_0/inst/virusCounterQ_reg[17]
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[17]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_0.  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg
+INFO: [Physopt 32-702] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/cmd_translator_0/incr_cmd_0/sel_first_reg_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_comp_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_2_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_2_comp
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3647.195 |
+INFO: [Physopt 32-663] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[38].  Re-placed instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[39]
+INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[38]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3645.563 |
+INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[38].  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[39]
+INFO: [Physopt 32-702] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[38]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_2_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_2_comp
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_5_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_5_comp
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3645.563 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_5_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_5_comp
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_8_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_8
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3645.339 |
+INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/AxiSupporter1/rdAddr[1].  Re-placed instance design_1_i/top_0/inst/AxiSupporter1/rdDataQ[30]_i_14
+INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/rdAddr[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3645.051 |
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[21].  Did not re-place instance design_1_i/top_0/inst/virusCounterQ_reg[21]
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[21]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/freqQ_reg_n_0_[0].  Did not re-place instance design_1_i/top_0/inst/freqQ_reg[0]
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/freqQ_reg_n_0_[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/virusCounterQ_reg[31]_i_4_n_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/virusCounterQ[31]_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/virusCounterD2[27]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/virusCounterQ[31]_i_93_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/virusCounterQ[21]_i_1_n_0.  Did not re-place instance design_1_i/top_0/inst/virusCounterQ[21]_i_1
+INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/virusCounterQ[21]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.888 | TNS=-3645.051 |
+Phase 4 Critical Path Optimization | Checksum: 23c2b8a4b
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:19 . Memory (MB): peak = 2022.793 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.222 . Memory (MB): peak = 2022.793 ; gain = 0.000
-INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-34.189 | TNS=-3657.443 |
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:41 . Memory (MB): peak = 2014.730 ; gain = 12.445
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.239 . Memory (MB): peak = 2014.730 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-33.888 | TNS=-3645.051 |
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -1239,28 +1370,28 @@ Summary of Physical Synthesis Optimizations
 |  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 |  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Critical Path  |          0.000  |         34.186  |            1  |              0  |                    65  |           0  |           2  |  00:00:17  |
-|  Total          |          0.000  |         34.186  |            1  |              0  |                    65  |           0  |           3  |  00:00:17  |
+|  Critical Path  |          0.000  |         82.553  |            6  |              0  |                    84  |           0  |           2  |  00:00:37  |
+|  Total          |          0.000  |         82.553  |            6  |              0  |                    84  |           0  |           3  |  00:00:37  |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.137 . Memory (MB): peak = 2022.793 ; gain = 0.000
-Ending Physical Synthesis Task | Checksum: b393e5fe
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.176 . Memory (MB): peak = 2014.730 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 23c2b8a4b
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 2022.793 ; gain = 0.000
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:41 . Memory (MB): peak = 2014.730 ; gain = 12.445
 INFO: [Common 17-83] Releasing license: Implementation
-884 Infos, 102 Warnings, 1 Critical Warnings and 0 Errors encountered.
+1013 Infos, 102 Warnings, 1 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
-phys_opt_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:21 . Memory (MB): peak = 2022.793 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.154 . Memory (MB): peak = 2022.793 ; gain = 0.000
+phys_opt_design: Time (s): cpu = 00:01:09 ; elapsed = 00:00:44 . Memory (MB): peak = 2014.730 ; gain = 14.824
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.142 . Memory (MB): peak = 2014.730 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 2028.055 ; gain = 5.262
+Write XDEF Complete: Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 2023.844 ; gain = 9.113
 INFO: [Common 17-1381] The checkpoint 'C:/Users/ressw/Documents/School/ESE498/merge/ESE498/tdc.runs/impl_2/design_1_wrapper_physopt.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2028.055 ; gain = 5.262
+write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2023.844 ; gain = 9.113
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -1376,41 +1507,41 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: ad50d7ba ConstDB: 0 ShapeSum: 365841c9 RouteDB: 0
+Checksum: PlaceDB: 7414db0b ConstDB: 0 ShapeSum: 829c1a86 RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: af7fd3b0
+Phase 1 Build RT Design | Checksum: 12445211c
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 2111.910 ; gain = 68.035
-Post Restoration Checksum: NetGraph: 2783cdc3 NumContArr: 87fc05ed Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:34 . Memory (MB): peak = 2084.699 ; gain = 49.055
+Post Restoration Checksum: NetGraph: f136eccb NumContArr: 330e3451 Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: af7fd3b0
+Phase 2.1 Create Timer | Checksum: 12445211c
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 2111.910 ; gain = 68.035
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:35 . Memory (MB): peak = 2084.699 ; gain = 49.055
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: af7fd3b0
+Phase 2.2 Fix Topology Constraints | Checksum: 12445211c
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:28 . Memory (MB): peak = 2117.688 ; gain = 73.813
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:35 . Memory (MB): peak = 2089.945 ; gain = 54.301
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: af7fd3b0
+Phase 2.3 Pre Route Cleanup | Checksum: 12445211c
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:28 . Memory (MB): peak = 2117.688 ; gain = 73.813
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:35 . Memory (MB): peak = 2089.945 ; gain = 54.301
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 19e72dc8d
+Phase 2.4 Update Timing | Checksum: 1a0263226
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:32 . Memory (MB): peak = 2143.957 ; gain = 100.082
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-34.725| TNS=-3604.261| WHS=-0.143 | THS=-17.013|
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:40 . Memory (MB): peak = 2115.211 ; gain = 79.566
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-33.913| TNS=-3556.870| WHS=-0.139 | THS=-17.001|
 
-Phase 2 Router Initialization | Checksum: 21c2b56ad
+Phase 2 Router Initialization | Checksum: 1a26a4e92
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:34 . Memory (MB): peak = 2143.957 ; gain = 100.082
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:41 . Memory (MB): peak = 2115.211 ; gain = 79.566
 
 Router Utilization Summary
   Global Vertical Routing Utilization    = 0 %
@@ -1418,29 +1549,29 @@ Router Utilization Summary
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 20241
+  Number of Failed Nets               = 20233
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 20241
+  Number of Unrouted Nets             = 20233
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 13ce5f0db
+Phase 3 Initial Routing | Checksum: 1d34e33c0
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:36 . Memory (MB): peak = 2143.957 ; gain = 100.082
-INFO: [Route 35-580] Design has 5 pins with tight setup and hold constraints.
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:43 . Memory (MB): peak = 2115.211 ; gain = 79.566
+INFO: [Route 35-580] Design has 6 pins with tight setup and hold constraints.
 
 The top 5 pins with tight setup and hold constraints:
 
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 |       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|               clk_fpga_0 |clk_out1_design_1_clk_wiz_0_0 |                                                             design_1_i/top_0/inst/virusFlagQ_reg_rep__0/D|
 |               clk_fpga_0 |clk_out1_design_1_clk_wiz_0_0 |                                                                design_1_i/top_0/inst/virusFlagQ_reg_rep/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                   design_1_i/top_0/inst/rmsAccQ_reg[13]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                   design_1_i/top_0/inst/rmsAccQ_reg[14]/D|
-|               clk_fpga_0 |clk_out1_design_1_clk_wiz_0_0 |                                                                  design_1_i/top_0/inst/virusEnQ_reg[71]/D|
-|               clk_fpga_0 |clk_out1_design_1_clk_wiz_0_0 |                                                                  design_1_i/top_0/inst/virusEnQ_reg[69]/D|
+|               clk_fpga_0 |clk_out1_design_1_clk_wiz_0_0 |                                                                    design_1_i/top_0/inst/virusFlagQ_reg/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                                    design_1_i/top_0/inst/rmsAccQ_reg[5]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                                    design_1_i/top_0/inst/rmsAccQ_reg[4]/D|
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 
 File with complete list of pins: tight_setup_hold_pins.txt
@@ -1449,84 +1580,76 @@ File with complete list of pins: tight_setup_hold_pins.txt
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 720
- Number of Nodes with overlaps = 179
- Number of Nodes with overlaps = 62
- Number of Nodes with overlaps = 14
- Number of Nodes with overlaps = 8
- Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 722
+ Number of Nodes with overlaps = 162
+ Number of Nodes with overlaps = 57
+ Number of Nodes with overlaps = 27
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-39.219| TNS=-10557.457| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-37.983| TNS=-11724.245| WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 283327d0b
+Phase 4.1 Global Iteration 0 | Checksum: 1a857ef75
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:48 . Memory (MB): peak = 2143.957 ; gain = 100.082
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:55 . Memory (MB): peak = 2115.211 ; gain = 79.566
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 3
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-39.091| TNS=-10565.827| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-37.983| TNS=-11660.207| WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 16e0fe3ae
+Phase 4.2 Global Iteration 1 | Checksum: 1cbf8620f
 
-Time (s): cpu = 00:00:57 ; elapsed = 00:00:49 . Memory (MB): peak = 2143.957 ; gain = 100.082
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:56 . Memory (MB): peak = 2115.211 ; gain = 79.566
+Phase 4 Rip-up And Reroute | Checksum: 1cbf8620f
 
-Phase 4.3 Global Iteration 2
- Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-39.091| TNS=-10541.649| WHS=N/A    | THS=N/A    |
-
-Phase 4.3 Global Iteration 2 | Checksum: 1a13c6d57
-
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:49 . Memory (MB): peak = 2143.957 ; gain = 100.082
-Phase 4 Rip-up And Reroute | Checksum: 1a13c6d57
-
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:49 . Memory (MB): peak = 2143.957 ; gain = 100.082
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:56 . Memory (MB): peak = 2115.211 ; gain = 79.566
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 1e6977492
+Phase 5.1.1 Update Timing | Checksum: 1d5a222e4
 
-Time (s): cpu = 00:00:59 ; elapsed = 00:00:50 . Memory (MB): peak = 2143.957 ; gain = 100.082
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-39.091| TNS=-10445.450| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:56 . Memory (MB): peak = 2115.211 ; gain = 79.566
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-37.983| TNS=-11048.031| WHS=N/A    | THS=N/A    |
 
  Number of Nodes with overlaps = 0
-Phase 5.1 Delay CleanUp | Checksum: 139369eb2
+Phase 5.1 Delay CleanUp | Checksum: 184622248
 
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:50 . Memory (MB): peak = 2143.957 ; gain = 100.082
+Time (s): cpu = 00:01:09 ; elapsed = 00:00:57 . Memory (MB): peak = 2115.211 ; gain = 79.566
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 139369eb2
+Phase 5.2 Clock Skew Optimization | Checksum: 184622248
 
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:50 . Memory (MB): peak = 2143.957 ; gain = 100.082
-Phase 5 Delay and Skew Optimization | Checksum: 139369eb2
+Time (s): cpu = 00:01:09 ; elapsed = 00:00:57 . Memory (MB): peak = 2115.211 ; gain = 79.566
+Phase 5 Delay and Skew Optimization | Checksum: 184622248
 
-Time (s): cpu = 00:01:00 ; elapsed = 00:00:50 . Memory (MB): peak = 2143.957 ; gain = 100.082
+Time (s): cpu = 00:01:09 ; elapsed = 00:00:57 . Memory (MB): peak = 2115.211 ; gain = 79.566
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 601c80a2
+Phase 6.1.1 Update Timing | Checksum: 153538f41
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:51 . Memory (MB): peak = 2143.957 ; gain = 100.082
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-39.096| TNS=-8284.121| WHS=0.069  | THS=0.000  |
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:58 . Memory (MB): peak = 2115.211 ; gain = 79.566
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-37.983| TNS=-7901.058| WHS=0.093  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 601c80a2
+Phase 6.1 Hold Fix Iter | Checksum: 153538f41
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:51 . Memory (MB): peak = 2143.957 ; gain = 100.082
-Phase 6 Post Hold Fix | Checksum: 601c80a2
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:58 . Memory (MB): peak = 2115.211 ; gain = 79.566
+Phase 6 Post Hold Fix | Checksum: 153538f41
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:51 . Memory (MB): peak = 2143.957 ; gain = 100.082
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:58 . Memory (MB): peak = 2115.211 ; gain = 79.566
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 1.48654 %
-  Global Horizontal Routing Utilization  = 1.57302 %
+  Global Vertical Routing Utilization    = 1.42146 %
+  Global Horizontal Routing Utilization  = 1.46712 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -1537,10 +1660,10 @@ Router Utilization Summary
   Number of Node Overlaps             = 0
 
 Congestion Report
-North Dir 1x1 Area, Max Cong = 61.2613%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 55.8559%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 60.2941%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 57.3529%, No Congested Regions.
+North Dir 1x1 Area, Max Cong = 50.4505%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 56.7568%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 52.9412%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 54.4118%, No Congested Regions.
 
 ------------------------------
 Reporting congestion hotspots
@@ -1562,70 +1685,71 @@ Direction: West
 Congested clusters found at Level 0
 Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 
-Phase 7 Route finalize | Checksum: e1a32331
+Phase 7 Route finalize | Checksum: 1757cbb90
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:51 . Memory (MB): peak = 2143.957 ; gain = 100.082
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:58 . Memory (MB): peak = 2115.211 ; gain = 79.566
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: e1a32331
+Phase 8 Verifying routed nets | Checksum: 1757cbb90
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:52 . Memory (MB): peak = 2143.957 ; gain = 100.082
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:58 . Memory (MB): peak = 2115.211 ; gain = 79.566
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 1345efd53
+Phase 9 Depositing Routes | Checksum: 219fcfd90
 
-Time (s): cpu = 00:01:03 ; elapsed = 00:00:53 . Memory (MB): peak = 2143.957 ; gain = 100.082
+Time (s): cpu = 00:01:12 ; elapsed = 00:01:02 . Memory (MB): peak = 2115.211 ; gain = 79.566
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-39.096| TNS=-8284.121| WHS=0.069  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-37.983| TNS=-7901.058| WHS=0.093  | THS=0.000  |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 10 Post Router Timing | Checksum: 1345efd53
+Phase 10 Post Router Timing | Checksum: 219fcfd90
 
-Time (s): cpu = 00:01:03 ; elapsed = 00:00:53 . Memory (MB): peak = 2143.957 ; gain = 100.082
+Time (s): cpu = 00:01:12 ; elapsed = 00:01:02 . Memory (MB): peak = 2115.211 ; gain = 79.566
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:01:03 ; elapsed = 00:00:54 . Memory (MB): peak = 2143.957 ; gain = 100.082
+Time (s): cpu = 00:01:12 ; elapsed = 00:01:02 . Memory (MB): peak = 2115.211 ; gain = 79.566
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-905 Infos, 203 Warnings, 1 Critical Warnings and 0 Errors encountered.
+1033 Infos, 203 Warnings, 1 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:01:09 ; elapsed = 00:00:58 . Memory (MB): peak = 2143.957 ; gain = 115.902
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.135 . Memory (MB): peak = 2143.957 ; gain = 0.000
+route_design: Time (s): cpu = 00:01:18 ; elapsed = 00:01:07 . Memory (MB): peak = 2115.211 ; gain = 91.367
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.160 . Memory (MB): peak = 2115.211 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:07 ; elapsed = 00:00:03 . Memory (MB): peak = 2150.578 ; gain = 6.621
+Write XDEF Complete: Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 2121.152 ; gain = 5.941
 INFO: [Common 17-1381] The checkpoint 'C:/Users/ressw/Documents/School/ESE498/merge/ESE498/tdc.runs/impl_2/design_1_wrapper_routed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2150.578 ; gain = 6.621
+write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 2121.152 ; gain = 5.941
 INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 Command: report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/ressw/Documents/School/ESE498/merge/ESE498/tdc.runs/impl_2/design_1_wrapper_drc_routed.rpt.
 report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 2181.859 ; gain = 60.707
 INFO: [runtcl-4] Executing : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 Command: report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
 INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/ressw/Documents/School/ESE498/merge/ESE498/tdc.runs/impl_2/design_1_wrapper_methodology_drc_routed.rpt.
 report_methodology completed successfully
-report_methodology: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 2232.129 ; gain = 24.063
+report_methodology: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 2213.191 ; gain = 31.332
 INFO: [runtcl-4] Executing : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 Command: report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-917 Infos, 203 Warnings, 1 Critical Warnings and 0 Errors encountered.
+1045 Infos, 203 Warnings, 1 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
-report_power: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2241.168 ; gain = 9.039
+report_power: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2222.230 ; gain = 9.039
 INFO: [runtcl-4] Executing : report_route_status -file design_1_wrapper_route_status.rpt -pb design_1_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file design_1_wrapper_timing_summary_routed.rpt -pb design_1_wrapper_timing_summary_routed.pb -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
@@ -1758,9 +1882,9 @@ Creating bitstream...
 Writing bitstream ./design_1_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/Users/ressw/Documents/School/ESE498/merge/ESE498/tdc.runs/impl_2/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Mon Apr  6 12:27:38 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-186] 'C:/Users/ressw/Documents/School/ESE498/merge/ESE498/tdc.runs/impl_2/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Tue Apr  7 10:33:10 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-939 Infos, 304 Warnings, 2 Critical Warnings and 0 Errors encountered.
+1067 Infos, 304 Warnings, 2 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:29 ; elapsed = 00:00:28 . Memory (MB): peak = 2681.223 ; gain = 440.055
-INFO: [Common 17-206] Exiting Vivado at Mon Apr  6 12:27:39 2020...
+write_bitstream: Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2676.969 ; gain = 454.738
+INFO: [Common 17-206] Exiting Vivado at Tue Apr  7 10:33:11 2020...
