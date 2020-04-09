@@ -47,6 +47,7 @@ def main():
                 s_r_y = np.array([np.mean(i[1]) for i in s_r])
                 if args.b and i > 0:
                     s_r_y -= responses[0][1]    # subtract off the baseline
+                    s_r_y = np.abs(s_r_y)
                 std_r_y = np.array([args.k * np.std(i[1]) for i in s_r])
                 responses.append((s_r_x, s_r_y, std_r_y, get_prefix(path), len(s_r[0][1])))
                 freq_data.append(traces)
@@ -70,15 +71,22 @@ def main():
         if args.histogram:
             plt.figure(0)
             for r in responses:
-                plt.hist(
+                n, bins, _ = plt.hist(
                     r[1]/np.sqrt((np.power(base_response[2], 2)/base_response[4]) 
                         + (np.power(r[2], 2)/r[4])), 
-                    histtype='step', label=r[3], density=True, bins=20)
+                    histtype='step', label=r[3], density=True, bins=50)
                 plt.xlabel('Energy (t-test statistic)')
                 plt.ylabel('Frequency')
                 plt.title('Histogram of distance (std dev) from baseline ' 
                     'response to different challenges')
                 plt.legend(loc='upper right', shadow=True)
+                bin_width = bins[1] - bins[0]
+                int_start = 10
+                bin_start = int(int_start / bin_width)
+                int_value = 0
+                for i in range(bin_start, len(bins)-1):
+                    int_value += n[i] * bin_width
+                print(f"Integrated value ({r[3]}) : ", int_value)
     
     plt.figure(1)
     for r in responses:
