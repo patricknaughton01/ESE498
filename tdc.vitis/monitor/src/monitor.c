@@ -49,7 +49,7 @@ void challengeResponse(){
 	*(virus_addr + 2) = 0x00001fff;
 	*(virus_addr + 3) = 0x00001fff;
 	for (int i=0; i<NUM_CHAL; i++) {
-		for(int j = 0; j<10; j++){
+		for(int j = 0; j<100; j++){
 			*chal_addr = challenges[i][0];
 			*(chal_addr + 1) = challenges[i][1];
 			*(chal_addr + 2) = challenges[i][2];
