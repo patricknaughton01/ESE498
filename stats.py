@@ -19,12 +19,15 @@ def main():
     parser.add_argument("--histogram", action="store_true", help="plot histogram")
     parser.add_argument("--title", type=str, 
         default="Frequency Reponse", help="title")
+    parser.add_argument("--leg", type=int, default=0, 
+        help="which index of filename to take for legend")
 
     args = parser.parse_args()
     
     responses = []
     freq_data = []
     files = glob.glob(args.path + "/" + args.f + "*.txt")
+    files = sorted(files)
     if not args.b == "":
         files.insert(0, args.b)
     print("Found {} files".format(len(files)))
@@ -49,7 +52,7 @@ def main():
                     s_r_y -= responses[0][1]    # subtract off the baseline
                     s_r_y = np.abs(s_r_y)
                 std_r_y = np.array([args.k * np.std(i[1]) for i in s_r])
-                responses.append((s_r_x, s_r_y, std_r_y, get_prefix(path), len(s_r[0][1])))
+                responses.append((s_r_x, s_r_y, std_r_y, get_prefix(path, args.leg), len(s_r[0][1])))
                 freq_data.append(traces)
         except IOError:
             print("Couldn't open file {}".format(args.filename))
@@ -75,13 +78,12 @@ def main():
                     r[1]/np.sqrt((np.power(base_response[2], 2)/base_response[4]) 
                         + (np.power(r[2], 2)/r[4])), 
                     histtype='step', label=r[3], density=True, bins=50)
-                plt.xlabel('Energy (t-test statistic)')
-                plt.ylabel('Frequency')
-                plt.title('Histogram of distance (std dev) from baseline ' 
-                    'response to different challenges')
+                plt.xlabel('T-test Distance')
+                plt.ylabel('Relative Frequency')
+                plt.title("T-test Distances From Unmodified Response")
                 plt.legend(loc='upper right', shadow=True)
                 bin_width = bins[1] - bins[0]
-                int_start = 10
+                int_start = 40
                 bin_start = int(int_start / bin_width)
                 int_value = 0
                 for i in range(bin_start, len(bins)-1):
@@ -107,10 +109,10 @@ def main():
     
     plt.show()
 
-def get_prefix(path):
+def get_prefix(path, ind=0):
     filename = path.split("/")[-1]
     filename = filename.split("_")
-    return filename[0]
+    return filename[ind]
 
 if __name__ == "__main__":
     main()

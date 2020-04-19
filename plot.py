@@ -22,7 +22,7 @@ def main():
             lines = in_file.readlines()
             traces = {}
             for line in lines:
-                line = line.split(" ")
+                line = line.split()
                 freq = int(line[0])
                 t = int(line[1])
                 count = int(line[2])
@@ -63,7 +63,7 @@ def main():
                     # If they didn't display 
                     for freq in to_plot:
                         plt.plot(to_plot[freq]['x'],to_plot[freq]['y'], label=str(freq))
-                plt.legend(loc='upper right', shadow=True)
+                #plt.legend(loc='upper right', shadow=True)
                 x_label = "Time (us)"
                 if args.m != "t":
                     x_label = "Frequency (Hz)"

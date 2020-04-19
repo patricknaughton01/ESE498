@@ -52,7 +52,7 @@ def main():
         plt.yscale("log")
     plt.ylabel(y_label)
     plt.title(args.title)
-    plt.legend(loc='upper right', shadow=True)
+    #plt.legend(loc='upper right', shadow=True)
     plt.show()
 
 def get_prefix(path):

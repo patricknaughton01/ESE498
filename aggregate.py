@@ -53,10 +53,9 @@ def main():
     if args.x:
         plt.xscale("log")
     plt.xlabel("Frequency (Hz)")
-    y_label = "Power response"
+    y_label = "Power Response"
     if args.l:
         plt.yscale("log")
-        y_label += " (log)"
     plt.ylabel(y_label)
     if args.title == "":
         plt.title("Frequency power response")
