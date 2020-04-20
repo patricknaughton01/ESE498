@@ -1,42 +1,43 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 01/24/2020 01:30:34 PM
-// Design Name: 
-// Module Name: tdc
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+/*
+ * This module creates the voltage measuring circuit
+ * 
+ * Parameters
+ *   INITIAL: the length of the initial delay line. On this particular board,
+ *            it was found that an initial delay line of length 64 worked
+ *   DELAY:   the length of the sensitive delay line. We found that a sensitive
+ *            delay line of length 64 is plenty large for the variations seen
+ *            on our board
+ *
+ * Inputs
+ *   clk:     the global clock signal, which is where the voltage is measured
+ *   reset:   the global reset signal, reset state when reset=0
+ * 
+ * Outputs
+ *   delay:   the value at the output after each buffer in the sensitive delay
+ *            line
+ * 
+*/
 
+`timescale 1ns / 1ps
 
 module tdc#(parameter INITIAL=64, DELAY=64)(
     input               clk,
     input               reset,
-    // TODO: Replace this with an encoder that just uses 6 bits
-    output  reg[DELAY:0]    delay
+    output reg[DELAY:0] delay
 );
 
-(* dont_touch = "true" *) wire[INITIAL-1:0] initial_bufs;     // Not INITIAL-1 so that instantiation is convenient
+(* dont_touch = "true" *) wire[INITIAL-1:0] initial_bufs;
 (* dont_touch = "true" *) wire[DELAY:0] delay_bufs;
 reg[DELAY:0] latches;
 reg[DELAY:0] delayD;
 
 generate
     genvar k;
+	// Initial delay line, this is implemented with two NOT gates
     for(k = 1; k < INITIAL; k = k + 1)begin
         (* dont_touch = "true" *) buffer init(initial_bufs[k], initial_bufs[k-1]);
     end
+	// Sensitive delay line, this is implemented with the CARRY4 primitive
     for(k = 0; k < DELAY/4; k = k + 1)begin
          (* dont_touch = "true" *) CARRY4 delay_k (
             .DI({0, 0, 0, delay_bufs[k*4] }),

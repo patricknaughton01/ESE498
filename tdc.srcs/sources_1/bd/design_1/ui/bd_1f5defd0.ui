@@ -3,7 +3,7 @@
    "Default View_ScaleFactor":"0.801282",
    "Default View_TopLeft":"-10,-74",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 TLS
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
 preplace port DDR -pg 1 -lvl 4 -x 1280 -y 230 -defaultsOSRD
 preplace port FIXED_IO -pg 1 -lvl 4 -x 1280 -y 260 -defaultsOSRD
@@ -13,17 +13,17 @@ preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 800 -y 380 -defaultsOSRD
 preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 400 -y 100 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 2 -x 800 -y 60 -defaultsOSRD
 preplace inst top_0 -pg 1 -lvl 3 -x 1120 -y 400 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 10 -10 630 500 970J
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 20 0 610
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 640 510 980J
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 10 -10 620 500 960J
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 20 0 600
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 630 510 970J
 preplace netloc top_0_trigger 1 3 1 NJ 400
-preplace netloc clk_wiz_0_clk_out1 1 2 1 960 60n
+preplace netloc clk_wiz_0_clk_out1 1 2 1 950 60n
+preplace netloc processing_system7_0_DDR 1 1 3 640J 230 NJ 230 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 610 300n
 preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 260 NJ 260 NJ
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 950 370n
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 620 300n
-preplace netloc processing_system7_0_DDR 1 1 3 650J 230 NJ 230 NJ
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 940 370n
 levelinfo -pg 1 -10 400 800 1120 1280
-pagesize -pg 1 -db -bbox -sgen -10 -50 1400 520
+pagesize -pg 1 -db -bbox -sgen -10 -50 1390 520
 "
 }
 {

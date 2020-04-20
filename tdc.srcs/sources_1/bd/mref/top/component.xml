@@ -223,7 +223,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>8beabd9e</spirit:value>
+            <spirit:value>f4de7979</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -236,7 +236,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>8beabd9e</spirit:value>
+            <spirit:value>f4de7979</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -661,29 +661,9 @@
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SIM">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
-        <spirit:name>M_TDATA_WIDTH</spirit:name>
-        <spirit:displayName>M Tdata Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.M_TDATA_WIDTH">16</spirit:value>
-      </spirit:modelParameter>
-      <spirit:modelParameter spirit:dataType="integer">
-        <spirit:name>S_TDATA_WIDTH</spirit:name>
-        <spirit:displayName>S Tdata Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.S_TDATA_WIDTH">48</spirit:value>
-      </spirit:modelParameter>
-      <spirit:modelParameter spirit:dataType="integer">
-        <spirit:name>FFT_WIDTH</spirit:name>
-        <spirit:displayName>Fft Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.FFT_WIDTH">8192</spirit:value>
-      </spirit:modelParameter>
-      <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>CHALLENGE_WIDTH</spirit:name>
         <spirit:displayName>Challenge Width</spirit:displayName>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CHALLENGE_WIDTH">128</spirit:value>
-      </spirit:modelParameter>
-      <spirit:modelParameter spirit:dataType="integer">
-        <spirit:name>CHALLENGE_TIME</spirit:name>
-        <spirit:displayName>Challenge Time</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CHALLENGE_TIME">8192</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>CHALLENGE_ADDR</spirit:name>
@@ -705,7 +685,7 @@
       <spirit:file>
         <spirit:name>xgui/top_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_622d0d2f</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_585bad13</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -793,29 +773,9 @@
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.SIM">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
-      <spirit:name>M_TDATA_WIDTH</spirit:name>
-      <spirit:displayName>M Tdata Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M_TDATA_WIDTH">16</spirit:value>
-    </spirit:parameter>
-    <spirit:parameter>
-      <spirit:name>S_TDATA_WIDTH</spirit:name>
-      <spirit:displayName>S Tdata Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.S_TDATA_WIDTH">48</spirit:value>
-    </spirit:parameter>
-    <spirit:parameter>
-      <spirit:name>FFT_WIDTH</spirit:name>
-      <spirit:displayName>Fft Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.FFT_WIDTH">8192</spirit:value>
-    </spirit:parameter>
-    <spirit:parameter>
       <spirit:name>CHALLENGE_WIDTH</spirit:name>
       <spirit:displayName>Challenge Width</spirit:displayName>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CHALLENGE_WIDTH">128</spirit:value>
-    </spirit:parameter>
-    <spirit:parameter>
-      <spirit:name>CHALLENGE_TIME</spirit:name>
-      <spirit:displayName>Challenge Time</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CHALLENGE_TIME">8192</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CHALLENGE_ADDR</spirit:name>
@@ -842,7 +802,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2020-04-07T15:22:10Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2020-04-20T15:42:04Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>

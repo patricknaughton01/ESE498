@@ -1,24 +1,18 @@
+/*
+ * This module creates a group of ring oscillators that are all enabled with
+ * the same signal.
+ * 
+ * Parameters
+ *   SIZE:   the number of ring oscillators in this group
+ *
+ * Inputs
+ *   enable: the enable signal for all the ring osciallators in this group
+ * 
+ * Outputs
+ *   out:    the output from all the ring oscillators in this group
+ * 
+*/
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 01/25/2020 12:40:09 PM
-// Design Name: 
-// Module Name: virus
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module virus_group#(parameter SIZE=512)(
     (* dont_touch = "true" *)output[SIZE-1:0]       out,

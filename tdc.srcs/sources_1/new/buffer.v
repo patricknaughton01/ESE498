@@ -1,24 +1,16 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 01/24/2020 03:14:16 PM
-// Design Name: 
-// Module Name: buffer
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+/*
+ * This module is simply two NOT gates in series to implement the initial
+ * delay line
+ *
+ * Inputs
+ *   in:  the input to the buffer
+ * 
+ * Outputs
+ *   out: the output of the buffer
+ * 
+*/
 
+`timescale 1ns / 1ps
 
 module buffer(
     output      out,
