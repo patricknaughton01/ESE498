@@ -1,0 +1,647 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri May 15 11:16:07 2020
+# Process ID: 26483
+# Current directory: /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1
+# Command line: vivado -log design_1_top_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_top_0_1.tcl
+# Log file: /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1/design_1_top_0_1.vds
+# Journal file: /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1/vivado.jou
+#-----------------------------------------------------------
+source design_1_top_0_1.tcl -notrace
+Command: synth_design -top design_1_top_0_1 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+WARNING: [IP_Flow 19-3571] IP 'design_1_top_0_1' is restricted:
+* Module reference is stale and needs refreshing.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 26527 
+WARNING: [Synth 8-2507] parameter declaration becomes local in Axi4LiteSupporter with formal parameter declaration list [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/imports/axi4lite/axi4litesupporter.v:36]
+WARNING: [Synth 8-2507] parameter declaration becomes local in top with formal parameter declaration list [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:133]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2007.652 ; gain = 207.621 ; free physical = 2150 ; free virtual = 21358
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_top_0_1' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/bd/design_1/ip/design_1_top_0_1/synth/design_1_top_0_1.v:59]
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:48]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter INITIAL bound to: 32 - type: integer 
+	Parameter DELAY bound to: 63 - type: integer 
+	Parameter READ_MAX_ADDR bound to: 65524 - type: integer 
+	Parameter REC_ADDR bound to: 65532 - type: integer 
+	Parameter FREQ_ADDR bound to: 65528 - type: integer 
+	Parameter VIRUS_ADDR bound to: 65504 - type: integer 
+	Parameter MEM_WIDTH bound to: 16 - type: integer 
+	Parameter PP_ADDR bound to: 65520 - type: integer 
+	Parameter RMS_ADDR bound to: 65516 - type: integer 
+	Parameter SUM_ADDR bound to: 65512 - type: integer 
+	Parameter ABS_READ_MAX bound to: 0 - type: integer 
+	Parameter VIRUS_NUM_B bound to: 1 - type: integer 
+	Parameter VIRUS_B_SIZE bound to: 128 - type: integer 
+	Parameter SIM bound to: 0 - type: integer 
+	Parameter CHALLENGE_WIDTH bound to: 128 - type: integer 
+	Parameter CHALLENGE_ADDR bound to: 65280 - type: integer 
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter C_RD bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Axi4LiteSupporter' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/imports/axi4lite/axi4litesupporter.v:3]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter RD1 bound to: 1 - type: integer 
+	Parameter WR1 bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Axi4LiteSupporter' (1#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/imports/axi4lite/axi4litesupporter.v:3]
+INFO: [Synth 8-6157] synthesizing module 'tdc' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:23]
+	Parameter INITIAL bound to: 32 - type: integer 
+	Parameter DELAY bound to: 63 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:29]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:30]
+INFO: [Synth 8-6157] synthesizing module 'buffer' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/buffer.v:15]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/buffer.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'buffer' (2#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/buffer.v:15]
+INFO: [Synth 8-6157] synthesizing module 'CARRY4' [/tools/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1479]
+INFO: [Synth 8-6155] done synthesizing module 'CARRY4' (3#1) [/tools/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1479]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'tdc' (4#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:23]
+WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:124]
+INFO: [Synth 8-6157] synthesizing module 'virus' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/virus.v:19]
+	Parameter NUM bound to: 1 - type: integer 
+	Parameter SIZE bound to: 128 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'virus_group' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/virus_group.v:17]
+	Parameter SIZE bound to: 128 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/virus_group.v:18]
+INFO: [Synth 8-6157] synthesizing module 'ro' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/ro.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'ro' (5#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/ro.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'virus_group' (6#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/virus_group.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'virus' (7#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/virus.v:19]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:165]
+WARNING: [Synth 8-6014] Unused sequential element freqQ_reg was removed.  [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:272]
+WARNING: [Synth 8-6014] Unused sequential element virusCounterQ_reg was removed.  [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:298]
+INFO: [Synth 8-6155] done synthesizing module 'top' (8#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_top_0_1' (9#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/bd/design_1/ip/design_1_top_0_1/synth/design_1_top_0_1.v:59]
+WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[3]
+WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[2]
+WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[1]
+WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[0]
+WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WVALID
+WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_BREADY
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 2049.527 ; gain = 249.496 ; free physical = 2187 ; free virtual = 21397
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2064.371 ; gain = 264.340 ; free physical = 2182 ; free virtual = 21392
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2064.371 ; gain = 264.340 ; free physical = 2182 ; free virtual = 21392
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2073.277 ; gain = 0.000 ; free physical = 2174 ; free virtual = 21384
+INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2230.121 ; gain = 0.000 ; free physical = 2101 ; free virtual = 21310
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2230.121 ; gain = 0.000 ; free physical = 2099 ; free virtual = 21308
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2230.121 ; gain = 430.090 ; free physical = 2162 ; free virtual = 21372
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2230.121 ; gain = 430.090 ; free physical = 2162 ; free virtual = 21372
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2230.121 ; gain = 430.090 ; free physical = 2162 ; free virtual = 21372
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Axi4LiteSupporter'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                             0000
+                     RD1 |                               01 |                             0001
+                  iSTATE |                               10 |                             0010
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Axi4LiteSupporter'
+WARNING: [Synth 8-327] inferring latch for variable 'latches_reg' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:59]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2230.121 ; gain = 430.090 ; free physical = 2138 ; free virtual = 21349
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   3 Input     32 Bit       Adders := 1     
+	  63 Input      7 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               64 Bit    Registers := 1     
+	               32 Bit    Registers := 7     
+	                7 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 5     
+	   3 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 12    
+	   2 Input     16 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 2     
+	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 33    
+	   3 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module Axi4LiteSupporter 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 4     
+Module tdc 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 1     
+Module top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   3 Input     32 Bit       Adders := 1     
+	  63 Input      7 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	              128 Bit    Registers := 1     
+	               32 Bit    Registers := 6     
+	                7 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 5     
+	   2 Input     32 Bit        Muxes := 12    
+	   2 Input      7 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 32    
+	   4 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'rmsAccQ_reg[31:0]' into 'rmsAccQ_reg[31:0]' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:278]
+WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[3]
+WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[2]
+WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[1]
+WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[0]
+WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WVALID
+WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_BREADY
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[7]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[8]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[9]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[10]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[11]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[12]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[13]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[14]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[15]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[16]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[17]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[18]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[19]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[20]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[21]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[22]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[23]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[24]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[25]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[26]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[27]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[28]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/ppQ_reg[29]' (FDRE) to 'inst/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/state_reg[3]' (FDRE) to 'inst/state_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/state_reg[2]' (FDRE) to 'inst/state_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/state_reg[1] )
+INFO: [Synth 8-3332] Sequential element (inst/tdc1/latches_reg[63]) is unused and will be removed from module design_1_top_0_1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2230.121 ; gain = 430.090 ; free physical = 2027 ; free virtual = 21241
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 2230.121 ; gain = 430.090 ; free physical = 2028 ; free virtual = 21242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 2230.121 ; gain = 430.090 ; free physical = 2029 ; free virtual = 21243
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 2230.121 ; gain = 430.090 ; free physical = 1941 ; free virtual = 21156
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3295] tying undriven pin inst/tdc1/delay_bufs_inferred:in0[63] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst/tdc1/delay_bufs_inferred:in0[62] to constant 0
+INFO: [Synth 8-3295] tying undriven pin inst/tdc1/delay_bufs_inferred:in0[61] to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 2230.121 ; gain = 430.090 ; free physical = 1999 ; free virtual = 21215
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 2230.121 ; gain = 430.090 ; free physical = 1999 ; free virtual = 21215
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 2230.121 ; gain = 430.090 ; free physical = 1998 ; free virtual = 21213
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 2230.121 ; gain = 430.090 ; free physical = 1998 ; free virtual = 21213
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 2230.121 ; gain = 430.090 ; free physical = 1996 ; free virtual = 21212
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 2230.121 ; gain = 430.090 ; free physical = 1996 ; free virtual = 21212
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    69|
+|2     |LUT1   |    68|
+|3     |LUT2   |   324|
+|4     |LUT3   |   116|
+|5     |LUT4   |   139|
+|6     |LUT5   |    87|
+|7     |LUT6   |   322|
+|8     |FDRE   |   374|
+|9     |FDSE   |     6|
+|10    |LD     |    63|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------------------+------------------+------+
+|      |Instance                       |Module            |Cells |
++------+-------------------------------+------------------+------+
+|1     |top                            |                  |  1568|
+|2     |  inst                         |top               |  1568|
+|3     |    AxiSupporter1              |Axi4LiteSupporter |   544|
+|4     |    tdc1                       |tdc               |   405|
+|5     |      \genblk1[1].init         |buffer__1         |     2|
+|6     |      \genblk1[2].init         |buffer__2         |     2|
+|7     |      \genblk1[3].init         |buffer__3         |     2|
+|8     |      \genblk1[4].init         |buffer__4         |     2|
+|9     |      \genblk1[5].init         |buffer__5         |     2|
+|10    |      \genblk1[6].init         |buffer__6         |     2|
+|11    |      \genblk1[7].init         |buffer__7         |     2|
+|12    |      \genblk1[8].init         |buffer__8         |     2|
+|13    |      \genblk1[9].init         |buffer__9         |     2|
+|14    |      \genblk1[10].init        |buffer__10        |     2|
+|15    |      \genblk1[11].init        |buffer__11        |     2|
+|16    |      \genblk1[12].init        |buffer__12        |     2|
+|17    |      \genblk1[13].init        |buffer__13        |     2|
+|18    |      \genblk1[14].init        |buffer__14        |     2|
+|19    |      \genblk1[15].init        |buffer__15        |     2|
+|20    |      \genblk1[16].init        |buffer__16        |     2|
+|21    |      \genblk1[17].init        |buffer__17        |     2|
+|22    |      \genblk1[18].init        |buffer__18        |     2|
+|23    |      \genblk1[19].init        |buffer__19        |     2|
+|24    |      \genblk1[20].init        |buffer__20        |     2|
+|25    |      \genblk1[21].init        |buffer__21        |     2|
+|26    |      \genblk1[22].init        |buffer__22        |     2|
+|27    |      \genblk1[23].init        |buffer__23        |     2|
+|28    |      \genblk1[24].init        |buffer__24        |     2|
+|29    |      \genblk1[25].init        |buffer__25        |     2|
+|30    |      \genblk1[26].init        |buffer__26        |     2|
+|31    |      \genblk1[27].init        |buffer__27        |     2|
+|32    |      \genblk1[28].init        |buffer__28        |     2|
+|33    |      \genblk1[29].init        |buffer__29        |     2|
+|34    |      \genblk1[30].init        |buffer__30        |     2|
+|35    |      \genblk1[31].init        |buffer            |     2|
+|36    |    virus1                     |virus             |   128|
+|37    |      \genblk1[0].vg           |virus_group       |   128|
+|38    |        \genblk1[0].ringOsc    |ro__1             |     1|
+|39    |        \genblk1[1].ringOsc    |ro__2             |     1|
+|40    |        \genblk1[2].ringOsc    |ro__3             |     1|
+|41    |        \genblk1[3].ringOsc    |ro__4             |     1|
+|42    |        \genblk1[4].ringOsc    |ro__5             |     1|
+|43    |        \genblk1[5].ringOsc    |ro__6             |     1|
+|44    |        \genblk1[6].ringOsc    |ro__7             |     1|
+|45    |        \genblk1[7].ringOsc    |ro__8             |     1|
+|46    |        \genblk1[8].ringOsc    |ro__9             |     1|
+|47    |        \genblk1[9].ringOsc    |ro__10            |     1|
+|48    |        \genblk1[10].ringOsc   |ro__11            |     1|
+|49    |        \genblk1[11].ringOsc   |ro__12            |     1|
+|50    |        \genblk1[12].ringOsc   |ro__13            |     1|
+|51    |        \genblk1[13].ringOsc   |ro__14            |     1|
+|52    |        \genblk1[14].ringOsc   |ro__15            |     1|
+|53    |        \genblk1[15].ringOsc   |ro__16            |     1|
+|54    |        \genblk1[16].ringOsc   |ro__17            |     1|
+|55    |        \genblk1[17].ringOsc   |ro__18            |     1|
+|56    |        \genblk1[18].ringOsc   |ro__19            |     1|
+|57    |        \genblk1[19].ringOsc   |ro__20            |     1|
+|58    |        \genblk1[20].ringOsc   |ro__21            |     1|
+|59    |        \genblk1[21].ringOsc   |ro__22            |     1|
+|60    |        \genblk1[22].ringOsc   |ro__23            |     1|
+|61    |        \genblk1[23].ringOsc   |ro__24            |     1|
+|62    |        \genblk1[24].ringOsc   |ro__25            |     1|
+|63    |        \genblk1[25].ringOsc   |ro__26            |     1|
+|64    |        \genblk1[26].ringOsc   |ro__27            |     1|
+|65    |        \genblk1[27].ringOsc   |ro__28            |     1|
+|66    |        \genblk1[28].ringOsc   |ro__29            |     1|
+|67    |        \genblk1[29].ringOsc   |ro__30            |     1|
+|68    |        \genblk1[30].ringOsc   |ro__31            |     1|
+|69    |        \genblk1[31].ringOsc   |ro__32            |     1|
+|70    |        \genblk1[32].ringOsc   |ro__33            |     1|
+|71    |        \genblk1[33].ringOsc   |ro__34            |     1|
+|72    |        \genblk1[34].ringOsc   |ro__35            |     1|
+|73    |        \genblk1[35].ringOsc   |ro__36            |     1|
+|74    |        \genblk1[36].ringOsc   |ro__37            |     1|
+|75    |        \genblk1[37].ringOsc   |ro__38            |     1|
+|76    |        \genblk1[38].ringOsc   |ro__39            |     1|
+|77    |        \genblk1[39].ringOsc   |ro__40            |     1|
+|78    |        \genblk1[40].ringOsc   |ro__41            |     1|
+|79    |        \genblk1[41].ringOsc   |ro__42            |     1|
+|80    |        \genblk1[42].ringOsc   |ro__43            |     1|
+|81    |        \genblk1[43].ringOsc   |ro__44            |     1|
+|82    |        \genblk1[44].ringOsc   |ro__45            |     1|
+|83    |        \genblk1[45].ringOsc   |ro__46            |     1|
+|84    |        \genblk1[46].ringOsc   |ro__47            |     1|
+|85    |        \genblk1[47].ringOsc   |ro__48            |     1|
+|86    |        \genblk1[48].ringOsc   |ro__49            |     1|
+|87    |        \genblk1[49].ringOsc   |ro__50            |     1|
+|88    |        \genblk1[50].ringOsc   |ro__51            |     1|
+|89    |        \genblk1[51].ringOsc   |ro__52            |     1|
+|90    |        \genblk1[52].ringOsc   |ro__53            |     1|
+|91    |        \genblk1[53].ringOsc   |ro__54            |     1|
+|92    |        \genblk1[54].ringOsc   |ro__55            |     1|
+|93    |        \genblk1[55].ringOsc   |ro__56            |     1|
+|94    |        \genblk1[56].ringOsc   |ro__57            |     1|
+|95    |        \genblk1[57].ringOsc   |ro__58            |     1|
+|96    |        \genblk1[58].ringOsc   |ro__59            |     1|
+|97    |        \genblk1[59].ringOsc   |ro__60            |     1|
+|98    |        \genblk1[60].ringOsc   |ro__61            |     1|
+|99    |        \genblk1[61].ringOsc   |ro__62            |     1|
+|100   |        \genblk1[62].ringOsc   |ro__63            |     1|
+|101   |        \genblk1[63].ringOsc   |ro__64            |     1|
+|102   |        \genblk1[64].ringOsc   |ro__65            |     1|
+|103   |        \genblk1[65].ringOsc   |ro__66            |     1|
+|104   |        \genblk1[66].ringOsc   |ro__67            |     1|
+|105   |        \genblk1[67].ringOsc   |ro__68            |     1|
+|106   |        \genblk1[68].ringOsc   |ro__69            |     1|
+|107   |        \genblk1[69].ringOsc   |ro__70            |     1|
+|108   |        \genblk1[70].ringOsc   |ro__71            |     1|
+|109   |        \genblk1[71].ringOsc   |ro__72            |     1|
+|110   |        \genblk1[72].ringOsc   |ro__73            |     1|
+|111   |        \genblk1[73].ringOsc   |ro__74            |     1|
+|112   |        \genblk1[74].ringOsc   |ro__75            |     1|
+|113   |        \genblk1[75].ringOsc   |ro__76            |     1|
+|114   |        \genblk1[76].ringOsc   |ro__77            |     1|
+|115   |        \genblk1[77].ringOsc   |ro__78            |     1|
+|116   |        \genblk1[78].ringOsc   |ro__79            |     1|
+|117   |        \genblk1[79].ringOsc   |ro__80            |     1|
+|118   |        \genblk1[80].ringOsc   |ro__81            |     1|
+|119   |        \genblk1[81].ringOsc   |ro__82            |     1|
+|120   |        \genblk1[82].ringOsc   |ro__83            |     1|
+|121   |        \genblk1[83].ringOsc   |ro__84            |     1|
+|122   |        \genblk1[84].ringOsc   |ro__85            |     1|
+|123   |        \genblk1[85].ringOsc   |ro__86            |     1|
+|124   |        \genblk1[86].ringOsc   |ro__87            |     1|
+|125   |        \genblk1[87].ringOsc   |ro__88            |     1|
+|126   |        \genblk1[88].ringOsc   |ro__89            |     1|
+|127   |        \genblk1[89].ringOsc   |ro__90            |     1|
+|128   |        \genblk1[90].ringOsc   |ro__91            |     1|
+|129   |        \genblk1[91].ringOsc   |ro__92            |     1|
+|130   |        \genblk1[92].ringOsc   |ro__93            |     1|
+|131   |        \genblk1[93].ringOsc   |ro__94            |     1|
+|132   |        \genblk1[94].ringOsc   |ro__95            |     1|
+|133   |        \genblk1[95].ringOsc   |ro__96            |     1|
+|134   |        \genblk1[96].ringOsc   |ro__97            |     1|
+|135   |        \genblk1[97].ringOsc   |ro__98            |     1|
+|136   |        \genblk1[98].ringOsc   |ro__99            |     1|
+|137   |        \genblk1[99].ringOsc   |ro__100           |     1|
+|138   |        \genblk1[100].ringOsc  |ro__101           |     1|
+|139   |        \genblk1[101].ringOsc  |ro__102           |     1|
+|140   |        \genblk1[102].ringOsc  |ro__103           |     1|
+|141   |        \genblk1[103].ringOsc  |ro__104           |     1|
+|142   |        \genblk1[104].ringOsc  |ro__105           |     1|
+|143   |        \genblk1[105].ringOsc  |ro__106           |     1|
+|144   |        \genblk1[106].ringOsc  |ro__107           |     1|
+|145   |        \genblk1[107].ringOsc  |ro__108           |     1|
+|146   |        \genblk1[108].ringOsc  |ro__109           |     1|
+|147   |        \genblk1[109].ringOsc  |ro__110           |     1|
+|148   |        \genblk1[110].ringOsc  |ro__111           |     1|
+|149   |        \genblk1[111].ringOsc  |ro__112           |     1|
+|150   |        \genblk1[112].ringOsc  |ro__113           |     1|
+|151   |        \genblk1[113].ringOsc  |ro__114           |     1|
+|152   |        \genblk1[114].ringOsc  |ro__115           |     1|
+|153   |        \genblk1[115].ringOsc  |ro__116           |     1|
+|154   |        \genblk1[116].ringOsc  |ro__117           |     1|
+|155   |        \genblk1[117].ringOsc  |ro__118           |     1|
+|156   |        \genblk1[118].ringOsc  |ro__119           |     1|
+|157   |        \genblk1[119].ringOsc  |ro__120           |     1|
+|158   |        \genblk1[120].ringOsc  |ro__121           |     1|
+|159   |        \genblk1[121].ringOsc  |ro__122           |     1|
+|160   |        \genblk1[122].ringOsc  |ro__123           |     1|
+|161   |        \genblk1[123].ringOsc  |ro__124           |     1|
+|162   |        \genblk1[124].ringOsc  |ro__125           |     1|
+|163   |        \genblk1[125].ringOsc  |ro__126           |     1|
+|164   |        \genblk1[126].ringOsc  |ro__127           |     1|
+|165   |        \genblk1[127].ringOsc  |ro                |     1|
++------+-------------------------------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 2230.121 ; gain = 430.090 ; free physical = 1996 ; free virtual = 21211
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2230.121 ; gain = 264.340 ; free physical = 2048 ; free virtual = 21263
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 2230.121 ; gain = 430.090 ; free physical = 2048 ; free virtual = 21263
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2230.121 ; gain = 0.000 ; free physical = 2112 ; free virtual = 21328
+INFO: [Netlist 29-17] Analyzing 132 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2236.059 ; gain = 0.000 ; free physical = 2043 ; free virtual = 21258
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 63 instances were transformed.
+  LD => LDCE: 63 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+69 Infos, 50 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 2236.059 ; gain = 695.531 ; free physical = 2188 ; free virtual = 21404
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2236.059 ; gain = 0.000 ; free physical = 2189 ; free virtual = 21404
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1/design_1_top_0_1.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1174] Renamed 164 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2260.070 ; gain = 0.000 ; free physical = 2203 ; free virtual = 21422
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1/design_1_top_0_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_top_0_1_utilization_synth.rpt -pb design_1_top_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri May 15 11:16:47 2020...
