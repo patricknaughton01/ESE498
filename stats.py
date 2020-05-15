@@ -108,6 +108,7 @@ def main():
             plt.fill_between(r[0], r[1]-r[2], r[1]+r[2], alpha=0.5)
         else:
             plt.errorbar(r[0], r[1], yerr=r[2], fmt="x", label=r[3], capsize=3.0)
+            print(r[3], np.std(r[1]))
     if args.x:
         plt.xscale("log")
     plt.xlabel("Frequency (Hz)")

@@ -47,10 +47,10 @@ int main() {
 // response 100 times for all challenges provided in the header file
 void challengeResponse(){
 	*read_addr = num_reads;
-	*virus_addr = 0x00001fff;
-	*(virus_addr + 1) = 0x00001fff;
-	*(virus_addr + 2) = 0x00001fff;
-	*(virus_addr + 3) = 0x00001fff;
+	*virus_addr = 0x00000fff;
+	*(virus_addr + 1) = 0x00000fff;
+	*(virus_addr + 2) = 0x00000fff;
+	*(virus_addr + 3) = 0x00000fff;
 	
 	
 	for (int i=0; i<NUM_CHAL; i++) {
@@ -92,10 +92,11 @@ void makeMeasurement(){
 	const double period_mul = 1.01;
 	*read_addr = num_reads;
 
-	*virus_addr = 0x00001fff;
-	*(virus_addr + 1) = 0x00001fff;
-	*(virus_addr + 2) = 0x00001fff;
-	*(virus_addr + 3) = 0x00001fff;
+	uint32_t mask = 0x00003fff;
+	*virus_addr = mask;
+	*(virus_addr + 1) = mask;
+	*(virus_addr + 2) = mask;
+	*(virus_addr + 3) = mask;
 	for (int i=0; i<RUNS; i++) {
 		for(double period=1.0; period < 5000.0; period = (period*period_mul + 1)){
 			*freq_addr = (int32_t)period;	// Set the frequency of the virus
