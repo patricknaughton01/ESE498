@@ -1,5 +1,9 @@
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 |       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
-|               clk_fpga_0 |               clk_fpga_0 |                                                                   design_1_i/top_0/inst/rmsAccQ_reg[11]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                                   design_1_i/top_0/inst/rmsAccQ_reg[14]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                                   design_1_i/top_0/inst/rmsAccQ_reg[12]/D|
+|               clk_fpga_0 |clk_out1_design_1_clk_wiz_0_0 |                                                                   design_1_i/top_0/inst/virusEnQ_reg[2]/D|
+|               clk_fpga_0 |clk_out1_design_1_clk_wiz_0_0 |                                                                  design_1_i/top_0/inst/virusEnQ_reg[15]/D|
+|               clk_fpga_0 |clk_out1_design_1_clk_wiz_0_0 |                                                                  design_1_i/top_0/inst/virusEnQ_reg[35]/D|
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

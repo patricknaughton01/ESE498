@@ -1,6 +1,8 @@
 /*
-	This code is based off of similar code from ESE 465
-*/
+ *  This code runs on the Zynq processor on the Zedboard, and controls
+ *  when and how measurements are made
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "platform.h"
@@ -9,14 +11,13 @@
 #include "xuartps.h"
 #include "monitor.h"
 
-#define CLK_SPEED 250000000
+#define CLK_SPEED 100000000
 #define RUNS 100
 
 int32_t * const peripheral 	= (int32_t*)0x43C00000;
 int32_t * const rec_addr 	= (int32_t*)0x43C0FFFC;
 int32_t * const freq_addr 	= (int32_t*)0x43C0FFF8;
 int32_t * const read_addr 	= (int32_t*)0x43C0FFF4;
-int32_t * const pp_addr 	= (int32_t*)0x43C0FFF0;
 int32_t * const rms_addr	= (int32_t*)0x43C0FFEC;
 int32_t * const sum_addr	= (int32_t*)0x43C0FFE8;
 int32_t * const virus_addr 	= (int32_t*)0x43C0FFD8;
@@ -42,12 +43,16 @@ int main() {
 	return 0;
 }
 
+// This function sends a challenge to the top module, then reads a challenge
+// response 100 times for all challenges provided in the header file
 void challengeResponse(){
 	*read_addr = num_reads;
 	*virus_addr = 0x00001fff;
 	*(virus_addr + 1) = 0x00001fff;
 	*(virus_addr + 2) = 0x00001fff;
 	*(virus_addr + 3) = 0x00001fff;
+	
+	
 	for (int i=0; i<NUM_CHAL; i++) {
 		for(int j = 0; j<100; j++){
 			*chal_addr = challenges[i][0];
@@ -80,6 +85,9 @@ void challengeResponse(){
 	}
 }
 
+// This function measures a frequency response of the board, starting at a high
+// frequency and working down by multiply the length of the period by a small
+// number
 void makeMeasurement(){
 	const double period_mul = 1.01;
 	*read_addr = num_reads;
@@ -117,6 +125,8 @@ void makeMeasurement(){
 	}
 }
 
+// This function generates a step response. In this configuration, the
+// frequency register is used to determine when the power virus turns on
 void stepResponse(){
 	*read_addr = num_reads;
 	int32_t freq = 5000;

@@ -1,10 +1,9 @@
 /*
-	This is the header file for testing the voltage monitor
-*/
+ *  This is the header file for testing the voltage monitor PUF
+ */
 
 #include "xil_printf.h"
 #include "xparameters.h"
-#include "xtime_l.h"
 
 #define NUM_CHAL 1000
 int32_t challenges[NUM_CHAL][4] = {

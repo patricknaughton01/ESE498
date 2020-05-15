@@ -1,24 +1,26 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 02/01/2020 02:30:37 PM
-// Design Name: 
-// Module Name: ram
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+/*
+ * This module creates memory to hold all measurements throughout the
+ * experiment
+ * 
+ * Parameters
+ *   DEPTH:      the size of the memory needed. This is equal to the number
+ *               of measurements made per frequency
+ *   ADDR_WIDTH: the number of bits used to address the memory
+ *   WIDTH:      the number of bits per location in this memory
+ *
+ * Inputs
+ *   clk:        the global clock signal
+ *   we:         the write eneable signal, this indicates that a location at
+ *               address a is to be written to with the value of di
+ *   a:          the target address for reads and writes
+ *   di:         the data in bus for memory writes
+ * 
+ * Outputs
+ *   do:         the data out bus for memory reads
+ * 
+*/
 
+`timescale 1ns / 1ps
 
 module RAM#(parameter DEPTH=10000, ADDR_WIDTH=16, WIDTH=32)(clk, we, a, di, do);
 

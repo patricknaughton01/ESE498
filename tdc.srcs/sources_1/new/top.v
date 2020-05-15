@@ -1,27 +1,53 @@
+/*
+ * This module creates all the necessary components to make the PDN PUF.
+ * 
+ * Parameters
+ *   C_S_AXI_ADDR_WIDTH: the number of bits in the address for the Axi4Lite bus
+ *   C_S_AXI_DATA_WIDTH: the number of data bits for the Axi4Lite bus
+ *   INITIAL:            the length of the initial delay line in the TDC
+ *   DELAY:              the length of the sensitive delay line in the TDC
+ *   READ_MAX_ADDR:      the address where the largest value measured by the
+ *                       TDC can be read from
+ *   REC_ADDR:           the address that is written to to indicate that a
+ *                       measurement should be made
+ *   FREQ_ADDR:          the address where the frequency to be measured is
+ *                       stored
+ *   VIRUS_ADDR:         the address of the bitmask that determines which power
+ *                       viruses are used
+ *   MEM_WIDTH:          the size of each value in memory
+ *   PP_ADDR:            the address that will return the peak-to-peak value
+ *                       when read from
+ *   RMS_ADDR:           the address that will return the sum-of-squared
+ *                       measured values when read from
+ *   SUM_ADDR:           the address that will return the sum of measured
+ *                       values when read from
+ *   ABS_READ_MAX:       the number of reads performed each measurement
+ *   VIRUS_NUM_B:        the number of virus_groups in the power virus
+ *   VIRUS_B_SIZE:       the size of each virus_group
+ *   SIM:                the value to use for total in simulation
+ *   CHALLENGE_WIDTH:    the length of the challenge used
+ *   CHALLENGE_ADDR:     the address of the register storing the challenge.
+ *                       Because the challenge is so large, it requires several
+ *                       writes
+ *
+ * Inputs
+ *   S_AXI_ACLK:         the global clock signal
+ *                       Other Axi4Lite signals
+ *   clk2:               the clock that is used to clock when the power virus
+ *                       turns on and off
+ * 
+ * Outputs
+ *   trigger:            a signal used to trigger an external oscilloscope for
+ *                       measurements of the PDN
+ *                       Other Axi4Lite signals
+ *
+*/
+
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 01/24/2020 03:36:25 PM
-// Design Name: 
-// Module Name: top
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+
 module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=32, DELAY=63, READ_MAX_ADDR='hFFF4, 
     REC_ADDR='hFFFC, FREQ_ADDR='hFFF8, VIRUS_ADDR='hFFE0, MEM_WIDTH=16, PP_ADDR='hFFF0, RMS_ADDR = 'hFFEC, SUM_ADDR='hFFE8,
-    ABS_READ_MAX=10000, VIRUS_NUM_B=128, VIRUS_B_SIZE=128, SIM=0, M_TDATA_WIDTH=16, S_TDATA_WIDTH=48, FFT_WIDTH=8192,
-    CHALLENGE_WIDTH=128, CHALLENGE_TIME=8192, CHALLENGE_ADDR='hFF00)(
+    ABS_READ_MAX=10000, VIRUS_NUM_B=128, VIRUS_B_SIZE=128, SIM=0, CHALLENGE_WIDTH=128, CHALLENGE_ADDR='hFF00)(
     // Axi4Lite Bus
     input       S_AXI_ACLK,
     input       S_AXI_ARESETN,
@@ -46,6 +72,7 @@ module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=
     output  reg trigger
 );
 
+// Simple bus used to communicate with Axi4Lite Supporter module
 wire [C_S_AXI_ADDR_WIDTH-1:0] wrAddr;
 wire [C_S_AXI_DATA_WIDTH-1:0] wrData;
 wire wr;
@@ -53,14 +80,10 @@ wire [C_S_AXI_ADDR_WIDTH-1:0] rdAddr;
 reg  [C_S_AXI_DATA_WIDTH-1:0] rdData;
 wire rd;
 
-
-// FFT Manager Simple bus
-reg[M_TDATA_WIDTH-1:0]   fft_wrData;
-wire    fft_wrDone;
-reg     fft_wr;
-
+// Outputs from the TDC
 wire [DELAY-1:0] tdcOut;
 
+// Signals for the power virus. These are clocked with clk2
 reg[VIRUS_NUM_B-1:0] virusEnD, virusEnQ, virusMaskD, virusMaskQ;
 reg virusFlagD, virusFlagQ;
 wire [(VIRUS_NUM_B*VIRUS_B_SIZE)-1:0] virusOut;
@@ -99,7 +122,6 @@ Axi4LiteSupporter#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(
 tdc#(.INITIAL(INITIAL), .DELAY(DELAY)) tdc1(
     .clk(S_AXI_ACLK),
     .reset(S_AXI_ARESETN),
-    // TODO: Replace this with an encoder that just uses 6 bits
     .delay(tdcOut)
 );
 
@@ -108,6 +130,7 @@ virus#(.NUM(VIRUS_NUM_B), .SIZE(VIRUS_B_SIZE)) virus1(
     .enable(virusEnQ)
 );
 
+// Memory input and output
 reg  memWe;
 reg  [C_S_AXI_ADDR_WIDTH-1:0] memAddr;
 reg  [MEM_WIDTH-1:0] memDi;
@@ -121,13 +144,16 @@ RAM#(.DEPTH(ABS_READ_MAX)) ram1(
     .do(memDo)
 );
 
-parameter IDLE=0, READ=1, READ_ONCE=2, READ_RAMP=3, RMS=4, FFT_WR=5, FFT_WR1=6, FFT_RD=7, C_RD=8;
-reg [7:0] state, nextState;
+// State machine
+parameter IDLE=0, READ=1, READ_ONCE=2, READ_RAMP=3, RMS=4, C_RD=5;
+reg [3:0] state, nextState;
+
+
 reg [C_S_AXI_DATA_WIDTH-1:0] counterD, counterQ, virusCounterD, virusCounterQ, freqD, freqQ,
            maxD, maxQ, ppD, ppQ, oneMask;
 reg [DELAY-1:0] tdcClean;
 reg [6:0] total, diffMaxD, diffMaxQ, diffMinD, diffMinQ;
-reg [C_S_AXI_DATA_WIDTH-1:0] rmsAccD, rmsAccQ, fftAccD, fftAccQ, fftRe, fftIm, sumAccD, sumAccQ;
+reg [C_S_AXI_DATA_WIDTH-1:0] rmsAccD, rmsAccQ, sumAccD, sumAccQ;
 
 
 integer i;
@@ -145,12 +171,7 @@ always @ * begin
     ppD = ppQ;
     rmsAccD = rmsAccQ;
     sumAccD = sumAccQ;
-    fftAccD = fftAccQ;
     challengeD = challengeQ;
-    fftRe = 0;
-    fftIm = 0;
-    fft_wr = 0;
-    fft_wrData = 0;
     rdData = 0;
     total = 0;
     memWe = 0;
@@ -164,16 +185,20 @@ always @ * begin
             virusEnD = 0;
             virusFlagD = 0;
             if(rd && rdAddr < (ABS_READ_MAX<<2))begin
+				// The memory is being read from
                 memAddr = rdAddr;
                 rdData = memDo;
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1; 
              end else if(rd && rdAddr == PP_ADDR)begin
+				// The peak-to-peak response is being measured
                 rdData = ppQ;
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
             end else if(rd && rdAddr == RMS_ADDR)begin
+				// The sum-of-squared measurements is being measured
                 rdData = rmsAccQ;
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
             end else if(rd && rdAddr == SUM_ADDR)begin
+				// The sum of measurements is being measured
                 rdData = sumAccQ;
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
             end else if(wr) begin
@@ -184,26 +209,38 @@ always @ * begin
                     virusCounterD = 0;
                     trigger = 1;    // Trigger scope when we start recording
                     if(wrData == 0)begin
+						// Read at a particular frequency response
                         nextState = READ;
                     end else if (wrData == 1) begin
+						// Read a step response
                         nextState = READ_ONCE;
                     end else if (wrData == 2) begin
+						// Read the response from a ramp function
                         nextState = READ_RAMP;
                     end else begin
+						// Read a challenge response
                         nextState = C_RD;
                     end
                 end else if(wrAddr == FREQ_ADDR) begin
+					// Write the frequency to be measured
                     freqD = wrData;
                 end else if(wrAddr == READ_MAX_ADDR)begin
+					// Write the number of measurements to perform
                     maxD = wrData;
                 end else if(wrAddr >= VIRUS_ADDR && wrAddr < VIRUS_ADDR + 4*4)begin
+					// Write to the virus bitmask. Note that this covers
+					// several addresses
                     virusMaskD = (virusMaskQ & ~(oneMask << ((wrAddr - VIRUS_ADDR)<<3))) | (wrData << ((wrAddr - VIRUS_ADDR)<<3));
                 end else if(wrAddr >= CHALLENGE_ADDR && wrAddr < (CHALLENGE_ADDR + (CHALLENGE_WIDTH>>3)))begin
+					// Write to the challenge. Note that this covers several
+					// addresses
                     challengeD = (challengeQ & ~(oneMask << ((wrAddr - CHALLENGE_ADDR)<<3))) | (wrData << ((wrAddr - CHALLENGE_ADDR)<<3));
                 end
             end
         end
         READ:begin
+			// This state performs a read at the frequency stored in the freq
+			// register
             if(virusCounterQ == (freqQ-1))begin
                 virusFlagD = ~virusFlagQ;
                 virusCounterD = 0;
@@ -260,9 +297,8 @@ always @ * begin
             end
         end
         C_RD:begin
-            /*if ((counterQ >> ($clog2(CHALLENGE_TIME/CHALLENGE_WIDTH))) < CHALLENGE_WIDTH)begin
-                virusFlagD = challengeQ[(counterQ >> ($clog2(CHALLENGE_TIME/CHALLENGE_WIDTH)))];
-            end*/
+			// This state performs a read with the challenge in the challenge
+			// register
             if(virusCounterQ < CHALLENGE_WIDTH)begin
                 virusCounterD = virusCounterQ + 1;
             end else begin
@@ -319,42 +355,10 @@ always @ * begin
                 nextState = IDLE;
             end
         end
-        /*FFT_WR:begin
-            if(counterQ < FFT_WIDTH)begin
-                fft_wr = 1;
-                memAddr = counterQ << 2;
-                fft_wrData = memDo;
-                counterD = counterQ + 1;
-                nextState = FFT_WR1;
-            end else begin
-                counterD = 0;
-                nextState = FFT_RD;
-            end
-        end
-        FFT_WR1:begin
-            if(fft_wrDone)begin
-                nextState = FFT_WR;
-            end
-        end
-        FFT_RD:begin
-            if(counterQ < FFT_WIDTH)begin
-                if(S_TVALID)begin
-                    S_TREADY = 1;
-                    counterD = counterQ + 1;
-                    fftRe = S_TDATA[(S_TDATA_WIDTH>>1)-1:0];
-                    fftIm = S_TDATA[S_TDATA_WIDTH-1:S_TDATA_WIDTH>>1];
-                    memAddr = counterQ << 2;
-                    memDi = (fftRe*fftRe) + (fftIm*fftIm);
-                    memWe = 1;
-                    if(counterQ > 0 && counterQ < FFT_WIDTH/2)begin
-                        fftAccD = fftAccQ + (fftRe*fftRe) + (fftIm*fftIm);
-                    end
-                end
-            end else begin
-                nextState = IDLE;
-            end
-        end*/
         READ_ONCE:begin
+			// This state performs a read with a step response. The power virus
+			//will turn on after the number of clock periods stored in the
+			//frequency register
             if(virusCounterQ >= freqQ-1)begin
                 virusEnD = virusMaskQ;
             end else begin
@@ -383,6 +387,7 @@ always @ * begin
             end
         end
         READ_RAMP:begin
+			// This state performs a read for a ramp function
             if(virusCounterQ >= freqQ-1)begin
                 virusCounterD = 0;
                 // If we haven't reached the final mask, add another 1 (turn another group on)
@@ -432,7 +437,6 @@ always @ (posedge S_AXI_ACLK)begin
         diffMinQ <= diffMinD;
         ppQ <= ppD;
         rmsAccQ <= rmsAccD;
-        fftAccQ <= fftAccD;
         sumAccQ <= sumAccD;
         challengeQ <= challengeD;
     end else begin
@@ -445,7 +449,6 @@ always @ (posedge S_AXI_ACLK)begin
         diffMinQ <= 'h3f;               // This stores a min value, so initialize it to max
         ppQ <= 0;
         rmsAccQ <= 0;
-        fftAccQ <= 0;
         sumAccQ <= 0;
         challengeQ <= 0;
     end
