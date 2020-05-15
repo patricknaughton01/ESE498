@@ -89,6 +89,7 @@ top#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_W
     S_AXI_RRESP,
     S_AXI_RVALID,
     S_AXI_RREADY,
+    S_AXI_ACLK, // clk2
     trigger
 );
 

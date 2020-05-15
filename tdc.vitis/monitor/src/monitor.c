@@ -92,8 +92,8 @@ void makeMeasurement(){
 	const double period_mul = 1.01;
 	*read_addr = num_reads;
 
-	uint32_t mask = 0x00003fff;
-	*virus_addr = mask;
+	uint32_t mask = 0x00000000;
+	*virus_addr = 0x1;
 	*(virus_addr + 1) = mask;
 	*(virus_addr + 2) = mask;
 	*(virus_addr + 3) = mask;

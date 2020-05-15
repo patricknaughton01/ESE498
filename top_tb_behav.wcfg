@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="861011fs"></ZoomStartTime>
-      <ZoomEndTime time="1027798fs"></ZoomEndTime>
-      <Cursor1Time time="1000000fs"></Cursor1Time>
+      <ZoomStartTime time="1631554fs"></ZoomStartTime>
+      <ZoomEndTime time="1761928fs"></ZoomEndTime>
+      <Cursor1Time time="3845000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="194"></NameColumnWidth>
-      <ValueColumnWidth column_width="102"></ValueColumnWidth>
+      <ValueColumnWidth column_width="98"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="35" />
    <wvobject type="logic" fp_name="/top_tb/S_AXI_ACLK">
@@ -125,21 +125,12 @@
       <obj_property name="ObjectShortName">tdcOut[62:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/top_tb/top1/state">
-      <obj_property name="ElementShortName">state[7:0]</obj_property>
-      <obj_property name="ObjectShortName">state[7:0]</obj_property>
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/top_tb/top1/nextState">
-      <obj_property name="ElementShortName">nextState[7:0]</obj_property>
-      <obj_property name="ObjectShortName">nextState[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/top_tb/top1/fftAccD">
-      <obj_property name="ElementShortName">fftAccD[31:0]</obj_property>
-      <obj_property name="ObjectShortName">fftAccD[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/top_tb/top1/fftAccQ">
-      <obj_property name="ElementShortName">fftAccQ[31:0]</obj_property>
-      <obj_property name="ObjectShortName">fftAccQ[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="ElementShortName">nextState[3:0]</obj_property>
+      <obj_property name="ObjectShortName">nextState[3:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/top_tb/top1/challengeD">
       <obj_property name="ElementShortName">challengeD[127:0]</obj_property>
@@ -164,5 +155,15 @@
    <wvobject type="logic" fp_name="/top_tb/top1/virusFlagQ">
       <obj_property name="ElementShortName">virusFlagQ</obj_property>
       <obj_property name="ObjectShortName">virusFlagQ</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/virusCounterD">
+      <obj_property name="ElementShortName">virusCounterD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">virusCounterD[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_tb/top1/virusCounterQ">
+      <obj_property name="ElementShortName">virusCounterQ[31:0]</obj_property>
+      <obj_property name="ObjectShortName">virusCounterQ[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>
