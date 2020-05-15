@@ -3,6 +3,7 @@ import sys
 import matplotlib.pyplot as plt
 import numpy as np
 import glob
+import pickle
 
 def main():
     parser = argparse.ArgumentParser(description='Plot TDC values')
@@ -21,6 +22,7 @@ def main():
         default="Frequency Reponse", help="title")
     parser.add_argument("--leg", type=int, default=0, 
         help="which index of filename to take for legend")
+    parser.add_argument("--roc", action="store_true", help="plot roc curve")
 
     args = parser.parse_args()
     
@@ -68,6 +70,7 @@ def main():
     plt.ylabel('Frequency')
     plt.title('Histogram of Energy Responses')"""
 
+    integrated_values = {}
     if args.b:
         base_response = responses[0]
         responses = responses[1:]
@@ -83,13 +86,21 @@ def main():
                 plt.title("T-test Distances From Unmodified Response")
                 plt.legend(loc='upper right', shadow=True)
                 bin_width = bins[1] - bins[0]
-                int_start = 40
-                bin_start = int(int_start / bin_width)
-                int_value = 0
-                for i in range(bin_start, len(bins)-1):
-                    int_value += n[i] * bin_width
-                print(f"Integrated value ({r[3]}) : ", int_value)
-    
+                for int_start in range(30, 50 + 2, 10):
+                    bin_start = int(int_start // bin_width)
+                    int_value = 0
+                    for i in range(bin_start, len(bins)-1):
+                        int_value += n[i] * bin_width
+                    if r[3] in integrated_values:
+                        integrated_values[r[3]].append((int_start, int_value))
+                    else:
+                        integrated_values[r[3]] = [(int_start, int_value)]
+    if args.roc:
+        print(integrated_values.keys())
+        print(integrated_values)
+        rocf = open("rocf.p", "wb")
+        pickle.dump(integrated_values, rocf)
+        rocf.close()
     plt.figure(1)
     for r in responses:
         if not args.i:
