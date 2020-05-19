@@ -100,7 +100,7 @@ void challengeResponse(){
 			xil_printf("%d %d\n", i, (int32_t)energy_no_dc_val);
 		}
 	}
-	xil_printf("stop\n");
+	//xil_printf("stop\n");
 }
 
 // This function measures a frequency response of the board, starting at a high

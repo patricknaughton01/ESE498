@@ -1,0 +1,17 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|               clk_fpga_0 |               clk_fpga_0 |                                           design_1_i/top_0/inst/ram1/ram_reg_7936_8191_1_1/RAMS64E_A/ADR4|
+|               clk_fpga_0 |               clk_fpga_0 |                                           design_1_i/top_0/inst/ram1/ram_reg_7936_8191_1_1/RAMS64E_B/ADR4|
+|               clk_fpga_0 |               clk_fpga_0 |                                           design_1_i/top_0/inst/ram1/ram_reg_7936_8191_1_1/RAMS64E_C/ADR5|
+|               clk_fpga_0 |               clk_fpga_0 |                                           design_1_i/top_0/inst/ram1/ram_reg_7936_8191_1_1/RAMS64E_A/ADR5|
+|               clk_fpga_0 |               clk_fpga_0 |                                           design_1_i/top_0/inst/ram1/ram_reg_7936_8191_1_1/RAMS64E_D/ADR5|
+|               clk_fpga_0 |               clk_fpga_0 |                                           design_1_i/top_0/inst/ram1/ram_reg_7936_8191_1_1/RAMS64E_B/ADR5|
+|               clk_fpga_0 |               clk_fpga_0 |                                           design_1_i/top_0/inst/ram1/ram_reg_6144_6399_2_2/RAMS64E_A/ADR5|
+|               clk_fpga_0 |               clk_fpga_0 |                                           design_1_i/top_0/inst/ram1/ram_reg_6144_6399_2_2/RAMS64E_B/ADR5|
+|               clk_fpga_0 |               clk_fpga_0 |                                           design_1_i/top_0/inst/ram1/ram_reg_6144_6399_2_2/RAMS64E_C/ADR5|
+|               clk_fpga_0 |               clk_fpga_0 |                                           design_1_i/top_0/inst/ram1/ram_reg_6144_6399_2_2/RAMS64E_D/ADR5|
+|               clk_fpga_0 |               clk_fpga_0 |                                           design_1_i/top_0/inst/ram1/ram_reg_6144_6399_1_1/RAMS64E_A/ADR5|
+|               clk_fpga_0 |               clk_fpga_0 |                                           design_1_i/top_0/inst/ram1/ram_reg_6144_6399_1_1/RAMS64E_B/ADR5|
+|               clk_fpga_0 |               clk_fpga_0 |                                           design_1_i/top_0/inst/ram1/ram_reg_6144_6399_1_1/RAMS64E_C/ADR5|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

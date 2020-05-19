@@ -299,16 +299,16 @@ always @ * begin
         C_RD:begin
 			// This state performs a read with the challenge in the challenge
 			// register
-            if(virusCounterQ < CHALLENGE_WIDTH-1)begin
+            /*if(virusCounterQ < CHALLENGE_WIDTH-1)begin
                 virusCounterD = virusCounterQ + 1;
             end else begin
                 virusCounterD = 0;
             end
             
-            virusFlagD = challengeQ[virusCounterQ];
+            virusFlagD = challengeQ[virusCounterQ];*/
             
-            /*virusFlagD = challengeQ[0];
-            challengeD = {challengeQ[0] ^ challengeQ[1] ,challengeQ[CHALLENGE_WIDTH-1:1]};*/
+            virusFlagD = challengeQ[CHALLENGE_WIDTH-13];
+            challengeD = {challengeQ[CHALLENGE_WIDTH-12] ^ challengeQ[CHALLENGE_WIDTH-13] ,challengeQ[CHALLENGE_WIDTH-1:1]};
             
             if(virusFlagQ == 1)begin
                 virusEnD = virusMaskQ;
