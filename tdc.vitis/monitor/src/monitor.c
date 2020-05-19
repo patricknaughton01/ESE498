@@ -23,10 +23,12 @@ int32_t * const sum_addr	= (int32_t*)0x43C0FFE8;
 int32_t * const virus_addr 	= (int32_t*)0x43C0FFD8;
 int32_t * const chal_addr	= (int32_t*)0x43C0FF00;
 const int32_t num_reads = 10000;
+int32_t maskRO[5] = {0x00001fff, 0x00001fff, 0x00001fff, 0x00001fff};
 
 void makeMeasurement();
 void stepResponse();
 void challengeResponse();
+void setMask();
 
 int main() {
 	init_platform();
@@ -38,19 +40,35 @@ int main() {
 			stepResponse();
 		}else if(go == 'r'){
 			challengeResponse();
+		}else if(go == 'm') {
+			setMask();
 		}
 	}
 	return 0;
+}
+
+// This function changes the mask to determine which ring oscillators are active
+void setMask() {
+	char buf[5] = {0,0,0,0,0};
+	for(int i=0; i<5; ++i) {
+		buf[i] = XUartPs_RecvByte(XPAR_PS7_UART_1_BASEADDR);
+	}
+	if(buf[0] < 4) {
+		maskRO[buf[0]] = buf[1] + ((int)(buf[2]) << 8) + ((int)(buf[3]) << 16) + ((int)(buf[3]) << 24);
+		xil_printf("mask: %x%x%x%x\n", maskRO[3], maskRO[2], maskRO[1], maskRO[0]);
+	}else {
+		xil_printf("Invalid index\n");
+	}
 }
 
 // This function sends a challenge to the top module, then reads a challenge
 // response 100 times for all challenges provided in the header file
 void challengeResponse(){
 	*read_addr = num_reads;
-	*virus_addr = 0x00001fff;
-	*(virus_addr + 1) = 0x00001fff;
-	*(virus_addr + 2) = 0x00001fff;
-	*(virus_addr + 3) = 0x00001fff;
+	*virus_addr = maskRO[0];
+	*(virus_addr + 1) = maskRO[1];
+	*(virus_addr + 2) = maskRO[2];
+	*(virus_addr + 3) = maskRO[3];
 	
 	
 	for (int i=0; i<NUM_CHAL; i++) {
@@ -83,6 +101,7 @@ void challengeResponse(){
 			xil_printf("%d %d\n", i, (int32_t)energy_no_dc_val);
 		}
 	}
+	xil_printf("stop\n");
 }
 
 // This function measures a frequency response of the board, starting at a high
