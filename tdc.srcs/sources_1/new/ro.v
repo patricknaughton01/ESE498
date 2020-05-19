@@ -4,12 +4,12 @@
  * table below.
  *
  *       Ring Oscillator
- *         ____________
- *        |            |
- *        |   ______   |
- *    in1  --|      |  |
- *           | NAND |--  output
- * enable ---|______|
+ *         ________________________________
+ *        |                                |
+ *        |   ______             _______   |
+ *    in1  --|      |           |       |  |
+ *           | NAND |--latch_in-| LATCH |---- output
+ * enable ---|______|           |_______|
  *
  *
  *  enable | in1 | output
@@ -37,10 +37,19 @@
 `timescale 1ns / 1ps
 
 module ro(
-    output out,
-    input enable
+    output reg out,
+    input enable,
+    input latch
 );
 
-(* dont_touch = "true" *)nand(out, out, enable);
+wire latch_in;
+
+(* dont_touch = "true" *)nand(latch_in, out, enable);
+
+always @ * begin
+    if(latch)begin
+        out = latch_in; // Infer latch here between latch_in and out
+    end
+end
 
 endmodule

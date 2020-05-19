@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Fri May 15 14:25:47 2020
+| Date         : Tue May 19 15:57:18 2020
 | Host         : patricknaughton01 running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_clock_utilization -file design_1_wrapper_clock_utilization_routed.rpt
 | Design       : design_1_wrapper
@@ -17,16 +17,17 @@ Table of Contents
 1. Clock Primitive Utilization
 2. Global Clock Resources
 3. Global Clock Source Details
-4. Clock Regions: Key Resource Utilization
-5. Clock Regions : Global Clock Summary
-6. Device Cell Placement Summary for Global Clock g0
-7. Device Cell Placement Summary for Global Clock g1
-8. Device Cell Placement Summary for Global Clock g2
-9. Clock Region Cell Placement per Global Clock: Region X1Y0
-10. Clock Region Cell Placement per Global Clock: Region X0Y1
-11. Clock Region Cell Placement per Global Clock: Region X1Y1
-12. Clock Region Cell Placement per Global Clock: Region X0Y2
-13. Clock Region Cell Placement per Global Clock: Region X1Y2
+4. Local Clock Details
+5. Clock Regions: Key Resource Utilization
+6. Clock Regions : Global Clock Summary
+7. Device Cell Placement Summary for Global Clock g0
+8. Device Cell Placement Summary for Global Clock g1
+9. Device Cell Placement Summary for Global Clock g2
+10. Clock Region Cell Placement per Global Clock: Region X1Y0
+11. Clock Region Cell Placement per Global Clock: Region X0Y1
+12. Clock Region Cell Placement per Global Clock: Region X1Y1
+13. Clock Region Cell Placement per Global Clock: Region X0Y2
+14. Clock Region Cell Placement per Global Clock: Region X1Y2
 
 1. Clock Primitive Utilization
 ------------------------------
@@ -50,8 +51,8 @@ Table of Contents
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+-------------------------------+--------------------------------------------------------------------------+-------------------------------------------------------------+
 | Global Id | Source Id | Driver Type/Pin | Constraint | Site           | Clock Region | Load Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock                         | Driver Pin                                                               | Net                                                         |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+-------------------------------+--------------------------------------------------------------------------+-------------------------------------------------------------+
-| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 4 |        1554 |               1 |       10.000 | clk_fpga_0                    | design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O | design_1_i/processing_system7_0/inst/FCLK_CLK0              |
-| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 4 |         161 |               0 |       10.000 | clk_out1_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clkout1_buf/O                                  | design_1_i/clk_wiz_0/inst/clk_out1                          |
+| g0        | src0      | BUFG/O          | None       | BUFGCTRL_X0Y16 | n/a          |                 5 |        1552 |               1 |       10.000 | clk_fpga_0                    | design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O | design_1_i/processing_system7_0/inst/FCLK_CLK0              |
+| g1        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y0  | n/a          |                 4 |         288 |               0 |       10.000 | clk_out1_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clkout1_buf/O                                  | design_1_i/clk_wiz_0/inst/clk_out1                          |
 | g2        | src1      | BUFG/O          | None       | BUFGCTRL_X0Y1  | n/a          |                 1 |           1 |               0 |       10.000 | clkfbout_design_1_clk_wiz_0_0 | design_1_i/clk_wiz_0/inst/clkf_buf/O                                     | design_1_i/clk_wiz_0/inst/clkfbout_buf_design_1_clk_wiz_0_0 |
 +-----------+-----------+-----------------+------------+----------------+--------------+-------------------+-------------+-----------------+--------------+-------------------------------+--------------------------------------------------------------------------+-------------------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
@@ -72,7 +73,147 @@ Table of Contents
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 
 
-4. Clock Regions: Key Resource Utilization
+4. Local Clock Details
+----------------------
+
++----------+-----------------+------------+--------------------+--------------+-------------+-----------------+--------------+-------+-----------------------------------------------+-------------------------------------------------+
+| Local Id | Driver Type/Pin | Constraint | Site/BEL           | Clock Region | Clock Loads | Non-Clock Loads | Clock Period | Clock | Driver Pin                                    | Net                                             |
++----------+-----------------+------------+--------------------+--------------+-------------+-----------------+--------------+-------+-----------------------------------------------+-------------------------------------------------||
+| 0        | FDRE/Q          | None       | SLICE_X52Y108/AFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[100]/Q     | design_1_i/top_0/inst/virusEnQ[100]             - Static -
+| 1        | FDRE/Q          | None       | SLICE_X51Y108/BFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[102]/Q     | design_1_i/top_0/inst/virusEnQ[102]             - Static -
+| 2        | FDRE/Q          | None       | SLICE_X51Y111/BFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[106]/Q     | design_1_i/top_0/inst/virusEnQ[106]             - Static -
+| 3        | FDRE/Q          | None       | SLICE_X46Y93/AFF   | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[11]/Q      | design_1_i/top_0/inst/virusEnQ[11]              - Static -
+| 4        | FDRE/Q          | None       | SLICE_X47Y108/A5FF | X0Y2         |         128 |             131 |              |       | design_1_i/top_0/inst/virusEnQ_reg[127]/Q     | design_1_i/top_0/inst/virusEnQ[127]             - Static -
+| 5        | FDRE/Q          | None       | SLICE_X45Y95/AFF   | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[13]/Q      | design_1_i/top_0/inst/virusEnQ[13]              - Static -
+| 6        | FDRE/Q          | None       | SLICE_X47Y95/A5FF  | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[15]/Q      | design_1_i/top_0/inst/virusEnQ[15]              - Static -
+| 7        | FDRE/Q          | None       | SLICE_X46Y96/BFF   | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[17]/Q      | design_1_i/top_0/inst/virusEnQ[17]              - Static -
+| 8        | FDRE/Q          | None       | SLICE_X50Y96/AFF   | X1Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[19]/Q      | design_1_i/top_0/inst/virusEnQ[19]              - Static -
+| 9        | FDRE/Q          | None       | SLICE_X44Y93/BFF   | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[1]/Q       | design_1_i/top_0/inst/virusEnQ[1]               - Static -
+| 10       | FDRE/Q          | None       | SLICE_X46Y96/CFF   | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[21]/Q      | design_1_i/top_0/inst/virusEnQ[21]              - Static -
+| 11       | FDRE/Q          | None       | SLICE_X47Y94/BFF   | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[23]/Q      | design_1_i/top_0/inst/virusEnQ[23]              - Static -
+| 12       | FDRE/Q          | None       | SLICE_X50Y96/BFF   | X1Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[25]/Q      | design_1_i/top_0/inst/virusEnQ[25]              - Static -
+| 13       | FDRE/Q          | None       | SLICE_X50Y98/A5FF  | X1Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[27]/Q      | design_1_i/top_0/inst/virusEnQ[27]              - Static -
+| 14       | FDRE/Q          | None       | SLICE_X53Y98/A5FF  | X1Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[29]/Q      | design_1_i/top_0/inst/virusEnQ[29]              - Static -
+| 15       | FDRE/Q          | None       | SLICE_X51Y97/BFF   | X1Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[31]/Q      | design_1_i/top_0/inst/virusEnQ[31]              - Static -
+| 16       | FDRE/Q          | None       | SLICE_X51Y96/AFF   | X1Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[33]/Q      | design_1_i/top_0/inst/virusEnQ[33]              - Static -
+| 17       | FDRE/Q          | None       | SLICE_X51Y96/CFF   | X1Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[35]/Q      | design_1_i/top_0/inst/virusEnQ[35]              - Static -
+| 18       | FDRE/Q          | None       | SLICE_X52Y98/A5FF  | X1Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[37]/Q      | design_1_i/top_0/inst/virusEnQ[37]              - Static -
+| 19       | FDRE/Q          | None       | SLICE_X51Y98/A5FF  | X1Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[39]/Q      | design_1_i/top_0/inst/virusEnQ[39]              - Static -
+| 20       | FDRE/Q          | None       | SLICE_X43Y94/BFF   | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[3]/Q       | design_1_i/top_0/inst/virusEnQ[3]               - Static -
+| 21       | FDRE/Q          | None       | SLICE_X53Y102/AFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[41]/Q      | design_1_i/top_0/inst/virusEnQ[41]              - Static -
+| 22       | FDRE/Q          | None       | SLICE_X52Y104/AFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[43]/Q      | design_1_i/top_0/inst/virusEnQ[43]              - Static -
+| 23       | FDRE/Q          | None       | SLICE_X53Y104/BFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[45]/Q      | design_1_i/top_0/inst/virusEnQ[45]              - Static -
+| 24       | FDRE/Q          | None       | SLICE_X52Y102/AFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[47]/Q      | design_1_i/top_0/inst/virusEnQ[47]              - Static -
+| 25       | FDRE/Q          | None       | SLICE_X53Y102/CFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[49]/Q      | design_1_i/top_0/inst/virusEnQ[49]              - Static -
+| 26       | FDRE/Q          | None       | SLICE_X51Y100/CFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[51]/Q      | design_1_i/top_0/inst/virusEnQ[51]              - Static -
+| 27       | FDRE/Q          | None       | SLICE_X49Y102/AFF  | X0Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[53]/Q      | design_1_i/top_0/inst/virusEnQ[53]              - Static -
+| 28       | FDRE/Q          | None       | SLICE_X53Y104/CFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[55]/Q      | design_1_i/top_0/inst/virusEnQ[55]              - Static -
+| 29       | FDRE/Q          | None       | SLICE_X53Y104/DFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[57]/Q      | design_1_i/top_0/inst/virusEnQ[57]              - Static -
+| 30       | FDRE/Q          | None       | SLICE_X48Y105/AFF  | X0Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[59]/Q      | design_1_i/top_0/inst/virusEnQ[59]              - Static -
+| 31       | FDRE/Q          | None       | SLICE_X46Y94/A5FF  | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[5]/Q       | design_1_i/top_0/inst/virusEnQ[5]               - Static -
+| 32       | FDRE/Q          | None       | SLICE_X52Y104/BFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[61]/Q      | design_1_i/top_0/inst/virusEnQ[61]              - Static -
+| 33       | FDRE/Q          | None       | SLICE_X52Y104/CFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[63]/Q      | design_1_i/top_0/inst/virusEnQ[63]              - Static -
+| 34       | FDRE/Q          | None       | SLICE_X53Y105/AFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[65]/Q      | design_1_i/top_0/inst/virusEnQ[65]              - Static -
+| 35       | FDRE/Q          | None       | SLICE_X48Y104/AFF  | X0Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[67]/Q      | design_1_i/top_0/inst/virusEnQ[67]              - Static -
+| 36       | FDRE/Q          | None       | SLICE_X52Y105/DFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[69]/Q      | design_1_i/top_0/inst/virusEnQ[69]              - Static -
+| 37       | FDRE/Q          | None       | SLICE_X50Y107/B5FF | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[71]/Q      | design_1_i/top_0/inst/virusEnQ[71]              - Static -
+| 38       | FDRE/Q          | None       | SLICE_X45Y106/A5FF | X0Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[73]/Q      | design_1_i/top_0/inst/virusEnQ[73]              - Static -
+| 39       | FDRE/Q          | None       | SLICE_X42Y107/BFF  | X0Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[75]/Q      | design_1_i/top_0/inst/virusEnQ[75]              - Static -
+| 40       | FDRE/Q          | None       | SLICE_X43Y106/B5FF | X0Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[77]/Q      | design_1_i/top_0/inst/virusEnQ[77]              - Static -
+| 41       | FDRE/Q          | None       | SLICE_X53Y105/CFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[79]/Q      | design_1_i/top_0/inst/virusEnQ[79]              - Static -
+| 42       | FDRE/Q          | None       | SLICE_X47Y94/DFF   | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[7]/Q       | design_1_i/top_0/inst/virusEnQ[7]               - Static -
+| 43       | FDRE/Q          | None       | SLICE_X52Y108/CFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[81]/Q      | design_1_i/top_0/inst/virusEnQ[81]              - Static -
+| 44       | FDRE/Q          | None       | SLICE_X42Y107/CFF  | X0Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[83]/Q      | design_1_i/top_0/inst/virusEnQ[83]              - Static -
+| 45       | FDRE/Q          | None       | SLICE_X42Y108/BFF  | X0Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[85]/Q      | design_1_i/top_0/inst/virusEnQ[85]              - Static -
+| 46       | FDRE/Q          | None       | SLICE_X42Y108/DFF  | X0Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[87]/Q      | design_1_i/top_0/inst/virusEnQ[87]              - Static -
+| 47       | FDRE/Q          | None       | SLICE_X50Y111/CFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[89]/Q      | design_1_i/top_0/inst/virusEnQ[89]              - Static -
+| 48       | FDRE/Q          | None       | SLICE_X50Y106/B5FF | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[92]/Q      | design_1_i/top_0/inst/virusEnQ[92]              - Static -
+| 49       | FDRE/Q          | None       | SLICE_X44Y108/B5FF | X0Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[94]/Q      | design_1_i/top_0/inst/virusEnQ[94]              - Static -
+| 50       | FDRE/Q          | None       | SLICE_X50Y111/A5FF | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[96]/Q      | design_1_i/top_0/inst/virusEnQ[96]              - Static -
+| 51       | FDRE/Q          | None       | SLICE_X51Y96/DFF   | X1Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[9]/Q       | design_1_i/top_0/inst/virusEnQ[9]               - Static -
+| 52       | FDRE/Q          | None       | SLICE_X44Y93/AFF   | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[0]_rep/Q   | design_1_i/top_0/inst/virusEnQ_reg[0]_rep_n_0   - Static -
+| 53       | FDRE/Q          | None       | SLICE_X51Y108/AFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[101]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[101]_rep_n_0 - Static -
+| 54       | FDRE/Q          | None       | SLICE_X51Y111/AFF  | X1Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[103]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[103]_rep_n_0 - Static -
+| 55       | FDRE/Q          | None       | SLICE_X48Y108/AFF  | X0Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[104]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[104]_rep_n_0 - Static -
+| 56       | FDRE/Q          | None       | SLICE_X50Y111/AFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[105]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[105]_rep_n_0 - Static -
+| 57       | FDRE/Q          | None       | SLICE_X51Y111/CFF  | X1Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[107]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[107]_rep_n_0 - Static -
+| 58       | FDRE/Q          | None       | SLICE_X50Y107/A5FF | X1Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[108]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[108]_rep_n_0 - Static -
+| 59       | FDRE/Q          | None       | SLICE_X50Y111/BFF  | X1Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[109]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[109]_rep_n_0 - Static -
+| 60       | FDRE/Q          | None       | SLICE_X48Y96/AFF   | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[10]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[10]_rep_n_0  - Static -
+| 61       | FDRE/Q          | None       | SLICE_X50Y108/A5FF | X1Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[110]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[110]_rep_n_0 - Static -
+| 62       | FDRE/Q          | None       | SLICE_X51Y108/CFF  | X1Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[111]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[111]_rep_n_0 - Static -
+| 63       | FDRE/Q          | None       | SLICE_X47Y109/A5FF | X0Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[112]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[112]_rep_n_0 - Static -
+| 64       | FDRE/Q          | None       | SLICE_X44Y108/A5FF | X0Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[113]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[113]_rep_n_0 - Static -
+| 65       | FDRE/Q          | None       | SLICE_X43Y108/A5FF | X0Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[114]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[114]_rep_n_0 - Static -
+| 66       | FDRE/Q          | None       | SLICE_X43Y108/B5FF | X0Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[115]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[115]_rep_n_0 - Static -
+| 67       | FDRE/Q          | None       | SLICE_X44Y109/A5FF | X0Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[116]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[116]_rep_n_0 - Static -
+| 68       | FDRE/Q          | None       | SLICE_X43Y109/A5FF | X0Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[117]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[117]_rep_n_0 - Static -
+| 69       | FDRE/Q          | None       | SLICE_X43Y109/BFF  | X0Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[118]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[118]_rep_n_0 - Static -
+| 70       | FDRE/Q          | None       | SLICE_X44Y109/BFF  | X0Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[119]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[119]_rep_n_0 - Static -
+| 71       | FDRE/Q          | None       | SLICE_X46Y109/A5FF | X0Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[120]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[120]_rep_n_0 - Static -
+| 72       | FDRE/Q          | None       | SLICE_X48Y109/AFF  | X0Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[121]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[121]_rep_n_0 - Static -
+| 73       | FDRE/Q          | None       | SLICE_X48Y110/A5FF | X0Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[122]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[122]_rep_n_0 - Static -
+| 74       | FDRE/Q          | None       | SLICE_X48Y110/B5FF | X0Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[123]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[123]_rep_n_0 - Static -
+| 75       | FDRE/Q          | None       | SLICE_X47Y110/A5FF | X0Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[124]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[124]_rep_n_0 - Static -
+| 76       | FDRE/Q          | None       | SLICE_X47Y110/B5FF | X0Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[125]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[125]_rep_n_0 - Static -
+| 77       | FDRE/Q          | None       | SLICE_X47Y109/BFF  | X0Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[126]_rep/Q | design_1_i/top_0/inst/virusEnQ_reg[126]_rep_n_0 - Static -
+| 78       | FDRE/Q          | None       | SLICE_X46Y93/BFF   | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[12]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[12]_rep_n_0  - Static -
+| 79       | FDRE/Q          | None       | SLICE_X43Y94/AFF   | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[14]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[14]_rep_n_0  - Static -
+| 80       | FDRE/Q          | None       | SLICE_X46Y96/A5FF  | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[16]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[16]_rep_n_0  - Static -
+| 81       | FDRE/Q          | None       | SLICE_X47Y96/A5FF  | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[18]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[18]_rep_n_0  - Static -
+| 82       | FDRE/Q          | None       | SLICE_X47Y94/AFF   | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[20]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[20]_rep_n_0  - Static -
+| 83       | FDRE/Q          | None       | SLICE_X49Y96/A5FF  | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[22]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[22]_rep_n_0  - Static -
+| 84       | FDRE/Q          | None       | SLICE_X47Y94/CFF   | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[24]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[24]_rep_n_0  - Static -
+| 85       | FDRE/Q          | None       | SLICE_X50Y96/CFF   | X1Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[26]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[26]_rep_n_0  - Static -
+| 86       | FDRE/Q          | None       | SLICE_X51Y97/A5FF  | X1Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[28]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[28]_rep_n_0  - Static -
+| 87       | FDRE/Q          | None       | SLICE_X44Y93/CFF   | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[2]_rep/Q   | design_1_i/top_0/inst/virusEnQ_reg[2]_rep_n_0   - Static -
+| 88       | FDRE/Q          | None       | SLICE_X52Y101/A5FF | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[30]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[30]_rep_n_0  - Static -
+| 89       | FDRE/Q          | None       | SLICE_X51Y100/A5FF | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[32]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[32]_rep_n_0  - Static -
+| 90       | FDRE/Q          | None       | SLICE_X51Y96/BFF   | X1Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[34]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[34]_rep_n_0  - Static -
+| 91       | FDRE/Q          | None       | SLICE_X53Y98/BFF   | X1Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[36]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[36]_rep_n_0  - Static -
+| 92       | FDRE/Q          | None       | SLICE_X52Y98/B5FF  | X1Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[38]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[38]_rep_n_0  - Static -
+| 93       | FDRE/Q          | None       | SLICE_X53Y103/AFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[40]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[40]_rep_n_0  - Static -
+| 94       | FDRE/Q          | None       | SLICE_X52Y101/BFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[42]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[42]_rep_n_0  - Static -
+| 95       | FDRE/Q          | None       | SLICE_X53Y104/AFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[44]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[44]_rep_n_0  - Static -
+| 96       | FDRE/Q          | None       | SLICE_X53Y103/BFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[46]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[46]_rep_n_0  - Static -
+| 97       | FDRE/Q          | None       | SLICE_X53Y102/BFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[48]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[48]_rep_n_0  - Static -
+| 98       | FDRE/Q          | None       | SLICE_X43Y94/CFF   | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[4]_rep/Q   | design_1_i/top_0/inst/virusEnQ_reg[4]_rep_n_0   - Static -
+| 99       | FDRE/Q          | None       | SLICE_X51Y100/BFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[50]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[50]_rep_n_0  - Static -
+| 100      | FDRE/Q          | None       | SLICE_X52Y101/CFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[52]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[52]_rep_n_0  - Static -
+| 101      | FDRE/Q          | None       | SLICE_X45Y104/A5FF | X0Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[54]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[54]_rep_n_0  - Static -
+| 102      | FDRE/Q          | None       | SLICE_X53Y102/DFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[56]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[56]_rep_n_0  - Static -
+| 103      | FDRE/Q          | None       | SLICE_X52Y105/AFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[58]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[58]_rep_n_0  - Static -
+| 104      | FDRE/Q          | None       | SLICE_X42Y107/AFF  | X0Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[60]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[60]_rep_n_0  - Static -
+| 105      | FDRE/Q          | None       | SLICE_X52Y105/BFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[62]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[62]_rep_n_0  - Static -
+| 106      | FDRE/Q          | None       | SLICE_X52Y104/DFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[64]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[64]_rep_n_0  - Static -
+| 107      | FDRE/Q          | None       | SLICE_X52Y105/CFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[66]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[66]_rep_n_0  - Static -
+| 108      | FDRE/Q          | None       | SLICE_X43Y104/AFF  | X0Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[68]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[68]_rep_n_0  - Static -
+| 109      | FDRE/Q          | None       | SLICE_X46Y93/CFF   | X0Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[6]_rep/Q   | design_1_i/top_0/inst/virusEnQ_reg[6]_rep_n_0   - Static -
+| 110      | FDRE/Q          | None       | SLICE_X53Y105/BFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[70]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[70]_rep_n_0  - Static -
+| 111      | FDRE/Q          | None       | SLICE_X47Y106/A5FF | X0Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[72]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[72]_rep_n_0  - Static -
+| 112      | FDRE/Q          | None       | SLICE_X42Y108/AFF  | X0Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[74]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[74]_rep_n_0  - Static -
+| 113      | FDRE/Q          | None       | SLICE_X43Y106/A5FF | X0Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[76]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[76]_rep_n_0  - Static -
+| 114      | FDRE/Q          | None       | SLICE_X48Y107/AFF  | X0Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[78]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[78]_rep_n_0  - Static -
+| 115      | FDRE/Q          | None       | SLICE_X52Y108/BFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[80]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[80]_rep_n_0  - Static -
+| 116      | FDRE/Q          | None       | SLICE_X52Y108/DFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[82]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[82]_rep_n_0  - Static -
+| 117      | FDRE/Q          | None       | SLICE_X43Y108/CFF  | X0Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[84]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[84]_rep_n_0  - Static -
+| 118      | FDRE/Q          | None       | SLICE_X42Y108/CFF  | X0Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[86]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[86]_rep_n_0  - Static -
+| 119      | FDRE/Q          | None       | SLICE_X49Y109/A5FF | X0Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[88]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[88]_rep_n_0  - Static -
+| 120      | FDRE/Q          | None       | SLICE_X50Y96/DFF   | X1Y1         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[8]_rep/Q   | design_1_i/top_0/inst/virusEnQ_reg[8]_rep_n_0   - Static -
+| 121      | FDRE/Q          | None       | SLICE_X50Y111/DFF  | X1Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[90]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[90]_rep_n_0  - Static -
+| 122      | FDRE/Q          | None       | SLICE_X50Y106/A5FF | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[91]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[91]_rep_n_0  - Static -
+| 123      | FDRE/Q          | None       | SLICE_X51Y108/DFF  | X1Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[93]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[93]_rep_n_0  - Static -
+| 124      | FDRE/Q          | None       | SLICE_X48Y109/BFF  | X0Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[95]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[95]_rep_n_0  - Static -
+| 125      | FDRE/Q          | None       | SLICE_X51Y111/DFF  | X1Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[97]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[97]_rep_n_0  - Static -
+| 126      | FDRE/Q          | None       | SLICE_X45Y106/B5FF | X0Y2         |         128 |             128 |              |       | design_1_i/top_0/inst/virusEnQ_reg[98]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[98]_rep_n_0  - Static -
+| 127      | FDRE/Q          | None       | SLICE_X48Y107/BFF  | X0Y2         |         128 |             129 |              |       | design_1_i/top_0/inst/virusEnQ_reg[99]_rep/Q  | design_1_i/top_0/inst/virusEnQ_reg[99]_rep_n_0  - Static -
++----------+-----------------+------------+--------------------+--------------+-------------+-----------------+--------------+-------+-----------------------------------------------+-------------------------------------------------||
+* Local Clocks in this context represents only clocks driven by non-global buffers
+** Clock Loads column represents the clock pin loads (pin count)
+*** Non-Clock Loads column represents the non-clock pin loads (pin count)
+
+
+5. Clock Regions: Key Resource Utilization
 ------------------------------------------
 
 +-------------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
@@ -80,36 +221,36 @@ Table of Contents
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 | Clock Region Name | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail | Used | Avail |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
-| X0Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2500 |    0 |  1000 |    0 |    60 |    0 |    30 |    0 |    60 |
+| X0Y0              |    0 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  2500 |   28 |  1000 |    0 |    60 |    0 |    30 |    0 |    60 |
 | X1Y0              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    1 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |    0 |  3200 |    0 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
-| X0Y1              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |  888 |  1200 |  171 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   42 |  2600 |    9 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
-| X0Y2              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |  359 |  1200 |  122 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
-| X1Y2              |    1 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   15 |  2600 |    7 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
+| X0Y1              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |  909 |  1200 |  631 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y1              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |   40 |  2600 | 3273 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
+| X0Y2              |    2 |    12 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |    0 |     0 |  378 |  1200 | 2732 |   400 |    0 |    20 |    0 |    10 |    0 |    20 |
+| X1Y2              |    2 |    12 |    0 |     4 |    0 |     2 |    0 |     4 |    0 |     1 |    0 |     1 |    0 |     0 |    0 |     0 |    0 |    50 |    0 |    50 |  102 |  2600 | 5345 |   850 |    0 |    60 |    0 |    30 |    0 |    40 |
 +-------------------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+------+-------+
 * Global Clock column represents track count; while other columns represents cell counts
 
 
-5. Clock Regions : Global Clock Summary
+6. Clock Regions : Global Clock Summary
 ---------------------------------------
 
 All Modules
 +----+----+----+
 |    | X0 | X1 |
 +----+----+----+
-| Y2 |  2 |  1 |
+| Y2 |  2 |  2 |
 | Y1 |  2 |  2 |
 | Y0 |  0 |  2 |
 +----+----+----+
 
 
-6. Device Cell Placement Summary for Global Clock g0
+7. Device Cell Placement Summary for Global Clock g0
 ----------------------------------------------------
 
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock      | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                            |
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------+
-| g0        | BUFG/O          | n/a               | clk_fpga_0 |      10.000 | {0.000 5.000} |        1274 |        0 |              1 |        0 | design_1_i/processing_system7_0/inst/FCLK_CLK0 |
+| g0        | BUFG/O          | n/a               | clk_fpga_0 |      10.000 | {0.000 5.000} |        1272 |        0 |              1 |        0 | design_1_i/processing_system7_0/inst/FCLK_CLK0 |
 +-----------+-----------------+-------------------+------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -120,19 +261,19 @@ All Modules
 +----+------+-----+
 |    | X0   | X1  |
 +----+------+-----+
-| Y2 |  278 |   0 |
-| Y1 |  954 |  42 |
+| Y2 |  285 |  32 |
+| Y1 |  948 |   7 |
 | Y0 |    0 |   1 |
 +----+------+-----+
 
 
-7. Device Cell Placement Summary for Global Clock g1
+8. Device Cell Placement Summary for Global Clock g1
 ----------------------------------------------------
 
 +-----------+-----------------+-------------------+-------------------------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------+
 | Global Id | Driver Type/Pin | Driver Region (D) | Clock                         | Period (ns) | Waveform (ns) | Slice Loads | IO Loads | Clocking Loads | GT Loads | Net                                |
 +-----------+-----------------+-------------------+-------------------------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------+
-| g1        | BUFG/O          | n/a               | clk_out1_design_1_clk_wiz_0_0 |      10.000 | {0.000 5.000} |         161 |        0 |              0 |        0 | design_1_i/clk_wiz_0/inst/clk_out1 |
+| g1        | BUFG/O          | n/a               | clk_out1_design_1_clk_wiz_0_0 |      10.000 | {0.000 5.000} |         288 |        0 |              0 |        0 | design_1_i/clk_wiz_0/inst/clk_out1 |
 +-----------+-----------------+-------------------+-------------------------------+-------------+---------------+-------------+----------+----------------+----------+------------------------------------+
 * Slice Loads column represents load cell count of all cell types other than IO, GT and clock resources
 ** IO Loads column represents load cell count of IO types
@@ -140,16 +281,16 @@ All Modules
 **** GT Loads column represents load cell count of GT types
 
 
-+----+-----+-----+
-|    | X0  | X1  |
-+----+-----+-----+
-| Y2 |  84 |  15 |
-| Y1 |  60 |   2 |
-| Y0 |   0 |   0 |
-+----+-----+-----+
++----+------+-----+
+|    | X0   | X1  |
++----+------+-----+
+| Y2 |  104 |  70 |
+| Y1 |   80 |  34 |
+| Y0 |    0 |   0 |
++----+------+-----+
 
 
-8. Device Cell Placement Summary for Global Clock g2
+9. Device Cell Placement Summary for Global Clock g2
 ----------------------------------------------------
 
 +-----------+-----------------+-------------------+-------------------------------+-------------+---------------+-------------+----------+----------------+----------+-------------------------------------------------------------+
@@ -172,8 +313,8 @@ All Modules
 +----+----+----+
 
 
-9. Clock Region Cell Placement per Global Clock: Region X1Y0
-------------------------------------------------------------
+10. Clock Region Cell Placement per Global Clock: Region X1Y0
+-------------------------------------------------------------
 
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+-------------------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                                         |
@@ -186,56 +327,57 @@ All Modules
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
 
 
-10. Clock Region Cell Placement per Global Clock: Region X0Y1
+11. Clock Region Cell Placement per Global Clock: Region X0Y1
 -------------------------------------------------------------
 
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                            |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         954 |               0 | 828 |     63 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/processing_system7_0/inst/FCLK_CLK0 |
-| g1        | n/a   | BUFG/O          | None       |          60 |               0 |  60 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1             |
+| g0        | n/a   | BUFG/O          | None       |         948 |               0 | 829 |     56 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/processing_system7_0/inst/FCLK_CLK0 |
+| g1        | n/a   | BUFG/O          | None       |          80 |               0 |  80 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1             |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
 
 
-11. Clock Region Cell Placement per Global Clock: Region X1Y1
+12. Clock Region Cell Placement per Global Clock: Region X1Y1
 -------------------------------------------------------------
 
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                            |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |          41 |               1 | 40 |      1 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/processing_system7_0/inst/FCLK_CLK0 |
-| g1        | n/a   | BUFG/O          | None       |           2 |               0 |  2 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1             |
+| g0        | n/a   | BUFG/O          | None       |           6 |               1 |  6 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/processing_system7_0/inst/FCLK_CLK0 |
+| g1        | n/a   | BUFG/O          | None       |          34 |               0 | 34 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1             |
 +-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
 
 
-12. Clock Region Cell Placement per Global Clock: Region X0Y2
+13. Clock Region Cell Placement per Global Clock: Region X0Y2
 -------------------------------------------------------------
 
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------+
 | Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF  | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                            |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------+
-| g0        | n/a   | BUFG/O          | None       |         278 |               0 | 275 |      2 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/processing_system7_0/inst/FCLK_CLK0 |
-| g1        | n/a   | BUFG/O          | None       |          84 |               0 |  84 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1             |
+| g0        | n/a   | BUFG/O          | None       |         285 |               0 | 274 |     10 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/processing_system7_0/inst/FCLK_CLK0 |
+| g1        | n/a   | BUFG/O          | None       |         104 |               0 | 104 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1             |
 +-----------+-------+-----------------+------------+-------------+-----------------+-----+--------+------+-----+----+------+-----+---------+------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
 
 
-13. Clock Region Cell Placement per Global Clock: Region X1Y2
+14. Clock Region Cell Placement per Global Clock: Region X1Y2
 -------------------------------------------------------------
 
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------+
-| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------+
-| g1        | n/a   | BUFG/O          | None       |          15 |               0 | 15 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1 |
-+-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------+
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------+
+| Global Id | Track | Driver Type/Pin | Constraint | Clock Loads | Non-Clock Loads | FF | LUTRAM | RAMB | DSP | GT | MMCM | PLL | Hard IP | Net                                            |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------+
+| g0        | n/a   | BUFG/O          | None       |          32 |               0 | 32 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/processing_system7_0/inst/FCLK_CLK0 |
+| g1        | n/a   | BUFG/O          | None       |          70 |               0 | 70 |      0 |    0 |   0 |  0 |    0 |   0 |       0 | design_1_i/clk_wiz_0/inst/clk_out1             |
++-----------+-------+-----------------+------------+-------------+-----------------+----+--------+------+-----+----+------+-----+---------+------------------------------------------------+
 * Clock Loads column represents the clock pin loads (pin count)
 ** Non-Clock Loads column represents the non-clock pin loads (pin count)
 *** Columns FF, LUTRAM, RAMB through 'Hard IP' represents load cell counts
@@ -255,7 +397,7 @@ set_property LOC BUFGCTRL_X0Y0 [get_cells design_1_i/clk_wiz_0/inst/clkout1_buf]
 #startgroup
 create_pblock {CLKAG_design_1_i/processing_system7_0/inst/FCLK_CLK0}
 add_cells_to_pblock [get_pblocks  {CLKAG_design_1_i/processing_system7_0/inst/FCLK_CLK0}] [get_cells -filter { PRIMITIVE_GROUP != I/O && IS_PRIMITIVE==1 && PRIMITIVE_LEVEL !=INTERNAL && NAME!=design_1_i/clk_wiz_0/inst/mmcm_adv_inst} -of_object [get_pins -filter {DIRECTION==IN} -of_objects [get_nets -hierarchical -filter {PARENT=="design_1_i/processing_system7_0/inst/FCLK_CLK0"}]]]
-resize_pblock [get_pblocks {CLKAG_design_1_i/processing_system7_0/inst/FCLK_CLK0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1}
+resize_pblock [get_pblocks {CLKAG_design_1_i/processing_system7_0/inst/FCLK_CLK0}] -add {CLOCKREGION_X0Y1:CLOCKREGION_X0Y1 CLOCKREGION_X0Y2:CLOCKREGION_X0Y2 CLOCKREGION_X1Y1:CLOCKREGION_X1Y1 CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
 #endgroup
 
 # Clock net "design_1_i/clk_wiz_0/inst/clk_out1" driven by instance "design_1_i/clk_wiz_0/inst/clkout1_buf" located at site "BUFGCTRL_X0Y0"

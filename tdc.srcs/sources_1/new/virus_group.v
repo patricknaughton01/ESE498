@@ -22,7 +22,7 @@ module virus_group#(parameter SIZE=512)(
 genvar k;
 generate
     for (k = 0; k<SIZE; k = k + 1)begin
-        (* dont_touch="true" *)ro ringOsc(out[k], enable);
+        (* dont_touch="true" *)ro ringOsc(out[k], enable, enable);
     end
 endgenerate
 
