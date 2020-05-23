@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 100ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -20,8 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module top_tb#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, CLK_PERIOD=10, READ_MAX=10000,
-    TO_READ=10000, M_TDATA_WIDTH=16, S_TDATA_WIDTH=48, FFT_WIDTH=8192)();
+module top_tb#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, CLK_PERIOD=10, READ_MAX=8192,
+    TO_READ=8192, M_TDATA_WIDTH=16, S_TDATA_WIDTH=48, FFT_WIDTH=8192, RUNS=4)();
 
 // Axi4Lite signals
 reg  S_AXI_ACLK ;
@@ -68,7 +68,8 @@ reg                     S_TVALID;
 wire trigger;
 
 top#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH), .SIM(40),
-    .M_TDATA_WIDTH(M_TDATA_WIDTH), .S_TDATA_WIDTH(S_TDATA_WIDTH), .FFT_WIDTH(FFT_WIDTH)) top1(
+    .M_TDATA_WIDTH(M_TDATA_WIDTH), .S_TDATA_WIDTH(S_TDATA_WIDTH), .FFT_WIDTH(FFT_WIDTH), 
+    .RUNS(RUNS)) top1(
     // Axi4Lite Bus
     S_AXI_ACLK,
     S_AXI_ARESETN,
@@ -217,7 +218,7 @@ initial begin
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * 5);
-    #(CLK_PERIOD * (TO_READ + 10));
+    #(CLK_PERIOD * ((TO_READ * RUNS) + 100));
     // Allow RMS to accumulate
     /*#(CLK_PERIOD*((TO_READ<<1) + 10));
     // Provide fake FFT values
@@ -226,15 +227,15 @@ initial begin
         S_TVALID = 1;
         #CLK_PERIOD;
     end*/
-    // Read RMS value
+    // Read Mean value
     rd = 1;
-    rdAddr = 'hFFEC;
+    rdAddr = 'hFEFC;
     #CLK_PERIOD;
     rd = 0;
     #(CLK_PERIOD*10);
-    // Read SUM value
+    // Read Var value
     rd = 1;
-    rdAddr = 'hFFE8;
+    rdAddr = 'hFEF8;
     #CLK_PERIOD;
     rd = 0;
     #(CLK_PERIOD*10);

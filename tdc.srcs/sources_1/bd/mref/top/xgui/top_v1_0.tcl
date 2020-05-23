@@ -11,13 +11,16 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "DELAY" -parent ${Page_0}
   ipgui::add_param $IPINST -name "FREQ_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "INITIAL" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "MEAN_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "MEM_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "PP_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "READ_MAX_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "REC_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "RMS_ADDR" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "RUNS" -parent ${Page_0}
   ipgui::add_param $IPINST -name "SIM" -parent ${Page_0}
   ipgui::add_param $IPINST -name "SUM_ADDR" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "VAR_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "VIRUS_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "VIRUS_B_SIZE" -parent ${Page_0}
   ipgui::add_param $IPINST -name "VIRUS_NUM_B" -parent ${Page_0}
@@ -97,6 +100,15 @@ proc validate_PARAM_VALUE.INITIAL { PARAM_VALUE.INITIAL } {
 	return true
 }
 
+proc update_PARAM_VALUE.MEAN_ADDR { PARAM_VALUE.MEAN_ADDR } {
+	# Procedure called to update MEAN_ADDR when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.MEAN_ADDR { PARAM_VALUE.MEAN_ADDR } {
+	# Procedure called to validate MEAN_ADDR
+	return true
+}
+
 proc update_PARAM_VALUE.MEM_WIDTH { PARAM_VALUE.MEM_WIDTH } {
 	# Procedure called to update MEM_WIDTH when any of the dependent parameters in the arguments change
 }
@@ -142,6 +154,15 @@ proc validate_PARAM_VALUE.RMS_ADDR { PARAM_VALUE.RMS_ADDR } {
 	return true
 }
 
+proc update_PARAM_VALUE.RUNS { PARAM_VALUE.RUNS } {
+	# Procedure called to update RUNS when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.RUNS { PARAM_VALUE.RUNS } {
+	# Procedure called to validate RUNS
+	return true
+}
+
 proc update_PARAM_VALUE.SIM { PARAM_VALUE.SIM } {
 	# Procedure called to update SIM when any of the dependent parameters in the arguments change
 }
@@ -157,6 +178,15 @@ proc update_PARAM_VALUE.SUM_ADDR { PARAM_VALUE.SUM_ADDR } {
 
 proc validate_PARAM_VALUE.SUM_ADDR { PARAM_VALUE.SUM_ADDR } {
 	# Procedure called to validate SUM_ADDR
+	return true
+}
+
+proc update_PARAM_VALUE.VAR_ADDR { PARAM_VALUE.VAR_ADDR } {
+	# Procedure called to update VAR_ADDR when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.VAR_ADDR { PARAM_VALUE.VAR_ADDR } {
+	# Procedure called to validate VAR_ADDR
 	return true
 }
 
@@ -276,5 +306,20 @@ proc update_MODELPARAM_VALUE.CHALLENGE_WIDTH { MODELPARAM_VALUE.CHALLENGE_WIDTH 
 proc update_MODELPARAM_VALUE.CHALLENGE_ADDR { MODELPARAM_VALUE.CHALLENGE_ADDR PARAM_VALUE.CHALLENGE_ADDR } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.CHALLENGE_ADDR}] ${MODELPARAM_VALUE.CHALLENGE_ADDR}
+}
+
+proc update_MODELPARAM_VALUE.RUNS { MODELPARAM_VALUE.RUNS PARAM_VALUE.RUNS } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.RUNS}] ${MODELPARAM_VALUE.RUNS}
+}
+
+proc update_MODELPARAM_VALUE.MEAN_ADDR { MODELPARAM_VALUE.MEAN_ADDR PARAM_VALUE.MEAN_ADDR } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.MEAN_ADDR}] ${MODELPARAM_VALUE.MEAN_ADDR}
+}
+
+proc update_MODELPARAM_VALUE.VAR_ADDR { MODELPARAM_VALUE.VAR_ADDR PARAM_VALUE.VAR_ADDR } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.VAR_ADDR}] ${MODELPARAM_VALUE.VAR_ADDR}
 }
 

@@ -47,7 +47,8 @@
 
 module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=32, DELAY=63, READ_MAX_ADDR='hFFF4, 
     REC_ADDR='hFFFC, FREQ_ADDR='hFFF8, VIRUS_ADDR='hFFE0, MEM_WIDTH=16, PP_ADDR='hFFF0, RMS_ADDR = 'hFFEC, SUM_ADDR='hFFE8,
-    ABS_READ_MAX=10000, VIRUS_NUM_B=128, VIRUS_B_SIZE=128, SIM=0, CHALLENGE_WIDTH=128, CHALLENGE_ADDR='hFF00)(
+    ABS_READ_MAX=8192, VIRUS_NUM_B=128, VIRUS_B_SIZE=128, SIM=0, CHALLENGE_WIDTH=128, CHALLENGE_ADDR='hFF00,
+    RUNS=128, MEAN_ADDR='hFEFC, VAR_ADDR='hFEF8)(
     // Axi4Lite Bus
     input       S_AXI_ACLK,
     input       S_AXI_ARESETN,
@@ -145,7 +146,7 @@ RAM#(.DEPTH(ABS_READ_MAX)) ram1(
 );
 
 // State machine
-parameter IDLE=0, READ=1, READ_ONCE=2, READ_RAMP=3, RMS=4, C_RD=5;
+parameter IDLE=0, READ=1, READ_ONCE=2, READ_RAMP=3, RMS=4, C_RD1=5, C_RD0=6;
 reg [3:0] state, nextState;
 
 
@@ -153,7 +154,9 @@ reg [C_S_AXI_DATA_WIDTH-1:0] counterD, counterQ, virusCounterD, virusCounterQ, f
            maxD, maxQ, ppD, ppQ, oneMask;
 reg [DELAY-1:0] tdcClean;
 reg [6:0] total, diffMaxD, diffMaxQ, diffMinD, diffMinQ;
-reg [C_S_AXI_DATA_WIDTH-1:0] rmsAccD, rmsAccQ, sumAccD, sumAccQ;
+reg [C_S_AXI_DATA_WIDTH-1:0] rmsAccD, rmsAccQ, sumAccD, sumAccQ, r_counterD, r_counterQ, 
+    meanD, meanQ;
+reg [64-1:0] varD, varQ, tmp_value;
 
 
 integer i;
@@ -171,6 +174,10 @@ always @ * begin
     ppD = ppQ;
     rmsAccD = rmsAccQ;
     sumAccD = sumAccQ;
+    r_counterD = r_counterQ;
+    meanD = meanQ;
+    varD = varQ;
+    tmp_value = 0;
     challengeD = challengeQ;
     rdData = 0;
     total = 0;
@@ -201,11 +208,25 @@ always @ * begin
 				// The sum of measurements is being measured
                 rdData = sumAccQ;
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
+            end else if(rd && rdAddr == MEAN_ADDR)begin
+                // The mean part of the response is being measured
+                rdData = meanQ;
+                rdData[C_S_AXI_DATA_WIDTH-1] = 1;
+            end else if(rd && rdAddr == VAR_ADDR)begin
+                // The variance part of the response is being measured
+                // Since var reg actually stores E[X^2], compute actual
+                // variance now
+                tmp_value = varQ - (meanQ * meanQ);
+                rdData = tmp_value[C_S_AXI_DATA_WIDTH-1:0];
+                rdData[C_S_AXI_DATA_WIDTH-1] = 1;
             end else if(wr) begin
                 if(wrAddr == REC_ADDR)begin
                     counterD = 0;
+                    r_counterD = 0;
                     rmsAccD = 0;
                     sumAccD = 0;
+                    meanD = 0;
+                    varD = 0;
                     virusCounterD = 0;
                     trigger = 1;    // Trigger scope when we start recording
                     if(wrData == 0)begin
@@ -219,7 +240,7 @@ always @ * begin
                         nextState = READ_RAMP;
                     end else begin
 						// Read a challenge response
-                        nextState = C_RD;
+                        nextState = C_RD0;
                     end
                 end else if(wrAddr == FREQ_ADDR) begin
 					// Write the frequency to be measured
@@ -296,19 +317,35 @@ always @ * begin
                 nextState = IDLE;
             end
         end
-        C_RD:begin
+        C_RD0:begin
+            tmp_value = (rmsAccQ - ((sumAccQ * sumAccQ)>>$clog2(ABS_READ_MAX)));
+            meanD = meanQ + (tmp_value >> $clog2(RUNS));
+            // Var register just accumulates E[X^2] while running
+            varD = varQ + ((tmp_value * tmp_value) >> $clog2(RUNS));
+            r_counterD = r_counterQ + 1;
+            if(r_counterQ < RUNS)begin
+                rmsAccD = 0;
+                sumAccD = 0;
+                virusCounterD = 0;
+                counterD = 0;
+                nextState = C_RD1;
+            end else begin
+                nextState = IDLE;
+            end
+        end
+        C_RD1:begin
 			// This state performs a read with the challenge in the challenge
 			// register
-            /*if(virusCounterQ < CHALLENGE_WIDTH-1)begin
+            if(virusCounterQ < CHALLENGE_WIDTH-1)begin
                 virusCounterD = virusCounterQ + 1;
             end else begin
                 virusCounterD = 0;
             end
             
-            virusFlagD = challengeQ[virusCounterQ];*/
+            virusFlagD = challengeQ[virusCounterQ];
             
-            virusFlagD = challengeQ[CHALLENGE_WIDTH-13];
-            challengeD = {challengeQ[CHALLENGE_WIDTH-12] ^ challengeQ[CHALLENGE_WIDTH-13] ,challengeQ[CHALLENGE_WIDTH-1:1]};
+            //virusFlagD = challengeQ[CHALLENGE_WIDTH-13];
+            //challengeD = {challengeQ[CHALLENGE_WIDTH-12] ^ challengeQ[CHALLENGE_WIDTH-13] ,challengeQ[CHALLENGE_WIDTH-1:1]};
             
             if(virusFlagQ == 1)begin
                 virusEnD = virusMaskQ;
@@ -330,7 +367,7 @@ always @ * begin
                 
                 // Give total a value so that we can simulate
                 if(SIM != 0)begin
-                    total = SIM;
+                    total = SIM - counterQ[0];
                 end
                 
                 rmsAccD = rmsAccQ + (total * total);
@@ -355,7 +392,7 @@ always @ * begin
                 diffMaxD = 0;
                 diffMinD = 'h3f;
                 ppD = (diffMaxQ - diffMinQ);
-                nextState = IDLE;
+                nextState = C_RD0;
             end
         end
         READ_ONCE:begin
@@ -433,6 +470,7 @@ always @ (posedge S_AXI_ACLK)begin
     if(S_AXI_ARESETN == 1)begin
         state <= nextState;
         counterQ <= counterD;
+        r_counterQ <= r_counterD;
         freqQ <= freqD;
         virusMaskQ <= virusMaskD;
         maxQ <= maxD;
@@ -441,10 +479,13 @@ always @ (posedge S_AXI_ACLK)begin
         ppQ <= ppD;
         rmsAccQ <= rmsAccD;
         sumAccQ <= sumAccD;
+        meanQ <= meanD;
+        varQ <= varD;
         challengeQ <= challengeD;
     end else begin
         state <= IDLE;
         counterQ <= 0;
+        r_counterQ <= 0;
         freqQ <= 0;
         virusMaskQ <= 0;
         maxQ <= 0;
@@ -453,6 +494,8 @@ always @ (posedge S_AXI_ACLK)begin
         ppQ <= 0;
         rmsAccQ <= 0;
         sumAccQ <= 0;
+        meanQ <= 0;
+        varQ <= 0;
         challengeQ <= 0;
     end
 end

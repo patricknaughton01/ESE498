@@ -20,6 +20,8 @@ int32_t * const freq_addr 	= (int32_t*)0x43C0FFF8;
 int32_t * const read_addr 	= (int32_t*)0x43C0FFF4;
 int32_t * const rms_addr	= (int32_t*)0x43C0FFEC;
 int32_t * const sum_addr	= (int32_t*)0x43C0FFE8;
+int32_t * const mean_addr	= (int32_t*)0x43C0FEFC;
+int32_t * const var_addr	= (int32_t*)0x43C0FEF8;
 int32_t * const virus_addr 	= (int32_t*)0x43C0FFD8;
 int32_t * const chal_addr	= (int32_t*)0x43C0FF00;
 const int32_t num_reads = 10000;
@@ -71,34 +73,26 @@ void challengeResponse(){
 	*(virus_addr + 3) = maskRO[3];
 	
 	for (int i=0; i<NUM_CHAL; i++) {
-		for(int j = 0; j<100; j++){
 			*chal_addr = challenges[i][0];
 			*(chal_addr + 1) = challenges[i][1];
 			*(chal_addr + 2) = challenges[i][2];
 			*(chal_addr + 3) = challenges[i][3];
 			*rec_addr = 3;					// Start recording challenge response
 
-			int32_t rms_val;
+			int32_t mean;
 			// Wait until the response is done being collected
 			do{
-				rms_val = *(rms_addr);
-			}while((rms_val & 1<<31)==0);
-			rms_val ^= (1<<31);
+				mean = *(mean_addr);
+			}while((mean & 1<<31)==0);
+			mean ^= (1<<31);
 
-			int32_t sum_val;
+			int32_t var;
 			do{
-				sum_val = *(sum_addr);
-			}while((sum_val & 1<<31) == 0);
-			sum_val ^= (1<<31);
+				var = *(var_addr);
+			}while((var & 1<<31) == 0);
+			var ^= (1<<31);
 
-			int32_t energy_val = (int32_t)rms_val;	// Divide by clock ticks to get power
-
-			double energy_no_dc_val =
-					((double)energy_val)
-					- ((double)sum_val * (double)sum_val / (double)num_reads);
-
-			xil_printf("%d %d\n", i, (int32_t)energy_no_dc_val);
-		}
+			xil_printf("%d %d %d\n", i, mean, var);
 	}
 	//xil_printf("stop\n");
 }
