@@ -146,7 +146,7 @@ RAM#(.DEPTH(ABS_READ_MAX)) ram1(
 );
 
 // State machine
-parameter IDLE=0, READ=1, READ_ONCE=2, READ_RAMP=3, RMS=4, C_RD1=5, C_RD0=6;
+parameter IDLE=0, READ=1, READ_ONCE=2, READ_RAMP=3, RMS=4, C_RD1=5, C_RD0=6, C_RD2=7;
 reg [3:0] state, nextState;
 
 
@@ -154,9 +154,8 @@ reg [C_S_AXI_DATA_WIDTH-1:0] counterD, counterQ, virusCounterD, virusCounterQ, f
            maxD, maxQ, ppD, ppQ, oneMask;
 reg [DELAY-1:0] tdcClean;
 reg [6:0] total, diffMaxD, diffMaxQ, diffMinD, diffMinQ;
-reg [C_S_AXI_DATA_WIDTH-1:0] rmsAccD, rmsAccQ, sumAccD, sumAccQ, r_counterD, r_counterQ, 
-    meanD, meanQ;
-reg [64-1:0] varD, varQ, tmp_value;
+reg [C_S_AXI_DATA_WIDTH-1:0] rmsAccD, rmsAccQ, sumAccD, sumAccQ, r_counterD, r_counterQ;
+reg [64-1:0] varD, varQ, tmp_value, meanD, meanQ, tmpMean, tmpVar;
 
 
 integer i;
@@ -178,6 +177,8 @@ always @ * begin
     meanD = meanQ;
     varD = varQ;
     tmp_value = 0;
+    tmpMean = 0;
+    tmpVar = 0;
     challengeD = challengeQ;
     rdData = 0;
     total = 0;
@@ -210,13 +211,16 @@ always @ * begin
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
             end else if(rd && rdAddr == MEAN_ADDR)begin
                 // The mean part of the response is being measured
-                rdData = meanQ;
+                tmpMean = meanQ >> ($clog2(RUNS));
+                rdData = tmpMean[C_S_AXI_DATA_WIDTH-1:0];
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
             end else if(rd && rdAddr == VAR_ADDR)begin
                 // The variance part of the response is being measured
-                // Since var reg actually stores E[X^2], compute actual
+                // Since var reg actually stores sum[X^2], compute actual
                 // variance now
-                tmp_value = varQ - (meanQ * meanQ);
+                tmpVar = varQ >> ($clog2(RUNS));      // tmpVar = E[X^2]
+                tmpMean = meanQ >> ($clog2(RUNS));    // tmpMean = E[X]
+                tmp_value = tmpVar - (tmpMean * tmpMean);
                 rdData = tmp_value[C_S_AXI_DATA_WIDTH-1:0];
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
             end else if(wr) begin
@@ -228,6 +232,8 @@ always @ * begin
                     meanD = 0;
                     varD = 0;
                     virusCounterD = 0;
+                    virusEnD = 0;
+                    virusFlagD = 0;
                     trigger = 1;    // Trigger scope when we start recording
                     if(wrData == 0)begin
 						// Read at a particular frequency response
@@ -319,15 +325,17 @@ always @ * begin
         end
         C_RD0:begin
             tmp_value = (rmsAccQ - ((sumAccQ * sumAccQ)>>$clog2(ABS_READ_MAX)));
-            meanD = meanQ + (tmp_value >> $clog2(RUNS));
+            meanD = meanQ + tmp_value;
             // Var register just accumulates E[X^2] while running
-            varD = varQ + ((tmp_value * tmp_value) >> $clog2(RUNS));
+            varD = varQ + (tmp_value * tmp_value);
             r_counterD = r_counterQ + 1;
             if(r_counterQ < RUNS)begin
                 rmsAccD = 0;
                 sumAccD = 0;
                 virusCounterD = 0;
                 counterD = 0;
+                virusFlagD = 0;
+                virusEnD = 0;
                 nextState = C_RD1;
             end else begin
                 nextState = IDLE;
@@ -392,6 +400,16 @@ always @ * begin
                 diffMaxD = 0;
                 diffMinD = 'h3f;
                 ppD = (diffMaxQ - diffMinQ);
+                virusFlagD = 0;
+                virusEnD = 0;
+                nextState = C_RD2;
+            end
+        end
+        C_RD2:begin
+            if (counterQ < (ABS_READ_MAX<<2))begin
+                counterD = counterQ + 1;
+            end else begin
+                counterD = 0;
                 nextState = C_RD0;
             end
         end

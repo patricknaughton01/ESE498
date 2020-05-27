@@ -22,10 +22,10 @@ int32_t * const rms_addr	= (int32_t*)0x43C0FFEC;
 int32_t * const sum_addr	= (int32_t*)0x43C0FFE8;
 int32_t * const mean_addr	= (int32_t*)0x43C0FEFC;
 int32_t * const var_addr	= (int32_t*)0x43C0FEF8;
-int32_t * const virus_addr 	= (int32_t*)0x43C0FFD8;
+int32_t * const virus_addr 	= (int32_t*)0x43C0FFE0;
 int32_t * const chal_addr	= (int32_t*)0x43C0FF00;
-const int32_t num_reads = 10000;
-int32_t maskRO[5] = {0x7f000000, 0x0, 0x0, 0x0};
+const int32_t num_reads = 8192;
+int32_t maskRO[5] = {0xfff, 0xfff, 0xfff, 0xfff};
 
 void makeMeasurement();
 void stepResponse();

@@ -218,7 +218,7 @@ initial begin
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * 5);
-    #(CLK_PERIOD * ((TO_READ * RUNS) + 100));
+    #(CLK_PERIOD * ((TO_READ * 2 * RUNS) + 100));
     // Allow RMS to accumulate
     /*#(CLK_PERIOD*((TO_READ<<1) + 10));
     // Provide fake FFT values

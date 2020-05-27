@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sat May 23 15:29:10 2020
-# Process ID: 20140
+# Start of session at: Wed May 27 16:38:21 2020
+# Process ID: 19041
 # Current directory: /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1
 # Command line: vivado -log design_1_top_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_top_0_1.tcl
 # Log file: /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1/design_1_top_0_1.vds
@@ -18,11 +18,11 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 20222 
+INFO: Helper process launched with PID 19076 
 WARNING: [Synth 8-2507] parameter declaration becomes local in Axi4LiteSupporter with formal parameter declaration list [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/imports/axi4lite/axi4litesupporter.v:36]
 WARNING: [Synth 8-2507] parameter declaration becomes local in top with formal parameter declaration list [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:149]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2008.621 ; gain = 207.621 ; free physical = 7976 ; free virtual = 21111
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2007.766 ; gain = 208.652 ; free physical = 3730 ; free virtual = 18610
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_top_0_1' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/bd/design_1/ip/design_1_top_0_1/synth/design_1_top_0_1.v:59]
 INFO: [Synth 8-6157] synthesizing module 'top' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:48]
@@ -54,6 +54,7 @@ INFO: [Synth 8-6157] synthesizing module 'top' [/home/patricknaughton01/Document
 	Parameter RMS bound to: 4 - type: integer 
 	Parameter C_RD1 bound to: 5 - type: integer 
 	Parameter C_RD0 bound to: 6 - type: integer 
+	Parameter C_RD2 bound to: 7 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'Axi4LiteSupporter' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/imports/axi4lite/axi4litesupporter.v:3]
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 16 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -119,7 +120,7 @@ INFO: [Synth 8-6157] synthesizing module 'RAM' [/home/patricknaughton01/Document
 	Parameter WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'RAM' (8#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/ram.v:25]
 WARNING: [Synth 8-689] width (16) of port connection 'do' does not match port width (32) of module 'RAM' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:145]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:190]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:191]
 INFO: [Synth 8-6155] done synthesizing module 'top' (9#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:48]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_top_0_1' (10#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/bd/design_1/ip/design_1_top_0_1/synth/design_1_top_0_1.v:59]
 WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[3]
@@ -129,7 +130,7 @@ WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTR
 WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WVALID
 WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_BREADY
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2058.496 ; gain = 257.496 ; free physical = 8003 ; free virtual = 21139
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2058.641 ; gain = 259.527 ; free physical = 3756 ; free virtual = 18638
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -142,12 +143,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2075.340 ; gain = 274.340 ; free physical = 7998 ; free virtual = 21134
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2076.484 ; gain = 277.371 ; free physical = 3758 ; free virtual = 18639
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2075.340 ; gain = 274.340 ; free physical = 7998 ; free virtual = 21134
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2076.484 ; gain = 277.371 ; free physical = 3758 ; free virtual = 18639
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2086.246 ; gain = 0.000 ; free physical = 7934 ; free virtual = 21070
+Netlist sorting complete. Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.20 . Memory (MB): peak = 2087.391 ; gain = 0.000 ; free physical = 3692 ; free virtual = 18573
 INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -156,28 +157,28 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2308.902 ; gain = 0.000 ; free physical = 7816 ; free virtual = 20953
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2309.047 ; gain = 0.000 ; free physical = 3592 ; free virtual = 18474
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.72 ; elapsed = 00:00:00.29 . Memory (MB): peak = 2322.777 ; gain = 13.875 ; free physical = 7806 ; free virtual = 20943
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.75 ; elapsed = 00:00:00.31 . Memory (MB): peak = 2322.922 ; gain = 13.875 ; free physical = 3583 ; free virtual = 18465
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2322.777 ; gain = 521.777 ; free physical = 7877 ; free virtual = 21014
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2322.922 ; gain = 523.809 ; free physical = 3662 ; free virtual = 18543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2322.777 ; gain = 521.777 ; free physical = 7877 ; free virtual = 21013
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2322.922 ; gain = 523.809 ; free physical = 3662 ; free virtual = 18543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2322.777 ; gain = 521.777 ; free physical = 7877 ; free virtual = 21013
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2322.922 ; gain = 523.809 ; free physical = 3662 ; free virtual = 18543
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Axi4LiteSupporter'
 ---------------------------------------------------------------------------------------------------
@@ -192,7 +193,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 WARNING: [Synth 8-327] inferring latch for variable 'latches_reg' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:59]
 WARNING: [Synth 8-327] inferring latch for variable 'out_reg' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/ro.v:47]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2322.777 ; gain = 521.777 ; free physical = 7854 ; free virtual = 20993
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2322.922 ; gain = 523.809 ; free physical = 3640 ; free virtual = 18525
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -200,7 +201,7 @@ Report RTL Partitions:
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
 |1     |virus         |           1|     49152|
-|2     |top__GB1      |           1|      9342|
+|2     |top__GB1      |           1|     10020|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -208,14 +209,14 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   3 Input     64 Bit       Adders := 1     
-	   2 Input     64 Bit       Adders := 1     
-	   2 Input     32 Bit       Adders := 8     
+	   2 Input     64 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 7     
 	   3 Input     32 Bit       Adders := 2     
 	  63 Input      7 Bit       Adders := 1     
 +---Registers : 
 	              128 Bit    Registers := 3     
-	               64 Bit    Registers := 2     
-	               32 Bit    Registers := 11    
+	               64 Bit    Registers := 3     
+	               32 Bit    Registers := 10    
 	                7 Bit    Registers := 2     
 	                4 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
@@ -224,30 +225,28 @@ Detailed RTL Component Info :
 	                64x64  Multipliers := 1     
 +---Muxes : 
 	   2 Input    128 Bit        Muxes := 5     
-	   7 Input    128 Bit        Muxes := 1     
-	   2 Input     64 Bit        Muxes := 1     
-	   7 Input     64 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 2     
+	   8 Input     64 Bit        Muxes := 2     
 	   3 Input     32 Bit        Muxes := 2     
 	   2 Input     32 Bit        Muxes := 14    
-	   7 Input     32 Bit        Muxes := 6     
+	   8 Input     32 Bit        Muxes := 5     
 	   6 Input     32 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 3     
 	   3 Input     16 Bit        Muxes := 2     
-	   7 Input     16 Bit        Muxes := 1     
+	   8 Input     16 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 2     
-	   7 Input      7 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
-	   7 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   4 Input      3 Bit        Muxes := 1     
 	   6 Input      3 Bit        Muxes := 1     
 	   3 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 28    
+	   2 Input      1 Bit        Muxes := 29    
 	   3 Input      1 Bit        Muxes := 5     
 	   4 Input      1 Bit        Muxes := 3     
-	   7 Input      1 Bit        Muxes := 17    
-	   8 Input      1 Bit        Muxes := 3     
+	   8 Input      1 Bit        Muxes := 20    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -275,14 +274,14 @@ Module top
 Detailed RTL Component Info : 
 +---Adders : 
 	   3 Input     64 Bit       Adders := 1     
-	   2 Input     64 Bit       Adders := 1     
-	   2 Input     32 Bit       Adders := 8     
+	   2 Input     64 Bit       Adders := 2     
+	   2 Input     32 Bit       Adders := 7     
 	   3 Input     32 Bit       Adders := 2     
 	  63 Input      7 Bit       Adders := 1     
 +---Registers : 
 	              128 Bit    Registers := 3     
-	               64 Bit    Registers := 1     
-	               32 Bit    Registers := 10    
+	               64 Bit    Registers := 2     
+	               32 Bit    Registers := 9     
 	                7 Bit    Registers := 2     
 	                4 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
@@ -291,26 +290,24 @@ Detailed RTL Component Info :
 	                64x64  Multipliers := 1     
 +---Muxes : 
 	   2 Input    128 Bit        Muxes := 5     
-	   7 Input    128 Bit        Muxes := 1     
-	   2 Input     64 Bit        Muxes := 1     
-	   7 Input     64 Bit        Muxes := 1     
+	   2 Input     64 Bit        Muxes := 2     
+	   8 Input     64 Bit        Muxes := 2     
 	   2 Input     32 Bit        Muxes := 14    
-	   7 Input     32 Bit        Muxes := 6     
+	   8 Input     32 Bit        Muxes := 5     
 	   6 Input     32 Bit        Muxes := 1     
 	   2 Input     16 Bit        Muxes := 2     
-	   7 Input     16 Bit        Muxes := 1     
+	   8 Input     16 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 2     
-	   7 Input      7 Bit        Muxes := 1     
+	   8 Input      7 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 1     
-	   7 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   4 Input      3 Bit        Muxes := 1     
 	   6 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 27    
+	   2 Input      1 Bit        Muxes := 28    
 	   4 Input      1 Bit        Muxes := 3     
-	   7 Input      1 Bit        Muxes := 17    
+	   8 Input      1 Bit        Muxes := 20    
 	   3 Input      1 Bit        Muxes := 1     
-	   8 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -327,30 +324,30 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-4471] merging register 'rmsAccQ_reg[31:0]' into 'rmsAccQ_reg[31:0]' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:480]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:321]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:219]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 16 [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:324]
-DSP Report: Generating DSP meanD4, operation Mode is: A2*B2.
-DSP Report: register sumAccQ_reg is absorbed into DSP meanD4.
-DSP Report: register meanD4 is absorbed into DSP meanD4.
-DSP Report: operator meanD4 is absorbed into DSP meanD4.
-DSP Report: operator meanD4 is absorbed into DSP meanD4.
-DSP Report: Generating DSP meanD4, operation Mode is: (PCIN>>17)+A2*B2.
-DSP Report: register sumAccQ_reg is absorbed into DSP meanD4.
-DSP Report: register sumAccQ_reg is absorbed into DSP meanD4.
-DSP Report: operator meanD4 is absorbed into DSP meanD4.
-DSP Report: operator meanD4 is absorbed into DSP meanD4.
-DSP Report: Generating DSP meanD4, operation Mode is: A2*B2.
-DSP Report: register meanD4 is absorbed into DSP meanD4.
-DSP Report: register meanD4 is absorbed into DSP meanD4.
-DSP Report: operator meanD4 is absorbed into DSP meanD4.
-DSP Report: operator meanD4 is absorbed into DSP meanD4.
-DSP Report: Generating DSP meanD4, operation Mode is: (PCIN>>17)+A2*B2.
-DSP Report: register sumAccQ_reg is absorbed into DSP meanD4.
-DSP Report: register meanD4 is absorbed into DSP meanD4.
-DSP Report: operator meanD4 is absorbed into DSP meanD4.
-DSP Report: operator meanD4 is absorbed into DSP meanD4.
+INFO: [Synth 8-4471] merging register 'rmsAccQ_reg[31:0]' into 'rmsAccQ_reg[31:0]' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:498]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:327]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:223]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 16 [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:330]
+DSP Report: Generating DSP meanD3, operation Mode is: A2*B2.
+DSP Report: register sumAccQ_reg is absorbed into DSP meanD3.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: Generating DSP meanD3, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register sumAccQ_reg is absorbed into DSP meanD3.
+DSP Report: register sumAccQ_reg is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: Generating DSP meanD3, operation Mode is: A2*B2.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: Generating DSP meanD3, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register sumAccQ_reg is absorbed into DSP meanD3.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
 DSP Report: Generating DSP rdData1, operation Mode is: A2*B2.
 DSP Report: register rdData1 is absorbed into DSP rdData1.
 DSP Report: register rdData1 is absorbed into DSP rdData1.
@@ -371,54 +368,54 @@ DSP Report: register rdData1 is absorbed into DSP rdData1.
 DSP Report: register rdData1 is absorbed into DSP rdData1.
 DSP Report: operator rdData1 is absorbed into DSP rdData1.
 DSP Report: operator rdData1 is absorbed into DSP rdData1.
-DSP Report: Generating DSP varD2, operation Mode is: A*B.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: Generating DSP varD2, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: Generating DSP varD2, operation Mode is: PCIN+A*B.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: Generating DSP varD2, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: Generating DSP varD2, operation Mode is: A*B.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: Generating DSP varD2, operation Mode is: PCIN+A*B.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: Generating DSP varD2, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: Generating DSP varD2, operation Mode is: PCIN+A*B.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: Generating DSP varD2, operation Mode is: A*B.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: Generating DSP varD2, operation Mode is: PCIN+A*B.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: Generating DSP varD2, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: Generating DSP varD2, operation Mode is: PCIN+A*B.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: Generating DSP varD2, operation Mode is: A*B.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: Generating DSP varD2, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: Generating DSP varD2, operation Mode is: PCIN+A*B.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: Generating DSP varD2, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator varD2 is absorbed into DSP varD2.
-DSP Report: operator varD2 is absorbed into DSP varD2.
+DSP Report: Generating DSP varD1, operation Mode is: A*B.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: Generating DSP varD1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: Generating DSP varD1, operation Mode is: PCIN+A*B.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: Generating DSP varD1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: Generating DSP varD1, operation Mode is: A*B.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: Generating DSP varD1, operation Mode is: PCIN+A*B.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: Generating DSP varD1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: Generating DSP varD1, operation Mode is: PCIN+A*B.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: Generating DSP varD1, operation Mode is: A*B.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: Generating DSP varD1, operation Mode is: PCIN+A*B.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: Generating DSP varD1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: Generating DSP varD1, operation Mode is: PCIN+A*B.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: Generating DSP varD1, operation Mode is: A*B.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: Generating DSP varD1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: Generating DSP varD1, operation Mode is: PCIN+A*B.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: Generating DSP varD1, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator varD1 is absorbed into DSP varD1.
+DSP Report: operator varD1 is absorbed into DSP varD1.
 INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[7]' (FDRE) to 'insti_0/ppQ_reg[30]'
 INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[8]' (FDRE) to 'insti_0/ppQ_reg[30]'
 INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[9]' (FDRE) to 'insti_0/ppQ_reg[30]'
@@ -447,7 +444,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (insti_0/\
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (insti_0/\diffMinQ_reg[6] )
 INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[6]' (FDRE) to 'insti_0/ppQ_reg[30]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:01:08 . Memory (MB): peak = 2322.777 ; gain = 521.777 ; free physical = 8606 ; free virtual = 21768
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:01:15 . Memory (MB): peak = 2322.922 ; gain = 523.809 ; free physical = 4297 ; free virtual = 19227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -502,19 +499,19 @@ Report RTL Partitions:
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
 |1     |virus         |           1|     32768|
-|2     |top__GB1      |           1|      6358|
+|2     |top__GB1      |           1|      6499|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:01:16 . Memory (MB): peak = 2335.762 ; gain = 534.762 ; free physical = 8441 ; free virtual = 21603
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:01:23 . Memory (MB): peak = 2335.906 ; gain = 536.793 ; free physical = 4191 ; free virtual = 19118
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:01:17 . Memory (MB): peak = 2335.762 ; gain = 534.762 ; free physical = 8431 ; free virtual = 21593
+Finished Timing Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:01:24 . Memory (MB): peak = 2335.906 ; gain = 536.793 ; free physical = 4191 ; free virtual = 19118
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -536,13 +533,13 @@ Report RTL Partitions:
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
 |1     |virus         |           1|     32768|
-|2     |top__GB1      |           1|      6358|
+|2     |top__GB1      |           1|      6499|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:08 ; elapsed = 00:02:01 . Memory (MB): peak = 2375.605 ; gain = 574.605 ; free physical = 8371 ; free virtual = 21535
+Finished Technology Mapping : Time (s): cpu = 00:01:12 ; elapsed = 00:02:09 . Memory (MB): peak = 2378.820 ; gain = 579.707 ; free physical = 4195 ; free virtual = 19122
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -569,13 +566,13 @@ INFO: [Synth 8-3295] tying undriven pin inst/tdc1/delay_bufs_inferred:in0[63] to
 INFO: [Synth 8-3295] tying undriven pin inst/tdc1/delay_bufs_inferred:in0[62] to constant 0
 INFO: [Synth 8-3295] tying undriven pin inst/tdc1/delay_bufs_inferred:in0[61] to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:13 ; elapsed = 00:02:06 . Memory (MB): peak = 2375.605 ; gain = 574.605 ; free physical = 8367 ; free virtual = 21531
+Finished IO Insertion : Time (s): cpu = 00:01:17 ; elapsed = 00:02:14 . Memory (MB): peak = 2378.820 ; gain = 579.707 ; free physical = 4193 ; free virtual = 19121
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:13 ; elapsed = 00:02:06 . Memory (MB): peak = 2375.605 ; gain = 574.605 ; free physical = 8367 ; free virtual = 21531
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:17 ; elapsed = 00:02:14 . Memory (MB): peak = 2378.820 ; gain = 579.707 ; free physical = 4193 ; free virtual = 19121
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -594,25 +591,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:14 ; elapsed = 00:02:08 . Memory (MB): peak = 2375.605 ; gain = 574.605 ; free physical = 8365 ; free virtual = 21530
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:19 ; elapsed = 00:02:16 . Memory (MB): peak = 2378.820 ; gain = 579.707 ; free physical = 4194 ; free virtual = 19122
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:15 ; elapsed = 00:02:08 . Memory (MB): peak = 2375.605 ; gain = 574.605 ; free physical = 8366 ; free virtual = 21531
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:19 ; elapsed = 00:02:16 . Memory (MB): peak = 2378.820 ; gain = 579.707 ; free physical = 4194 ; free virtual = 19122
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:16 ; elapsed = 00:02:10 . Memory (MB): peak = 2375.605 ; gain = 574.605 ; free physical = 8369 ; free virtual = 21534
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:20 ; elapsed = 00:02:17 . Memory (MB): peak = 2378.820 ; gain = 579.707 ; free physical = 4196 ; free virtual = 19124
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:16 ; elapsed = 00:02:10 . Memory (MB): peak = 2375.605 ; gain = 574.605 ; free physical = 8369 ; free virtual = 21534
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:20 ; elapsed = 00:02:17 . Memory (MB): peak = 2378.820 ; gain = 579.707 ; free physical = 4196 ; free virtual = 19124
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -628,19 +625,19 @@ Report Cell Usage:
 +------+----------+------+
 |      |Cell      |Count |
 +------+----------+------+
-|1     |CARRY4    |   175|
+|1     |CARRY4    |   179|
 |2     |DSP48E1   |     7|
 |3     |DSP48E1_1 |     6|
 |4     |LUT1      |   117|
-|5     |LUT2      | 16855|
-|6     |LUT3      |   148|
-|7     |LUT4      |   406|
-|8     |LUT5      |   202|
-|9     |LUT6      |   810|
-|10    |MUXF7     |    17|
-|11    |MUXF8     |     8|
+|5     |LUT2      | 16918|
+|6     |LUT3      |   109|
+|7     |LUT4      |   587|
+|8     |LUT5      |   183|
+|9     |LUT6      |   676|
+|10    |MUXF7     |    37|
+|11    |MUXF8     |    14|
 |12    |RAM256X1S |   224|
-|13    |FDRE      |   905|
+|13    |FDRE      |   918|
 |14    |FDSE      |    16|
 |15    |LD        | 16447|
 +------+----------+------+
@@ -649,11 +646,11 @@ Report Instance Areas:
 +------+-------------------------------+------------------+------+
 |      |Instance                       |Module            |Cells |
 +------+-------------------------------+------------------+------+
-|1     |top                            |                  | 36343|
-|2     |  inst                         |top               | 36334|
-|3     |    AxiSupporter1              |Axi4LiteSupporter |   879|
-|4     |    ram1                       |RAM               |   332|
-|5     |    tdc1                       |tdc               |   410|
+|1     |top                            |                  | 36438|
+|2     |  inst                         |top               | 36429|
+|3     |    AxiSupporter1              |Axi4LiteSupporter |   891|
+|4     |    ram1                       |RAM               |   361|
+|5     |    tdc1                       |tdc               |   413|
 |6     |      \genblk1[1].init         |buffer__1         |     2|
 |7     |      \genblk1[2].init         |buffer__2         |     2|
 |8     |      \genblk1[3].init         |buffer__3         |     2|
@@ -17200,18 +17197,18 @@ Report Instance Areas:
 |16549 |        \genblk1[127].ringOsc  |ro__1280          |     2|
 +------+-------------------------------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:16 ; elapsed = 00:02:10 . Memory (MB): peak = 2375.605 ; gain = 574.605 ; free physical = 8366 ; free virtual = 21534
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:20 ; elapsed = 00:02:18 . Memory (MB): peak = 2378.820 ; gain = 579.707 ; free physical = 4196 ; free virtual = 19127
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:12 ; elapsed = 00:02:07 . Memory (MB): peak = 2375.605 ; gain = 327.168 ; free physical = 8439 ; free virtual = 21608
-Synthesis Optimization Complete : Time (s): cpu = 00:01:16 ; elapsed = 00:02:10 . Memory (MB): peak = 2375.613 ; gain = 574.605 ; free physical = 8439 ; free virtual = 21608
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:16 ; elapsed = 00:02:14 . Memory (MB): peak = 2378.820 ; gain = 333.270 ; free physical = 4267 ; free virtual = 19199
+Synthesis Optimization Complete : Time (s): cpu = 00:01:21 ; elapsed = 00:02:18 . Memory (MB): peak = 2378.828 ; gain = 579.707 ; free physical = 4267 ; free virtual = 19199
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2375.613 ; gain = 0.000 ; free physical = 8492 ; free virtual = 21660
-INFO: [Netlist 29-17] Analyzing 16884 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2378.828 ; gain = 0.000 ; free physical = 4314 ; free virtual = 19246
+INFO: [Netlist 29-17] Analyzing 16914 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2407.621 ; gain = 0.000 ; free physical = 8392 ; free virtual = 21565
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2410.836 ; gain = 0.000 ; free physical = 4251 ; free virtual = 19183
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 16671 instances were transformed.
   LD => LDCE: 16447 instances
@@ -17220,16 +17217,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 74 Infos, 44 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:27 ; elapsed = 00:02:23 . Memory (MB): peak = 2407.621 ; gain = 866.094 ; free physical = 8553 ; free virtual = 21726
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2407.621 ; gain = 0.000 ; free physical = 8553 ; free virtual = 21726
+synth_design: Time (s): cpu = 00:01:31 ; elapsed = 00:02:31 . Memory (MB): peak = 2410.836 ; gain = 869.227 ; free physical = 4426 ; free virtual = 19357
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2410.836 ; gain = 0.000 ; free physical = 4426 ; free virtual = 19358
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1/design_1_top_0_1.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
 INFO: [Coretcl 2-1174] Renamed 16548 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2431.633 ; gain = 0.000 ; free physical = 8547 ; free virtual = 21759
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2434.848 ; gain = 0.000 ; free physical = 4343 ; free virtual = 19319
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1/design_1_top_0_1.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_top_0_1_utilization_synth.rpt -pb design_1_top_0_1_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat May 23 15:31:58 2020...
+INFO: [Common 17-206] Exiting Vivado at Wed May 27 16:41:16 2020...
