@@ -146,7 +146,7 @@ RAM#(.DEPTH(ABS_READ_MAX)) ram1(
 );
 
 // State machine
-parameter IDLE=0, READ=1, READ_ONCE=2, READ_RAMP=3, RMS=4, C_RD1=5, C_RD0=6, C_RD2=7;
+parameter IDLE=0, READ=1, READ_ONCE=2, READ_RAMP=3, RMS=4, C_RD1=5, C_RD0=6, C_RD2=7, C_RD_DELAY=8;
 reg [3:0] state, nextState;
 
 
@@ -336,9 +336,17 @@ always @ * begin
                 counterD = 0;
                 virusFlagD = 0;
                 virusEnD = 0;
-                nextState = C_RD1;
+                nextState = C_RD_DELAY;
             end else begin
                 nextState = IDLE;
+            end
+        end
+        C_RD_DELAY:begin
+            if (counterQ < (ABS_READ_MAX))begin
+                counterD = counterQ + 1;
+            end else begin
+                counterD = 0;
+                nextState = C_RD1;
             end
         end
         C_RD1:begin
@@ -406,7 +414,7 @@ always @ * begin
             end
         end
         C_RD2:begin
-            if (counterQ < (ABS_READ_MAX<<2))begin
+            if (counterQ < (ABS_READ_MAX))begin
                 counterD = counterQ + 1;
             end else begin
                 counterD = 0;

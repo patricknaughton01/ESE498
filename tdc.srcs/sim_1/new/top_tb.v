@@ -218,15 +218,54 @@ initial begin
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * 5);
-    #(CLK_PERIOD * ((TO_READ * 2 * RUNS) + 100));
-    // Allow RMS to accumulate
-    /*#(CLK_PERIOD*((TO_READ<<1) + 10));
-    // Provide fake FFT values
-    for(i = 0; i<FFT_WIDTH; i = i + 1)begin
-        S_TDATA = 'h000010_000010;
-        S_TVALID = 1;
-        #CLK_PERIOD;
-    end*/
+    #(CLK_PERIOD * ((TO_READ * 3 * RUNS) + 100));
+    // Read Mean value
+    rd = 1;
+    rdAddr = 'hFEFC;
+    #CLK_PERIOD;
+    rd = 0;
+    #(CLK_PERIOD*10);
+    // Read Var value
+    rd = 1;
+    rdAddr = 'hFEF8;
+    #CLK_PERIOD;
+    rd = 0;
+    #(CLK_PERIOD*10);
+    
+    // Write a second challenge in
+    // Must be done in 4 groups b/c mask is 128 bits
+    wr = 1;
+    wrAddr = 'hFF00;
+    wrData = 'h0123_4567;
+    #CLK_PERIOD;
+    wr = 0;
+    #(CLK_PERIOD * 5);
+    wr = 1;
+    wrAddr = 'hFF04;
+    wrData = 'h89AB_CDEF;
+    #CLK_PERIOD;
+    wr = 0;
+    #(CLK_PERIOD * 5);
+    wr = 1;
+    wrAddr = 'hFF08;
+    wrData = 'hFEDC_BA98;
+    #CLK_PERIOD;
+    wr = 0;
+    #(CLK_PERIOD * 5);
+    wr = 1;
+    wrAddr = 'hFF0C;
+    wrData = 'h7654_3210;
+    #CLK_PERIOD;
+    wr = 0;
+    #(CLK_PERIOD * 5);
+    // Start the measurement - Challenge
+    wr = 1;
+    wrAddr = 'hFFFC;
+    wrData = 3;
+    #CLK_PERIOD;
+    wr = 0;
+    #(CLK_PERIOD * 5);
+    #(CLK_PERIOD * ((TO_READ * 3 * RUNS) + 100));
     // Read Mean value
     rd = 1;
     rdAddr = 'hFEFC;

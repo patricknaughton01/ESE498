@@ -1379,10 +1379,10 @@
       }
     },
     "interface_nets": {
-      "processing_system7_0_M_AXI_GP0": {
+      "processing_system7_0_DDR": {
         "interface_ports": [
-          "processing_system7_0/M_AXI_GP0",
-          "ps7_0_axi_periph/S00_AXI"
+          "DDR",
+          "processing_system7_0/DDR"
         ]
       },
       "processing_system7_0_FIXED_IO": {
@@ -1397,10 +1397,10 @@
           "top_0/S_AXI"
         ]
       },
-      "processing_system7_0_DDR": {
+      "processing_system7_0_M_AXI_GP0": {
         "interface_ports": [
-          "DDR",
-          "processing_system7_0/DDR"
+          "processing_system7_0/M_AXI_GP0",
+          "ps7_0_axi_periph/S00_AXI"
         ]
       }
     },
