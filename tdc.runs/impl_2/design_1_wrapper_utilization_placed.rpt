@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Thu May 28 16:02:30 2020
+| Date         : Fri May 29 09:35:14 2020
 | Host         : patricknaughton01 running 64-bit Ubuntu 18.04.4 LTS
 | Command      : report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb
 | Design       : design_1_wrapper
@@ -31,8 +31,8 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs                 | 11575 |     0 |     53200 | 21.76 |
-|   LUT as Logic             | 10617 |     0 |     53200 | 19.96 |
+| Slice LUTs                 | 11586 |     0 |     53200 | 21.78 |
+|   LUT as Logic             | 10628 |     0 |     53200 | 19.98 |
 |   LUT as Memory            |   958 |     0 |     17400 |  5.51 |
 |     LUT as Distributed RAM |   896 |     0 |           |       |
 |     LUT as Shift Register  |    62 |     0 |           |       |
@@ -69,13 +69,13 @@ Table of Contents
 +--------------------------------------------+-------+-------+-----------+-------+
 |                  Site Type                 |  Used | Fixed | Available | Util% |
 +--------------------------------------------+-------+-------+-----------+-------+
-| Slice                                      |  5188 |     0 |     13300 | 39.01 |
-|   SLICEL                                   |  3188 |     0 |           |       |
-|   SLICEM                                   |  2000 |     0 |           |       |
-| LUT as Logic                               | 10617 |     0 |     53200 | 19.96 |
-|   using O5 output only                     |     0 |       |           |       |
-|   using O6 output only                     |  1989 |       |           |       |
-|   using O5 and O6                          |  8628 |       |           |       |
+| Slice                                      |  5190 |     0 |     13300 | 39.02 |
+|   SLICEL                                   |  3209 |     0 |           |       |
+|   SLICEM                                   |  1981 |     0 |           |       |
+| LUT as Logic                               | 10628 |     0 |     53200 | 19.98 |
+|   using O5 output only                     |     4 |       |           |       |
+|   using O6 output only                     |  2007 |       |           |       |
+|   using O5 and O6                          |  8617 |       |           |       |
 | LUT as Memory                              |   958 |     0 |     17400 |  5.51 |
 |   LUT as Distributed RAM                   |   896 |     0 |           |       |
 |     using O5 output only                   |     0 |       |           |       |
@@ -86,10 +86,10 @@ Table of Contents
 |     using O6 output only                   |    58 |       |           |       |
 |     using O5 and O6                        |     4 |       |           |       |
 | Slice Registers                            | 17986 |     0 |    106400 | 16.90 |
-|   Register driven from within the Slice    |  9445 |       |           |       |
-|   Register driven from outside the Slice   |  8541 |       |           |       |
-|     LUT in front of the register is unused |  8278 |       |           |       |
-|     LUT in front of the register is used   |   263 |       |           |       |
+|   Register driven from within the Slice    |  9413 |       |           |       |
+|   Register driven from outside the Slice   |  8573 |       |           |       |
+|     LUT in front of the register is unused |  8283 |       |           |       |
+|     LUT in front of the register is used   |   290 |       |           |       |
 | Unique Control Sets                        |   207 |       |     13300 |  1.56 |
 +--------------------------------------------+-------+-------+-----------+-------+
 * Note: Available Control Sets calculated as Slice Registers / 8, Review the Control Sets Report for more information regarding control sets.
