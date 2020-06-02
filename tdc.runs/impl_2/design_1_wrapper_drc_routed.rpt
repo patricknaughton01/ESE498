@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date         : Fri May 29 09:36:12 2020
-| Host         : patricknaughton01 running 64-bit Ubuntu 18.04.4 LTS
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Tue Jun  2 15:20:06 2020
+| Host         : DESKTOP-2GDKRNR running 64-bit major release  (build 9200)
 | Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 | Design       : design_1_wrapper
 | Device       : xc7z020clg484-1
@@ -228,7 +228,7 @@ Related violations: <none>
 
 RTSTAT-10#1 Warning
 No routable loads  
-2312 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/processing_system7_0/inst/CAN0_PHY_TX, design_1_i/processing_system7_0/inst/CAN1_PHY_TX, design_1_i/processing_system7_0/inst/DMA0_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA0_DAVALID, design_1_i/processing_system7_0/inst/DMA0_DRREADY, design_1_i/processing_system7_0/inst/DMA0_RSTN, design_1_i/processing_system7_0/inst/DMA1_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA1_DAVALID, design_1_i/processing_system7_0/inst/DMA1_DRREADY, design_1_i/processing_system7_0/inst/DMA1_RSTN, design_1_i/processing_system7_0/inst/DMA2_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA2_DAVALID, design_1_i/processing_system7_0/inst/DMA2_DRREADY, design_1_i/processing_system7_0/inst/DMA2_RSTN, design_1_i/processing_system7_0/inst/DMA3_DATYPE[1:0] (the first 15 of 1403 listed).
+2228 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/processing_system7_0/inst/CAN0_PHY_TX, design_1_i/processing_system7_0/inst/CAN1_PHY_TX, design_1_i/processing_system7_0/inst/DMA0_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA0_DAVALID, design_1_i/processing_system7_0/inst/DMA0_DRREADY, design_1_i/processing_system7_0/inst/DMA0_RSTN, design_1_i/processing_system7_0/inst/DMA1_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA1_DAVALID, design_1_i/processing_system7_0/inst/DMA1_DRREADY, design_1_i/processing_system7_0/inst/DMA1_RSTN, design_1_i/processing_system7_0/inst/DMA2_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA2_DAVALID, design_1_i/processing_system7_0/inst/DMA2_DRREADY, design_1_i/processing_system7_0/inst/DMA2_RSTN, design_1_i/processing_system7_0/inst/DMA3_DATYPE[1:0] (the first 15 of 1319 listed).
 Related violations: <none>
 
 

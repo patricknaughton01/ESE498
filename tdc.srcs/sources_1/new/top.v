@@ -47,7 +47,7 @@
 
 module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=32, DELAY=63, READ_MAX_ADDR='hFFF4, 
     REC_ADDR='hFFFC, FREQ_ADDR='hFFF8, VIRUS_ADDR='hFFE0, MEM_WIDTH=16, PP_ADDR='hFFF0, RMS_ADDR = 'hFFEC, SUM_ADDR='hFFE8,
-    ABS_READ_MAX=8192, VIRUS_NUM_B=128, VIRUS_B_SIZE=128, SIM=0, CHALLENGE_WIDTH=128, CHALLENGE_ADDR='hFF00,
+    ABS_READ_MAX=8192, /*VIRUS_NUM_B=128,*/ VIRUS_B_SIZE=6144, SIM=0, CHALLENGE_WIDTH=128, CHALLENGE_ADDR='hFF00,
     RUNS=128, MEAN_ADDR='hFEFC, VAR_ADDR='hFEF8)(
     // Axi4Lite Bus
     input       S_AXI_ACLK,
@@ -85,9 +85,9 @@ wire rd;
 wire [DELAY-1:0] tdcOut;
 
 // Signals for the power virus. These are clocked with clk2
-reg[VIRUS_NUM_B-1:0] virusEnD, virusEnQ, virusMaskD, virusMaskQ;
-reg virusFlagD, virusFlagQ;
-wire [(VIRUS_NUM_B*VIRUS_B_SIZE)-1:0] virusOut;
+reg virusEnD, virusEnQ;
+//reg virusFlagD, virusFlagQ;
+wire [VIRUS_B_SIZE-1:0] virusOut;
 reg [CHALLENGE_WIDTH-1:0] challengeD, challengeQ;
 
 Axi4LiteSupporter#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH))AxiSupporter1(
@@ -126,7 +126,7 @@ tdc#(.INITIAL(INITIAL), .DELAY(DELAY)) tdc1(
     .delay(tdcOut)
 );
 
-virus#(.NUM(VIRUS_NUM_B), .SIZE(VIRUS_B_SIZE)) virus1(
+virus#(.SIZE(VIRUS_B_SIZE)) virus1(
     .out(virusOut),
     .enable(virusEnQ)
 );
@@ -137,13 +137,13 @@ reg  [C_S_AXI_ADDR_WIDTH-1:0] memAddr;
 reg  [MEM_WIDTH-1:0] memDi;
 wire [MEM_WIDTH-1:0] memDo;
 
-RAM#(.DEPTH(ABS_READ_MAX)) ram1(
-    .clk(S_AXI_ACLK),
-    .we(memWe),
-    .a(memAddr),
-    .di(memDi),
-    .do(memDo)
-);
+//RAM#(.DEPTH(ABS_READ_MAX)) ram1(
+//    .clk(S_AXI_ACLK),
+//    .we(memWe),
+//    .a(memAddr),
+//    .di(memDi),
+//    .do(memDo)
+//);
 
 // State machine
 parameter IDLE=0, READ=1, READ_ONCE=2, READ_RAMP=3, RMS=4, C_RD1=5, C_RD0=6, C_RD2=7, C_RD_DELAY=8;
@@ -151,9 +151,9 @@ reg [3:0] state, nextState;
 
 
 reg [C_S_AXI_DATA_WIDTH-1:0] counterD, counterQ, virusCounterD, virusCounterQ, freqD, freqQ,
-           maxD, maxQ, ppD, ppQ, oneMask;
+           maxD, maxQ, /*ppD, ppQ,*/ oneMask;
 reg [DELAY-1:0] tdcClean;
-reg [6:0] total, diffMaxD, diffMaxQ, diffMinD, diffMinQ;
+reg [6:0] total/*, diffMaxD, diffMaxQ, diffMinD, diffMinQ*/;
 reg [C_S_AXI_DATA_WIDTH-1:0] rmsAccD, rmsAccQ, sumAccD, sumAccQ, r_counterD, r_counterQ;
 reg [64-1:0] varD, varQ, tmp_value, meanD, meanQ, tmpMean, tmpVar;
 
@@ -166,11 +166,11 @@ always @ * begin
     maxD = maxQ;
     nextState = state;
     virusEnD = virusEnQ;
-    virusMaskD = virusMaskQ;
-    virusFlagD = virusFlagQ;
-    diffMaxD = diffMaxQ;
-    diffMinD = diffMinQ;
-    ppD = ppQ;
+//    virusMaskD = virusMaskQ;
+//    virusFlagD = virusFlagQ;
+//    diffMaxD = diffMaxQ;
+//    diffMinD = diffMinQ;
+//    ppD = ppQ;
     rmsAccD = rmsAccQ;
     sumAccD = sumAccQ;
     r_counterD = r_counterQ;
@@ -191,7 +191,7 @@ always @ * begin
     case(state)
         IDLE:begin
             virusEnD = 0;
-            virusFlagD = 0;
+//            virusFlagD = 0;
             if(rd && rdAddr < (ABS_READ_MAX<<2))begin
 				// The memory is being read from
                 memAddr = rdAddr;
@@ -199,7 +199,7 @@ always @ * begin
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1; 
              end else if(rd && rdAddr == PP_ADDR)begin
 				// The peak-to-peak response is being measured
-                rdData = ppQ;
+//                rdData = ppQ;
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
             end else if(rd && rdAddr == RMS_ADDR)begin
 				// The sum-of-squared measurements is being measured
@@ -233,7 +233,7 @@ always @ * begin
                     varD = 0;
                     virusCounterD = 0;
                     virusEnD = 0;
-                    virusFlagD = 0;
+//                    virusFlagD = 0;
                     trigger = 1;    // Trigger scope when we start recording
                     if(wrData == 0)begin
 						// Read at a particular frequency response
@@ -254,10 +254,10 @@ always @ * begin
                 end else if(wrAddr == READ_MAX_ADDR)begin
 					// Write the number of measurements to perform
                     maxD = wrData;
-                end else if(wrAddr >= VIRUS_ADDR && wrAddr < VIRUS_ADDR + 4*4)begin
+//                end else if(wrAddr >= VIRUS_ADDR && wrAddr < VIRUS_ADDR + 4*4)begin
 					// Write to the virus bitmask. Note that this covers
 					// several addresses
-                    virusMaskD = (virusMaskQ & ~(oneMask << ((wrAddr - VIRUS_ADDR)<<3))) | (wrData << ((wrAddr - VIRUS_ADDR)<<3));
+//                    virusMaskD = (virusMaskQ & ~(oneMask << ((wrAddr - VIRUS_ADDR)<<3))) | (wrData << ((wrAddr - VIRUS_ADDR)<<3));
                 end else if(wrAddr >= CHALLENGE_ADDR && wrAddr < (CHALLENGE_ADDR + (CHALLENGE_WIDTH>>3)))begin
 					// Write to the challenge. Note that this covers several
 					// addresses
@@ -269,17 +269,17 @@ always @ * begin
 			// This state performs a read at the frequency stored in the freq
 			// register
             if(virusCounterQ == (freqQ-1))begin
-                virusFlagD = ~virusFlagQ;
+                virusEnD = ~virusEnQ;
                 virusCounterD = 0;
             end else begin
                 virusCounterD = virusCounterQ + 1;
             end
             
-            if(virusFlagQ == 1)begin
-                virusEnD = virusMaskQ;
-            end else begin
-                virusEnD = 0;
-            end
+//            if(virusFlagQ == 1)begin
+//                virusEnD = virusMaskQ;
+//            end else begin
+//                virusEnD = 0;
+//            end
             
             if(counterQ < maxQ)begin
                 tdcClean[0] = tdcOut[0];
@@ -302,24 +302,24 @@ always @ * begin
                 sumAccD = sumAccQ + total;
                 
                 // Decide if this is a new min or max
-                if (total > diffMaxQ) begin
-                    diffMaxD = total;
-                end
-                if (total < diffMinQ) begin
-                    diffMinD = total;
-                end
+//                if (total > diffMaxQ) begin
+//                    diffMaxD = total;
+//                end
+//                if (total < diffMinQ) begin
+//                    diffMinD = total;
+//                end
                 
                 // Write to the memory
-                memWe = 1;
-                memAddr = counterQ << 2;
-                memDi = total;
+//                memWe = 1;
+//                memAddr = counterQ << 2;
+//                memDi = total;
                 counterD = counterQ + 1;
             end else begin
                 // Write to the PP register
                 counterD = 0;
-                diffMaxD = 0;
-                diffMinD = 'h3f;
-                ppD = (diffMaxQ - diffMinQ);
+//                diffMaxD = 0;
+//                diffMinD = 'h3f;
+//                ppD = (diffMaxQ - diffMinQ);
                 nextState = IDLE;
             end
         end
@@ -334,7 +334,7 @@ always @ * begin
                 sumAccD = 0;
                 virusCounterD = 0;
                 counterD = 0;
-                virusFlagD = 0;
+//                virusFlagD = 0;
                 virusEnD = 0;
                 nextState = C_RD_DELAY;
             end else begin
@@ -358,16 +358,16 @@ always @ * begin
                 virusCounterD = 0;
             end
             
-            virusFlagD = challengeQ[virusCounterQ];
+            virusEnD = challengeQ[virusCounterQ];
             
             //virusFlagD = challengeQ[CHALLENGE_WIDTH-13];
             //challengeD = {challengeQ[CHALLENGE_WIDTH-12] ^ challengeQ[CHALLENGE_WIDTH-13] ,challengeQ[CHALLENGE_WIDTH-1:1]};
             
-            if(virusFlagQ == 1)begin
-                virusEnD = virusMaskQ;
-            end else begin
-                virusEnD = 0;
-            end
+//            if(virusFlagQ == 1)begin
+//                virusEnD = virusMaskQ;
+//            end else begin
+//                virusEnD = 0;
+//            end
             
             if(counterQ < maxQ)begin
                 tdcClean[0] = tdcOut[0];
@@ -390,25 +390,25 @@ always @ * begin
                 sumAccD = sumAccQ + total;
                 
                 // Decide if this is a new min or max
-                if (total > diffMaxQ) begin
-                    diffMaxD = total;
-                end
-                if (total < diffMinQ) begin
-                    diffMinD = total;
-                end
+//                if (total > diffMaxQ) begin
+//                    diffMaxD = total;
+//                end
+//                if (total < diffMinQ) begin
+//                    diffMinD = total;
+//                end
                 
                 // Write to the memory
-                memWe = 1;
-                memAddr = counterQ << 2;
-                memDi = total;
+//                memWe = 1;
+//                memAddr = counterQ << 2;
+//                memDi = total;
                 counterD = counterQ + 1;
             end else begin
                 // Write to the PP register
                 counterD = 0;
-                diffMaxD = 0;
-                diffMinD = 'h3f;
-                ppD = (diffMaxQ - diffMinQ);
-                virusFlagD = 0;
+//                diffMaxD = 0;
+//                diffMinD = 'h3f;
+//                ppD = (diffMaxQ - diffMinQ);
+//                virusFlagD = 0;
                 virusEnD = 0;
                 nextState = C_RD2;
             end
@@ -426,7 +426,7 @@ always @ * begin
 			//will turn on after the number of clock periods stored in the
 			//frequency register
             if(virusCounterQ >= freqQ-1)begin
-                virusEnD = virusMaskQ;
+                virusEnD = 1;
             end else begin
                 virusCounterD = virusCounterQ + 1;
             end
@@ -452,7 +452,7 @@ always @ * begin
                 nextState = IDLE;
             end
         end
-        READ_RAMP:begin
+/*        READ_RAMP:begin
 			// This state performs a read for a ramp function
             if(virusCounterQ >= freqQ-1)begin
                 virusCounterD = 0;
@@ -488,7 +488,7 @@ always @ * begin
                 counterD = 0;
                 nextState = IDLE;
             end
-        end
+        end*/
     endcase
 end
 
@@ -498,11 +498,11 @@ always @ (posedge S_AXI_ACLK)begin
         counterQ <= counterD;
         r_counterQ <= r_counterD;
         freqQ <= freqD;
-        virusMaskQ <= virusMaskD;
+//        virusMaskQ <= virusMaskD;
         maxQ <= maxD;
-        diffMaxQ <= diffMaxD;
-        diffMinQ <= diffMinD;
-        ppQ <= ppD;
+//        diffMaxQ <= diffMaxD;
+//        diffMinQ <= diffMinD;
+//        ppQ <= ppD;
         rmsAccQ <= rmsAccD;
         sumAccQ <= sumAccD;
         meanQ <= meanD;
@@ -513,11 +513,11 @@ always @ (posedge S_AXI_ACLK)begin
         counterQ <= 0;
         r_counterQ <= 0;
         freqQ <= 0;
-        virusMaskQ <= 0;
+//        virusMaskQ <= 0;
         maxQ <= 0;
-        diffMaxQ <= 0;
-        diffMinQ <= 'h3f;               // This stores a min value, so initialize it to max
-        ppQ <= 0;
+//        diffMaxQ <= 0;
+//        diffMinQ <= 'h3f;               // This stores a min value, so initialize it to max
+//        ppQ <= 0;
         rmsAccQ <= 0;
         sumAccQ <= 0;
         meanQ <= 0;
@@ -529,11 +529,11 @@ end
 always @ (posedge clk2) begin
     if(S_AXI_ARESETN == 1)begin
         virusCounterQ <= virusCounterD;
-        virusFlagQ <= virusFlagD;
+//        virusFlagQ <= virusFlagD;
         virusEnQ <= virusEnD;
     end else begin
         virusCounterQ <= 0;
-        virusFlagQ <= 0;
+//        virusFlagQ <= 0;
         virusEnQ <= 0;
     end
 end

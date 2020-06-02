@@ -223,7 +223,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>6bf5af51</spirit:value>
+            <spirit:value>d9a009c6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -236,7 +236,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>6bf5af51</spirit:value>
+            <spirit:value>d9a009c6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -646,14 +646,9 @@
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ABS_READ_MAX">8192</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
-        <spirit:name>VIRUS_NUM_B</spirit:name>
-        <spirit:displayName>Virus Num B</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.VIRUS_NUM_B">128</spirit:value>
-      </spirit:modelParameter>
-      <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>VIRUS_B_SIZE</spirit:name>
         <spirit:displayName>Virus B Size</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.VIRUS_B_SIZE">128</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.VIRUS_B_SIZE">6144</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>SIM</spirit:name>
@@ -700,7 +695,7 @@
       <spirit:file>
         <spirit:name>xgui/top_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_460c8ab2</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_614255ac</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -773,14 +768,9 @@
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.ABS_READ_MAX">8192</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
-      <spirit:name>VIRUS_NUM_B</spirit:name>
-      <spirit:displayName>Virus Num B</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.VIRUS_NUM_B">128</spirit:value>
-    </spirit:parameter>
-    <spirit:parameter>
       <spirit:name>VIRUS_B_SIZE</spirit:name>
       <spirit:displayName>Virus B Size</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.VIRUS_B_SIZE">128</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.VIRUS_B_SIZE">6144</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>SIM</spirit:name>
@@ -832,7 +822,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2020-05-28T20:52:20Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2020-06-02T20:12:12Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>

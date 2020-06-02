@@ -16,18 +16,18 @@
 
 `timescale 1ns / 1ps
 
-module virus#(parameter NUM=16, SIZE=512)(
-    output  wire[(NUM*SIZE)-1:0]    out,
-    input   wire[NUM-1:0]           enable
+module virus#(parameter SIZE=1536)(
+    output  wire[SIZE-1:0]    out,
+    input   wire              enable
 );
 
 genvar k;
 generate
-    for(k = 0; k < NUM; k = k + 1)begin
+    for(k = 0; k < SIZE; k = k + 1)begin
 		// This creates a virus_group with size SIZE, unique output pins, and
 		// enable signal enable[k]
-        virus_group#(.SIZE(SIZE)) vg(out[((NUM-k)*SIZE) - 1:(NUM-k-1)*SIZE], enable[k]);
+        (* dont_touch="true" *)ro ringOsc(out[k], enable, enable);
     end
-endgenerate;
+endgenerate
 
 endmodule

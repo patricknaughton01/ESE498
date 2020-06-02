@@ -23,7 +23,6 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "VAR_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "VIRUS_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "VIRUS_B_SIZE" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "VIRUS_NUM_B" -parent ${Page_0}
 
 
 }
@@ -208,15 +207,6 @@ proc validate_PARAM_VALUE.VIRUS_B_SIZE { PARAM_VALUE.VIRUS_B_SIZE } {
 	return true
 }
 
-proc update_PARAM_VALUE.VIRUS_NUM_B { PARAM_VALUE.VIRUS_NUM_B } {
-	# Procedure called to update VIRUS_NUM_B when any of the dependent parameters in the arguments change
-}
-
-proc validate_PARAM_VALUE.VIRUS_NUM_B { PARAM_VALUE.VIRUS_NUM_B } {
-	# Procedure called to validate VIRUS_NUM_B
-	return true
-}
-
 
 proc update_MODELPARAM_VALUE.C_S_AXI_ADDR_WIDTH { MODELPARAM_VALUE.C_S_AXI_ADDR_WIDTH PARAM_VALUE.C_S_AXI_ADDR_WIDTH } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
@@ -281,11 +271,6 @@ proc update_MODELPARAM_VALUE.SUM_ADDR { MODELPARAM_VALUE.SUM_ADDR PARAM_VALUE.SU
 proc update_MODELPARAM_VALUE.ABS_READ_MAX { MODELPARAM_VALUE.ABS_READ_MAX PARAM_VALUE.ABS_READ_MAX } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.ABS_READ_MAX}] ${MODELPARAM_VALUE.ABS_READ_MAX}
-}
-
-proc update_MODELPARAM_VALUE.VIRUS_NUM_B { MODELPARAM_VALUE.VIRUS_NUM_B PARAM_VALUE.VIRUS_NUM_B } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.VIRUS_NUM_B}] ${MODELPARAM_VALUE.VIRUS_NUM_B}
 }
 
 proc update_MODELPARAM_VALUE.VIRUS_B_SIZE { MODELPARAM_VALUE.VIRUS_B_SIZE PARAM_VALUE.VIRUS_B_SIZE } {

@@ -548,7 +548,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e2e93faf</spirit:value>
+            <spirit:value>9:a89aa1b4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -559,7 +559,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e2e93faf</spirit:value>
+            <spirit:value>9:a89aa1b4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -575,11 +575,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu May 28 20:56:52 UTC 2020</spirit:value>
+            <spirit:value>Tue Jun 02 20:12:29 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e2e93faf</spirit:value>
+            <spirit:value>9:a89aa1b4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -591,7 +591,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:5fab2595</spirit:value>
+            <spirit:value>9:c624b1a1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -607,11 +607,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu May 28 20:56:52 UTC 2020</spirit:value>
+            <spirit:value>Tue Jun 02 20:12:29 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:5fab2595</spirit:value>
+            <spirit:value>9:c624b1a1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -625,11 +625,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu May 28 20:59:50 UTC 2020</spirit:value>
+            <spirit:value>Tue Jun 02 20:15:34 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:e2e93faf</spirit:value>
+            <spirit:value>9:a89aa1b4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1031,14 +1031,9 @@
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ABS_READ_MAX">8192</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
-        <spirit:name>VIRUS_NUM_B</spirit:name>
-        <spirit:displayName>Virus Num B</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.VIRUS_NUM_B">128</spirit:value>
-      </spirit:modelParameter>
-      <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>VIRUS_B_SIZE</spirit:name>
         <spirit:displayName>Virus B Size</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.VIRUS_B_SIZE">128</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.VIRUS_B_SIZE">6144</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>SIM</spirit:name>
@@ -1201,14 +1196,9 @@
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.ABS_READ_MAX">8192</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
-      <spirit:name>VIRUS_NUM_B</spirit:name>
-      <spirit:displayName>Virus Num B</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.VIRUS_NUM_B">128</spirit:value>
-    </spirit:parameter>
-    <spirit:parameter>
       <spirit:name>VIRUS_B_SIZE</spirit:name>
       <spirit:displayName>Virus B Size</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.VIRUS_B_SIZE">128</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.VIRUS_B_SIZE">6144</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>SIM</spirit:name>
