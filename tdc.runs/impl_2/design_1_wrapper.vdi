@@ -2,367 +2,52 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue Jun  2 15:16:51 2020
-# Process ID: 11116
-# Current directory: C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.runs/impl_2
+# Start of session at: Fri Jun  5 11:04:14 2020
+# Process ID: 3452
+# Current directory: C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/impl_2
 # Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
-# Log file: C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.runs/impl_2/design_1_wrapper.vdi
-# Journal file: C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.runs/impl_2\vivado.jou
+# Log file: C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/impl_2/design_1_wrapper.vdi
+# Journal file: C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/impl_2\vivado.jou
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
-WARNING: [IP_Flow 19-3664] IP 'design_1_rst_ps7_0_100M_2' generated file not found 'c:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2_stub.vhdl'. Please regenerate to continue.
-WARNING: [IP_Flow 19-3664] IP 'design_1_rst_ps7_0_100M_2' generated file not found 'c:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_rst_ps7_0_100M_2' generated file not found 'c:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_rst_ps7_0_100M_2' generated file not found 'c:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2_sim_netlist.vhdl'. Please regenerate to continue.
 Command: link_design -top design_1_wrapper -part xc7z020clg484-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7z020clg484-1
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.dcp' for cell 'design_1_i/clk_wiz_0'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_2/design_1_processing_system7_0_2.dcp' for cell 'design_1_i/processing_system7_0'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2.dcp' for cell 'design_1_i/rst_ps7_0_100M'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_top_0_1/design_1_top_0_1.dcp' for cell 'design_1_i/top_0'
-INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.181 . Memory (MB): peak = 812.813 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 180 Unisim elements for replacement
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_2/design_1_processing_system7_0_2.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2.dcp' for cell 'design_1_i/rst_ps7_0_100M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_top_0_1/design_1_top_0_1.dcp' for cell 'design_1_i/top_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.195 . Memory (MB): peak = 791.566 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 153 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2019.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
-WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. design_1_i/clk_wiz_0/inst/clkin1_ibufg 
-Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
-WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'design_1_i/clk_wiz_0/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
-Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_2/design_1_processing_system7_0_2.xdc] for cell 'design_1_i/processing_system7_0/inst'
-Finished Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_2/design_1_processing_system7_0_2.xdc] for cell 'design_1_i/processing_system7_0/inst'
-Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
-Finished Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
-Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
-Finished Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
-Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-CRITICAL WARNING: [Netlist 29-160] Cannot set property 'BOARD_PIN', because the property does not exist for objects of type 'pin'. [c:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc:3]
-Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
-Finished Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc:57]
-INFO: [Timing 38-2] Deriving generated clocks [c:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc:57]
-get_clocks: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1545.992 ; gain = 580.984
-Finished Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
-Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/zedboard.xdc]
-Finished Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/zedboard.xdc]
-Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[0].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:1]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:1]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[1].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:2]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:2]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[2].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:3]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:3]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[3].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:4]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:4]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[4].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:5]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:5]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[5].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:6]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:6]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[6].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:7]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:7]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[7].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:8]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:8]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[8].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:9]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:9]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[9].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:10]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:10]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[10].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:11]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:11]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[11].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:12]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:12]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[12].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:13]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:13]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[13].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:14]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:14]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[14].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:15]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:15]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[15].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:16]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:16]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[16].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:17]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:17]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[17].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:18]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[18].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:19]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:19]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[19].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:20]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:20]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[20].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:21]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:21]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[21].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:22]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:22]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[22].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:23]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:23]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[23].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:24]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:24]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[24].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:25]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:25]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[25].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:26]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:26]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[26].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:27]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:27]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[27].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:28]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:28]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[28].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:29]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:29]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[29].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:30]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:30]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[30].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:31]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:31]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[31].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:32]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:32]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[32].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:33]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[33].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:34]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[34].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:35]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[35].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:36]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[36].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:37]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[37].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:38]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:38]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[38].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:39]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:39]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[39].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:40]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:40]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[40].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:41]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:41]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[41].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:42]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:42]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[42].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:43]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:43]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[43].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:44]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:44]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[44].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:45]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:45]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[45].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:46]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:46]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[46].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:47]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:47]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[47].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:48]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:48]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[48].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:49]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:49]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[49].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:50]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:50]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[50].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:51]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:51]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[51].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:52]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:52]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[52].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:53]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:53]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[53].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:54]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:54]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[54].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:55]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:55]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[55].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:56]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:56]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[56].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:57]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:57]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[57].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:58]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:58]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[58].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:59]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:59]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[59].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:60]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:60]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[60].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:61]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:61]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[61].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:62]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:62]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[62].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:63]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:63]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[63].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:64]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:64]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[64].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:65]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:65]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[65].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:66]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:66]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[66].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:67]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:67]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[67].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:68]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:68]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[68].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:69]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:69]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[69].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:70]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:70]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[70].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:71]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:71]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[71].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:72]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:72]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[72].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:73]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:73]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[73].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:74]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:74]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[74].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:75]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:75]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[75].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:76]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:76]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[76].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:77]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:77]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[77].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:78]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:78]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[78].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:79]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:79]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[79].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:80]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:80]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[80].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:81]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:81]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[81].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:82]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:82]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[82].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:83]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:83]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[83].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:84]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:84]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[84].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:85]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:85]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[85].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:86]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:86]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[86].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:87]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:87]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[87].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:88]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:88]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[88].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:89]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:89]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[89].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:90]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:90]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[90].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:91]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:91]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[91].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:92]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:92]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[92].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:93]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:93]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[93].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:94]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:94]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[94].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:95]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:95]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[95].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:96]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:96]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[96].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:97]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:97]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[97].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:98]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:98]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[98].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:99]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:99]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].vg/genblk1[99].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:100]
-INFO: [Common 17-14] Message 'Vivado 12-507' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:100]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:100]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-INFO: [Common 17-14] Message 'Common 17-55' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc:100]
-Finished Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/loops.xdc]
-Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/placement.xdc]
-Finished Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/constrs_1/new/placement.xdc]
+Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_2/design_1_processing_system7_0_2.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_2/design_1_processing_system7_0_2.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/zedboard.xdc]
+Finished Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/zedboard.xdc]
+Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc]
+Finished Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc]
+Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/placement.xdc]
+Finished Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/placement.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 1552.230 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 947.090 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-19 Infos, 104 Warnings, 101 Critical Warnings and 0 Errors encountered.
+14 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:52 . Memory (MB): peak = 1552.230 ; gain = 1071.363
+link_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 947.090 ; gain = 467.852
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -380,45 +65,47 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1552.230 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 7eca1d56
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1003.082 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 8b7e338c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 1552.230 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.127 . Memory (MB): peak = 1003.082 ; gain = 0.000
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 1641.355 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1543.223 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+WARNING: [Place 30-439] A collection of cells which have restrictive placement or routing requirements has some cells within some area groups and some cells outside. This is likely to cause placement problems.
+	The cells involved are "design_1_i/top_0/inst/tdc1/rmsAccD1__51_carry__0_i_9" "design_1_i/top_0/inst/rmsAccD1__0_carry" "design_1_i/top_0/inst/rmsAccD1__0_carry__0" in Carry-chain. The area groups involved are "pblock_tdc1" 
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: e649a963
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 922cba29
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1643.383 ; gain = 91.152
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1549.258 ; gain = 546.176
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 1cd2cac17
+Phase 1.3 Build Placer Netlist Model | Checksum: a9cdc7b9
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1647.926 ; gain = 95.695
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:20 . Memory (MB): peak = 1549.258 ; gain = 546.176
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 1cd2cac17
+Phase 1.4 Constrain Clocks/Macros | Checksum: a9cdc7b9
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1647.926 ; gain = 95.695
-Phase 1 Placer Initialization | Checksum: 1cd2cac17
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:20 . Memory (MB): peak = 1549.258 ; gain = 546.176
+Phase 1 Placer Initialization | Checksum: a9cdc7b9
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1647.926 ; gain = 95.695
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:20 . Memory (MB): peak = 1549.258 ; gain = 546.176
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 200348ba2
+Phase 2.1 Floorplanning | Checksum: 10e048a25
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1647.926 ; gain = 95.695
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 1549.258 ; gain = 546.176
 
 Phase 2.2 Global Placement Core
 
 Phase 2.2.1 Physical Synthesis In Placer
-INFO: [Physopt 32-1018] Found 6195 candidate LUT instances to create LUTNM shape
-INFO: [Physopt 32-775] End 1 Pass. Optimized 3138 nets or cells. Created 57 new cells, deleted 3081 existing cells and moved 0 existing cell
+INFO: [Physopt 32-1018] Found 2370 candidate LUT instances to create LUTNM shape
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1198 nets or cells. Created 37 new cells, deleted 1161 existing cells and moved 0 existing cell
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -431,7 +118,7 @@ INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found i
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for HD net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 2159.055 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1623.543 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -440,76 +127,76 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |           57  |           3081  |                  3138  |           0  |           1  |  00:00:16  |
+|  LUT Combining                                    |           37  |           1161  |                  1198  |           0  |           1  |  00:00:04  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |           57  |           3081  |                  3138  |           0  |           7  |  00:00:16  |
+|  Total                                            |           37  |           1161  |                  1198  |           0  |           7  |  00:00:04  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2.1 Physical Synthesis In Placer | Checksum: 1c835e402
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 14b37dcc1
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:32 . Memory (MB): peak = 2159.055 ; gain = 606.824
-Phase 2.2 Global Placement Core | Checksum: 19aa56d58
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:33 . Memory (MB): peak = 1623.543 ; gain = 620.461
+Phase 2.2 Global Placement Core | Checksum: 117716b1c
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:33 . Memory (MB): peak = 2159.055 ; gain = 606.824
-Phase 2 Global Placement | Checksum: 19aa56d58
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:33 . Memory (MB): peak = 1623.543 ; gain = 620.461
+Phase 2 Global Placement | Checksum: 117716b1c
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:33 . Memory (MB): peak = 2159.055 ; gain = 606.824
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:33 . Memory (MB): peak = 1623.543 ; gain = 620.461
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 148fc530c
+Phase 3.1 Commit Multi Column Macros | Checksum: f25b2c71
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:33 . Memory (MB): peak = 2159.055 ; gain = 606.824
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:34 . Memory (MB): peak = 1623.543 ; gain = 620.461
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 181b942fb
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 16183c840
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:34 . Memory (MB): peak = 2159.055 ; gain = 606.824
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:34 . Memory (MB): peak = 1623.543 ; gain = 620.461
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1ad212e45
+Phase 3.3 Area Swap Optimization | Checksum: 1dd3e6693
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:34 . Memory (MB): peak = 2159.055 ; gain = 606.824
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:34 . Memory (MB): peak = 1623.543 ; gain = 620.461
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 1ba8d712e
+Phase 3.4 Pipeline Register Optimization | Checksum: 21d4235a2
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:34 . Memory (MB): peak = 2159.055 ; gain = 606.824
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:34 . Memory (MB): peak = 1623.543 ; gain = 620.461
 
 Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: 23689d4c1
+Phase 3.5 Fast Optimization | Checksum: 1857c7cb9
 
-Time (s): cpu = 00:00:42 ; elapsed = 00:00:37 . Memory (MB): peak = 2159.055 ; gain = 606.824
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:38 . Memory (MB): peak = 1623.543 ; gain = 620.461
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: 2d2ad42dc
+Phase 3.6 Small Shape Detail Placement | Checksum: d3b321fc
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:42 . Memory (MB): peak = 2159.055 ; gain = 606.824
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:41 . Memory (MB): peak = 1623.543 ; gain = 620.461
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 21d5db98c
+Phase 3.7 Re-assign LUT pins | Checksum: 12010b9a3
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:42 . Memory (MB): peak = 2159.055 ; gain = 606.824
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:41 . Memory (MB): peak = 1623.543 ; gain = 620.461
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 1eaaff8a1
+Phase 3.8 Pipeline Register Optimization | Checksum: 16018a7f4
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:43 . Memory (MB): peak = 2159.055 ; gain = 606.824
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:41 . Memory (MB): peak = 1623.543 ; gain = 620.461
 
 Phase 3.9 Fast Optimization
-Phase 3.9 Fast Optimization | Checksum: 24ee9fe2f
+Phase 3.9 Fast Optimization | Checksum: e50f17a3
 
-Time (s): cpu = 00:00:53 ; elapsed = 00:00:47 . Memory (MB): peak = 2159.055 ; gain = 606.824
-Phase 3 Detail Placement | Checksum: 24ee9fe2f
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:47 . Memory (MB): peak = 1623.543 ; gain = 620.461
+Phase 3 Detail Placement | Checksum: e50f17a3
 
-Time (s): cpu = 00:00:53 ; elapsed = 00:00:47 . Memory (MB): peak = 2159.055 ; gain = 606.824
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:47 . Memory (MB): peak = 1623.543 ; gain = 620.461
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -517,83 +204,83 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 2906e49f6
+Post Placement Optimization Initialization | Checksum: 181e3c1b1
 
 Phase 4.1.1.1 BUFG Insertion
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 2906e49f6
+Phase 4.1.1.1 BUFG Insertion | Checksum: 181e3c1b1
 
-Time (s): cpu = 00:00:58 ; elapsed = 00:00:51 . Memory (MB): peak = 2159.055 ; gain = 606.824
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-32.683. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 196723a32
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:50 . Memory (MB): peak = 1636.637 ; gain = 633.555
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-32.668. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 175140439
 
-Time (s): cpu = 00:01:06 ; elapsed = 00:01:00 . Memory (MB): peak = 2159.055 ; gain = 606.824
-Phase 4.1 Post Commit Optimization | Checksum: 196723a32
+Time (s): cpu = 00:01:13 ; elapsed = 00:01:05 . Memory (MB): peak = 1636.637 ; gain = 633.555
+Phase 4.1 Post Commit Optimization | Checksum: 175140439
 
-Time (s): cpu = 00:01:06 ; elapsed = 00:01:00 . Memory (MB): peak = 2159.055 ; gain = 606.824
+Time (s): cpu = 00:01:13 ; elapsed = 00:01:05 . Memory (MB): peak = 1636.637 ; gain = 633.555
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 196723a32
+Phase 4.2 Post Placement Cleanup | Checksum: 175140439
 
-Time (s): cpu = 00:01:06 ; elapsed = 00:01:00 . Memory (MB): peak = 2159.055 ; gain = 606.824
+Time (s): cpu = 00:01:13 ; elapsed = 00:01:05 . Memory (MB): peak = 1636.637 ; gain = 633.555
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 196723a32
+Phase 4.3 Placer Reporting | Checksum: 175140439
 
-Time (s): cpu = 00:01:06 ; elapsed = 00:01:00 . Memory (MB): peak = 2159.055 ; gain = 606.824
+Time (s): cpu = 00:01:13 ; elapsed = 00:01:05 . Memory (MB): peak = 1636.637 ; gain = 633.555
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.057 . Memory (MB): peak = 2159.055 ; gain = 0.000
-Phase 4.4 Final Placement Cleanup | Checksum: 1208a05b0
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1636.637 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: cf1207fb
 
-Time (s): cpu = 00:01:07 ; elapsed = 00:01:00 . Memory (MB): peak = 2159.055 ; gain = 606.824
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1208a05b0
+Time (s): cpu = 00:01:13 ; elapsed = 00:01:06 . Memory (MB): peak = 1636.637 ; gain = 633.555
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: cf1207fb
 
-Time (s): cpu = 00:01:07 ; elapsed = 00:01:00 . Memory (MB): peak = 2159.055 ; gain = 606.824
-Ending Placer Task | Checksum: 116f33412
+Time (s): cpu = 00:01:13 ; elapsed = 00:01:06 . Memory (MB): peak = 1636.637 ; gain = 633.555
+Ending Placer Task | Checksum: 9c55212d
 
-Time (s): cpu = 00:01:07 ; elapsed = 00:01:00 . Memory (MB): peak = 2159.055 ; gain = 606.824
+Time (s): cpu = 00:01:13 ; elapsed = 00:01:06 . Memory (MB): peak = 1636.637 ; gain = 633.555
 INFO: [Common 17-83] Releasing license: Implementation
-48 Infos, 104 Warnings, 101 Critical Warnings and 0 Errors encountered.
+43 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:01:11 ; elapsed = 00:01:02 . Memory (MB): peak = 2159.055 ; gain = 606.824
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 2159.055 ; gain = 0.000
+place_design: Time (s): cpu = 00:01:18 ; elapsed = 00:01:08 . Memory (MB): peak = 1636.637 ; gain = 689.547
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1636.637 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 2159.055 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.runs/impl_2/design_1_wrapper_placed.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 1636.637 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/impl_2/design_1_wrapper_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file design_1_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.089 . Memory (MB): peak = 2159.055 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 1636.637 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 2159.055 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1636.637 ; gain = 0.000
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 2159.055 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1637.074 ; gain = 0.000
 
 Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-32.683 | TNS=-2522.127 |
-Phase 1 Physical Synthesis Initialization | Checksum: 15eb80bb8
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-32.668 | TNS=-2404.995 |
+Phase 1 Physical Synthesis Initialization | Checksum: 18cbcbf3e
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2159.055 ; gain = 0.000
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-32.683 | TNS=-2522.127 |
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1637.121 ; gain = 0.047
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-32.668 | TNS=-2404.995 |
 
 Phase 2 DSP Register Optimization
 INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Phase 2 DSP Register Optimization | Checksum: 15eb80bb8
+Phase 2 DSP Register Optimization | Checksum: 18cbcbf3e
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2159.055 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1637.121 ; gain = 0.047
 
 Phase 3 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-32.683 | TNS=-2522.127 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-32.668 | TNS=-2404.995 |
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/latches[60]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[60]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[56]. Optimizations did not improve timing on the net.
@@ -880,12 +567,12 @@ INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/
 INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp_inferred_i_1
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-32.683 | TNS=-2522.127 |
-Phase 3 Critical Path Optimization | Checksum: 15eb80bb8
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-32.668 | TNS=-2404.995 |
+Phase 3 Critical Path Optimization | Checksum: 18cbcbf3e
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2159.055 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 2159.055 ; gain = 0.000
-INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-32.683 | TNS=-2522.127 |
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 1646.383 ; gain = 9.309
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1646.383 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-32.668 | TNS=-2404.995 |
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -895,27 +582,27 @@ Summary of Physical Synthesis Optimizations
 |  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 |  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Critical Path  |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:05  |
-|  Total          |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           2  |  00:00:05  |
+|  Critical Path  |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:06  |
+|  Total          |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           2  |  00:00:06  |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 2159.055 ; gain = 0.000
-Ending Physical Synthesis Task | Checksum: 15eb80bb8
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1646.383 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 18cbcbf3e
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2159.055 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 1646.383 ; gain = 9.309
 INFO: [Common 17-83] Releasing license: Implementation
-349 Infos, 104 Warnings, 101 Critical Warnings and 0 Errors encountered.
+344 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
-phys_opt_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 2159.055 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 2159.055 ; gain = 0.000
+phys_opt_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1646.383 ; gain = 9.746
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1646.383 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 2159.055 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.runs/impl_2/design_1_wrapper_physopt.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1655.230 ; gain = 8.848
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/impl_2/design_1_wrapper_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -927,129 +614,128 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: e23ca654 ConstDB: 0 ShapeSum: 53175723 RouteDB: 0
+Checksum: PlaceDB: 6d909567 ConstDB: 0 ShapeSum: 27152cbf RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: 181e23ae6
+Phase 1 Build RT Design | Checksum: f0072474
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:26 . Memory (MB): peak = 2159.055 ; gain = 0.000
-Post Restoration Checksum: NetGraph: d339eb90 NumContArr: aea84f56 Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:37 . Memory (MB): peak = 1719.355 ; gain = 54.398
+Post Restoration Checksum: NetGraph: 89c5d486 NumContArr: 66414fee Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: 181e23ae6
+Phase 2.1 Create Timer | Checksum: f0072474
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:26 . Memory (MB): peak = 2159.055 ; gain = 0.000
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:37 . Memory (MB): peak = 1719.355 ; gain = 54.398
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: 181e23ae6
+Phase 2.2 Fix Topology Constraints | Checksum: f0072474
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:26 . Memory (MB): peak = 2159.055 ; gain = 0.000
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:37 . Memory (MB): peak = 1726.453 ; gain = 61.496
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: 181e23ae6
+Phase 2.3 Pre Route Cleanup | Checksum: f0072474
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:26 . Memory (MB): peak = 2159.055 ; gain = 0.000
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:37 . Memory (MB): peak = 1726.453 ; gain = 61.496
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 12986fc95
+Phase 2.4 Update Timing | Checksum: 1a94ec0cd
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:32 . Memory (MB): peak = 2159.055 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-33.056| TNS=-2519.511| WHS=-0.175 | THS=-15.051|
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:41 . Memory (MB): peak = 1754.094 ; gain = 89.137
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-33.038| TNS=-2413.181| WHS=-0.149 | THS=-15.266|
 
-Phase 2 Router Initialization | Checksum: 133b4f530
+Phase 2 Router Initialization | Checksum: 220d90f78
 
-Time (s): cpu = 00:00:41 ; elapsed = 00:00:34 . Memory (MB): peak = 2159.055 ; gain = 0.000
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:43 . Memory (MB): peak = 1788.000 ; gain = 123.043
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.174174 %
-  Global Horizontal Routing Utilization  = 0.20977 %
+  Global Vertical Routing Utilization    = 0.0704152 %
+  Global Horizontal Routing Utilization  = 0.0818966 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 14340
+  Number of Failed Nets               = 7303
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 14339
+  Number of Unrouted Nets             = 7302
   Number of Partially Routed Nets     = 1
   Number of Node Overlaps             = 0
 
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 10774f7f8
+Phase 3 Initial Routing | Checksum: 21552e22e
 
-Time (s): cpu = 00:00:43 ; elapsed = 00:00:35 . Memory (MB): peak = 2159.055 ; gain = 0.000
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:44 . Memory (MB): peak = 1788.000 ; gain = 123.043
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 258
- Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 190
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-37.342| TNS=-4848.120| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-37.300| TNS=-3793.525| WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 14b05bcbf
+Phase 4.1 Global Iteration 0 | Checksum: 9739957a
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:38 . Memory (MB): peak = 2159.055 ; gain = 0.000
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:47 . Memory (MB): peak = 1788.000 ; gain = 123.043
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 6
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-37.341| TNS=-4536.180| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-37.300| TNS=-3793.989| WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 2191b8d63
+Phase 4.2 Global Iteration 1 | Checksum: 15f26614d
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:39 . Memory (MB): peak = 2159.055 ; gain = 0.000
-Phase 4 Rip-up And Reroute | Checksum: 2191b8d63
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:47 . Memory (MB): peak = 1788.000 ; gain = 123.043
+Phase 4 Rip-up And Reroute | Checksum: 15f26614d
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:39 . Memory (MB): peak = 2159.055 ; gain = 0.000
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:47 . Memory (MB): peak = 1788.000 ; gain = 123.043
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 19ee7c430
+Phase 5.1.1 Update Timing | Checksum: 1e7b01d81
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:39 . Memory (MB): peak = 2159.055 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-37.341| TNS=-4468.791| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:48 . Memory (MB): peak = 1788.000 ; gain = 123.043
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-37.300| TNS=-3768.755| WHS=N/A    | THS=N/A    |
 
  Number of Nodes with overlaps = 0
-Phase 5.1 Delay CleanUp | Checksum: 21979d767
+Phase 5.1 Delay CleanUp | Checksum: 1471d65bc
 
-Time (s): cpu = 00:00:50 ; elapsed = 00:00:40 . Memory (MB): peak = 2159.055 ; gain = 0.000
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:49 . Memory (MB): peak = 1788.000 ; gain = 123.043
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 21979d767
+Phase 5.2 Clock Skew Optimization | Checksum: 1471d65bc
 
-Time (s): cpu = 00:00:50 ; elapsed = 00:00:40 . Memory (MB): peak = 2159.055 ; gain = 0.000
-Phase 5 Delay and Skew Optimization | Checksum: 21979d767
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:49 . Memory (MB): peak = 1788.000 ; gain = 123.043
+Phase 5 Delay and Skew Optimization | Checksum: 1471d65bc
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:40 . Memory (MB): peak = 2159.055 ; gain = 0.000
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:49 . Memory (MB): peak = 1788.000 ; gain = 123.043
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 240748147
+Phase 6.1.1 Update Timing | Checksum: 93d95ee8
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:41 . Memory (MB): peak = 2159.055 ; gain = 0.000
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-37.340| TNS=-3948.871| WHS=0.101  | THS=0.000  |
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:49 . Memory (MB): peak = 1788.000 ; gain = 123.043
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-37.300| TNS=-3337.644| WHS=0.075  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 2121719d5
+Phase 6.1 Hold Fix Iter | Checksum: 93d95ee8
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:41 . Memory (MB): peak = 2159.055 ; gain = 0.000
-Phase 6 Post Hold Fix | Checksum: 2121719d5
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:50 . Memory (MB): peak = 1788.000 ; gain = 123.043
+Phase 6 Post Hold Fix | Checksum: 93d95ee8
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:41 . Memory (MB): peak = 2159.055 ; gain = 0.000
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:50 . Memory (MB): peak = 1788.000 ; gain = 123.043
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 1.35187 %
-  Global Horizontal Routing Utilization  = 1.50938 %
+  Global Vertical Routing Utilization    = 0.852024 %
+  Global Horizontal Routing Utilization  = 0.862745 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -1061,9 +747,9 @@ Router Utilization Summary
 
 Congestion Report
 North Dir 1x1 Area, Max Cong = 47.7477%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 45.045%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 52.9412%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 61.7647%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 43.2432%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 42.6471%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 41.1765%, No Congested Regions.
 
 ------------------------------
 Reporting congestion hotspots
@@ -1085,69 +771,68 @@ Direction: West
 Congested clusters found at Level 0
 Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 
-Phase 7 Route finalize | Checksum: 1cf1833b5
+Phase 7 Route finalize | Checksum: cbe622c4
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:41 . Memory (MB): peak = 2159.055 ; gain = 0.000
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:50 . Memory (MB): peak = 1788.000 ; gain = 123.043
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 1cf1833b5
+Phase 8 Verifying routed nets | Checksum: cbe622c4
 
-Time (s): cpu = 00:00:52 ; elapsed = 00:00:41 . Memory (MB): peak = 2159.055 ; gain = 0.000
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:50 . Memory (MB): peak = 1788.000 ; gain = 123.043
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 1575a3ad9
+Phase 9 Depositing Routes | Checksum: 77083a61
 
-Time (s): cpu = 00:00:53 ; elapsed = 00:00:42 . Memory (MB): peak = 2159.055 ; gain = 0.000
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:50 . Memory (MB): peak = 1788.000 ; gain = 123.043
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-37.340| TNS=-3948.871| WHS=0.101  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-37.300| TNS=-3337.644| WHS=0.075  | THS=0.000  |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 10 Post Router Timing | Checksum: 1575a3ad9
+Phase 10 Post Router Timing | Checksum: 77083a61
 
-Time (s): cpu = 00:00:53 ; elapsed = 00:00:42 . Memory (MB): peak = 2159.055 ; gain = 0.000
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:50 . Memory (MB): peak = 1788.000 ; gain = 123.043
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:53 ; elapsed = 00:00:42 . Memory (MB): peak = 2159.055 ; gain = 0.000
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:50 . Memory (MB): peak = 1788.000 ; gain = 123.043
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-364 Infos, 105 Warnings, 101 Critical Warnings and 0 Errors encountered.
+359 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:57 ; elapsed = 00:00:44 . Memory (MB): peak = 2159.055 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 2159.055 ; gain = 0.000
+route_design: Time (s): cpu = 00:01:05 ; elapsed = 00:00:52 . Memory (MB): peak = 1788.000 ; gain = 132.770
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1788.000 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 2159.055 ; gain = 0.000
-INFO: [Common 17-1381] The checkpoint 'C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.runs/impl_2/design_1_wrapper_routed.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1788.000 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/impl_2/design_1_wrapper_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 Command: report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.runs/impl_2/design_1_wrapper_drc_routed.rpt.
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/impl_2/design_1_wrapper_drc_routed.rpt.
 report_drc completed successfully
 INFO: [runtcl-4] Executing : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 Command: report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
-INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.runs/impl_2/design_1_wrapper_methodology_drc_routed.rpt.
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/impl_2/design_1_wrapper_methodology_drc_routed.rpt.
 report_methodology completed successfully
-report_methodology: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2159.055 ; gain = 0.000
+report_methodology: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1800.125 ; gain = 6.945
 INFO: [runtcl-4] Executing : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 Command: report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-376 Infos, 105 Warnings, 101 Critical Warnings and 0 Errors encountered.
+371 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
-report_power: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2159.055 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_route_status -file design_1_wrapper_route_status.rpt -pb design_1_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file design_1_wrapper_timing_summary_routed.rpt -pb design_1_wrapper_timing_summary_routed.pb -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
@@ -1203,7 +888,7 @@ WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_0/inst/varD1__1
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_0/inst/varD1__2 multiplier stage design_1_i/top_0/inst/varD1__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_0/inst/varD1__3 multiplier stage design_1_i/top_0/inst/varD1__3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_0/inst/varD1__4 multiplier stage design_1_i/top_0/inst/varD1__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC RTSTAT-10] No routable loads: 2228 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/processing_system7_0/inst/CAN0_PHY_TX, design_1_i/processing_system7_0/inst/CAN1_PHY_TX, design_1_i/processing_system7_0/inst/DMA0_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA0_DAVALID, design_1_i/processing_system7_0/inst/DMA0_DRREADY, design_1_i/processing_system7_0/inst/DMA0_RSTN, design_1_i/processing_system7_0/inst/DMA1_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA1_DAVALID, design_1_i/processing_system7_0/inst/DMA1_DRREADY, design_1_i/processing_system7_0/inst/DMA1_RSTN, design_1_i/processing_system7_0/inst/DMA2_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA2_DAVALID, design_1_i/processing_system7_0/inst/DMA2_DRREADY, design_1_i/processing_system7_0/inst/DMA2_RSTN, design_1_i/processing_system7_0/inst/DMA3_DATYPE[1:0]... and (the first 15 of 1319 listed).
+WARNING: [DRC RTSTAT-10] No routable loads: 2149 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/processing_system7_0/inst/CAN0_PHY_TX, design_1_i/processing_system7_0/inst/CAN1_PHY_TX, design_1_i/processing_system7_0/inst/DMA0_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA0_DAVALID, design_1_i/processing_system7_0/inst/DMA0_DRREADY, design_1_i/processing_system7_0/inst/DMA0_RSTN, design_1_i/processing_system7_0/inst/DMA1_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA1_DAVALID, design_1_i/processing_system7_0/inst/DMA1_DRREADY, design_1_i/processing_system7_0/inst/DMA1_RSTN, design_1_i/processing_system7_0/inst/DMA2_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA2_DAVALID, design_1_i/processing_system7_0/inst/DMA2_DRREADY, design_1_i/processing_system7_0/inst/DMA2_RSTN, design_1_i/processing_system7_0/inst/DMA3_DATYPE[1:0]... and (the first 15 of 1240 listed).
 INFO: [Vivado 12-3199] DRC finished with 0 Errors, 39 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
@@ -1216,9 +901,9 @@ Creating bitstream...
 Writing bitstream ./design_1_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.runs/impl_2/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Tue Jun  2 15:20:42 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-186] 'C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/impl_2/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Fri Jun  5 11:07:52 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-396 Infos, 144 Warnings, 102 Critical Warnings and 0 Errors encountered.
+391 Infos, 43 Warnings, 1 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 2401.898 ; gain = 242.844
-INFO: [Common 17-206] Exiting Vivado at Tue Jun  2 15:20:42 2020...
+write_bitstream: Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2233.996 ; gain = 424.832
+INFO: [Common 17-206] Exiting Vivado at Fri Jun  5 11:07:53 2020...

@@ -74,7 +74,6 @@ module design_1_top_0_1 (
   S_AXI_RRESP,
   S_AXI_RVALID,
   S_AXI_RREADY,
-  clk2,
   trigger
 );
 
@@ -120,7 +119,6 @@ output wire S_AXI_RVALID;
 S 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *)
 input wire S_AXI_RREADY;
-input wire clk2;
 output wire trigger;
 
   top #(
@@ -130,20 +128,15 @@ output wire trigger;
     .DELAY(63),
     .READ_MAX_ADDR(32'H0000FFF4),
     .REC_ADDR(32'H0000FFFC),
-    .FREQ_ADDR(32'H0000FFF8),
-    .VIRUS_ADDR(32'H0000FFE0),
     .MEM_WIDTH(16),
-    .PP_ADDR(32'H0000FFF0),
-    .RMS_ADDR(32'H0000FFEC),
-    .SUM_ADDR(32'H0000FFE8),
-    .ABS_READ_MAX(8192),
-    .VIRUS_B_SIZE(6144),
-    .SIM(0),
+    .DELAY_CYCLES(10000),
+    .VIRUS_B_SIZE(2300),
     .CHALLENGE_WIDTH(128),
     .CHALLENGE_ADDR(32'H0000FF00),
     .RUNS(128),
     .MEAN_ADDR(32'H0000FEFC),
-    .VAR_ADDR(32'H0000FEF8)
+    .VAR_ADDR(32'H0000FEF8),
+    .NUM_READS(8192)
   ) inst (
     .S_AXI_ACLK(S_AXI_ACLK),
     .S_AXI_ARESETN(S_AXI_ARESETN),
@@ -164,7 +157,6 @@ output wire trigger;
     .S_AXI_RRESP(S_AXI_RRESP),
     .S_AXI_RVALID(S_AXI_RVALID),
     .S_AXI_RREADY(S_AXI_RREADY),
-    .clk2(clk2),
     .trigger(trigger)
   );
 endmodule

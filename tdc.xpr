@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="44" Path="C:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.xpr">
+<Project Version="7" Minor="44" Path="C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="c67c990f3edc47b8ab6ef8236306e33d"/>
@@ -30,7 +30,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="zed"/>
-    <Option Name="WTXSimLaunchSim" Val="130"/>
+    <Option Name="WTXSimLaunchSim" Val="133"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -108,14 +108,14 @@
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_processing_system7_0_2/design_1_processing_system7_0_2.xci">
-          <Proxy FileSetName="design_1_processing_system7_0_2"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_top_0_1/design_1_top_0_1.xci">
+          <Proxy FileSetName="design_1_top_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2.xci">
           <Proxy FileSetName="design_1_rst_ps7_0_100M_2"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_top_0_1/design_1_top_0_1.xci">
-          <Proxy FileSetName="design_1_top_0_1"/>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_processing_system7_0_2/design_1_processing_system7_0_2.xci">
+          <Proxy FileSetName="design_1_processing_system7_0_2"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_auto_pc_0/design_1_auto_pc_0.xci">
           <Proxy FileSetName="design_1_auto_pc_0"/>
@@ -125,24 +125,6 @@
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/ram.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/new/axis_manager.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../fft/fft.srcs/sources_1/new/axis_manager.v"/>
-          <Attr Name="ImportTime" Val="1584638936"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <Config>
@@ -229,20 +211,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="clk_wiz_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clk_wiz_0">
-      <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0/clk_wiz_0.xci">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <Config>
-        <Option Name="TopModule" Val="clk_wiz_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="design_1_top_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_top_0_1">
       <Config>
         <Option Name="TopModule" Val="design_1_top_0_1"/>
@@ -308,16 +276,6 @@
       <RQSFiles/>
     </Run>
     <Run Id="design_1_rst_ps7_0_100M_2_synth_1" Type="Ft3:Synth" SrcSet="design_1_rst_ps7_0_100M_2" Part="xc7z020clg484-1" ConstrsSet="design_1_rst_ps7_0_100M_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_1_rst_ps7_0_100M_2_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="clk_wiz_0_synth_1" Type="Ft3:Synth" SrcSet="clk_wiz_0" Part="xc7z020clg484-1" ConstrsSet="clk_wiz_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/clk_wiz_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -404,23 +362,6 @@
       <RQSFiles/>
     </Run>
     <Run Id="design_1_rst_ps7_0_100M_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="design_1_rst_ps7_0_100M_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_1_rst_ps7_0_100M_2_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design" EnableStepBool="1"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="clk_wiz_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="clk_wiz_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="clk_wiz_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>

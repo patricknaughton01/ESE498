@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Tue Jun  2 15:13:56 2020
+// Date        : Fri Jun  5 11:02:21 2020
 // Host        : DESKTOP-2GDKRNR running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               c:/Users/ressw/Documents/School/ESE498/master/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.v
+//               c:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_sim_netlist.v
 // Design      : design_1_auto_pc_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

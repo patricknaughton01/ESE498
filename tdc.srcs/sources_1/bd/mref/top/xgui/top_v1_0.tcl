@@ -3,37 +3,23 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "Component_Name"
   #Adding Page
   set Page_0 [ipgui::add_page $IPINST -name "Page 0"]
-  ipgui::add_param $IPINST -name "ABS_READ_MAX" -parent ${Page_0}
   ipgui::add_param $IPINST -name "CHALLENGE_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "CHALLENGE_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "C_S_AXI_ADDR_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "C_S_AXI_DATA_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "DELAY" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "FREQ_ADDR" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "DELAY_CYCLES" -parent ${Page_0}
   ipgui::add_param $IPINST -name "INITIAL" -parent ${Page_0}
   ipgui::add_param $IPINST -name "MEAN_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "MEM_WIDTH" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "PP_ADDR" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "NUM_READS" -parent ${Page_0}
   ipgui::add_param $IPINST -name "READ_MAX_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "REC_ADDR" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "RMS_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "RUNS" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "SIM" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "SUM_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "VAR_ADDR" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "VIRUS_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "VIRUS_B_SIZE" -parent ${Page_0}
 
 
-}
-
-proc update_PARAM_VALUE.ABS_READ_MAX { PARAM_VALUE.ABS_READ_MAX } {
-	# Procedure called to update ABS_READ_MAX when any of the dependent parameters in the arguments change
-}
-
-proc validate_PARAM_VALUE.ABS_READ_MAX { PARAM_VALUE.ABS_READ_MAX } {
-	# Procedure called to validate ABS_READ_MAX
-	return true
 }
 
 proc update_PARAM_VALUE.CHALLENGE_ADDR { PARAM_VALUE.CHALLENGE_ADDR } {
@@ -81,12 +67,12 @@ proc validate_PARAM_VALUE.DELAY { PARAM_VALUE.DELAY } {
 	return true
 }
 
-proc update_PARAM_VALUE.FREQ_ADDR { PARAM_VALUE.FREQ_ADDR } {
-	# Procedure called to update FREQ_ADDR when any of the dependent parameters in the arguments change
+proc update_PARAM_VALUE.DELAY_CYCLES { PARAM_VALUE.DELAY_CYCLES } {
+	# Procedure called to update DELAY_CYCLES when any of the dependent parameters in the arguments change
 }
 
-proc validate_PARAM_VALUE.FREQ_ADDR { PARAM_VALUE.FREQ_ADDR } {
-	# Procedure called to validate FREQ_ADDR
+proc validate_PARAM_VALUE.DELAY_CYCLES { PARAM_VALUE.DELAY_CYCLES } {
+	# Procedure called to validate DELAY_CYCLES
 	return true
 }
 
@@ -117,12 +103,12 @@ proc validate_PARAM_VALUE.MEM_WIDTH { PARAM_VALUE.MEM_WIDTH } {
 	return true
 }
 
-proc update_PARAM_VALUE.PP_ADDR { PARAM_VALUE.PP_ADDR } {
-	# Procedure called to update PP_ADDR when any of the dependent parameters in the arguments change
+proc update_PARAM_VALUE.NUM_READS { PARAM_VALUE.NUM_READS } {
+	# Procedure called to update NUM_READS when any of the dependent parameters in the arguments change
 }
 
-proc validate_PARAM_VALUE.PP_ADDR { PARAM_VALUE.PP_ADDR } {
-	# Procedure called to validate PP_ADDR
+proc validate_PARAM_VALUE.NUM_READS { PARAM_VALUE.NUM_READS } {
+	# Procedure called to validate NUM_READS
 	return true
 }
 
@@ -144,15 +130,6 @@ proc validate_PARAM_VALUE.REC_ADDR { PARAM_VALUE.REC_ADDR } {
 	return true
 }
 
-proc update_PARAM_VALUE.RMS_ADDR { PARAM_VALUE.RMS_ADDR } {
-	# Procedure called to update RMS_ADDR when any of the dependent parameters in the arguments change
-}
-
-proc validate_PARAM_VALUE.RMS_ADDR { PARAM_VALUE.RMS_ADDR } {
-	# Procedure called to validate RMS_ADDR
-	return true
-}
-
 proc update_PARAM_VALUE.RUNS { PARAM_VALUE.RUNS } {
 	# Procedure called to update RUNS when any of the dependent parameters in the arguments change
 }
@@ -162,39 +139,12 @@ proc validate_PARAM_VALUE.RUNS { PARAM_VALUE.RUNS } {
 	return true
 }
 
-proc update_PARAM_VALUE.SIM { PARAM_VALUE.SIM } {
-	# Procedure called to update SIM when any of the dependent parameters in the arguments change
-}
-
-proc validate_PARAM_VALUE.SIM { PARAM_VALUE.SIM } {
-	# Procedure called to validate SIM
-	return true
-}
-
-proc update_PARAM_VALUE.SUM_ADDR { PARAM_VALUE.SUM_ADDR } {
-	# Procedure called to update SUM_ADDR when any of the dependent parameters in the arguments change
-}
-
-proc validate_PARAM_VALUE.SUM_ADDR { PARAM_VALUE.SUM_ADDR } {
-	# Procedure called to validate SUM_ADDR
-	return true
-}
-
 proc update_PARAM_VALUE.VAR_ADDR { PARAM_VALUE.VAR_ADDR } {
 	# Procedure called to update VAR_ADDR when any of the dependent parameters in the arguments change
 }
 
 proc validate_PARAM_VALUE.VAR_ADDR { PARAM_VALUE.VAR_ADDR } {
 	# Procedure called to validate VAR_ADDR
-	return true
-}
-
-proc update_PARAM_VALUE.VIRUS_ADDR { PARAM_VALUE.VIRUS_ADDR } {
-	# Procedure called to update VIRUS_ADDR when any of the dependent parameters in the arguments change
-}
-
-proc validate_PARAM_VALUE.VIRUS_ADDR { PARAM_VALUE.VIRUS_ADDR } {
-	# Procedure called to validate VIRUS_ADDR
 	return true
 }
 
@@ -238,49 +188,19 @@ proc update_MODELPARAM_VALUE.REC_ADDR { MODELPARAM_VALUE.REC_ADDR PARAM_VALUE.RE
 	set_property value [get_property value ${PARAM_VALUE.REC_ADDR}] ${MODELPARAM_VALUE.REC_ADDR}
 }
 
-proc update_MODELPARAM_VALUE.FREQ_ADDR { MODELPARAM_VALUE.FREQ_ADDR PARAM_VALUE.FREQ_ADDR } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.FREQ_ADDR}] ${MODELPARAM_VALUE.FREQ_ADDR}
-}
-
-proc update_MODELPARAM_VALUE.VIRUS_ADDR { MODELPARAM_VALUE.VIRUS_ADDR PARAM_VALUE.VIRUS_ADDR } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.VIRUS_ADDR}] ${MODELPARAM_VALUE.VIRUS_ADDR}
-}
-
 proc update_MODELPARAM_VALUE.MEM_WIDTH { MODELPARAM_VALUE.MEM_WIDTH PARAM_VALUE.MEM_WIDTH } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.MEM_WIDTH}] ${MODELPARAM_VALUE.MEM_WIDTH}
 }
 
-proc update_MODELPARAM_VALUE.PP_ADDR { MODELPARAM_VALUE.PP_ADDR PARAM_VALUE.PP_ADDR } {
+proc update_MODELPARAM_VALUE.DELAY_CYCLES { MODELPARAM_VALUE.DELAY_CYCLES PARAM_VALUE.DELAY_CYCLES } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.PP_ADDR}] ${MODELPARAM_VALUE.PP_ADDR}
-}
-
-proc update_MODELPARAM_VALUE.RMS_ADDR { MODELPARAM_VALUE.RMS_ADDR PARAM_VALUE.RMS_ADDR } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.RMS_ADDR}] ${MODELPARAM_VALUE.RMS_ADDR}
-}
-
-proc update_MODELPARAM_VALUE.SUM_ADDR { MODELPARAM_VALUE.SUM_ADDR PARAM_VALUE.SUM_ADDR } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.SUM_ADDR}] ${MODELPARAM_VALUE.SUM_ADDR}
-}
-
-proc update_MODELPARAM_VALUE.ABS_READ_MAX { MODELPARAM_VALUE.ABS_READ_MAX PARAM_VALUE.ABS_READ_MAX } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.ABS_READ_MAX}] ${MODELPARAM_VALUE.ABS_READ_MAX}
+	set_property value [get_property value ${PARAM_VALUE.DELAY_CYCLES}] ${MODELPARAM_VALUE.DELAY_CYCLES}
 }
 
 proc update_MODELPARAM_VALUE.VIRUS_B_SIZE { MODELPARAM_VALUE.VIRUS_B_SIZE PARAM_VALUE.VIRUS_B_SIZE } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.VIRUS_B_SIZE}] ${MODELPARAM_VALUE.VIRUS_B_SIZE}
-}
-
-proc update_MODELPARAM_VALUE.SIM { MODELPARAM_VALUE.SIM PARAM_VALUE.SIM } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.SIM}] ${MODELPARAM_VALUE.SIM}
 }
 
 proc update_MODELPARAM_VALUE.CHALLENGE_WIDTH { MODELPARAM_VALUE.CHALLENGE_WIDTH PARAM_VALUE.CHALLENGE_WIDTH } {
@@ -306,5 +226,10 @@ proc update_MODELPARAM_VALUE.MEAN_ADDR { MODELPARAM_VALUE.MEAN_ADDR PARAM_VALUE.
 proc update_MODELPARAM_VALUE.VAR_ADDR { MODELPARAM_VALUE.VAR_ADDR PARAM_VALUE.VAR_ADDR } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.VAR_ADDR}] ${MODELPARAM_VALUE.VAR_ADDR}
+}
+
+proc update_MODELPARAM_VALUE.NUM_READS { MODELPARAM_VALUE.NUM_READS PARAM_VALUE.NUM_READS } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.NUM_READS}] ${MODELPARAM_VALUE.NUM_READS}
 }
 
