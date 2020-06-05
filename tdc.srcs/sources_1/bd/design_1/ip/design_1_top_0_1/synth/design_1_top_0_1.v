@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "top,Vivado 2019.2" *)
 (* CHECK_LICENSE_TYPE = "design_1_top_0_1,top,{}" *)
-(* CORE_GENERATION_INFO = "design_1_top_0_1,top,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_ADDR_WIDTH=16,C_S_AXI_DATA_WIDTH=32,INITIAL=32,DELAY=63,READ_MAX_ADDR=0x0000FFF4,REC_ADDR=0x0000FFFC,MEM_WIDTH=16,DELAY_CYCLES=10000,VIRUS_B_SIZE=2300,CHALLENGE_WIDTH=128,CHALLENGE_ADDR=0x0000FF00,RUNS=128,MEAN_ADDR=0x0000FEFC,VAR_ADDR=0x0000FEF8,NUM_READS=8192}" *)
+(* CORE_GENERATION_INFO = "design_1_top_0_1,top,{x_ipProduct=Vivado 2019.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_ADDR_WIDTH=16,C_S_AXI_DATA_WIDTH=32,INITIAL=32,DELAY=63,READ_MAX_ADDR=0x0000FFF4,REC_ADDR=0x0000FFFC,MEM_WIDTH=16,DELAY_CYCLES=10000,VIRUS_B_SIZE=2270,CHALLENGE_WIDTH=128,CHALLENGE_ADDR=0x0000FF00,RUNS=128,MEAN_ADDR=0x0000FEFC,VAR_ADDR=0x0000FEF8,NUM_READS=8192}" *)
 (* IP_DEFINITION_SOURCE = "module_ref" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_top_0_1 (
@@ -74,8 +74,7 @@ module design_1_top_0_1 (
   S_AXI_RDATA,
   S_AXI_RRESP,
   S_AXI_RVALID,
-  S_AXI_RREADY,
-  trigger
+  S_AXI_RREADY
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET S_AXI_ARESETN, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_2_FCLK_CLK0, INSERT_VIP 0" *)
@@ -120,7 +119,6 @@ output wire S_AXI_RVALID;
 S 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *)
 input wire S_AXI_RREADY;
-output wire trigger;
 
   top #(
     .C_S_AXI_ADDR_WIDTH(16),
@@ -131,7 +129,7 @@ output wire trigger;
     .REC_ADDR(32'H0000FFFC),
     .MEM_WIDTH(16),
     .DELAY_CYCLES(10000),
-    .VIRUS_B_SIZE(2300),
+    .VIRUS_B_SIZE(2270),
     .CHALLENGE_WIDTH(128),
     .CHALLENGE_ADDR(32'H0000FF00),
     .RUNS(128),
@@ -157,7 +155,6 @@ output wire trigger;
     .S_AXI_RDATA(S_AXI_RDATA),
     .S_AXI_RRESP(S_AXI_RRESP),
     .S_AXI_RVALID(S_AXI_RVALID),
-    .S_AXI_RREADY(S_AXI_RREADY),
-    .trigger(trigger)
+    .S_AXI_RREADY(S_AXI_RREADY)
   );
 endmodule

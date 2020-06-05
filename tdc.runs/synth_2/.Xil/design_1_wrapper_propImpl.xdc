@@ -3,6 +3,8 @@ set_property SRC_FILE_INFO {cfile:C:/Users/ressw/Documents/School/ESE498/Utiliza
 set_property SRC_FILE_INFO {cfile:C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/placement.xdc rfile:../../../tdc.srcs/constrs_1/new/placement.xdc id:3} [current_design]
 set_property src_info {type:XDC file:1 line:89 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN Y11  [get_ports {trigger_0}];  # "JA1"
+set_property src_info {type:XDC file:1 line:90 export:INPUT save:INPUT read:READ} [current_design]
+set_property IOSTANDARD LVCMOS33 [get_ports {trigger_0}];
 set_property src_info {type:XDC file:2 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[0].ringOsc/out];
 set_property src_info {type:XDC file:2 line:2 export:INPUT save:INPUT read:READ} [current_design]
@@ -4543,66 +4545,6 @@ set_property src_info {type:XDC file:2 line:2269 export:INPUT save:INPUT read:RE
 set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2268].ringOsc/out];
 set_property src_info {type:XDC file:2 line:2270 export:INPUT save:INPUT read:READ} [current_design]
 set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2269].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2271 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2270].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2272 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2271].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2273 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2272].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2274 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2273].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2275 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2274].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2276 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2275].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2277 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2276].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2278 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2277].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2279 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2278].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2280 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2279].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2281 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2280].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2282 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2281].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2283 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2282].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2284 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2283].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2285 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2284].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2286 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2285].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2287 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2286].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2288 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2287].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2289 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2288].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2290 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2289].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2291 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2290].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2292 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2291].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2293 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2292].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2294 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2293].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2295 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2294].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2296 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2295].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2297 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2296].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2298 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2297].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2299 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2298].ringOsc/out];
-set_property src_info {type:XDC file:2 line:2300 export:INPUT save:INPUT read:READ} [current_design]
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[2299].ringOsc/out];
 set_property src_info {type:XDC file:3 line:5 export:INPUT save:INPUT read:READ} [current_design]
 create_pblock pblock_tdc1
 resize_pblock [get_pblocks pblock_tdc1] -add {CLOCKREGION_X1Y0:CLOCKREGION_X1Y0}

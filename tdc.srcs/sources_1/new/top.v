@@ -46,7 +46,7 @@
 `timescale 1ns / 1ps
 
 module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=32, DELAY=63, READ_MAX_ADDR='hFFF4, 
-    REC_ADDR='hFFFC, MEM_WIDTH=16, DELAY_CYCLES=10000, VIRUS_B_SIZE=2300, CHALLENGE_WIDTH=128, CHALLENGE_ADDR='hFF00,
+    REC_ADDR='hFFFC, MEM_WIDTH=16, DELAY_CYCLES=10000, VIRUS_B_SIZE=2270, CHALLENGE_WIDTH=128, CHALLENGE_ADDR='hFF00,
     RUNS=128, MEAN_ADDR='hFEFC, VAR_ADDR='hFEF8, NUM_READS=8192)(
     // Axi4Lite Bus
     input       S_AXI_ACLK,
@@ -67,8 +67,7 @@ module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=
     output      [C_S_AXI_DATA_WIDTH-1:0] S_AXI_RDATA,
     output      [1:0] S_AXI_RRESP,
     output      S_AXI_RVALID,
-    input       S_AXI_RREADY,
-    output  reg trigger
+    input       S_AXI_RREADY
 );
 
 // Simple bus used to communicate with Axi4Lite Supporter module
@@ -135,7 +134,7 @@ reg [3:0] state, nextState;
 
 reg [C_S_AXI_DATA_WIDTH-1:0] counterD, counterQ, virusCounterD, virusCounterQ, oneMask;
 reg [DELAY-1:0] tdcClean;
-reg [6:0] total;
+reg [$clog2(DELAY)-1:0] total;
 reg [C_S_AXI_DATA_WIDTH-1:0] rmsAccD, rmsAccQ, sumAccD, sumAccQ, r_counterD, r_counterQ;
 reg [63:0] varD, varQ, tmp_value, meanD, meanQ, tmpMean, tmpVar;
 
@@ -157,7 +156,6 @@ always @ * begin
     challengeD = challengeQ;
     rdData = 0;
     total = 0;
-    trigger = 0;
     oneMask = -1;   // Mask of all 1's (C_S_AXI_DATA_WIDTH wide)
     
     case(state)
@@ -165,15 +163,15 @@ always @ * begin
             virusEnD = 0;
             if(rd && rdAddr == MEAN_ADDR)begin
                 // The mean part of the response is being measured
-                tmpMean = meanQ >> ($clog2(RUNS));
+                tmpMean = (meanQ + $clog2(RUNS >> 1)) >> ($clog2(RUNS));
                 rdData = tmpMean[C_S_AXI_DATA_WIDTH-1:0];
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
             end else if(rd && rdAddr == VAR_ADDR)begin
                 // The variance part of the response is being measured
                 // Since var reg actually stores sum[X^2], compute actual
                 // variance now
-                tmpVar = varQ >> ($clog2(RUNS));      // tmpVar = E[X^2]
-                tmpMean = meanQ >> ($clog2(RUNS));    // tmpMean = E[X]
+                tmpVar = (varQ + $clog2(RUNS >> 1)) >> ($clog2(RUNS));      // tmpVar = E[X^2]
+                tmpMean = (meanQ + $clog2(RUNS >> 1)) >> ($clog2(RUNS));    // tmpMean = E[X]
                 tmp_value = tmpVar - (tmpMean * tmpMean);
                 rdData = tmp_value[C_S_AXI_DATA_WIDTH-1:0];
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
@@ -187,7 +185,6 @@ always @ * begin
                     varD = 0;
                     virusCounterD = 0;
                     virusEnD = 0;
-                    trigger = 1;    // Trigger scope when we start recording
                     nextState = C_RD0;
                 end else if(wrAddr >= CHALLENGE_ADDR && wrAddr < (CHALLENGE_ADDR + (CHALLENGE_WIDTH>>3)))begin
 					// Write to the challenge. Note that this covers several
@@ -214,7 +211,7 @@ always @ * begin
             end
         end
         C_RD_DELAY:begin
-            if (counterQ < (DELAY_CYCLES))begin
+            if (counterQ < DELAY_CYCLES)begin
                 counterD = counterQ + 1;
             end else begin
                 counterD = 0;
@@ -249,14 +246,13 @@ always @ * begin
                 
                 counterD = counterQ + 1;
             end else begin
-                // Write to the PP register
                 counterD = 0;
                 virusEnD = 0;
                 nextState = C_RD2;
             end
         end
         C_RD2:begin
-            if (counterQ < (DELAY_CYCLES))begin
+            if (counterQ < DELAY_CYCLES)begin
                 counterD = counterQ + 1;
             end else begin
                 counterD = 0;

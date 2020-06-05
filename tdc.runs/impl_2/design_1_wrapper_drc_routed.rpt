@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Fri Jun  5 11:07:12 2020
+| Date         : Fri Jun  5 14:49:23 2020
 | Host         : DESKTOP-2GDKRNR running 64-bit major release  (build 9200)
 | Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 | Design       : design_1_wrapper
@@ -24,11 +24,11 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 39
+             Violations found: 45
 +-----------+----------+------------------------+------------+
 | Rule      | Severity | Description            | Violations |
 +-----------+----------+------------------------+------------+
-| DPIP-1    | Warning  | Input pipelining       | 12         |
+| DPIP-1    | Warning  | Input pipelining       | 18         |
 | DPOP-1    | Warning  | PREG Output pipelining | 13         |
 | DPOP-2    | Warning  | MREG Output pipelining | 13         |
 | RTSTAT-10 | Warning  | No routable loads      | 1          |
@@ -38,60 +38,90 @@ Table of Contents
 -----------------
 DPIP-1#1 Warning
 Input pipelining  
-DSP design_1_i/top_0/inst/varD1 input design_1_i/top_0/inst/varD1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/top_0/inst/rdData1 input design_1_i/top_0/inst/rdData1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#2 Warning
 Input pipelining  
-DSP design_1_i/top_0/inst/varD1 input design_1_i/top_0/inst/varD1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/top_0/inst/rdData1 input design_1_i/top_0/inst/rdData1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#3 Warning
 Input pipelining  
-DSP design_1_i/top_0/inst/varD1__0 input design_1_i/top_0/inst/varD1__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/top_0/inst/rdData1__0 input design_1_i/top_0/inst/rdData1__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#4 Warning
 Input pipelining  
-DSP design_1_i/top_0/inst/varD1__0 input design_1_i/top_0/inst/varD1__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/top_0/inst/rdData1__0 input design_1_i/top_0/inst/rdData1__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#5 Warning
 Input pipelining  
-DSP design_1_i/top_0/inst/varD1__1 input design_1_i/top_0/inst/varD1__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/top_0/inst/rdData1__1 input design_1_i/top_0/inst/rdData1__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#6 Warning
 Input pipelining  
-DSP design_1_i/top_0/inst/varD1__1 input design_1_i/top_0/inst/varD1__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/top_0/inst/rdData1__1 input design_1_i/top_0/inst/rdData1__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#7 Warning
 Input pipelining  
-DSP design_1_i/top_0/inst/varD1__2 input design_1_i/top_0/inst/varD1__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/top_0/inst/varD1 input design_1_i/top_0/inst/varD1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#8 Warning
 Input pipelining  
-DSP design_1_i/top_0/inst/varD1__2 input design_1_i/top_0/inst/varD1__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/top_0/inst/varD1 input design_1_i/top_0/inst/varD1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#9 Warning
 Input pipelining  
-DSP design_1_i/top_0/inst/varD1__3 input design_1_i/top_0/inst/varD1__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/top_0/inst/varD1__0 input design_1_i/top_0/inst/varD1__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#10 Warning
 Input pipelining  
-DSP design_1_i/top_0/inst/varD1__3 input design_1_i/top_0/inst/varD1__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/top_0/inst/varD1__0 input design_1_i/top_0/inst/varD1__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#11 Warning
 Input pipelining  
-DSP design_1_i/top_0/inst/varD1__4 input design_1_i/top_0/inst/varD1__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP design_1_i/top_0/inst/varD1__1 input design_1_i/top_0/inst/varD1__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#12 Warning
+Input pipelining  
+DSP design_1_i/top_0/inst/varD1__1 input design_1_i/top_0/inst/varD1__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#13 Warning
+Input pipelining  
+DSP design_1_i/top_0/inst/varD1__2 input design_1_i/top_0/inst/varD1__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#14 Warning
+Input pipelining  
+DSP design_1_i/top_0/inst/varD1__2 input design_1_i/top_0/inst/varD1__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#15 Warning
+Input pipelining  
+DSP design_1_i/top_0/inst/varD1__3 input design_1_i/top_0/inst/varD1__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#16 Warning
+Input pipelining  
+DSP design_1_i/top_0/inst/varD1__3 input design_1_i/top_0/inst/varD1__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#17 Warning
+Input pipelining  
+DSP design_1_i/top_0/inst/varD1__4 input design_1_i/top_0/inst/varD1__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#18 Warning
 Input pipelining  
 DSP design_1_i/top_0/inst/varD1__4 input design_1_i/top_0/inst/varD1__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
@@ -228,7 +258,7 @@ Related violations: <none>
 
 RTSTAT-10#1 Warning
 No routable loads  
-2149 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/processing_system7_0/inst/CAN0_PHY_TX, design_1_i/processing_system7_0/inst/CAN1_PHY_TX, design_1_i/processing_system7_0/inst/DMA0_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA0_DAVALID, design_1_i/processing_system7_0/inst/DMA0_DRREADY, design_1_i/processing_system7_0/inst/DMA0_RSTN, design_1_i/processing_system7_0/inst/DMA1_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA1_DAVALID, design_1_i/processing_system7_0/inst/DMA1_DRREADY, design_1_i/processing_system7_0/inst/DMA1_RSTN, design_1_i/processing_system7_0/inst/DMA2_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA2_DAVALID, design_1_i/processing_system7_0/inst/DMA2_DRREADY, design_1_i/processing_system7_0/inst/DMA2_RSTN, design_1_i/processing_system7_0/inst/DMA3_DATYPE[1:0] (the first 15 of 1240 listed).
+2186 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/processing_system7_0/inst/CAN0_PHY_TX, design_1_i/processing_system7_0/inst/CAN1_PHY_TX, design_1_i/processing_system7_0/inst/DMA0_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA0_DAVALID, design_1_i/processing_system7_0/inst/DMA0_DRREADY, design_1_i/processing_system7_0/inst/DMA0_RSTN, design_1_i/processing_system7_0/inst/DMA1_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA1_DAVALID, design_1_i/processing_system7_0/inst/DMA1_DRREADY, design_1_i/processing_system7_0/inst/DMA1_RSTN, design_1_i/processing_system7_0/inst/DMA2_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA2_DAVALID, design_1_i/processing_system7_0/inst/DMA2_DRREADY, design_1_i/processing_system7_0/inst/DMA2_RSTN, design_1_i/processing_system7_0/inst/DMA3_DATYPE[1:0] (the first 15 of 1277 listed).
 Related violations: <none>
 
 
