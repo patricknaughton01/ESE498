@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_2" LaunchPart="xc7z020clg484-1" LaunchTime="1591386154">
+<GenRun Id="synth_2" LaunchPart="xc7z020clg484-1" LaunchTime="1591395404">
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
@@ -75,12 +75,6 @@
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/new/zedboard.xdc">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/constrs_1/new/loops.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

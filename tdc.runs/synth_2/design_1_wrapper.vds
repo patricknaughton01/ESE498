@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Fri Jun  5 14:44:48 2020
-# Process ID: 16992
+# Start of session at: Fri Jun  5 17:19:00 2020
+# Process ID: 16360
 # Current directory: C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/synth_2
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/synth_2/design_1_wrapper.vds
@@ -15,33 +15,34 @@ INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
 WARNING: [IP_Flow 19-3664] IP 'design_1_rst_ps7_0_100M_2' generated file not found 'c:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2_stub.vhdl'. Please regenerate to continue.
 WARNING: [IP_Flow 19-3664] IP 'design_1_rst_ps7_0_100M_2' generated file not found 'c:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2_sim_netlist.vhdl'. Please regenerate to continue.
+add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 474.293 ; gain = 37.168
 Command: synth_design -top design_1_wrapper -part xc7z020clg484-1 -no_lc
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 14756 
+INFO: Helper process launched with PID 6540 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1008.633 ; gain = 234.973
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1009.313 ; gain = 235.004
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_2' [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/synth_2/.Xil/Vivado-16992-DESKTOP-2GDKRNR/realtime/design_1_processing_system7_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_2' (1#1) [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/synth_2/.Xil/Vivado-16992-DESKTOP-2GDKRNR/realtime/design_1_processing_system7_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_2' [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/synth_2/.Xil/Vivado-16360-DESKTOP-2GDKRNR/realtime/design_1_processing_system7_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_2' (1#1) [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/synth_2/.Xil/Vivado-16360-DESKTOP-2GDKRNR/realtime/design_1_processing_system7_0_2_stub.v:6]
 WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_2' has 68 connections declared, but only 63 given [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/synth/design_1.v:137]
 INFO: [Synth 8-6157] synthesizing module 'design_1_ps7_0_axi_periph_2' [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/synth/design_1.v:292]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_UYSKKA' [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/synth/design_1.v:597]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/synth_2/.Xil/Vivado-16992-DESKTOP-2GDKRNR/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (2#1) [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/synth_2/.Xil/Vivado-16992-DESKTOP-2GDKRNR/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/synth_2/.Xil/Vivado-16360-DESKTOP-2GDKRNR/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (2#1) [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/synth_2/.Xil/Vivado-16360-DESKTOP-2GDKRNR/realtime/design_1_auto_pc_0_stub.v:6]
 WARNING: [Synth 8-7023] instance 'auto_pc' of module 'design_1_auto_pc_0' has 59 connections declared, but only 57 given [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/synth/design_1.v:832]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_UYSKKA' (3#1) [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/synth/design_1.v:597]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_ps7_0_axi_periph_2' (4#1) [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/synth/design_1.v:292]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_100M_2' [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/synth_2/.Xil/Vivado-16992-DESKTOP-2GDKRNR/realtime/design_1_rst_ps7_0_100M_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_100M_2' (5#1) [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/synth_2/.Xil/Vivado-16992-DESKTOP-2GDKRNR/realtime/design_1_rst_ps7_0_100M_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_100M_2' [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/synth_2/.Xil/Vivado-16360-DESKTOP-2GDKRNR/realtime/design_1_rst_ps7_0_100M_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_100M_2' (5#1) [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/synth_2/.Xil/Vivado-16360-DESKTOP-2GDKRNR/realtime/design_1_rst_ps7_0_100M_2_stub.v:6]
 WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'design_1_rst_ps7_0_100M_2' has 10 connections declared, but only 6 given [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/synth/design_1.v:263]
-INFO: [Synth 8-6157] synthesizing module 'design_1_top_0_1' [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/synth_2/.Xil/Vivado-16992-DESKTOP-2GDKRNR/realtime/design_1_top_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_top_0_1' (6#1) [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/synth_2/.Xil/Vivado-16992-DESKTOP-2GDKRNR/realtime/design_1_top_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_top_0_1' [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/synth_2/.Xil/Vivado-16360-DESKTOP-2GDKRNR/realtime/design_1_top_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_top_0_1' (6#1) [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/synth_2/.Xil/Vivado-16360-DESKTOP-2GDKRNR/realtime/design_1_top_0_1_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'design_1' (7#1) [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/synth/design_1.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (8#1) [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 WARNING: [Synth 8-3331] design s00_couplers_imp_UYSKKA has unconnected port M_ACLK
@@ -49,7 +50,7 @@ WARNING: [Synth 8-3331] design s00_couplers_imp_UYSKKA has unconnected port M_AR
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_2 has unconnected port ACLK
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_2 has unconnected port ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1084.422 ; gain = 310.762
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1085.352 ; gain = 311.043
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -62,12 +63,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1084.422 ; gain = 310.762
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1085.352 ; gain = 311.043
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1084.422 ; gain = 310.762
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1085.352 ; gain = 311.043
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1084.422 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1085.352 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -81,114 +82,7 @@ Finished Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/Utilization/ES
 Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/zedboard.xdc]
-WARNING: [Vivado 12-584] No ports matched 'trigger_0'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/zedboard.xdc:89]
-WARNING: [Vivado 12-584] No ports matched 'trigger_0'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/zedboard.xdc:90]
 Finished Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/zedboard.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/zedboard.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/design_1_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[0].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:1]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[1].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:2]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[2].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:3]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[3].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:4]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[4].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:5]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[5].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:6]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[6].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:7]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[7].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:8]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[8].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:9]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[9].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:10]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[10].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:11]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[11].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:12]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[12].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:13]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[13].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:14]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[14].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:15]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[15].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:16]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[16].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:17]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[17].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:18]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[18].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:19]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[19].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:20]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[20].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:21]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[21].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:22]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[22].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:23]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[23].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:24]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[24].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:25]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[25].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:26]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[26].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:27]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[27].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:28]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[28].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:29]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[29].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:30]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[30].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:31]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[31].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:32]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[32].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:33]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[33].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:34]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[34].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:35]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[35].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:36]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[36].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:37]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[37].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:38]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[38].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:39]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[39].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:40]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[40].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:41]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[41].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:42]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[42].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:43]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[43].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:44]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[44].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:45]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[45].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:46]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[46].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:47]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[47].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:48]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[48].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:49]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[49].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:50]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[50].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:51]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[51].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:52]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[52].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:53]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[53].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:54]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[54].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:55]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[55].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:56]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[56].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:57]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[57].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[58].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:59]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[59].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:60]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[60].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[61].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:62]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[62].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:63]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[63].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:64]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[64].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:65]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[65].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:66]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[66].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:67]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[67].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:68]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[68].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:69]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[69].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:70]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[70].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:71]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[71].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:72]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[72].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:73]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[73].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:74]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[74].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:75]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[75].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:76]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[76].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:77]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[77].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:78]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[78].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:79]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[79].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:80]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[80].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:81]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[81].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:82]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[82].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:83]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[83].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:84]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[84].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:85]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[85].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:86]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[86].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:87]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[87].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:88]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[88].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:89]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[89].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:90]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[90].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:91]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[91].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:92]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[92].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:93]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[93].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:94]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[94].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:95]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[95].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:96]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[96].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:97]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[97].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:98]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[98].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:99]
-WARNING: [Vivado 12-507] No nets matched 'design_1_i/top_0/inst/virus1/genblk1[99].ringOsc/out'. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:100]
-INFO: [Common 17-14] Message 'Vivado 12-507' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc:100]
-Finished Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/design_1_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/placement.xdc]
 Finished Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/placement.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/placement.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
@@ -197,20 +91,20 @@ Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.
 Finished Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/synth_2/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1105.375 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1105.777 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1105.375 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1105.777 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1105.375 ; gain = 331.715
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1105.777 ; gain = 331.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1105.375 ; gain = 331.715
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1105.777 ; gain = 331.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -482,10 +376,10 @@ Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph. (constra
 Applied set_property DONT_TOUCH = true for design_1_i/rst_ps7_0_100M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1105.375 ; gain = 331.715
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1105.777 ; gain = 331.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1105.375 ; gain = 331.715
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1105.777 ; gain = 331.469
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -525,7 +419,7 @@ WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_2 has unconnected port 
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_2 has unconnected port M00_ACLK
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_2 has unconnected port M00_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1105.375 ; gain = 331.715
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1105.777 ; gain = 331.469
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -537,13 +431,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1155.926 ; gain = 382.266
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1157.070 ; gain = 382.762
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1156.000 ; gain = 382.340
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1157.145 ; gain = 382.836
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -555,7 +449,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1165.723 ; gain = 392.063
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1166.867 ; gain = 392.559
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -579,13 +473,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1181.523 ; gain = 407.863
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1182.570 ; gain = 408.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1181.523 ; gain = 407.863
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1182.570 ; gain = 408.262
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -604,25 +498,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1181.523 ; gain = 407.863
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1182.570 ; gain = 408.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1181.523 ; gain = 407.863
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1182.570 ; gain = 408.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1181.523 ; gain = 407.863
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1182.570 ; gain = 408.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1181.523 ; gain = 407.863
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1182.570 ; gain = 408.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -658,26 +552,26 @@ Report Instance Areas:
 |4     |      s00_couplers   |s00_couplers_imp_UYSKKA     |   177|
 +------+---------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1181.523 ; gain = 407.863
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1182.570 ; gain = 408.262
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:00:44 . Memory (MB): peak = 1181.523 ; gain = 386.910
-Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:51 . Memory (MB): peak = 1181.523 ; gain = 407.863
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 1182.570 ; gain = 387.836
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:41 . Memory (MB): peak = 1182.570 ; gain = 408.262
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1181.523 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1182.570 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1200.402 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1205.852 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-30 Infos, 117 Warnings, 0 Critical Warnings and 0 Errors encountered.
+29 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:03 . Memory (MB): peak = 1205.410 ; gain = 730.379
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1205.410 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 1209.867 ; gain = 735.574
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1209.867 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.runs/synth_2/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jun  5 14:46:06 2020...
+INFO: [Common 17-206] Exiting Vivado at Fri Jun  5 17:20:06 2020...

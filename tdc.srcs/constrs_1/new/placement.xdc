@@ -1,5 +1,7 @@
 
-
+create_pblock pblock_else
+add_cells_to_pblock [get_pblocks pblock_else] [get_cells -quiet [list design_1_i/top_0/inst]]
+resize_pblock [get_pblocks pblock_else] -add {CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
 
 
 create_pblock pblock_tdc1

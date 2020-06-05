@@ -82,7 +82,6 @@ set rc [catch {
   add_files C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
   read_xdc C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/zedboard.xdc
-  read_xdc C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc
   read_xdc C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/placement.xdc
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7z020clg484-1

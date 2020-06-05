@@ -223,7 +223,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>0deda7a9</spirit:value>
+            <spirit:value>713a207b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -236,7 +236,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>0deda7a9</spirit:value>
+            <spirit:value>713a207b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -597,7 +597,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>VIRUS_B_SIZE</spirit:name>
         <spirit:displayName>Virus B Size</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.VIRUS_B_SIZE">2270</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.VIRUS_B_SIZE">1500</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>CHALLENGE_WIDTH</spirit:name>
@@ -694,7 +694,7 @@
     <spirit:parameter>
       <spirit:name>VIRUS_B_SIZE</spirit:name>
       <spirit:displayName>Virus B Size</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.VIRUS_B_SIZE">2270</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.VIRUS_B_SIZE">1500</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CHALLENGE_WIDTH</spirit:name>
@@ -746,7 +746,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2020-06-05T19:42:19Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2020-06-05T22:27:29Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.2</xilinx:xilinxVersion>

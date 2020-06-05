@@ -53,9 +53,6 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/zedboard.xdc
 set_property used_in_implementation false [get_files C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/zedboard.xdc]
 
-read_xdc C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc
-set_property used_in_implementation false [get_files C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc]
-
 read_xdc C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/placement.xdc
 set_property used_in_implementation false [get_files C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/placement.xdc]
 

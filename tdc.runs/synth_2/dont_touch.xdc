@@ -3,8 +3,6 @@
 
 # XDC: new/zedboard.xdc
 
-# XDC: new/loops.xdc
-
 # XDC: new/placement.xdc
 
 # Block Designs: bd/design_1/design_1.bd
