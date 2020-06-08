@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.801282",
-   "Default View_TopLeft":"80,35",
+   "Default View_TopLeft":"80,36",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
@@ -14,10 +14,10 @@ preplace inst top_0 -pg 1 -lvl 3 -x 1120 -y 400 -defaultsOSRD
 preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 460 620 500 940J
 preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 10 0 600
 preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 610 510 950J
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 620 300n
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 N 380
 preplace netloc processing_system7_0_DDR 1 1 3 620J 230 NJ 230 NJ
 preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 260 NJ 260 NJ
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 N 380
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 620 300n
 levelinfo -pg 1 -10 400 800 1120 1280
 pagesize -pg 1 -db -bbox -sgen -10 -50 1390 520
 "
