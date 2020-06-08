@@ -2,44 +2,4 @@
 |       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 |               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/challengeQ_reg[111]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[35]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[61]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[89]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/challengeQ_reg[107]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[26]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/challengeQ_reg[109]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[58]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/challengeQ_reg[115]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[94]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/challengeQ_reg[121]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[68]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/challengeQ_reg[122]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[56]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/challengeQ_reg[127]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[90]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[95]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[88]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[93]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/challengeQ_reg[125]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[24]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[91]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[31]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[28]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/challengeQ_reg[103]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/challengeQ_reg[120]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/challengeQ_reg[123]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[59]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[65]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/challengeQ_reg[124]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[27]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[62]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[67]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[92]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[64]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[15]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[18]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[69]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                               design_1_i/top_0/inst/challengeQ_reg[117]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[63]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                                design_1_i/top_0/inst/challengeQ_reg[16]/D|
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
