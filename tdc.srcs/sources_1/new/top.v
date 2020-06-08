@@ -46,8 +46,8 @@
 `timescale 1ns / 1ps
 
 module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=32, DELAY=63, READ_MAX_ADDR='hFFF4, 
-    REC_ADDR='hFFFC, MEM_WIDTH=16, DELAY_CYCLES=10000, VIRUS_B_SIZE=2300, CHALLENGE_WIDTH=128, CHALLENGE_ADDR='hFF00,
-    RUNS=128, MEAN_ADDR='hFEFC, VAR_ADDR='hFEF8, NUM_READS=8192)(
+    REC_ADDR='hFFFC, MEM_WIDTH=16, DELAY_CYCLES=10000, VIRUS_B_SIZE=6000, VIRUS_CONST_SIZE=10000, CHALLENGE_WIDTH=128, 
+    CHALLENGE_ADDR='hFF00, RUNS=128, MEAN_ADDR='hFEFC, VAR_ADDR='hFEF8, NUM_READS=8192)(
     // Axi4Lite Bus
     input       S_AXI_ACLK,
     input       S_AXI_ARESETN,
@@ -67,8 +67,7 @@ module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=
     output      [C_S_AXI_DATA_WIDTH-1:0] S_AXI_RDATA,
     output      [1:0] S_AXI_RRESP,
     output      S_AXI_RVALID,
-    input       S_AXI_RREADY,
-    output  reg trigger
+    input       S_AXI_RREADY
 );
 
 // Simple bus used to communicate with Axi4Lite Supporter module
@@ -84,7 +83,10 @@ wire [DELAY-1:0] tdcOut;
 
 // Signals for the power virus
 reg virusEnD, virusEnQ;
+wire virusConstEn;
+assign virusConstEn = 0;
 wire [VIRUS_B_SIZE-1:0] virusOut;
+wire [VIRUS_CONST_SIZE-1:0] virusConstOut;
 reg [CHALLENGE_WIDTH-1:0] challengeD, challengeQ;
 
 Axi4LiteSupporter#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH))AxiSupporter1(
@@ -128,6 +130,11 @@ virus#(.SIZE(VIRUS_B_SIZE)) virus1(
     .enable(virusEnQ)
 );
 
+virus#(.SIZE(VIRUS_CONST_SIZE)) virusConst(
+    .out(virusConstOut),
+    .enable(virusConstEn)
+);
+
 // State machine
 localparam IDLE=0, C_RD1=1, C_RD0=2, C_RD2=3, C_RD_DELAY=4;
 reg [3:0] state, nextState;
@@ -157,7 +164,6 @@ always @ * begin
     challengeD = challengeQ;
     rdData = 0;
     total = 0;
-    trigger = 0;
     oneMask = -1;   // Mask of all 1's (C_S_AXI_DATA_WIDTH wide)
     
     case(state)
@@ -187,7 +193,6 @@ always @ * begin
                     varD = 0;
                     virusCounterD = 0;
                     virusEnD = 0;
-                    trigger = 1;    // Trigger scope when we start recording
                     nextState = C_RD0;
                 end else if(wrAddr >= CHALLENGE_ADDR && wrAddr < (CHALLENGE_ADDR + (CHALLENGE_WIDTH>>3)))begin
 					// Write to the challenge. Note that this covers several

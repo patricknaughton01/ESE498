@@ -36,11 +36,13 @@ int main() {
 	init_platform();
 	while(1){
 		char go = XUartPs_RecvByte(XPAR_PS7_UART_1_BASEADDR);
+		xil_printf("%c\n", go);
 		if(go == 'c'){
 			makeMeasurement();
 		}else if(go == 't'){
 			stepResponse();
 		}else if(go == 'r'){
+			xil_printf("r\n");
 			challengeResponse();
 		}else if(go == 'm') {
 			setMask();
@@ -66,33 +68,34 @@ void setMask() {
 // This function sends a challenge to the top module, then reads a challenge
 // response 100 times for all challenges provided in the header file
 void challengeResponse(){
-	*read_addr = num_reads;
+	/**read_addr = num_reads;
 	*virus_addr = maskRO[0];
 	*(virus_addr + 1) = maskRO[1];
 	*(virus_addr + 2) = maskRO[2];
-	*(virus_addr + 3) = maskRO[3];
+	*(virus_addr + 3) = maskRO[3];*/
 	
 	for (int i=0; i<NUM_CHAL; i++) {
-			*chal_addr = challenges[i][0];
-			*(chal_addr + 1) = challenges[i][1];
-			*(chal_addr + 2) = challenges[i][2];
-			*(chal_addr + 3) = challenges[i][3];
-			*rec_addr = 3;					// Start recording challenge response
+		*chal_addr = challenges[i][0];
+		*(chal_addr + 1) = challenges[i][1];
+		*(chal_addr + 2) = challenges[i][2];
+		*(chal_addr + 3) = challenges[i][3];
+		*rec_addr = 3;					// Start recording challenge response
 
-			int32_t mean;
-			// Wait until the response is done being collected
-			do{
-				mean = *(mean_addr);
-			}while((mean & 1<<31)==0);
-			mean ^= (1<<31);
+		int32_t mean;
+		xil_printf("Here\n");
+		// Wait until the response is done being collected
+		do{
+			mean = *(mean_addr);
+		}while((mean & 1<<31)==0);
+		mean ^= (1<<31);
 
-			int32_t var;
-			do{
-				var = *(var_addr);
-			}while((var & 1<<31) == 0);
-			var ^= (1<<31);
+		int32_t var;
+		do{
+			var = *(var_addr);
+		}while((var & 1<<31) == 0);
+		var ^= (1<<31);
 
-			xil_printf("%d %d %d\n", i, mean, var);
+		xil_printf("%d %d %d\n", i, mean, var);
 	}
 	//xil_printf("stop\n");
 }

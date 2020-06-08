@@ -1,8 +1,10 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/zedboard.xdc rfile:../../../tdc.srcs/constrs_1/new/zedboard.xdc id:1} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/loops.xdc rfile:../../../tdc.srcs/constrs_1/new/loops.xdc id:2} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Users/ressw/Documents/School/ESE498/Utilization/ESE498/tdc.srcs/constrs_1/new/placement.xdc rfile:../../../tdc.srcs/constrs_1/new/placement.xdc id:3} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/constrs_1/new/zedboard.xdc rfile:../../../tdc.srcs/constrs_1/new/zedboard.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/constrs_1/new/loops.xdc rfile:../../../tdc.srcs/constrs_1/new/loops.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/constrs_1/new/placement.xdc rfile:../../../tdc.srcs/constrs_1/new/placement.xdc id:3} [current_design]
 set_property src_info {type:XDC file:1 line:89 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN Y11  [get_ports {trigger_0}];  # "JA1"
+set_property src_info {type:XDC file:1 line:90 export:INPUT save:INPUT read:READ} [current_design]
+set_property IOSTANDARD LVCMOS33 [get_ports {trigger_0}];
 set_property src_info {type:XDC file:2 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[0].ringOsc/out];
 set_property src_info {type:XDC file:2 line:2 export:INPUT save:INPUT read:READ} [current_design]

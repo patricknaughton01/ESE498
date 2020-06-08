@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
-<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="monitor" location="/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.vitis/monitor" platform="/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.vitis/monitor_hw/export/monitor_hw/monitor_hw.xpfm" platformUID="" systemProject="monitor_system" sysConfig="monitor_hw" runtime="cpp" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" dimmRepoPath="" mssSignature="621cd51d2690590ba19257c15c6539f8">
-  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1900206920">
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="monitor" location="/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.vitis/monitor" platform="/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.vitis/monitor_hw/export/monitor_hw/monitor_hw.xpfm" platformUID="xilinx:zed::0.0(custom)" systemProject="monitor_system" sysConfig="monitor_hw" runtime="cpp" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" dimmRepoPath="" mssSignature="621cd51d2690590ba19257c15c6539f8">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1900206920" dirty="true">
     <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
     <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
   </configuration>
-  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.2019157460" dirty="true">
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.2019157460">
     <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
   </configuration>
   <template appTemplateName="hello_world"/>
 </sdkproject:SdkProject>

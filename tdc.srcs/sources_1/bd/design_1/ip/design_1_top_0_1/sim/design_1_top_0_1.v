@@ -73,8 +73,7 @@ module design_1_top_0_1 (
   S_AXI_RDATA,
   S_AXI_RRESP,
   S_AXI_RVALID,
-  S_AXI_RREADY,
-  trigger
+  S_AXI_RREADY
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET S_AXI_ARESETN, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_2_FCLK_CLK0, INSERT_VIP 0" *)
@@ -119,7 +118,6 @@ output wire S_AXI_RVALID;
 S 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *)
 input wire S_AXI_RREADY;
-output wire trigger;
 
   top #(
     .C_S_AXI_ADDR_WIDTH(16),
@@ -130,7 +128,8 @@ output wire trigger;
     .REC_ADDR(32'H0000FFFC),
     .MEM_WIDTH(16),
     .DELAY_CYCLES(10000),
-    .VIRUS_B_SIZE(2300),
+    .VIRUS_B_SIZE(6000),
+    .VIRUS_CONST_SIZE(10000),
     .CHALLENGE_WIDTH(128),
     .CHALLENGE_ADDR(32'H0000FF00),
     .RUNS(128),
@@ -156,7 +155,6 @@ output wire trigger;
     .S_AXI_RDATA(S_AXI_RDATA),
     .S_AXI_RRESP(S_AXI_RRESP),
     .S_AXI_RVALID(S_AXI_RVALID),
-    .S_AXI_RREADY(S_AXI_RREADY),
-    .trigger(trigger)
+    .S_AXI_RREADY(S_AXI_RREADY)
   );
 endmodule
