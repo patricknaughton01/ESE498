@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue Jun  9 13:44:42 2020
-# Process ID: 12258
+# Start of session at: Tue Jun  9 15:29:10 2020
+# Process ID: 30960
 # Current directory: /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1
 # Command line: vivado -log design_1_top_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_top_0_1.tcl
 # Log file: /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1/design_1_top_0_1.vds
@@ -18,11 +18,11 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12321 
+INFO: Helper process launched with PID 31080 
 WARNING: [Synth 8-2507] parameter declaration becomes local in Axi4LiteSupporter with formal parameter declaration list [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/imports/axi4lite/axi4litesupporter.v:36]
 WARNING: [Synth 8-2507] parameter declaration becomes local in top with formal parameter declaration list [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:149]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2008.621 ; gain = 207.621 ; free physical = 4833 ; free virtual = 18639
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2007.648 ; gain = 208.621 ; free physical = 4671 ; free virtual = 18858
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_top_0_1' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/bd/design_1/ip/design_1_top_0_1/synth/design_1_top_0_1.v:59]
 INFO: [Synth 8-6157] synthesizing module 'top' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:48]
@@ -121,7 +121,7 @@ INFO: [Synth 8-6157] synthesizing module 'RAM' [/home/patricknaughton01/Document
 	Parameter WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'RAM' (8#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/ram.v:25]
 WARNING: [Synth 8-689] width (16) of port connection 'do' does not match port width (32) of module 'RAM' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:145]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:191]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:190]
 INFO: [Synth 8-6155] done synthesizing module 'top' (9#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:48]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_top_0_1' (10#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/bd/design_1/ip/design_1_top_0_1/synth/design_1_top_0_1.v:59]
 WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[3]
@@ -131,7 +131,7 @@ WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTR
 WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WVALID
 WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_BREADY
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2059.496 ; gain = 258.496 ; free physical = 4859 ; free virtual = 18666
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2059.555 ; gain = 260.527 ; free physical = 4700 ; free virtual = 18883
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -144,12 +144,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2076.340 ; gain = 275.340 ; free physical = 4858 ; free virtual = 18665
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2077.367 ; gain = 278.340 ; free physical = 4701 ; free virtual = 18884
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2076.340 ; gain = 275.340 ; free physical = 4858 ; free virtual = 18665
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2077.367 ; gain = 278.340 ; free physical = 4701 ; free virtual = 18884
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.19 . Memory (MB): peak = 2088.246 ; gain = 0.000 ; free physical = 4794 ; free virtual = 18601
+Netlist sorting complete. Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.20 . Memory (MB): peak = 2084.305 ; gain = 0.000 ; free physical = 4645 ; free virtual = 18828
 INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -158,28 +158,28 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2309.902 ; gain = 0.000 ; free physical = 4680 ; free virtual = 18487
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2314.930 ; gain = 0.000 ; free physical = 4548 ; free virtual = 18740
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.75 ; elapsed = 00:00:00.31 . Memory (MB): peak = 2324.777 ; gain = 14.875 ; free physical = 4668 ; free virtual = 18475
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.69 ; elapsed = 00:00:00.30 . Memory (MB): peak = 2329.805 ; gain = 14.875 ; free physical = 4535 ; free virtual = 18726
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2324.777 ; gain = 523.777 ; free physical = 4751 ; free virtual = 18558
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2329.805 ; gain = 530.777 ; free physical = 4623 ; free virtual = 18815
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2324.777 ; gain = 523.777 ; free physical = 4751 ; free virtual = 18558
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2329.805 ; gain = 530.777 ; free physical = 4623 ; free virtual = 18815
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2324.777 ; gain = 523.777 ; free physical = 4750 ; free virtual = 18558
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2329.805 ; gain = 530.777 ; free physical = 4623 ; free virtual = 18815
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Axi4LiteSupporter'
 ---------------------------------------------------------------------------------------------------
@@ -194,7 +194,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 WARNING: [Synth 8-327] inferring latch for variable 'latches_reg' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:59]
 WARNING: [Synth 8-327] inferring latch for variable 'out_reg' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/ro.v:47]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2324.777 ; gain = 523.777 ; free physical = 4727 ; free virtual = 18536
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2329.805 ; gain = 530.777 ; free physical = 4608 ; free virtual = 18796
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -202,39 +202,39 @@ Report RTL Partitions:
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
 |1     |virus         |           1|     49152|
-|2     |top__GB1      |           1|     10332|
+|2     |top__GB1      |           1|      3569|
+|3     |top__GB2      |           1|      8379|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     64 Bit       Adders := 5     
 	   3 Input     64 Bit       Adders := 2     
-	   2 Input     64 Bit       Adders := 2     
-	   2 Input     32 Bit       Adders := 7     
+	   2 Input     32 Bit       Adders := 5     
 	   3 Input     32 Bit       Adders := 1     
-	  63 Input      7 Bit       Adders := 1     
+	  48 Input     11 Bit       Adders := 1     
+	  16 Input      5 Bit       Adders := 1     
 +---Registers : 
 	              128 Bit    Registers := 3     
-	               64 Bit    Registers := 3     
-	               32 Bit    Registers := 9     
-	                7 Bit    Registers := 2     
+	               64 Bit    Registers := 7     
+	               63 Bit    Registers := 1     
+	               32 Bit    Registers := 6     
 	                4 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Multipliers : 
-	                32x32  Multipliers := 1     
-	                64x64  Multipliers := 2     
+	                64x64  Multipliers := 3     
 +---Muxes : 
 	   2 Input    128 Bit        Muxes := 5     
-	   9 Input     64 Bit        Muxes := 2     
-	   3 Input     32 Bit        Muxes := 2     
-	   9 Input     32 Bit        Muxes := 5     
+	   9 Input     64 Bit        Muxes := 5     
+	   2 Input     63 Bit        Muxes := 2     
+	   9 Input     32 Bit        Muxes := 2     
 	   2 Input     32 Bit        Muxes := 13    
+	   3 Input     32 Bit        Muxes := 2     
+	   9 Input     16 Bit        Muxes := 2     
 	   2 Input     16 Bit        Muxes := 2     
 	   3 Input     16 Bit        Muxes := 2     
-	   9 Input     16 Bit        Muxes := 1     
-	   2 Input      7 Bit        Muxes := 1     
-	   9 Input      7 Bit        Muxes := 1     
 	  10 Input      4 Bit        Muxes := 1     
 	   9 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
@@ -242,10 +242,10 @@ Detailed RTL Component Info :
 	   3 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 12    
-	   3 Input      1 Bit        Muxes := 5     
 	   4 Input      1 Bit        Muxes := 3     
 	   9 Input      1 Bit        Muxes := 15    
 	   5 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 5     
 	   8 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -273,30 +273,29 @@ Detailed RTL Component Info :
 Module top 
 Detailed RTL Component Info : 
 +---Adders : 
+	   2 Input     64 Bit       Adders := 5     
 	   3 Input     64 Bit       Adders := 2     
-	   2 Input     64 Bit       Adders := 2     
-	   2 Input     32 Bit       Adders := 7     
+	   2 Input     32 Bit       Adders := 5     
 	   3 Input     32 Bit       Adders := 1     
-	  63 Input      7 Bit       Adders := 1     
+	  48 Input     11 Bit       Adders := 1     
+	  16 Input      5 Bit       Adders := 1     
 +---Registers : 
 	              128 Bit    Registers := 3     
-	               64 Bit    Registers := 2     
-	               32 Bit    Registers := 8     
-	                7 Bit    Registers := 2     
+	               64 Bit    Registers := 6     
+	               63 Bit    Registers := 1     
+	               32 Bit    Registers := 5     
 	                4 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Multipliers : 
-	                32x32  Multipliers := 1     
-	                64x64  Multipliers := 2     
+	                64x64  Multipliers := 3     
 +---Muxes : 
 	   2 Input    128 Bit        Muxes := 5     
-	   9 Input     64 Bit        Muxes := 2     
-	   9 Input     32 Bit        Muxes := 5     
+	   9 Input     64 Bit        Muxes := 5     
+	   2 Input     63 Bit        Muxes := 2     
+	   9 Input     32 Bit        Muxes := 2     
 	   2 Input     32 Bit        Muxes := 13    
-	   9 Input     16 Bit        Muxes := 1     
+	   9 Input     16 Bit        Muxes := 2     
 	   2 Input     16 Bit        Muxes := 1     
-	   2 Input      7 Bit        Muxes := 1     
-	   9 Input      7 Bit        Muxes := 1     
 	  10 Input      4 Bit        Muxes := 1     
 	   9 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
@@ -323,26 +322,86 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:330]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 10 [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:223]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 16 [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:333]
-DSP Report: Generating DSP meanD3, operation Mode is: A2*B2.
-DSP Report: register sumAccQ_reg is absorbed into DSP meanD3.
-DSP Report: register meanD3 is absorbed into DSP meanD3.
-DSP Report: operator meanD3 is absorbed into DSP meanD3.
-DSP Report: operator meanD3 is absorbed into DSP meanD3.
-DSP Report: Generating DSP meanD3, operation Mode is: (PCIN>>17)+A2*B2.
-DSP Report: register sumAccQ_reg is absorbed into DSP meanD3.
-DSP Report: register sumAccQ_reg is absorbed into DSP meanD3.
-DSP Report: operator meanD3 is absorbed into DSP meanD3.
-DSP Report: operator meanD3 is absorbed into DSP meanD3.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 16 [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:329]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 10 [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:222]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 16 [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:332]
 DSP Report: Generating DSP meanD3, operation Mode is: A2*B2.
 DSP Report: register meanD3 is absorbed into DSP meanD3.
 DSP Report: register meanD3 is absorbed into DSP meanD3.
 DSP Report: operator meanD3 is absorbed into DSP meanD3.
 DSP Report: operator meanD3 is absorbed into DSP meanD3.
 DSP Report: Generating DSP meanD3, operation Mode is: (PCIN>>17)+A2*B2.
-DSP Report: register sumAccQ_reg is absorbed into DSP meanD3.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: Generating DSP meanD3, operation Mode is: PCIN+A2*B2.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: Generating DSP meanD3, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: Generating DSP meanD3, operation Mode is: A2*B2.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: Generating DSP meanD3, operation Mode is: PCIN+A2*B2.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: Generating DSP meanD3, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: Generating DSP meanD3, operation Mode is: PCIN+A2*B2.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: Generating DSP meanD3, operation Mode is: A2*B2.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: Generating DSP meanD3, operation Mode is: PCIN+A2*B2.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: Generating DSP meanD3, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: Generating DSP meanD3, operation Mode is: PCIN+A2*B2.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: Generating DSP meanD3, operation Mode is: A2*B2.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: Generating DSP meanD3, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: Generating DSP meanD3, operation Mode is: PCIN+A2*B2.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: operator meanD3 is absorbed into DSP meanD3.
+DSP Report: Generating DSP meanD3, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register meanD3 is absorbed into DSP meanD3.
 DSP Report: register meanD3 is absorbed into DSP meanD3.
 DSP Report: operator meanD3 is absorbed into DSP meanD3.
 DSP Report: operator meanD3 is absorbed into DSP meanD3.
@@ -444,34 +503,88 @@ DSP Report: operator varD1 is absorbed into DSP varD1.
 DSP Report: Generating DSP varD1, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator varD1 is absorbed into DSP varD1.
 DSP Report: operator varD1 is absorbed into DSP varD1.
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[7]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[8]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[9]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[10]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[11]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[12]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[13]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[14]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[15]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[16]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[17]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[18]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[19]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[20]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[21]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[22]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[23]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[24]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[25]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[26]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[27]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[28]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[29]' (FDRE) to 'insti_0/ppQ_reg[30]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (insti_0/\diffMaxQ_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (insti_0/\diffMinQ_reg[6] )
-INFO: [Synth 8-3886] merging instance 'insti_0/ppQ_reg[6]' (FDRE) to 'insti_0/ppQ_reg[30]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[31]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[32]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[33]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[34]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[35]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[36]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[37]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[38]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[39]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[40]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[41]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[42]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[43]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[44]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[45]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[46]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[47]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[48]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[49]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[50]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[51]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[52]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[53]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[54]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[55]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[56]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[57]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[58]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[59]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[60]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[61]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[62]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[63]' (FDRE) to 'insti_1/diffMinQ_reg[7]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[7]' (FDRE) to 'insti_1/diffMinQ_reg[8]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[8]' (FDRE) to 'insti_1/diffMinQ_reg[9]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[9]' (FDRE) to 'insti_1/diffMinQ_reg[10]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[10]' (FDRE) to 'insti_1/diffMinQ_reg[11]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[11]' (FDRE) to 'insti_1/diffMinQ_reg[12]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[12]' (FDRE) to 'insti_1/diffMinQ_reg[13]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[13]' (FDRE) to 'insti_1/diffMinQ_reg[14]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[14]' (FDRE) to 'insti_1/diffMinQ_reg[15]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[15]' (FDRE) to 'insti_1/diffMinQ_reg[16]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[16]' (FDRE) to 'insti_1/diffMinQ_reg[17]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[17]' (FDRE) to 'insti_1/diffMinQ_reg[18]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[18]' (FDRE) to 'insti_1/diffMinQ_reg[19]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[19]' (FDRE) to 'insti_1/diffMinQ_reg[20]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[20]' (FDRE) to 'insti_1/diffMinQ_reg[21]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[21]' (FDRE) to 'insti_1/diffMinQ_reg[22]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[22]' (FDRE) to 'insti_1/diffMinQ_reg[23]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[23]' (FDRE) to 'insti_1/diffMinQ_reg[24]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[24]' (FDRE) to 'insti_1/diffMinQ_reg[25]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[25]' (FDRE) to 'insti_1/diffMinQ_reg[26]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[26]' (FDRE) to 'insti_1/diffMinQ_reg[27]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[27]' (FDRE) to 'insti_1/diffMinQ_reg[28]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[28]' (FDRE) to 'insti_1/diffMinQ_reg[29]'
+INFO: [Synth 8-3886] merging instance 'insti_1/diffMinQ_reg[29]' (FDRE) to 'insti_1/diffMinQ_reg[30]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (insti_1/\diffMinQ_reg[30] )
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[7]' (FDRE) to 'insti_1/ppQ_reg[8]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[8]' (FDRE) to 'insti_1/ppQ_reg[9]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[9]' (FDRE) to 'insti_1/ppQ_reg[10]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[10]' (FDRE) to 'insti_1/ppQ_reg[11]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[11]' (FDRE) to 'insti_1/ppQ_reg[12]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[12]' (FDRE) to 'insti_1/ppQ_reg[13]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[13]' (FDRE) to 'insti_1/ppQ_reg[14]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[14]' (FDRE) to 'insti_1/ppQ_reg[15]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[15]' (FDRE) to 'insti_1/ppQ_reg[16]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[16]' (FDRE) to 'insti_1/ppQ_reg[17]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[17]' (FDRE) to 'insti_1/ppQ_reg[18]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[18]' (FDRE) to 'insti_1/ppQ_reg[19]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[19]' (FDRE) to 'insti_1/ppQ_reg[20]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[20]' (FDRE) to 'insti_1/ppQ_reg[21]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[21]' (FDRE) to 'insti_1/ppQ_reg[22]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[22]' (FDRE) to 'insti_1/ppQ_reg[23]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[23]' (FDRE) to 'insti_1/ppQ_reg[24]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[24]' (FDRE) to 'insti_1/ppQ_reg[25]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[25]' (FDRE) to 'insti_1/ppQ_reg[26]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[26]' (FDRE) to 'insti_1/ppQ_reg[27]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[27]' (FDRE) to 'insti_1/ppQ_reg[28]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[28]' (FDRE) to 'insti_1/ppQ_reg[29]'
+INFO: [Synth 8-3886] merging instance 'insti_1/ppQ_reg[29]' (FDRE) to 'insti_1/ppQ_reg[30]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:01:11 . Memory (MB): peak = 2324.777 ; gain = 523.777 ; free physical = 5470 ; free virtual = 19320
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:01:12 . Memory (MB): peak = 2329.805 ; gain = 530.777 ; free physical = 5348 ; free virtual = 19588
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -481,7 +594,7 @@ Distributed RAM: Preliminary Mapping	Report (see note below)
 +-----------------+--------------+-----------+----------------------+------------------+
 |Module Name      | RTL Object   | Inference | Size (Depth x Width) | Primitives       | 
 +-----------------+--------------+-----------+----------------------+------------------+
-|design_1_top_0_1 | ram1/ram_reg | Implied   | 8 K x 7              | RAM256X1S x 512	 | 
+|design_1_top_0_1 | ram1/ram_reg | Implied   | 8 K x 16             | RAM256X1S x 512	 | 
 +-----------------+--------------+-----------+----------------------+------------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
@@ -490,10 +603,22 @@ DSP: Preliminary Mapping	Report (see note below)
 +-----------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name      | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +-----------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|design_1_top_0_1 | A2*B2            | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
-|design_1_top_0_1 | (PCIN>>17)+A2*B2 | 16     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|design_1_top_0_1 | A2*B2            | 18     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|design_1_top_0_1 | (PCIN>>17)+A2*B2 | 18     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|design_1_top_0_1 | PCIN+A2*B2       | 18     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|design_1_top_0_1 | (PCIN>>17)+A2*B2 | 14     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
 |design_1_top_0_1 | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
-|design_1_top_0_1 | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|design_1_top_0_1 | PCIN+A2*B2       | 18     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|design_1_top_0_1 | (PCIN>>17)+A2*B2 | 18     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|design_1_top_0_1 | PCIN+A2*B2       | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|design_1_top_0_1 | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|design_1_top_0_1 | PCIN+A2*B2       | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|design_1_top_0_1 | (PCIN>>17)+A2*B2 | 18     | 14     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|design_1_top_0_1 | PCIN+A2*B2       | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|design_1_top_0_1 | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|design_1_top_0_1 | (PCIN>>17)+A2*B2 | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|design_1_top_0_1 | PCIN+A2*B2       | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|design_1_top_0_1 | (PCIN>>17)+A2*B2 | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
 |design_1_top_0_1 | A2*B2            | 24     | 7      | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
 |design_1_top_0_1 | A2*B2            | 24     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
 |design_1_top_0_1 | PCIN+A2*B2       | 24     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
@@ -532,19 +657,20 @@ Report RTL Partitions:
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
 |1     |virus         |           1|     32768|
-|2     |top__GB1      |           1|      7100|
+|2     |top__GB1      |           1|      2151|
+|3     |top__GB2      |           1|      6363|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:01:19 . Memory (MB): peak = 2337.762 ; gain = 536.762 ; free physical = 5320 ; free virtual = 19170
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:01:20 . Memory (MB): peak = 2333.789 ; gain = 534.762 ; free physical = 5227 ; free virtual = 19453
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:01:20 . Memory (MB): peak = 2337.762 ; gain = 536.762 ; free physical = 5319 ; free virtual = 19169
+Finished Timing Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:01:21 . Memory (MB): peak = 2333.789 ; gain = 534.762 ; free physical = 5227 ; free virtual = 19453
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -554,7 +680,7 @@ Distributed RAM: Final Mapping	Report
 +-----------------+--------------+-----------+----------------------+------------------+
 |Module Name      | RTL Object   | Inference | Size (Depth x Width) | Primitives       | 
 +-----------------+--------------+-----------+----------------------+------------------+
-|design_1_top_0_1 | ram1/ram_reg | Implied   | 8 K x 7              | RAM256X1S x 512	 | 
+|design_1_top_0_1 | ram1/ram_reg | Implied   | 8 K x 16             | RAM256X1S x 512	 | 
 +-----------------+--------------+-----------+----------------------+------------------+
 
 ---------------------------------------------------------------------------------
@@ -566,13 +692,14 @@ Report RTL Partitions:
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
 |1     |virus         |           1|     32768|
-|2     |top__GB1      |           1|      7100|
+|2     |top__GB1      |           1|      2151|
+|3     |top__GB2      |           1|      6363|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:12 ; elapsed = 00:02:06 . Memory (MB): peak = 2382.996 ; gain = 581.996 ; free physical = 5290 ; free virtual = 19141
+Finished Technology Mapping : Time (s): cpu = 00:01:12 ; elapsed = 00:02:07 . Memory (MB): peak = 2388.711 ; gain = 589.684 ; free physical = 5242 ; free virtual = 19469
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -599,13 +726,13 @@ INFO: [Synth 8-3295] tying undriven pin inst/tdc1/delay_bufs_inferred:in0[63] to
 INFO: [Synth 8-3295] tying undriven pin inst/tdc1/delay_bufs_inferred:in0[62] to constant 0
 INFO: [Synth 8-3295] tying undriven pin inst/tdc1/delay_bufs_inferred:in0[61] to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:16 ; elapsed = 00:02:11 . Memory (MB): peak = 2382.996 ; gain = 581.996 ; free physical = 5274 ; free virtual = 19125
+Finished IO Insertion : Time (s): cpu = 00:01:17 ; elapsed = 00:02:11 . Memory (MB): peak = 2388.711 ; gain = 589.684 ; free physical = 5243 ; free virtual = 19471
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:16 ; elapsed = 00:02:11 . Memory (MB): peak = 2382.996 ; gain = 581.996 ; free physical = 5274 ; free virtual = 19125
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:17 ; elapsed = 00:02:11 . Memory (MB): peak = 2388.711 ; gain = 589.684 ; free physical = 5243 ; free virtual = 19471
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -624,25 +751,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:18 ; elapsed = 00:02:12 . Memory (MB): peak = 2382.996 ; gain = 581.996 ; free physical = 5280 ; free virtual = 19134
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:19 ; elapsed = 00:02:13 . Memory (MB): peak = 2388.711 ; gain = 589.684 ; free physical = 5241 ; free virtual = 19469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:18 ; elapsed = 00:02:13 . Memory (MB): peak = 2382.996 ; gain = 581.996 ; free physical = 5279 ; free virtual = 19134
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:19 ; elapsed = 00:02:13 . Memory (MB): peak = 2388.711 ; gain = 589.684 ; free physical = 5241 ; free virtual = 19469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:20 ; elapsed = 00:02:14 . Memory (MB): peak = 2382.996 ; gain = 581.996 ; free physical = 5291 ; free virtual = 19146
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:21 ; elapsed = 00:02:15 . Memory (MB): peak = 2388.711 ; gain = 589.684 ; free physical = 5247 ; free virtual = 19475
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:20 ; elapsed = 00:02:14 . Memory (MB): peak = 2382.996 ; gain = 581.996 ; free physical = 5291 ; free virtual = 19146
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:21 ; elapsed = 00:02:15 . Memory (MB): peak = 2388.711 ; gain = 589.684 ; free physical = 5247 ; free virtual = 19475
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -658,19 +785,19 @@ Report Cell Usage:
 +------+----------+------+
 |      |Cell      |Count |
 +------+----------+------+
-|1     |CARRY4    |   209|
-|2     |DSP48E1   |    12|
+|1     |CARRY4    |   241|
+|2     |DSP48E1   |    18|
 |3     |DSP48E1_1 |    10|
-|4     |LUT1      |   124|
-|5     |LUT2      | 17108|
-|6     |LUT3      |   182|
-|7     |LUT4      |   583|
-|8     |LUT5      |   168|
-|9     |LUT6      |   727|
-|10    |MUXF7     |    18|
-|11    |MUXF8     |     9|
-|12    |RAM256X1S |   224|
-|13    |FDRE      |   983|
+|4     |LUT1      |   121|
+|5     |LUT2      | 17218|
+|6     |LUT3      |   157|
+|7     |LUT4      |   645|
+|8     |LUT5      |   195|
+|9     |LUT6      |   599|
+|10    |MUXF7     |    36|
+|11    |MUXF8     |     1|
+|12    |RAM256X1S |   256|
+|13    |FDRE      |  1079|
 |14    |FDSE      |     6|
 |15    |LD        | 16447|
 +------+----------+------+
@@ -679,11 +806,11 @@ Report Instance Areas:
 +------+-------------------------------+------------------+------+
 |      |Instance                       |Module            |Cells |
 +------+-------------------------------+------------------+------+
-|1     |top                            |                  | 36810|
-|2     |  inst                         |top               | 36801|
-|3     |    AxiSupporter1              |Axi4LiteSupporter |  1049|
-|4     |    ram1                       |RAM               |   351|
-|5     |    tdc1                       |tdc               |   413|
+|1     |top                            |                  | 37029|
+|2     |  inst                         |top               | 37025|
+|3     |    AxiSupporter1              |Axi4LiteSupporter |   892|
+|4     |    ram1                       |RAM               |   398|
+|5     |    tdc1                       |tdc               |   455|
 |6     |      \genblk1[1].init         |buffer__1         |     2|
 |7     |      \genblk1[2].init         |buffer__2         |     2|
 |8     |      \genblk1[3].init         |buffer__3         |     2|
@@ -17230,37 +17357,36 @@ Report Instance Areas:
 |16549 |        \genblk1[127].ringOsc  |ro__1280          |     2|
 +------+-------------------------------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:20 ; elapsed = 00:02:14 . Memory (MB): peak = 2382.996 ; gain = 581.996 ; free physical = 5288 ; free virtual = 19146
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:21 ; elapsed = 00:02:15 . Memory (MB): peak = 2388.711 ; gain = 589.684 ; free physical = 5242 ; free virtual = 19474
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:16 ; elapsed = 00:02:11 . Memory (MB): peak = 2382.996 ; gain = 333.559 ; free physical = 5362 ; free virtual = 19220
-Synthesis Optimization Complete : Time (s): cpu = 00:01:20 ; elapsed = 00:02:15 . Memory (MB): peak = 2383.004 ; gain = 581.996 ; free physical = 5362 ; free virtual = 19220
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:16 ; elapsed = 00:02:11 . Memory (MB): peak = 2388.711 ; gain = 337.246 ; free physical = 5313 ; free virtual = 19545
+Synthesis Optimization Complete : Time (s): cpu = 00:01:21 ; elapsed = 00:02:15 . Memory (MB): peak = 2388.719 ; gain = 589.684 ; free physical = 5313 ; free virtual = 19545
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2383.004 ; gain = 0.000 ; free physical = 5421 ; free virtual = 19280
-INFO: [Netlist 29-17] Analyzing 16929 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2388.719 ; gain = 0.000 ; free physical = 5371 ; free virtual = 19602
+INFO: [Netlist 29-17] Analyzing 17009 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2415.012 ; gain = 0.000 ; free physical = 5372 ; free virtual = 19227
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2420.727 ; gain = 0.000 ; free physical = 5312 ; free virtual = 19544
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 16671 instances were transformed.
+  A total of 16703 instances were transformed.
   LD => LDCE: 16447 instances
-  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 224 instances
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 256 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-72 Infos, 44 Warnings, 0 Critical Warnings and 0 Errors encountered.
+126 Infos, 44 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:31 ; elapsed = 00:02:28 . Memory (MB): peak = 2415.012 ; gain = 873.484 ; free physical = 5537 ; free virtual = 19393
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2415.012 ; gain = 0.000 ; free physical = 5537 ; free virtual = 19393
+synth_design: Time (s): cpu = 00:01:32 ; elapsed = 00:02:28 . Memory (MB): peak = 2420.727 ; gain = 880.203 ; free physical = 5473 ; free virtual = 19705
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2420.727 ; gain = 0.000 ; free physical = 5473 ; free virtual = 19705
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1/design_1_top_0_1.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2439.023 ; gain = 24.012 ; free physical = 5532 ; free virtual = 19391
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
 INFO: [Coretcl 2-1174] Renamed 16548 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2439.023 ; gain = 0.000 ; free physical = 5496 ; free virtual = 19390
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2444.738 ; gain = 0.000 ; free physical = 5435 ; free virtual = 19706
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1/design_1_top_0_1.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_top_0_1_utilization_synth.rpt -pb design_1_top_0_1_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jun  9 13:47:35 2020...
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  9 15:32:03 2020...

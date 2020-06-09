@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue Jun  9 13:48:29 2020
-# Process ID: 13222
+# Start of session at: Tue Jun  9 15:32:55 2020
+# Process ID: 31946
 # Current directory: /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/impl_2
 # Command line: vivado -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
 # Log file: /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/impl_2/design_1_wrapper.vdi
@@ -22,8 +22,8 @@ INFO: [Project 1-454] Reading design checkpoint '/home/patricknaughton01/Documen
 INFO: [Project 1-454] Reading design checkpoint '/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2.dcp' for cell 'design_1_i/rst_ps7_0_100M'
 INFO: [Project 1-454] Reading design checkpoint '/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/bd/design_1/ip/design_1_top_0_1/design_1_top_0_1.dcp' for cell 'design_1_i/top_0'
 INFO: [Project 1-454] Reading design checkpoint '/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Netlist sorting complete. Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1901.254 ; gain = 0.000 ; free physical = 5648 ; free virtual = 19538
-INFO: [Netlist 29-17] Analyzing 501 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.13 . Memory (MB): peak = 1900.250 ; gain = 0.000 ; free physical = 5486 ; free virtual = 19762
+INFO: [Netlist 29-17] Analyzing 581 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2019.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -43,7 +43,7 @@ Finished Parsing XDC File [/home/patricknaughton01/Documents/WashU/School/Sem6/E
 Parsing XDC File [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc:57]
-get_clocks: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2612.305 ; gain = 547.820 ; free physical = 5107 ; free virtual = 18998
+get_clocks: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2630.340 ; gain = 563.859 ; free physical = 4943 ; free virtual = 19208
 Finished Parsing XDC File [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
 Parsing XDC File [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/constrs_1/new/zedboard.xdc]
 Finished Parsing XDC File [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/constrs_1/new/zedboard.xdc]
@@ -52,14 +52,14 @@ Finished Parsing XDC File [/home/patricknaughton01/Documents/WashU/School/Sem6/E
 Parsing XDC File [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/constrs_1/new/placement.xdc]
 Finished Parsing XDC File [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/constrs_1/new/placement.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2748.348 ; gain = 0.000 ; free physical = 4995 ; free virtual = 18890
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2766.387 ; gain = 0.000 ; free physical = 4852 ; free virtual = 19119
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 224 instances were transformed.
-  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 224 instances
+  A total of 256 instances were transformed.
+  RAM256X1S => RAM256X1S (MUXF7(x2), MUXF8, RAMS64E(x4)): 256 instances
 
 17 Infos, 2 Warnings, 1 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 2748.348 ; gain = 1072.855 ; free physical = 4995 ; free virtual = 18890
+link_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:41 . Memory (MB): peak = 2766.387 ; gain = 1091.898 ; free physical = 4852 ; free virtual = 19119
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -77,108 +77,152 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2801.336 ; gain = 0.000 ; free physical = 4964 ; free virtual = 18860
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 13bd6eef5
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2801.527 ; gain = 0.000 ; free physical = 4837 ; free virtual = 19106
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: dfe0f127
 
-Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2801.336 ; gain = 0.000 ; free physical = 4964 ; free virtual = 18860
+Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2801.527 ; gain = 0.000 ; free physical = 4837 ; free virtual = 19106
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2801.336 ; gain = 0.000 ; free physical = 4887 ; free virtual = 18785
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2816.324 ; gain = 0.000 ; free physical = 4828 ; free virtual = 19095
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: f7a6abc2
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: de70b4c3
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2803.070 ; gain = 1.734 ; free physical = 4887 ; free virtual = 18783
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2820.293 ; gain = 18.766 ; free physical = 4800 ; free virtual = 19065
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 16bcd728b
+Phase 1.3 Build Placer Netlist Model | Checksum: 2828dcb4a
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 2868.082 ; gain = 66.746 ; free physical = 4852 ; free virtual = 18748
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 2883.305 ; gain = 81.777 ; free physical = 4747 ; free virtual = 19012
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 16bcd728b
+Phase 1.4 Constrain Clocks/Macros | Checksum: 2828dcb4a
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 2868.082 ; gain = 66.746 ; free physical = 4852 ; free virtual = 18748
-Phase 1 Placer Initialization | Checksum: 16bcd728b
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 2883.305 ; gain = 81.777 ; free physical = 4747 ; free virtual = 19012
+Phase 1 Placer Initialization | Checksum: 2828dcb4a
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 2868.082 ; gain = 66.746 ; free physical = 4850 ; free virtual = 18746
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 2883.305 ; gain = 81.777 ; free physical = 4746 ; free virtual = 19011
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 1458d85ae
+Phase 2.1 Floorplanning | Checksum: 23717e860
 
-Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 2898.215 ; gain = 96.879 ; free physical = 4826 ; free virtual = 18722
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 2914.938 ; gain = 113.410 ; free physical = 4720 ; free virtual = 18985
 
 Phase 2.2 Global Placement Core
 
 Phase 2.2.1 Physical Synthesis In Placer
-INFO: [Physopt 32-1018] Found 16458 candidate LUT instances to create LUTNM shape
-INFO: [Physopt 32-775] End 1 Pass. Optimized 8255 nets or cells. Created 69 new cells, deleted 8186 existing cells and moved 0 existing cell
+INFO: [Physopt 32-1018] Found 16455 candidate LUT instances to create LUTNM shape
+INFO: [Physopt 32-775] End 1 Pass. Optimized 8242 nets or cells. Created 46 new cells, deleted 8196 existing cells and moved 0 existing cell
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-64] No nets found for fanout-optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[63] could not be optimized because driver design_1_i/top_0/inst/meanQ[63]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[61] could not be optimized because driver design_1_i/top_0/inst/meanQ[61]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[57] could not be optimized because driver design_1_i/top_0/inst/meanQ[57]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[59] could not be optimized because driver design_1_i/top_0/inst/meanQ[59]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[62] could not be optimized because driver design_1_i/top_0/inst/meanQ[62]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[57] could not be optimized because driver design_1_i/top_0/inst/meanQ[57]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[63] could not be optimized because driver design_1_i/top_0/inst/meanQ[63]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[59] could not be optimized because driver design_1_i/top_0/inst/meanQ[59]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[60] could not be optimized because driver design_1_i/top_0/inst/meanQ[60]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[55] could not be optimized because driver design_1_i/top_0/inst/meanQ[55]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[54] could not be optimized because driver design_1_i/top_0/inst/meanQ[54]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[53] could not be optimized because driver design_1_i/top_0/inst/meanQ[53]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[58] could not be optimized because driver design_1_i/top_0/inst/meanQ[58]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[56] could not be optimized because driver design_1_i/top_0/inst/meanQ[56]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[53] could not be optimized because driver design_1_i/top_0/inst/meanQ[53]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[54] could not be optimized because driver design_1_i/top_0/inst/meanQ[54]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[55] could not be optimized because driver design_1_i/top_0/inst/meanQ[55]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[51] could not be optimized because driver design_1_i/top_0/inst/meanQ[51]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[49] could not be optimized because driver design_1_i/top_0/inst/meanQ[49]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[52] could not be optimized because driver design_1_i/top_0/inst/meanQ[52]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[46] could not be optimized because driver design_1_i/top_0/inst/meanQ[46]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[50] could not be optimized because driver design_1_i/top_0/inst/meanQ[50]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[51] could not be optimized because driver design_1_i/top_0/inst/meanQ[51]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[45] could not be optimized because driver design_1_i/top_0/inst/meanQ[45]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[47] could not be optimized because driver design_1_i/top_0/inst/meanQ[47]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[42] could not be optimized because driver design_1_i/top_0/inst/meanQ[42]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[41] could not be optimized because driver design_1_i/top_0/inst/meanQ[41]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[43] could not be optimized because driver design_1_i/top_0/inst/meanQ[43]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[48] could not be optimized because driver design_1_i/top_0/inst/meanQ[48]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[31] could not be optimized because driver design_1_i/top_0/inst/meanQ[31]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[46] could not be optimized because driver design_1_i/top_0/inst/meanQ[46]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[44] could not be optimized because driver design_1_i/top_0/inst/meanQ[44]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[40] could not be optimized because driver design_1_i/top_0/inst/meanQ[40]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[39] could not be optimized because driver design_1_i/top_0/inst/meanQ[39]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[37] could not be optimized because driver design_1_i/top_0/inst/meanQ[37]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[34] could not be optimized because driver design_1_i/top_0/inst/meanQ[34]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[42] could not be optimized because driver design_1_i/top_0/inst/meanQ[42]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[38] could not be optimized because driver design_1_i/top_0/inst/meanQ[38]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[36] could not be optimized because driver design_1_i/top_0/inst/meanQ[36]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[40] could not be optimized because driver design_1_i/top_0/inst/meanQ[40]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[37] could not be optimized because driver design_1_i/top_0/inst/meanQ[37]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[41] could not be optimized because driver design_1_i/top_0/inst/meanQ[41]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[35] could not be optimized because driver design_1_i/top_0/inst/meanQ[35]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[44] could not be optimized because driver design_1_i/top_0/inst/meanQ[44]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[30] could not be optimized because driver design_1_i/top_0/inst/meanQ[30]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[29] could not be optimized because driver design_1_i/top_0/inst/meanQ[29]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[33] could not be optimized because driver design_1_i/top_0/inst/meanQ[33]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[31] could not be optimized because driver design_1_i/top_0/inst/meanQ[31]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[34] could not be optimized because driver design_1_i/top_0/inst/meanQ[34]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[32] could not be optimized because driver design_1_i/top_0/inst/meanQ[32]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[33] could not be optimized because driver design_1_i/top_0/inst/meanQ[33]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[30] could not be optimized because driver design_1_i/top_0/inst/meanQ[30]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[27] could not be optimized because driver design_1_i/top_0/inst/meanQ[27]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[29] could not be optimized because driver design_1_i/top_0/inst/meanQ[29]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[28] could not be optimized because driver design_1_i/top_0/inst/meanQ[28]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[26] could not be optimized because driver design_1_i/top_0/inst/meanQ[26]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[25] could not be optimized because driver design_1_i/top_0/inst/meanQ[25]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[24] could not be optimized because driver design_1_i/top_0/inst/meanQ[24]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[26] could not be optimized because driver design_1_i/top_0/inst/meanQ[26]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[23] could not be optimized because driver design_1_i/top_0/inst/meanQ[23]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[22] could not be optimized because driver design_1_i/top_0/inst/meanQ[22]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[21] could not be optimized because driver design_1_i/top_0/inst/meanQ[21]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[17] could not be optimized because driver design_1_i/top_0/inst/meanQ[17]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[20] could not be optimized because driver design_1_i/top_0/inst/meanQ[20]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[18] could not be optimized because driver design_1_i/top_0/inst/meanQ[18]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[15] could not be optimized because driver design_1_i/top_0/inst/meanQ[15]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[17] could not be optimized because driver design_1_i/top_0/inst/meanQ[17]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[14] could not be optimized because driver design_1_i/top_0/inst/meanQ[14]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[19] could not be optimized because driver design_1_i/top_0/inst/meanQ[19]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[13] could not be optimized because driver design_1_i/top_0/inst/meanQ[13]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[14] could not be optimized because driver design_1_i/top_0/inst/meanQ[14]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[15] could not be optimized because driver design_1_i/top_0/inst/meanQ[15]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[16] could not be optimized because driver design_1_i/top_0/inst/meanQ[16]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[10] could not be optimized because driver design_1_i/top_0/inst/meanQ[10]_i_1 could not be replicated
-INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[11] could not be optimized because driver design_1_i/top_0/inst/meanQ[11]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[12] could not be optimized because driver design_1_i/top_0/inst/meanQ[12]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[9] could not be optimized because driver design_1_i/top_0/inst/meanQ[9]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[11] could not be optimized because driver design_1_i/top_0/inst/meanQ[11]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[10] could not be optimized because driver design_1_i/top_0/inst/meanQ[10]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[8] could not be optimized because driver design_1_i/top_0/inst/meanQ[8]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[48] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[48]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[49] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[49]_i_1 could not be replicated
 INFO: [Physopt 32-117] Net design_1_i/top_0/inst/meanD[7] could not be optimized because driver design_1_i/top_0/inst/meanQ[7]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[39] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[39]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[41] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[41]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[37] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[37]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[44] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[44]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[50] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[50]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[43] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[43]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[47] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[47]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[45] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[45]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[35] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[35]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[42] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[42]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[38] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[38]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[46] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[46]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[31] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[31]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[40] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[40]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[36] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[36]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[34] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[34]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[33] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[33]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[27] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[27]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[30] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[30]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[24] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[24]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[29] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[29]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[23] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[23]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[32] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[32]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[25] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[25]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[15] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[15]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[12] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[12]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[20] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[20]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[26] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[26]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[28] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[28]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[16] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[16]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[21] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[21]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[19] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[19]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[11] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[11]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[8] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[8]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[13] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[13]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[22] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[22]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[9] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[9]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[17] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[17]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[10] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[10]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[18] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[18]_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_1_i/top_0/inst/sumAccD[14] could not be optimized because driver design_1_i/top_0/inst/sumAccQ[14]_i_1 could not be replicated
+INFO: [Common 17-14] Message 'Physopt 32-117' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Physopt 32-68] No nets found for critical-cell optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -191,7 +235,7 @@ INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found i
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for HD net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2930.012 ; gain = 0.000 ; free physical = 4800 ; free virtual = 18691
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2942.734 ; gain = 0.000 ; free physical = 4667 ; free virtual = 18919
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -200,7 +244,7 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |           69  |           8186  |                  8255  |           0  |           1  |  00:00:04  |
+|  LUT Combining                                    |           46  |           8196  |                  8242  |           0  |           1  |  00:00:04  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Fanout                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Critical Cell                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
@@ -209,69 +253,69 @@ Summary of Physical Synthesis Optimizations
 |  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |           69  |           8186  |                  8255  |           0  |           9  |  00:00:05  |
+|  Total                                            |           46  |           8196  |                  8242  |           0  |           9  |  00:00:05  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2.1 Physical Synthesis In Placer | Checksum: 922762fc
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 17721f731
 
-Time (s): cpu = 00:01:01 ; elapsed = 00:00:25 . Memory (MB): peak = 2962.027 ; gain = 160.691 ; free physical = 4812 ; free virtual = 18703
-Phase 2.2 Global Placement Core | Checksum: 12e5be150
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:26 . Memory (MB): peak = 2974.750 ; gain = 173.223 ; free physical = 4679 ; free virtual = 18931
+Phase 2.2 Global Placement Core | Checksum: 150a7e299
 
-Time (s): cpu = 00:01:06 ; elapsed = 00:00:26 . Memory (MB): peak = 2962.027 ; gain = 160.691 ; free physical = 4812 ; free virtual = 18703
-Phase 2 Global Placement | Checksum: 12e5be150
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:26 . Memory (MB): peak = 2974.750 ; gain = 173.223 ; free physical = 4675 ; free virtual = 18927
+Phase 2 Global Placement | Checksum: 150a7e299
 
-Time (s): cpu = 00:01:06 ; elapsed = 00:00:26 . Memory (MB): peak = 2962.027 ; gain = 160.691 ; free physical = 4829 ; free virtual = 18720
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:26 . Memory (MB): peak = 2974.750 ; gain = 173.223 ; free physical = 4691 ; free virtual = 18943
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 11114e910
+Phase 3.1 Commit Multi Column Macros | Checksum: 19fd6cd58
 
-Time (s): cpu = 00:01:07 ; elapsed = 00:00:27 . Memory (MB): peak = 2962.027 ; gain = 160.691 ; free physical = 4828 ; free virtual = 18719
+Time (s): cpu = 00:01:07 ; elapsed = 00:00:27 . Memory (MB): peak = 2974.750 ; gain = 173.223 ; free physical = 4690 ; free virtual = 18942
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 14687618d
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 2a58690e9
 
-Time (s): cpu = 00:01:09 ; elapsed = 00:00:28 . Memory (MB): peak = 2962.027 ; gain = 160.691 ; free physical = 4827 ; free virtual = 18718
+Time (s): cpu = 00:01:09 ; elapsed = 00:00:28 . Memory (MB): peak = 2974.750 ; gain = 173.223 ; free physical = 4689 ; free virtual = 18941
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 1e6fa2327
+Phase 3.3 Area Swap Optimization | Checksum: 282287af4
 
-Time (s): cpu = 00:01:10 ; elapsed = 00:00:28 . Memory (MB): peak = 2962.027 ; gain = 160.691 ; free physical = 4827 ; free virtual = 18718
+Time (s): cpu = 00:01:09 ; elapsed = 00:00:28 . Memory (MB): peak = 2974.750 ; gain = 173.223 ; free physical = 4689 ; free virtual = 18941
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 1c4104b8b
+Phase 3.4 Pipeline Register Optimization | Checksum: 2649ec8b7
 
-Time (s): cpu = 00:01:10 ; elapsed = 00:00:28 . Memory (MB): peak = 2962.027 ; gain = 160.691 ; free physical = 4827 ; free virtual = 18718
+Time (s): cpu = 00:01:09 ; elapsed = 00:00:28 . Memory (MB): peak = 2974.750 ; gain = 173.223 ; free physical = 4689 ; free virtual = 18941
 
 Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: 1921f54dc
+Phase 3.5 Fast Optimization | Checksum: 22582d9d0
 
-Time (s): cpu = 00:01:13 ; elapsed = 00:00:30 . Memory (MB): peak = 2962.027 ; gain = 160.691 ; free physical = 4823 ; free virtual = 18714
+Time (s): cpu = 00:01:13 ; elapsed = 00:00:30 . Memory (MB): peak = 2974.750 ; gain = 173.223 ; free physical = 4687 ; free virtual = 18940
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: 194fb137c
+Phase 3.6 Small Shape Detail Placement | Checksum: 1e23965e5
 
-Time (s): cpu = 00:01:18 ; elapsed = 00:00:34 . Memory (MB): peak = 2962.027 ; gain = 160.691 ; free physical = 4822 ; free virtual = 18713
+Time (s): cpu = 00:01:18 ; elapsed = 00:00:34 . Memory (MB): peak = 2974.750 ; gain = 173.223 ; free physical = 4641 ; free virtual = 18898
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 1593963ef
+Phase 3.7 Re-assign LUT pins | Checksum: 18f635f6f
 
-Time (s): cpu = 00:01:19 ; elapsed = 00:00:35 . Memory (MB): peak = 2962.027 ; gain = 160.691 ; free physical = 4824 ; free virtual = 18715
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:34 . Memory (MB): peak = 2974.750 ; gain = 173.223 ; free physical = 4642 ; free virtual = 18898
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 1b6432c53
+Phase 3.8 Pipeline Register Optimization | Checksum: 1a50e0cba
 
-Time (s): cpu = 00:01:19 ; elapsed = 00:00:35 . Memory (MB): peak = 2962.027 ; gain = 160.691 ; free physical = 4824 ; free virtual = 18715
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:34 . Memory (MB): peak = 2974.750 ; gain = 173.223 ; free physical = 4642 ; free virtual = 18898
 
 Phase 3.9 Fast Optimization
-Phase 3.9 Fast Optimization | Checksum: 1f69b7ed6
+Phase 3.9 Fast Optimization | Checksum: fddd5f84
 
-Time (s): cpu = 00:01:26 ; elapsed = 00:00:38 . Memory (MB): peak = 2965.145 ; gain = 163.809 ; free physical = 4822 ; free virtual = 18713
-Phase 3 Detail Placement | Checksum: 1f69b7ed6
+Time (s): cpu = 00:01:25 ; elapsed = 00:00:38 . Memory (MB): peak = 2977.867 ; gain = 176.340 ; free physical = 4635 ; free virtual = 18891
+Phase 3 Detail Placement | Checksum: fddd5f84
 
-Time (s): cpu = 00:01:26 ; elapsed = 00:00:39 . Memory (MB): peak = 2965.145 ; gain = 163.809 ; free physical = 4822 ; free virtual = 18713
+Time (s): cpu = 00:01:25 ; elapsed = 00:00:38 . Memory (MB): peak = 2977.867 ; gain = 176.340 ; free physical = 4635 ; free virtual = 18891
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -279,84 +323,85 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 12cfdb51a
+Post Placement Optimization Initialization | Checksum: 105baac70
 
 Phase 4.1.1.1 BUFG Insertion
-INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Phase 4.1.1.1 BUFG Insertion | Checksum: 12cfdb51a
+INFO: [Place 46-33] Processed net design_1_i/top_0/inst/tdc1/S_AXI_ARESETN_0, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 1, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 105baac70
 
-Time (s): cpu = 00:01:35 ; elapsed = 00:00:42 . Memory (MB): peak = 3018.945 ; gain = 217.609 ; free physical = 4816 ; free virtual = 18707
-INFO: [Place 30-746] Post Placement Timing Summary WNS=-33.286. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 1101ad28d
+Time (s): cpu = 00:01:34 ; elapsed = 00:00:41 . Memory (MB): peak = 3045.668 ; gain = 244.141 ; free physical = 4628 ; free virtual = 18885
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-33.396. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1c3310acc
 
-Time (s): cpu = 00:01:42 ; elapsed = 00:00:48 . Memory (MB): peak = 3018.945 ; gain = 217.609 ; free physical = 4814 ; free virtual = 18706
-Phase 4.1 Post Commit Optimization | Checksum: 1101ad28d
+Time (s): cpu = 00:01:39 ; elapsed = 00:00:46 . Memory (MB): peak = 3045.668 ; gain = 244.141 ; free physical = 4622 ; free virtual = 18879
+Phase 4.1 Post Commit Optimization | Checksum: 1c3310acc
 
-Time (s): cpu = 00:01:42 ; elapsed = 00:00:48 . Memory (MB): peak = 3018.945 ; gain = 217.609 ; free physical = 4814 ; free virtual = 18706
+Time (s): cpu = 00:01:40 ; elapsed = 00:00:46 . Memory (MB): peak = 3045.668 ; gain = 244.141 ; free physical = 4622 ; free virtual = 18879
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 1101ad28d
+Phase 4.2 Post Placement Cleanup | Checksum: 1c3310acc
 
-Time (s): cpu = 00:01:42 ; elapsed = 00:00:48 . Memory (MB): peak = 3018.945 ; gain = 217.609 ; free physical = 4814 ; free virtual = 18706
+Time (s): cpu = 00:01:40 ; elapsed = 00:00:46 . Memory (MB): peak = 3045.668 ; gain = 244.141 ; free physical = 4624 ; free virtual = 18880
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 1101ad28d
+Phase 4.3 Placer Reporting | Checksum: 1c3310acc
 
-Time (s): cpu = 00:01:42 ; elapsed = 00:00:48 . Memory (MB): peak = 3018.945 ; gain = 217.609 ; free physical = 4817 ; free virtual = 18708
+Time (s): cpu = 00:01:40 ; elapsed = 00:00:46 . Memory (MB): peak = 3045.668 ; gain = 244.141 ; free physical = 4626 ; free virtual = 18882
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3018.945 ; gain = 0.000 ; free physical = 4817 ; free virtual = 18708
-Phase 4.4 Final Placement Cleanup | Checksum: 12103a75f
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3045.668 ; gain = 0.000 ; free physical = 4626 ; free virtual = 18882
+Phase 4.4 Final Placement Cleanup | Checksum: 246dff09a
 
-Time (s): cpu = 00:01:42 ; elapsed = 00:00:48 . Memory (MB): peak = 3018.945 ; gain = 217.609 ; free physical = 4817 ; free virtual = 18708
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 12103a75f
+Time (s): cpu = 00:01:40 ; elapsed = 00:00:46 . Memory (MB): peak = 3045.668 ; gain = 244.141 ; free physical = 4626 ; free virtual = 18882
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 246dff09a
 
-Time (s): cpu = 00:01:42 ; elapsed = 00:00:48 . Memory (MB): peak = 3018.945 ; gain = 217.609 ; free physical = 4817 ; free virtual = 18708
-Ending Placer Task | Checksum: b2ca0ce5
+Time (s): cpu = 00:01:40 ; elapsed = 00:00:46 . Memory (MB): peak = 3045.668 ; gain = 244.141 ; free physical = 4626 ; free virtual = 18882
+Ending Placer Task | Checksum: 14d649403
 
-Time (s): cpu = 00:01:42 ; elapsed = 00:00:48 . Memory (MB): peak = 3018.945 ; gain = 217.609 ; free physical = 4817 ; free virtual = 18708
+Time (s): cpu = 00:01:40 ; elapsed = 00:00:46 . Memory (MB): peak = 3045.668 ; gain = 244.141 ; free physical = 4626 ; free virtual = 18882
 INFO: [Common 17-83] Releasing license: Implementation
-109 Infos, 2 Warnings, 1 Critical Warnings and 0 Errors encountered.
+154 Infos, 2 Warnings, 1 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:01:45 ; elapsed = 00:00:50 . Memory (MB): peak = 3018.945 ; gain = 270.598 ; free physical = 4860 ; free virtual = 18751
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3018.945 ; gain = 0.000 ; free physical = 4860 ; free virtual = 18751
+place_design: Time (s): cpu = 00:01:43 ; elapsed = 00:00:48 . Memory (MB): peak = 3045.668 ; gain = 279.281 ; free physical = 4670 ; free virtual = 18926
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3045.668 ; gain = 0.000 ; free physical = 4670 ; free virtual = 18926
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.96 . Memory (MB): peak = 3018.945 ; gain = 0.000 ; free physical = 4791 ; free virtual = 18726
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.97 . Memory (MB): peak = 3045.668 ; gain = 0.000 ; free physical = 4608 ; free virtual = 18907
 INFO: [Common 17-1381] The checkpoint '/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/impl_2/design_1_wrapper_placed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3018.945 ; gain = 0.000 ; free physical = 4848 ; free virtual = 18749
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3045.668 ; gain = 0.000 ; free physical = 4668 ; free virtual = 18933
 INFO: [runtcl-4] Executing : report_io -file design_1_wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.14 . Memory (MB): peak = 3018.945 ; gain = 0.000 ; free physical = 4836 ; free virtual = 18737
+report_io: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.14 . Memory (MB): peak = 3045.668 ; gain = 0.000 ; free physical = 4657 ; free virtual = 18921
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.14 . Memory (MB): peak = 3018.945 ; gain = 0.000 ; free physical = 4847 ; free virtual = 18747
+report_control_sets: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.14 . Memory (MB): peak = 3045.668 ; gain = 0.000 ; free physical = 4667 ; free virtual = 18932
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3018.945 ; gain = 0.000 ; free physical = 4821 ; free virtual = 18722
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3045.668 ; gain = 0.000 ; free physical = 4636 ; free virtual = 18901
 
 Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5271.914 |
-Phase 1 Physical Synthesis Initialization | Checksum: 22ca6afbf
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.396 | TNS=-5794.212 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1b7f03258
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3018.945 ; gain = 0.000 ; free physical = 4805 ; free virtual = 18707
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5271.914 |
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3045.668 ; gain = 0.000 ; free physical = 4612 ; free virtual = 18877
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.396 | TNS=-5794.212 |
 
 Phase 2 DSP Register Optimization
 INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Phase 2 DSP Register Optimization | Checksum: 22ca6afbf
+Phase 2 DSP Register Optimization | Checksum: 1b7f03258
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3018.945 ; gain = 0.000 ; free physical = 4803 ; free virtual = 18705
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 3045.668 ; gain = 0.000 ; free physical = 4493 ; free virtual = 18758
 
 Phase 3 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5271.914 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.396 | TNS=-5794.212 |
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/latches[60]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[60]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[56]. Optimizations did not improve timing on the net.
@@ -500,125 +545,6 @@ INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/
 INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp_inferred_i_1
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[11].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[11]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[11]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5271.573 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[1].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[1]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[1]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5271.321 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[10].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[10]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[10]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5271.111 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[12].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[12]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[12]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5270.901 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[14].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[14]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[14]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5270.691 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[4].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[4]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[4]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5270.480 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[6].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[6]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[6]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5270.271 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[7].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[7]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[7]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5270.061 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[8].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[8]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[8]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5269.851 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[9].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[9]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[9]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5269.645 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[13].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[13]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[13]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5269.463 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[15].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[15]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[15]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5269.279 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[16].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[16]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[16]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5269.097 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[19].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[19]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[19]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5268.925 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[2].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[2]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[2]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5268.752 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[5].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[5]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[5]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5268.580 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[0].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[0]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[0]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5268.455 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[17].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[17]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[17]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5268.330 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[18].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[18]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[18]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5268.214 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[20].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[20]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[20]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5268.098 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[21].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[21]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[21]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5267.982 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[23].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[23]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[23]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5267.867 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[24].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[24]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[24]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5267.781 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[25].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[25]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[25]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5267.696 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[29].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[29]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[29]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5267.611 |
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[3].  Re-placed instance design_1_i/top_0/inst/virusCounterQ_reg[3]
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[3]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5267.526 |
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[24].  Did not re-place instance design_1_i/top_0/inst/virusCounterQ_reg[24]
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/virusCounterQ_reg_n_0_[24]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[38].  Re-placed instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[39]
-INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[38]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5193.284 |
-INFO: [Physopt 32-663] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[61]_0[38].  Re-placed instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[39]
-INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[61]_0[38]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5176.557 |
-INFO: [Physopt 32-663] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[37].  Re-placed instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[38]
-INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[37]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5172.695 |
-INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[38].  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/m_payload_i_reg[39]
-INFO: [Physopt 32-572] Net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[38] was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar.ar_pipe/Q[38]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1
-INFO: [Physopt 32-710] Processed net design_1_i/top_0/inst/AxiSupporter1/state_reg[3]_3[0]. Critical path length was reduced through logic transformation on cell design_1_i/top_0/inst/AxiSupporter1/virusCounterQ[31]_i_1_comp.
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5153.910 |
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_5_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_5
-INFO: [Physopt 32-572] Net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_5_n_0 was not replicated.
-Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_5_n_0. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-663] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_9_n_0.  Re-placed instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_9
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_9_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5115.435 |
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_9_n_0.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_9
-INFO: [Physopt 32-710] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_5_n_0. Critical path length was reduced through logic transformation on cell design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_5_comp.
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_9_n_0. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5111.043 |
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_n_0_repN_1.  Did not re-place instance design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_comp_1
-INFO: [Physopt 32-710] Processed net design_1_i/top_0/inst/AxiSupporter1/state_reg[3]_3[0]. Critical path length was reduced through logic transformation on cell design_1_i/top_0/inst/AxiSupporter1/virusCounterQ[31]_i_1_comp_1.
-INFO: [Physopt 32-735] Processed net design_1_i/top_0/inst/AxiSupporter1/trigger_INST_0_i_1_n_0_repN_1. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5109.534 |
-INFO: [Physopt 32-663] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/wrap_cmd_0/sel_first.  Re-placed instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/wrap_cmd_0/sel_first_reg
-INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/cmd_translator_0/wrap_cmd_0/sel_first. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5109.174 |
-INFO: [Physopt 32-662] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[61]_0[38].  Did not re-place instance design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[39]
-INFO: [Physopt 32-81] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[61]_0[38]. Replicated 1 times.
-INFO: [Physopt 32-735] Processed net design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[61]_0[38]. Optimization improves timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5107.840 |
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/latches[60]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[60]. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[56]. Optimizations did not improve timing on the net.
@@ -762,305 +688,12 @@ INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/
 INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp_inferred_i_1
 INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp. Optimizations did not improve timing on the net.
 INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5107.840 |
-Phase 3 Critical Path Optimization | Checksum: 22ca6afbf
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.396 | TNS=-5794.212 |
+Phase 3 Critical Path Optimization | Checksum: 1b7f03258
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:10 . Memory (MB): peak = 3042.957 ; gain = 24.012 ; free physical = 4834 ; free virtual = 18736
-
-Phase 4 Critical Path Optimization
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5107.840 |
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/latches[60]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[60]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[56]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[52]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[48]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[44]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[40]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[36]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[32]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[28]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[24]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[20]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[16]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[12]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[8]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[4]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[0].  Did not re-place instance design_1_i/top_0/inst/tdc1/initial_bufs_inst
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[31].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[31].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[31].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[31].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[31].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[31].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[30].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[30].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[30].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[30].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[30].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[30].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[29].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[29].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[29].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[29].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[29].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[29].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[28].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[28].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[28].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[28].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[28].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[28].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[27].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[27].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[27].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[27].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[27].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[27].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[26].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[26].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[26].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[26].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[26].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[26].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[25].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[25].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[25].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[25].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[25].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[25].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[24].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[24].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[24].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[24].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[24].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[24].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[23].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[23].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[23].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[23].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[23].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[23].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[22].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[22].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[22].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[22].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[22].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[22].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[21].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[21].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[21].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[21].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[21].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[21].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[20].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[20].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[20].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[20].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[20].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[20].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[19].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[19].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[19].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[19].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[19].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[19].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[18].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[18].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[18].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[18].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[18].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[18].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[17].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[17].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[17].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[17].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[17].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[17].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[16].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[16].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[16].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[16].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[16].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[16].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[15].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[15].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[15].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[15].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[15].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[15].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[14].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[14].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[14].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[14].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[14].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[14].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[13].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[13].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[13].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[13].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[13].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[13].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[12].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[12].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[12].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[12].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[12].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[12].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[11].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[11].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[11].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[11].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[11].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[11].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[10].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[10].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[10].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[10].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[10].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[10].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[9].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[9].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[9].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[9].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[9].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[9].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[8].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[8].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[8].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[8].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[8].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[8].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[7].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[7].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[7].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[7].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[7].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[7].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[6].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[6].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[6].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[6].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[6].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[6].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[5].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[5].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[5].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[5].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[5].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[5].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[4].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[4].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[4].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[4].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[4].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[4].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[3].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[3].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[3].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[3].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[3].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[3].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[2].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[2].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[2].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[2].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[2].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[2].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[1].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/latches[60]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[60]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[56]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[52]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[48]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[44]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[40]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[36]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[32]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[28]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[24]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[20]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[16]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[12]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[8]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[4]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[0].  Did not re-place instance design_1_i/top_0/inst/tdc1/initial_bufs_inst
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/delay_bufs[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[31].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[31].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[31].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[31].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[31].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[31].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[30].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[30].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[30].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[30].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[30].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[30].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[29].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[29].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[29].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[29].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[29].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[29].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[28].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[28].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[28].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[28].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[28].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[28].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[27].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[27].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[27].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[27].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[27].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[27].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[26].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[26].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[26].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[26].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[26].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[26].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[25].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[25].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[25].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[25].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[25].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[25].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[24].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[24].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[24].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[24].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[24].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[24].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[23].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[23].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[23].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[23].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[23].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[23].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[22].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[22].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[22].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[22].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[22].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[22].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[21].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[21].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[21].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[21].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[21].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[21].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[20].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[20].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[20].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[20].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[20].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[20].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[19].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[19].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[19].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[19].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[19].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[19].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[18].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[18].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[18].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[18].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[18].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[18].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[17].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[17].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[17].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[17].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[17].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[17].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[16].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[16].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[16].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[16].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[16].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[16].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[15].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[15].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[15].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[15].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[15].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[15].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[14].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[14].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[14].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[14].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[14].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[14].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[13].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[13].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[13].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[13].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[13].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[13].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[12].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[12].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[12].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[12].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[12].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[12].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[11].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[11].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[11].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[11].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[11].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[11].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[10].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[10].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[10].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[10].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[10].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[10].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[9].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[9].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[9].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[9].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[9].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[9].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[8].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[8].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[8].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[8].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[8].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[8].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[7].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[7].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[7].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[7].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[7].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[7].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[6].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[6].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[6].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[6].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[6].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[6].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[5].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[5].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[5].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[5].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[5].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[5].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[4].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[4].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[4].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[4].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[4].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[4].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[3].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[3].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[3].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[3].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[3].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[3].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[2].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[2].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[2].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[2].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[2].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[2].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/out.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[1].init/out_INST_0
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/out. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-662] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp.  Did not re-place instance design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp_inferred_i_1
-INFO: [Physopt 32-702] Processed net design_1_i/top_0/inst/tdc1/genblk1[1].init/tmp. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-33.286 | TNS=-5107.840 |
-Phase 4 Critical Path Optimization | Checksum: 22ca6afbf
-
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:15 . Memory (MB): peak = 3042.957 ; gain = 24.012 ; free physical = 4931 ; free virtual = 18736
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3042.957 ; gain = 0.000 ; free physical = 4933 ; free virtual = 18738
-INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-33.286 | TNS=-5107.840 |
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:06 . Memory (MB): peak = 3045.668 ; gain = 0.000 ; free physical = 4493 ; free virtual = 18758
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3045.668 ; gain = 0.000 ; free physical = 4494 ; free virtual = 18759
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-33.396 | TNS=-5794.212 |
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -1070,34 +703,31 @@ Summary of Physical Synthesis Optimizations
 |  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 |  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Critical Path  |          0.000  |        164.073  |            1  |              0  |                    35  |           0  |           2  |  00:00:13  |
-|  Total          |          0.000  |        164.073  |            1  |              0  |                    35  |           0  |           3  |  00:00:13  |
+|  Critical Path  |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:04  |
+|  Total          |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           2  |  00:00:04  |
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3042.957 ; gain = 0.000 ; free physical = 4934 ; free virtual = 18738
-Ending Physical Synthesis Task | Checksum: 22ca6afbf
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3045.668 ; gain = 0.000 ; free physical = 4494 ; free virtual = 18759
+Ending Physical Synthesis Task | Checksum: 1b7f03258
 
-Time (s): cpu = 00:00:56 ; elapsed = 00:00:15 . Memory (MB): peak = 3042.957 ; gain = 24.012 ; free physical = 4934 ; free virtual = 18738
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:06 . Memory (MB): peak = 3045.668 ; gain = 0.000 ; free physical = 4495 ; free virtual = 18760
 INFO: [Common 17-83] Releasing license: Implementation
-815 Infos, 2 Warnings, 1 Critical Warnings and 0 Errors encountered.
+455 Infos, 2 Warnings, 1 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
-phys_opt_design: Time (s): cpu = 00:01:03 ; elapsed = 00:00:17 . Memory (MB): peak = 3042.957 ; gain = 24.012 ; free physical = 4949 ; free virtual = 18754
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3042.957 ; gain = 0.000 ; free physical = 4949 ; free virtual = 18754
+phys_opt_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:09 . Memory (MB): peak = 3045.668 ; gain = 0.000 ; free physical = 4513 ; free virtual = 18778
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3045.668 ; gain = 0.000 ; free physical = 4523 ; free virtual = 18788
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.99 . Memory (MB): peak = 3042.957 ; gain = 0.000 ; free physical = 4870 ; free virtual = 18717
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3062.676 ; gain = 9.000 ; free physical = 4502 ; free virtual = 18812
 INFO: [Common 17-1381] The checkpoint '/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/impl_2/design_1_wrapper_physopt.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3042.957 ; gain = 0.000 ; free physical = 4939 ; free virtual = 18753
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3062.676 ; gain = 17.008 ; free physical = 4616 ; free virtual = 18892
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [DRC 23-27] Running DRC with 8 threads
-INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
-INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 Running DRC as a precondition to command route_design
 INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
@@ -1106,71 +736,71 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
-Checksum: PlaceDB: c8980d85 ConstDB: 0 ShapeSum: f7af403a RouteDB: 0
+Checksum: PlaceDB: acc54bb0 ConstDB: 0 ShapeSum: f0762ace RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: e627c772
+Phase 1 Build RT Design | Checksum: 18cbe2983
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 3134.305 ; gain = 0.000 ; free physical = 4806 ; free virtual = 18620
-Post Restoration Checksum: NetGraph: 900c930d NumContArr: 561b3465 Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 3162.129 ; gain = 0.000 ; free physical = 4505 ; free virtual = 18781
+Post Restoration Checksum: NetGraph: d7e46496 NumContArr: b4d9c4ed Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: e627c772
+Phase 2.1 Create Timer | Checksum: 18cbe2983
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 3134.305 ; gain = 0.000 ; free physical = 4805 ; free virtual = 18619
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 3162.129 ; gain = 0.000 ; free physical = 4507 ; free virtual = 18782
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: e627c772
+Phase 2.2 Fix Topology Constraints | Checksum: 18cbe2983
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 3134.305 ; gain = 0.000 ; free physical = 4767 ; free virtual = 18582
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 3162.129 ; gain = 0.000 ; free physical = 4469 ; free virtual = 18744
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: e627c772
+Phase 2.3 Pre Route Cleanup | Checksum: 18cbe2983
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 3134.305 ; gain = 0.000 ; free physical = 4767 ; free virtual = 18582
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 3162.129 ; gain = 0.000 ; free physical = 4472 ; free virtual = 18748
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: bcf63eee
+Phase 2.4 Update Timing | Checksum: 260997ae9
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:19 . Memory (MB): peak = 3134.305 ; gain = 0.000 ; free physical = 4752 ; free virtual = 18565
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-33.656| TNS=-4956.371| WHS=-0.186 | THS=-28.656|
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:20 . Memory (MB): peak = 3162.129 ; gain = 0.000 ; free physical = 4444 ; free virtual = 18722
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-33.928| TNS=-5749.263| WHS=-0.147 | THS=-28.704|
 
-Phase 2 Router Initialization | Checksum: 17706ec34
+Phase 2 Router Initialization | Checksum: 1dfb84ad7
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:21 . Memory (MB): peak = 3148.289 ; gain = 13.984 ; free physical = 4749 ; free virtual = 18561
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:21 . Memory (MB): peak = 3173.113 ; gain = 10.984 ; free physical = 4438 ; free virtual = 18716
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 1.4126 %
-  Global Horizontal Routing Utilization  = 1.24079 %
+  Global Vertical Routing Utilization    = 1.31045 %
+  Global Horizontal Routing Utilization  = 1.07192 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 33946
+  Number of Failed Nets               = 34360
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 33818
+  Number of Unrouted Nets             = 34232
   Number of Partially Routed Nets     = 128
-  Number of Node Overlaps             = 828
+  Number of Node Overlaps             = 500
 
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 19e6ca1ff
+Phase 3 Initial Routing | Checksum: 26528470b
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:22 . Memory (MB): peak = 3148.289 ; gain = 13.984 ; free physical = 4742 ; free virtual = 18554
-INFO: [Route 35-580] Design has 92 pins with tight setup and hold constraints.
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:22 . Memory (MB): peak = 3173.113 ; gain = 10.984 ; free physical = 4430 ; free virtual = 18708
+INFO: [Route 35-580] Design has 14 pins with tight setup and hold constraints.
 
 The top 5 pins with tight setup and hold constraints:
 
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 |       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
-|               clk_fpga_0 |               clk_fpga_0 |                                                     design_1_i/top_0/inst/AxiSupporter1/rdDataQ_reg[18]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                     design_1_i/top_0/inst/AxiSupporter1/rdDataQ_reg[19]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                     design_1_i/top_0/inst/AxiSupporter1/rdDataQ_reg[11]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                      design_1_i/top_0/inst/AxiSupporter1/rdDataQ_reg[9]/D|
-|               clk_fpga_0 |               clk_fpga_0 |                                                     design_1_i/top_0/inst/AxiSupporter1/rdDataQ_reg[29]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                                   design_1_i/top_0/inst/rmsAccQ_reg[62]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                                   design_1_i/top_0/inst/rmsAccQ_reg[60]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                                   design_1_i/top_0/inst/rmsAccQ_reg[58]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                                   design_1_i/top_0/inst/rmsAccQ_reg[61]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                                   design_1_i/top_0/inst/rmsAccQ_reg[56]/D|
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 
 File with complete list of pins: tight_setup_hold_pins.txt
@@ -1179,71 +809,80 @@ File with complete list of pins: tight_setup_hold_pins.txt
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 373
+ Number of Nodes with overlaps = 365
  Number of Nodes with overlaps = 2
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-37.800| TNS=-12057.110| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-39.021| TNS=-13779.330| WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 152a4c847
+Phase 4.1 Global Iteration 0 | Checksum: 16f097350
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:25 . Memory (MB): peak = 3148.289 ; gain = 13.984 ; free physical = 4738 ; free virtual = 18550
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:25 . Memory (MB): peak = 3173.113 ; gain = 10.984 ; free physical = 4444 ; free virtual = 18716
 
 Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-37.800| TNS=-11508.491| WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-38.723| TNS=-12550.493| WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 9c4b5d70
+Phase 4.2 Global Iteration 1 | Checksum: f40a458d
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:25 . Memory (MB): peak = 3148.289 ; gain = 13.984 ; free physical = 4738 ; free virtual = 18550
-Phase 4 Rip-up And Reroute | Checksum: 9c4b5d70
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:27 . Memory (MB): peak = 3173.113 ; gain = 10.984 ; free physical = 4445 ; free virtual = 18717
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:25 . Memory (MB): peak = 3148.289 ; gain = 13.984 ; free physical = 4738 ; free virtual = 18550
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-38.723| TNS=-12355.553| WHS=N/A    | THS=N/A    |
+
+Phase 4.3 Global Iteration 2 | Checksum: 124d8af2d
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:27 . Memory (MB): peak = 3173.113 ; gain = 10.984 ; free physical = 4433 ; free virtual = 18706
+Phase 4 Rip-up And Reroute | Checksum: 124d8af2d
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:27 . Memory (MB): peak = 3173.113 ; gain = 10.984 ; free physical = 4426 ; free virtual = 18699
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: b9838d19
+Phase 5.1.1 Update Timing | Checksum: 12dfbc4db
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:26 . Memory (MB): peak = 3148.289 ; gain = 13.984 ; free physical = 4738 ; free virtual = 18550
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-37.800| TNS=-11317.265| WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:28 . Memory (MB): peak = 3173.113 ; gain = 10.984 ; free physical = 4421 ; free virtual = 18694
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-38.723| TNS=-11989.133| WHS=N/A    | THS=N/A    |
 
  Number of Nodes with overlaps = 0
-Phase 5.1 Delay CleanUp | Checksum: d972ea28
+Phase 5.1 Delay CleanUp | Checksum: 1ea7de502
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:26 . Memory (MB): peak = 3148.289 ; gain = 13.984 ; free physical = 4727 ; free virtual = 18539
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:28 . Memory (MB): peak = 3173.113 ; gain = 10.984 ; free physical = 4407 ; free virtual = 18680
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: d972ea28
+Phase 5.2 Clock Skew Optimization | Checksum: 1ea7de502
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:26 . Memory (MB): peak = 3148.289 ; gain = 13.984 ; free physical = 4727 ; free virtual = 18539
-Phase 5 Delay and Skew Optimization | Checksum: d972ea28
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:28 . Memory (MB): peak = 3173.113 ; gain = 10.984 ; free physical = 4407 ; free virtual = 18680
+Phase 5 Delay and Skew Optimization | Checksum: 1ea7de502
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:26 . Memory (MB): peak = 3148.289 ; gain = 13.984 ; free physical = 4727 ; free virtual = 18539
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:28 . Memory (MB): peak = 3173.113 ; gain = 10.984 ; free physical = 4407 ; free virtual = 18680
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 162f76ef0
+Phase 6.1.1 Update Timing | Checksum: 1fbbdf7d2
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:27 . Memory (MB): peak = 3148.289 ; gain = 13.984 ; free physical = 4718 ; free virtual = 18530
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=-37.800| TNS=-10676.362| WHS=0.046  | THS=0.000  |
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:29 . Memory (MB): peak = 3173.113 ; gain = 10.984 ; free physical = 4406 ; free virtual = 18679
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-38.718| TNS=-12050.403| WHS=0.012  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: e6a4d633
+Phase 6.1 Hold Fix Iter | Checksum: 23888fb98
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:27 . Memory (MB): peak = 3148.289 ; gain = 13.984 ; free physical = 4718 ; free virtual = 18530
-Phase 6 Post Hold Fix | Checksum: e6a4d633
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:29 . Memory (MB): peak = 3173.113 ; gain = 10.984 ; free physical = 4406 ; free virtual = 18679
+Phase 6 Post Hold Fix | Checksum: 23888fb98
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:27 . Memory (MB): peak = 3148.289 ; gain = 13.984 ; free physical = 4718 ; free virtual = 18530
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:29 . Memory (MB): peak = 3173.113 ; gain = 10.984 ; free physical = 4406 ; free virtual = 18679
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 3.83059 %
-  Global Horizontal Routing Utilization  = 3.78414 %
+  Global Vertical Routing Utilization    = 3.58087 %
+  Global Horizontal Routing Utilization  = 3.61486 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -1254,9 +893,9 @@ Router Utilization Summary
   Number of Node Overlaps             = 0
 
 Congestion Report
-North Dir 1x1 Area, Max Cong = 73.8739%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 64.8649%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 66.1765%, No Congested Regions.
+North Dir 1x1 Area, Max Cong = 54.955%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 60.3604%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 57.3529%, No Congested Regions.
 West Dir 1x1 Area, Max Cong = 64.7059%, No Congested Regions.
 
 ------------------------------
@@ -1279,48 +918,48 @@ Direction: West
 Congested clusters found at Level 0
 Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 
-Phase 7 Route finalize | Checksum: 1619330d2
+Phase 7 Route finalize | Checksum: 1f5ff01d4
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:27 . Memory (MB): peak = 3148.289 ; gain = 13.984 ; free physical = 4718 ; free virtual = 18530
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:29 . Memory (MB): peak = 3173.113 ; gain = 10.984 ; free physical = 4406 ; free virtual = 18679
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 1619330d2
+Phase 8 Verifying routed nets | Checksum: 1f5ff01d4
 
-Time (s): cpu = 00:00:54 ; elapsed = 00:00:27 . Memory (MB): peak = 3148.289 ; gain = 13.984 ; free physical = 4715 ; free virtual = 18528
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:29 . Memory (MB): peak = 3173.113 ; gain = 10.984 ; free physical = 4405 ; free virtual = 18677
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 165ccbbfe
+Phase 9 Depositing Routes | Checksum: 19d00abe1
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:28 . Memory (MB): peak = 3148.289 ; gain = 13.984 ; free physical = 4710 ; free virtual = 18523
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:30 . Memory (MB): peak = 3173.113 ; gain = 10.984 ; free physical = 4401 ; free virtual = 18673
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=-37.800| TNS=-10676.362| WHS=0.046  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-38.718| TNS=-12050.403| WHS=0.012  | THS=0.000  |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
-Phase 10 Post Router Timing | Checksum: 165ccbbfe
+Phase 10 Post Router Timing | Checksum: 19d00abe1
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:29 . Memory (MB): peak = 3148.289 ; gain = 13.984 ; free physical = 4710 ; free virtual = 18523
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:30 . Memory (MB): peak = 3173.113 ; gain = 10.984 ; free physical = 4407 ; free virtual = 18679
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:55 ; elapsed = 00:00:29 . Memory (MB): peak = 3148.289 ; gain = 13.984 ; free physical = 4774 ; free virtual = 18586
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:30 . Memory (MB): peak = 3173.113 ; gain = 10.984 ; free physical = 4465 ; free virtual = 18738
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-834 Infos, 3 Warnings, 1 Critical Warnings and 0 Errors encountered.
+472 Infos, 3 Warnings, 1 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:59 ; elapsed = 00:00:30 . Memory (MB): peak = 3148.289 ; gain = 105.332 ; free physical = 4774 ; free virtual = 18586
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3148.289 ; gain = 0.000 ; free physical = 4775 ; free virtual = 18587
+route_design: Time (s): cpu = 00:01:02 ; elapsed = 00:00:32 . Memory (MB): peak = 3173.113 ; gain = 110.438 ; free physical = 4465 ; free virtual = 18738
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3173.113 ; gain = 0.000 ; free physical = 4465 ; free virtual = 18738
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 3148.289 ; gain = 0.000 ; free physical = 4696 ; free virtual = 18560
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 3173.113 ; gain = 0.000 ; free physical = 4411 ; free virtual = 18736
 INFO: [Common 17-1381] The checkpoint '/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/impl_2/design_1_wrapper_routed.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3148.289 ; gain = 0.000 ; free physical = 4767 ; free virtual = 18591
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 3173.113 ; gain = 0.000 ; free physical = 4475 ; free virtual = 18759
 INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 Command: report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
@@ -1339,7 +978,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-846 Infos, 3 Warnings, 1 Critical Warnings and 0 Errors encountered.
+484 Infos, 3 Warnings, 1 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
 INFO: [runtcl-4] Executing : report_route_status -file design_1_wrapper_route_status.rpt -pb design_1_wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file design_1_wrapper_timing_summary_routed.rpt -pb design_1_wrapper_timing_summary_routed.pb -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation 
@@ -1378,10 +1017,12 @@ WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/top_0/inst/varD1__7 input
 WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/top_0/inst/varD1__7 input design_1_i/top_0/inst/varD1__7/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/top_0/inst/varD1__8 input design_1_i/top_0/inst/varD1__8/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/top_0/inst/varD1__8 input design_1_i/top_0/inst/varD1__8/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_0/inst/meanD3 output design_1_i/top_0/inst/meanD3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_0/inst/meanD3__0 output design_1_i/top_0/inst/meanD3__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_0/inst/meanD3__1 output design_1_i/top_0/inst/meanD3__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_0/inst/meanD3__2 output design_1_i/top_0/inst/meanD3__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_0/inst/meanD3__4 output design_1_i/top_0/inst/meanD3__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_0/inst/meanD3__5 output design_1_i/top_0/inst/meanD3__5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_0/inst/meanD3__7 output design_1_i/top_0/inst/meanD3__7/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_0/inst/meanD3__8 output design_1_i/top_0/inst/meanD3__8/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_0/inst/rdData1__0 output design_1_i/top_0/inst/rdData1__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_0/inst/rdData1__3 output design_1_i/top_0/inst/rdData1__3/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_0/inst/rdData1__4 output design_1_i/top_0/inst/rdData1__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
@@ -1396,10 +1037,12 @@ WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_0/inst/varD1__5
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_0/inst/varD1__6 output design_1_i/top_0/inst/varD1__6/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_0/inst/varD1__7 output design_1_i/top_0/inst/varD1__7/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/top_0/inst/varD1__8 output design_1_i/top_0/inst/varD1__8/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_0/inst/meanD3 multiplier stage design_1_i/top_0/inst/meanD3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_0/inst/meanD3__0 multiplier stage design_1_i/top_0/inst/meanD3__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_0/inst/meanD3__1 multiplier stage design_1_i/top_0/inst/meanD3__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_0/inst/meanD3__2 multiplier stage design_1_i/top_0/inst/meanD3__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_0/inst/meanD3__4 multiplier stage design_1_i/top_0/inst/meanD3__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_0/inst/meanD3__5 multiplier stage design_1_i/top_0/inst/meanD3__5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_0/inst/meanD3__7 multiplier stage design_1_i/top_0/inst/meanD3__7/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_0/inst/meanD3__8 multiplier stage design_1_i/top_0/inst/meanD3__8/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_0/inst/rdData1__0 multiplier stage design_1_i/top_0/inst/rdData1__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_0/inst/rdData1__3 multiplier stage design_1_i/top_0/inst/rdData1__3/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_0/inst/rdData1__4 multiplier stage design_1_i/top_0/inst/rdData1__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
@@ -1414,8 +1057,8 @@ WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_0/inst/varD1__5
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_0/inst/varD1__6 multiplier stage design_1_i/top_0/inst/varD1__6/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_0/inst/varD1__7 multiplier stage design_1_i/top_0/inst/varD1__7/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/top_0/inst/varD1__8 multiplier stage design_1_i/top_0/inst/varD1__8/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC RTSTAT-10] No routable loads: 2523 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/processing_system7_0/inst/CAN0_PHY_TX, design_1_i/processing_system7_0/inst/CAN1_PHY_TX, design_1_i/processing_system7_0/inst/DMA0_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA0_DAVALID, design_1_i/processing_system7_0/inst/DMA0_DRREADY, design_1_i/processing_system7_0/inst/DMA0_RSTN, design_1_i/processing_system7_0/inst/DMA1_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA1_DAVALID, design_1_i/processing_system7_0/inst/DMA1_DRREADY, design_1_i/processing_system7_0/inst/DMA1_RSTN, design_1_i/processing_system7_0/inst/DMA2_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA2_DAVALID, design_1_i/processing_system7_0/inst/DMA2_DRREADY, design_1_i/processing_system7_0/inst/DMA2_RSTN, design_1_i/processing_system7_0/inst/DMA3_DATYPE[1:0]... and (the first 15 of 1614 listed).
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 57 Warnings
+WARNING: [DRC RTSTAT-10] No routable loads: 2765 net(s) have no routable loads. The problem bus(es) and/or net(s) are design_1_i/processing_system7_0/inst/CAN0_PHY_TX, design_1_i/processing_system7_0/inst/CAN1_PHY_TX, design_1_i/processing_system7_0/inst/DMA0_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA0_DAVALID, design_1_i/processing_system7_0/inst/DMA0_DRREADY, design_1_i/processing_system7_0/inst/DMA0_RSTN, design_1_i/processing_system7_0/inst/DMA1_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA1_DAVALID, design_1_i/processing_system7_0/inst/DMA1_DRREADY, design_1_i/processing_system7_0/inst/DMA1_RSTN, design_1_i/processing_system7_0/inst/DMA2_DATYPE[1:0], design_1_i/processing_system7_0/inst/DMA2_DAVALID, design_1_i/processing_system7_0/inst/DMA2_DRREADY, design_1_i/processing_system7_0/inst/DMA2_RSTN, design_1_i/processing_system7_0/inst/DMA3_DATYPE[1:0]... and (the first 15 of 1856 listed).
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 61 Warnings
 INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
 INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
 Loading data files...
@@ -1428,7 +1071,7 @@ Writing bitstream ./design_1_wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
 INFO: [Common 17-83] Releasing license: Implementation
-865 Infos, 60 Warnings, 2 Critical Warnings and 0 Errors encountered.
+503 Infos, 64 Warnings, 2 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:23 ; elapsed = 00:00:14 . Memory (MB): peak = 3565.996 ; gain = 250.773 ; free physical = 4629 ; free virtual = 18478
-INFO: [Common 17-206] Exiting Vivado at Tue Jun  9 13:51:39 2020...
+write_bitstream: Time (s): cpu = 00:00:25 ; elapsed = 00:00:15 . Memory (MB): peak = 3578.352 ; gain = 244.906 ; free physical = 4356 ; free virtual = 18675
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  9 15:35:58 2020...

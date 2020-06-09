@@ -153,9 +153,8 @@ reg [3:0] state, nextState;
 reg [C_S_AXI_DATA_WIDTH-1:0] counterD, counterQ, virusCounterD, virusCounterQ, freqD, freqQ,
            maxD, maxQ, ppD, ppQ, oneMask;
 reg [DELAY-1:0] tdcClean;
-reg [6:0] total, diffMaxD, diffMaxQ, diffMinD, diffMinQ;
-reg [C_S_AXI_DATA_WIDTH-1:0] rmsAccD, rmsAccQ, sumAccD, sumAccQ, r_counterD, r_counterQ;
-reg [64-1:0] varD, varQ, tmp_value, meanD, meanQ, tmpMean, tmpVar;
+reg [63:0] total, diffMaxD, diffMaxQ, diffMinD, diffMinQ;
+reg [64-1:0] varD, varQ, tmp_value, meanD, meanQ, tmpMean, tmpVar, rmsAccD, rmsAccQ, sumAccD, sumAccQ, r_counterD, r_counterQ;
 
 
 integer i;

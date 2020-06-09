@@ -74,23 +74,23 @@ void challengeResponse(){
 	*(virus_addr + 3) = maskRO[3];
 	
 	for (int i=0; i<NUM_CHAL; i++) {
-			*chal_addr = challenges[i][0];
-			*(chal_addr + 1) = challenges[i][1];
-			*(chal_addr + 2) = challenges[i][2];
-			*(chal_addr + 3) = challenges[i][3];
-			*rec_addr = 3;					// Start recording challenge response
+		*chal_addr = challenges[i][0];
+		*(chal_addr + 1) = challenges[i][1];
+		*(chal_addr + 2) = challenges[i][2];
+		*(chal_addr + 3) = challenges[i][3];
+		*rec_addr = 3;					// Start recording challenge response
 
-			int32_t mean;
-			// Wait until the response is done being collected
-			do{
-				mean = *(mean_addr);
-			}while((mean & 1<<31)==0);
-			mean ^= (1<<31);
+		int32_t mean;
+		// Wait until the response is done being collected
+		do{
+			mean = *(mean_addr);
+		}while((mean & 1<<31)==0);
+		mean ^= (1<<31);
 
-			uint32_t var_l = *(var_addr);
-			uint32_t var_h = *(var_addr+4);
+		uint32_t var_l = *(var_addr);
+		uint32_t var_h = *(var_addr+4);
 
-			xil_printf("%d %d %u\n", i, mean, var_l);
+		xil_printf("%d %d %u\n", i, mean, var_l);
 	}
 	//xil_printf("stop\n");
 }
