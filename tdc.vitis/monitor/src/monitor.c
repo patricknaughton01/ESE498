@@ -25,7 +25,7 @@ int32_t * const var_addr	= (int32_t*)0x43C0FEF8;
 int32_t * const virus_addr 	= (int32_t*)0x43C0FFE0;
 int32_t * const chal_addr	= (int32_t*)0x43C0FF00;
 const int32_t num_reads = 8192;
-int32_t maskRO[5] = {0xffff0000, 0x0, 0x0, 0x0};
+int32_t maskRO[5] = {0xffffffff, 0xffff0000, 0x0, 0x0};
 
 void makeMeasurement();
 void stepResponse();

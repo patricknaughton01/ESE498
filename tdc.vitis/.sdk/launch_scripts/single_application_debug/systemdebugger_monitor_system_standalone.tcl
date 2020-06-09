@@ -12,7 +12,7 @@ source /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.vitis/
 ps7_init
 ps7_post_config
 targets -set -nocase -filter {name =~ "*A9*#0"}
-dow /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.vitis/monitor/Debug/monitor.elf
+dow /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.vitis/monitor/Release/monitor.elf
 configparams force-mem-access 0
 targets -set -nocase -filter {name =~ "*A9*#0"}
 con
