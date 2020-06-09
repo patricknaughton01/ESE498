@@ -63,7 +63,7 @@
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.RUNS">128</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.SIM">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.SUM_ADDR">0x0000FFE8</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.VAR_ADDR">0x0000FEF8</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.VAR_ADDR">0x0000FEF4</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.VIRUS_ADDR">0x0000FFE0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.VIRUS_B_SIZE">128</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="MODELPARAM_VALUE.VIRUS_NUM_B">128</spirit:configurableElementValue>
@@ -85,7 +85,7 @@
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.RUNS">128</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.SIM">0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.SUM_ADDR">0x0000FFE8</spirit:configurableElementValue>
-        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.VAR_ADDR">0x0000FEF8</spirit:configurableElementValue>
+        <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.VAR_ADDR">0x0000FEF4</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.VIRUS_ADDR">0x0000FFE0</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.VIRUS_B_SIZE">128</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.VIRUS_NUM_B">128</spirit:configurableElementValue>

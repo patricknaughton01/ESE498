@@ -227,7 +227,7 @@ initial begin
     #(CLK_PERIOD*10);
     // Read Var value
     rd = 1;
-    rdAddr = 'hFEF8;
+    rdAddr = 'hFEF4;
     #CLK_PERIOD;
     rd = 0;
     #(CLK_PERIOD*10);
@@ -274,7 +274,7 @@ initial begin
     #(CLK_PERIOD*10);
     // Read Var value
     rd = 1;
-    rdAddr = 'hFEF8;
+    rdAddr = 'hFEF4;
     #CLK_PERIOD;
     rd = 0;
     #(CLK_PERIOD*10);

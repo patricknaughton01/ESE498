@@ -1,6 +1,5 @@
 set_property SRC_FILE_INFO {cfile:/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/constrs_1/new/zedboard.xdc rfile:../../../tdc.srcs/constrs_1/new/zedboard.xdc id:1} [current_design]
 set_property SRC_FILE_INFO {cfile:/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/constrs_1/new/loops.xdc rfile:../../../tdc.srcs/constrs_1/new/loops.xdc id:2} [current_design]
-set_property SRC_FILE_INFO {cfile:/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/constrs_1/new/placement.xdc rfile:../../../tdc.srcs/constrs_1/new/placement.xdc id:3} [current_design]
 set_property src_info {type:XDC file:1 line:89 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN Y11  [get_ports {trigger_0}];  # "JA1"
 set_property src_info {type:XDC file:2 line:1 export:INPUT save:INPUT read:READ} [current_design]
@@ -32771,8 +32770,3 @@ set_property src_info {type:XDC file:2 line:16383 export:INPUT save:INPUT read:R
 set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[127].vg/genblk1[126].ringOsc/out];
 set_property src_info {type:XDC file:2 line:16384 export:INPUT save:INPUT read:READ} [current_design]
 set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets design_1_i/top_0/inst/virus1/genblk1[127].vg/genblk1[127].ringOsc/out];
-set_property src_info {type:XDC file:3 line:6 export:INPUT save:INPUT read:READ} [current_design]
-create_pblock pblock_tdc1
-resize_pblock [get_pblocks pblock_tdc1] -add {CLOCKREGION_X1Y2:CLOCKREGION_X1Y2}
-set_property src_info {type:XDC file:3 line:7 export:INPUT save:INPUT read:READ} [current_design]
-add_cells_to_pblock [get_pblocks pblock_tdc1] [get_cells -quiet [list design_1_i/top_0/inst/tdc1]]

@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <sleep.h>
 #include "platform.h"
 #include "xil_printf.h"
 #include "xparameters.h"
@@ -21,7 +22,7 @@ int32_t * const read_addr 	= (int32_t*)0x43C0FFF4;
 int32_t * const rms_addr	= (int32_t*)0x43C0FFEC;
 int32_t * const sum_addr	= (int32_t*)0x43C0FFE8;
 int32_t * const mean_addr	= (int32_t*)0x43C0FEFC;
-int32_t * const var_addr	= (int32_t*)0x43C0FEF8;
+int32_t * const var_addr	= (int32_t*)0x43C0FEF4;
 int32_t * const virus_addr 	= (int32_t*)0x43C0FFE0;
 int32_t * const chal_addr	= (int32_t*)0x43C0FF00;
 const int32_t num_reads = 8192;
@@ -86,13 +87,10 @@ void challengeResponse(){
 			}while((mean & 1<<31)==0);
 			mean ^= (1<<31);
 
-			int32_t var;
-			do{
-				var = *(var_addr);
-			}while((var & 1<<31) == 0);
-			var ^= (1<<31);
+			uint32_t var_l = *(var_addr);
+			uint32_t var_h = *(var_addr+4);
 
-			xil_printf("%d %d %d\n", i, mean, var);
+			xil_printf("%d %d %u\n", i, mean, var_l);
 	}
 	//xil_printf("stop\n");
 }

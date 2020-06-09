@@ -48,7 +48,7 @@
 module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=32, DELAY=63, READ_MAX_ADDR='hFFF4, 
     REC_ADDR='hFFFC, FREQ_ADDR='hFFF8, VIRUS_ADDR='hFFE0, MEM_WIDTH=16, PP_ADDR='hFFF0, RMS_ADDR = 'hFFEC, SUM_ADDR='hFFE8,
     ABS_READ_MAX=8192, VIRUS_NUM_B=128, VIRUS_B_SIZE=128, SIM=0, CHALLENGE_WIDTH=128, CHALLENGE_ADDR='hFF00,
-    RUNS=128, MEAN_ADDR='hFEFC, VAR_ADDR='hFEF8)(
+    RUNS=128, MEAN_ADDR='hFEFC, VAR_ADDR='hFEF4)(
     // Axi4Lite Bus
     input       S_AXI_ACLK,
     input       S_AXI_ARESETN,
@@ -214,15 +214,18 @@ always @ * begin
                 tmpMean = meanQ >> ($clog2(RUNS));
                 rdData = tmpMean[C_S_AXI_DATA_WIDTH-1:0];
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
-            end else if(rd && rdAddr == VAR_ADDR)begin
+            end else if(rd && (rdAddr == VAR_ADDR || rdAddr == VAR_ADDR+4))begin
                 // The variance part of the response is being measured
                 // Since var reg actually stores sum[X^2], compute actual
                 // variance now
                 tmpVar = varQ >> ($clog2(RUNS));      // tmpVar = E[X^2]
                 tmpMean = meanQ >> ($clog2(RUNS));    // tmpMean = E[X]
                 tmp_value = tmpVar - (tmpMean * tmpMean);
-                rdData = tmp_value[C_S_AXI_DATA_WIDTH-1:0];
-                rdData[C_S_AXI_DATA_WIDTH-1] = 1;
+                if (rdAddr == VAR_ADDR)begin
+                    rdData = tmp_value[C_S_AXI_DATA_WIDTH-1:0];
+                end else begin
+                    rdData = tmp_value[(C_S_AXI_DATA_WIDTH << 1) - 1:C_S_AXI_DATA_WIDTH];
+                end
             end else if(wr) begin
                 if(wrAddr == REC_ADDR)begin
                     counterD = 0;
