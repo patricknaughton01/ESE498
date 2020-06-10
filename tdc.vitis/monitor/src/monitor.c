@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <sleep.h>
 #include "platform.h"
 #include "xil_printf.h"
 #include "xparameters.h"
@@ -70,7 +71,7 @@ void challengeResponse(){
 	*(virus_addr + 2) = maskRO[2];
 	*(virus_addr + 3) = maskRO[3];
 	
-	for (int i=0; i<NUM_CHAL; i++) {
+	for (int i=NUM_CHAL-1; i > -1; i--) {
 		for(int j = 0; j<100; j++){
 			*chal_addr = challenges[i][0];
 			*(chal_addr + 1) = challenges[i][1];
@@ -98,9 +99,9 @@ void challengeResponse(){
 					- ((double)sum_val * (double)sum_val / (double)num_reads);
 
 			xil_printf("%d %d\n", i, (int32_t)energy_no_dc_val);
+			usleep(10000);
 		}
 	}
-	xil_printf("stop\n");
 }
 
 // This function measures a frequency response of the board, starting at a high

@@ -5,6 +5,8 @@
 
 # XDC: new/loops.xdc
 
+# XDC: new/platform.xdc
+
 # Block Designs: bd/design_1/design_1.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1 || ORIG_REF_NAME==design_1} -quiet] -quiet
 
