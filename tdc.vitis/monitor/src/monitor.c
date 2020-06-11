@@ -24,7 +24,7 @@ int32_t * const sum_addr	= (int32_t*)0x43C0FFE8;
 int32_t * const virus_addr 	= (int32_t*)0x43C0FFD8;
 int32_t * const chal_addr	= (int32_t*)0x43C0FF00;
 const int32_t num_reads = 10000;
-int32_t maskRO[5] = {0x7f000000, 0x0, 0x0, 0x0};
+int32_t maskRO[5] = {0xffffffff, 0xffff0000, 0x0, 0x0};
 
 void makeMeasurement();
 void stepResponse();
@@ -71,7 +71,7 @@ void challengeResponse(){
 	*(virus_addr + 2) = maskRO[2];
 	*(virus_addr + 3) = maskRO[3];
 	
-	for (int i=NUM_CHAL-1; i > -1; i--) {
+	for (int i=0; i < NUM_CHAL; i++) {
 		for(int j = 0; j<100; j++){
 			*chal_addr = challenges[i][0];
 			*(chal_addr + 1) = challenges[i][1];
@@ -99,7 +99,13 @@ void challengeResponse(){
 					- ((double)sum_val * (double)sum_val / (double)num_reads);
 
 			xil_printf("%d %d\n", i, (int32_t)energy_no_dc_val);
-			usleep(10000);
+			/*int32_t tmp;
+			do{
+				tmp = *(peripheral);
+			}while((tmp & (1<<31)) == 0);
+			for(int k = 0; k < num_reads; k++){
+				xil_printf("%d %d\n", k, *(peripheral+k) ^ (1<<31));
+			}*/
 		}
 	}
 }

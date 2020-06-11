@@ -141,7 +141,8 @@ output wire trigger;
     .VIRUS_B_SIZE(128),
     .SIM(0),
     .CHALLENGE_WIDTH(128),
-    .CHALLENGE_ADDR(32'H0000FF00)
+    .CHALLENGE_ADDR(32'H0000FF00),
+    .TDC_COUNT(16)
   ) inst (
     .S_AXI_ACLK(S_AXI_ACLK),
     .S_AXI_ARESETN(S_AXI_ARESETN),

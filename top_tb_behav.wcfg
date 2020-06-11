@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1631554fs"></ZoomStartTime>
-      <ZoomEndTime time="1761928fs"></ZoomEndTime>
-      <Cursor1Time time="3845000fs"></Cursor1Time>
+      <ZoomStartTime time="100914846fs"></ZoomStartTime>
+      <ZoomEndTime time="101149031fs"></ZoomEndTime>
+      <Cursor1Time time="101015000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="194"></NameColumnWidth>
-      <ValueColumnWidth column_width="98"></ValueColumnWidth>
+      <ValueColumnWidth column_width="90"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="35" />
+   <WVObjectSize size="29" />
    <wvobject type="logic" fp_name="/top_tb/S_AXI_ACLK">
       <obj_property name="ElementShortName">S_AXI_ACLK</obj_property>
       <obj_property name="ObjectShortName">S_AXI_ACLK</obj_property>
@@ -51,6 +51,7 @@
    <wvobject type="array" fp_name="/top_tb/rdData">
       <obj_property name="ElementShortName">rdData[31:0]</obj_property>
       <obj_property name="ObjectShortName">rdData[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/top_tb/rd">
       <obj_property name="ElementShortName">rd</obj_property>
@@ -59,30 +60,6 @@
    <wvobject type="logic" fp_name="/top_tb/rdDone">
       <obj_property name="ElementShortName">rdDone</obj_property>
       <obj_property name="ObjectShortName">rdDone</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/top_tb/C_S_AXI_ADDR_WIDTH">
-      <obj_property name="ElementShortName">C_S_AXI_ADDR_WIDTH[31:0]</obj_property>
-      <obj_property name="ObjectShortName">C_S_AXI_ADDR_WIDTH[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/top_tb/C_S_AXI_DATA_WIDTH">
-      <obj_property name="ElementShortName">C_S_AXI_DATA_WIDTH[31:0]</obj_property>
-      <obj_property name="ObjectShortName">C_S_AXI_DATA_WIDTH[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/top_tb/CLK_PERIOD">
-      <obj_property name="ElementShortName">CLK_PERIOD[31:0]</obj_property>
-      <obj_property name="ObjectShortName">CLK_PERIOD[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/top_tb/READ_MAX">
-      <obj_property name="ElementShortName">READ_MAX[31:0]</obj_property>
-      <obj_property name="ObjectShortName">READ_MAX[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/top_tb/TO_READ">
-      <obj_property name="ElementShortName">TO_READ[31:0]</obj_property>
-      <obj_property name="ObjectShortName">TO_READ[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/top_tb/CLK_PERIOD_2">
-      <obj_property name="ElementShortName">CLK_PERIOD_2[31:0]</obj_property>
-      <obj_property name="ObjectShortName">CLK_PERIOD_2[31:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/top_tb/top1/virusMaskD">
       <obj_property name="ElementShortName">virusMaskD[127:0]</obj_property>
@@ -93,36 +70,37 @@
       <obj_property name="ObjectShortName">virusMaskQ[127:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/top_tb/top1/rmsAccD">
-      <obj_property name="ElementShortName">rmsAccD[31:0]</obj_property>
-      <obj_property name="ObjectShortName">rmsAccD[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="ElementShortName">rmsAccD[63:0]</obj_property>
+      <obj_property name="ObjectShortName">rmsAccD[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/top_tb/top1/rmsAccQ">
-      <obj_property name="ElementShortName">rmsAccQ[31:0]</obj_property>
-      <obj_property name="ObjectShortName">rmsAccQ[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">rmsAccQ[63:0]</obj_property>
+      <obj_property name="ObjectShortName">rmsAccQ[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/top_tb/top1/sumAccD">
-      <obj_property name="ElementShortName">sumAccD[31:0]</obj_property>
-      <obj_property name="ObjectShortName">sumAccD[31:0]</obj_property>
+      <obj_property name="ElementShortName">sumAccD[63:0]</obj_property>
+      <obj_property name="ObjectShortName">sumAccD[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/top_tb/top1/sumAccQ">
-      <obj_property name="ElementShortName">sumAccQ[31:0]</obj_property>
-      <obj_property name="ObjectShortName">sumAccQ[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="ElementShortName">sumAccQ[63:0]</obj_property>
+      <obj_property name="ObjectShortName">sumAccQ[63:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/top_tb/top1/total">
-      <obj_property name="ElementShortName">total[6:0]</obj_property>
-      <obj_property name="ObjectShortName">total[6:0]</obj_property>
+      <obj_property name="ElementShortName">total[15:0][63:0]</obj_property>
+      <obj_property name="ObjectShortName">total[15:0][63:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/top_tb/top1/tdcClean">
-      <obj_property name="ElementShortName">tdcClean[62:0]</obj_property>
-      <obj_property name="ObjectShortName">tdcClean[62:0]</obj_property>
+      <obj_property name="ElementShortName">tdcClean[15:0][62:0]</obj_property>
+      <obj_property name="ObjectShortName">tdcClean[15:0][62:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/top_tb/top1/tdcOut">
-      <obj_property name="ElementShortName">tdcOut[62:0]</obj_property>
-      <obj_property name="ObjectShortName">tdcOut[62:0]</obj_property>
+      <obj_property name="ElementShortName">tdcOut[15:0][62:0]</obj_property>
+      <obj_property name="ObjectShortName">tdcOut[15:0][62:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/top_tb/top1/state">
       <obj_property name="ElementShortName">state[3:0]</obj_property>

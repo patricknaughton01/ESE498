@@ -548,7 +548,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:639a664e</spirit:value>
+            <spirit:value>9:8ce8b0a1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -559,7 +559,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:639a664e</spirit:value>
+            <spirit:value>9:8ce8b0a1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -575,11 +575,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jun 09 20:49:41 UTC 2020</spirit:value>
+            <spirit:value>Wed Jun 10 22:15:50 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:639a664e</spirit:value>
+            <spirit:value>9:8ce8b0a1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -591,7 +591,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8a5f32e1</spirit:value>
+            <spirit:value>9:aa889b7e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -607,11 +607,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jun 09 20:49:41 UTC 2020</spirit:value>
+            <spirit:value>Wed Jun 10 22:15:50 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8a5f32e1</spirit:value>
+            <spirit:value>9:aa889b7e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -625,11 +625,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Jun 09 20:52:36 UTC 2020</spirit:value>
+            <spirit:value>Wed Jun 10 22:19:00 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:639a664e</spirit:value>
+            <spirit:value>9:8ce8b0a1</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1055,6 +1055,11 @@
         <spirit:displayName>Challenge Addr</spirit:displayName>
         <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CHALLENGE_ADDR" spirit:bitStringLength="32">0x0000FF00</spirit:value>
       </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>TDC_COUNT</spirit:name>
+        <spirit:displayName>Tdc Count</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TDC_COUNT">16</spirit:value>
+      </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
   <spirit:choices>
@@ -1209,6 +1214,11 @@
       <spirit:name>CHALLENGE_ADDR</spirit:name>
       <spirit:displayName>Challenge Addr</spirit:displayName>
       <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.CHALLENGE_ADDR" spirit:bitStringLength="32">0x0000FF00</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>TDC_COUNT</spirit:name>
+      <spirit:displayName>Tdc Count</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.TDC_COUNT">16</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
