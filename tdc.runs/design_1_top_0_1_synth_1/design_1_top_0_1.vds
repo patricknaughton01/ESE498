@@ -1,15 +1,16 @@
 #-----------------------------------------------------------
 # Vivado v2019.2 (64-bit)
-# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Wed Jun 10 17:15:56 2020
-# Process ID: 17206
-# Current directory: /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1
-# Command line: vivado -log design_1_top_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_top_0_1.tcl
-# Log file: /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1/design_1_top_0_1.vds
-# Journal file: /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1/vivado.jou
+# Start of session at: Thu Jun 11 10:35:15 2020
+# Process ID: 9628
+# Current directory: C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.runs/design_1_top_0_1_synth_1
+# Command line: vivado.exe -log design_1_top_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_top_0_1.tcl
+# Log file: C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.runs/design_1_top_0_1_synth_1/design_1_top_0_1.vds
+# Journal file: C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.runs/design_1_top_0_1_synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_top_0_1.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 438.082 ; gain = 137.828
 Command: synth_design -top design_1_top_0_1 -part xc7z020clg484-1 -mode out_of_context
 Starting synth_design
 WARNING: [IP_Flow 19-3571] IP 'design_1_top_0_1' is restricted:
@@ -18,14 +19,14 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 17240 
-WARNING: [Synth 8-2507] parameter declaration becomes local in Axi4LiteSupporter with formal parameter declaration list [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/imports/axi4lite/axi4litesupporter.v:36]
-WARNING: [Synth 8-2507] parameter declaration becomes local in top with formal parameter declaration list [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:154]
+INFO: Helper process launched with PID 18776 
+WARNING: [Synth 8-2507] parameter declaration becomes local in Axi4LiteSupporter with formal parameter declaration list [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/imports/axi4lite/axi4litesupporter.v:36]
+WARNING: [Synth 8-2507] parameter declaration becomes local in top with formal parameter declaration list [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:154]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2008.621 ; gain = 207.621 ; free physical = 2317 ; free virtual = 16883
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 1006.520 ; gain = 241.930
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'design_1_top_0_1' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/bd/design_1/ip/design_1_top_0_1/synth/design_1_top_0_1.v:59]
-INFO: [Synth 8-6157] synthesizing module 'top' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:48]
+INFO: [Synth 8-6157] synthesizing module 'design_1_top_0_1' [c:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_top_0_1/synth/design_1_top_0_1.v:59]
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:48]
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 16 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter INITIAL bound to: 32 - type: integer 
@@ -47,91 +48,92 @@ INFO: [Synth 8-6157] synthesizing module 'top' [/home/patricknaughton01/Document
 	Parameter TDC_COUNT bound to: 16 - type: integer 
 	Parameter IDLE bound to: 0 - type: integer 
 	Parameter READ bound to: 1 - type: integer 
-	Parameter RMS bound to: 4 - type: integer 
-	Parameter C_RD bound to: 5 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'tdc' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:23]
+	Parameter RMS bound to: 2 - type: integer 
+	Parameter C_RD bound to: 3 - type: integer 
+	Parameter DONE bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'tdc' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:23]
 	Parameter INITIAL bound to: 32 - type: integer 
 	Parameter DELAY bound to: 63 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:29]
-INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:30]
-INFO: [Synth 8-6157] synthesizing module 'buffer' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/buffer.v:15]
-INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/buffer.v:19]
-INFO: [Synth 8-6155] done synthesizing module 'buffer' (1#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/buffer.v:15]
-INFO: [Synth 8-6157] synthesizing module 'CARRY4' [/tools/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1479]
-INFO: [Synth 8-6155] done synthesizing module 'CARRY4' (2#1) [/tools/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1479]
-WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
-WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
-WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
-WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
-WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
-WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
-WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
-WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
-WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
-WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
-WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
-WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
-WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
-WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
-WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
-WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
-WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
-WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
-WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
-WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
-WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
-WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
-WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
-WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
-WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
-WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
-WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
-WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
-WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:43]
-WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:42]
-INFO: [Synth 8-6155] done synthesizing module 'tdc' (3#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:23]
-WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:129]
-WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:129]
-WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:129]
-WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:129]
-WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:129]
-WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:129]
-WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:129]
-WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:129]
-WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:129]
-WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:129]
-WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:129]
-WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:129]
-WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:129]
-WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:129]
-WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:129]
-WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:129]
-INFO: [Synth 8-6157] synthesizing module 'Axi4LiteSupporter' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/imports/axi4lite/axi4litesupporter.v:3]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:29]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:30]
+INFO: [Synth 8-6157] synthesizing module 'buffer' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/buffer.v:15]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/buffer.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'buffer' (1#1) [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/buffer.v:15]
+INFO: [Synth 8-6157] synthesizing module 'CARRY4' [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1479]
+INFO: [Synth 8-6155] done synthesizing module 'CARRY4' (2#1) [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1479]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:42]
+WARNING: [Synth 8-689] width (97) of port connection 'DI' does not match port width (4) of module 'CARRY4' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:43]
+WARNING: [Synth 8-7023] instance 'delay_k' of module 'CARRY4' has 6 connections declared, but only 5 given [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'tdc' (3#1) [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:23]
+WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:129]
+WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:129]
+WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:129]
+WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:129]
+WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:129]
+WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:129]
+WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:129]
+WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:129]
+WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:129]
+WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:129]
+WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:129]
+WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:129]
+WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:129]
+WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:129]
+WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:129]
+WARNING: [Synth 8-689] width (63) of port connection 'delay' does not match port width (64) of module 'tdc' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:129]
+INFO: [Synth 8-6157] synthesizing module 'Axi4LiteSupporter' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/imports/axi4lite/axi4litesupporter.v:3]
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 16 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter IDLE bound to: 0 - type: integer 
 	Parameter RD1 bound to: 1 - type: integer 
 	Parameter WR1 bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'Axi4LiteSupporter' (4#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/imports/axi4lite/axi4litesupporter.v:3]
-INFO: [Synth 8-6157] synthesizing module 'virus' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/virus.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'Axi4LiteSupporter' (4#1) [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/imports/axi4lite/axi4litesupporter.v:3]
+INFO: [Synth 8-6157] synthesizing module 'virus' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/virus.v:19]
 	Parameter NUM bound to: 128 - type: integer 
 	Parameter SIZE bound to: 128 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'virus_group' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/virus_group.v:17]
+INFO: [Synth 8-6157] synthesizing module 'virus_group' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/virus_group.v:17]
 	Parameter SIZE bound to: 128 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/virus_group.v:18]
-INFO: [Synth 8-6157] synthesizing module 'ro' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/ro.v:39]
-INFO: [Synth 8-6155] done synthesizing module 'ro' (5#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/ro.v:39]
-INFO: [Synth 8-6155] done synthesizing module 'virus_group' (6#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/virus_group.v:17]
-INFO: [Synth 8-6155] done synthesizing module 'virus' (7#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/virus.v:19]
-INFO: [Synth 8-6157] synthesizing module 'RAM' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/ram.v:25]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/virus_group.v:18]
+INFO: [Synth 8-6157] synthesizing module 'ro' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/ro.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'ro' (5#1) [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/ro.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'virus_group' (6#1) [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/virus_group.v:17]
+INFO: [Synth 8-6155] done synthesizing module 'virus' (7#1) [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/virus.v:19]
+INFO: [Synth 8-6157] synthesizing module 'RAM' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/ram.v:25]
 	Parameter DEPTH bound to: 10000 - type: integer 
 	Parameter ADDR_WIDTH bound to: 16 - type: integer 
 	Parameter WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'RAM' (8#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/ram.v:25]
-WARNING: [Synth 8-689] width (16) of port connection 'do' does not match port width (32) of module 'RAM' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:150]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:194]
-INFO: [Synth 8-6155] done synthesizing module 'top' (9#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:48]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_top_0_1' (10#1) [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/bd/design_1/ip/design_1_top_0_1/synth/design_1_top_0_1.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'RAM' (8#1) [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/ram.v:25]
+WARNING: [Synth 8-689] width (16) of port connection 'do' does not match port width (32) of module 'RAM' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:150]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:194]
+INFO: [Synth 8-6155] done synthesizing module 'top' (9#1) [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_top_0_1' (10#1) [c:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_top_0_1/synth/design_1_top_0_1.v:59]
 WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[3]
 WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[2]
 WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTRB[1]
@@ -139,7 +141,7 @@ WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WSTR
 WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_WVALID
 WARNING: [Synth 8-3331] design Axi4LiteSupporter has unconnected port S_AXI_BREADY
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2079.395 ; gain = 278.395 ; free physical = 2329 ; free virtual = 16897
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 1096.648 ; gain = 332.059
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -152,12 +154,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2094.238 ; gain = 293.238 ; free physical = 2332 ; free virtual = 16900
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 1096.648 ; gain = 332.059
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2094.238 ; gain = 293.238 ; free physical = 2332 ; free virtual = 16900
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 1096.648 ; gain = 332.059
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.22 . Memory (MB): peak = 2109.113 ; gain = 0.000 ; free physical = 2260 ; free virtual = 16827
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1097.156 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 240 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -166,33 +168,33 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2328.770 ; gain = 0.000 ; free physical = 2146 ; free virtual = 16714
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.113 . Memory (MB): peak = 1335.910 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.76 ; elapsed = 00:00:00.32 . Memory (MB): peak = 2342.645 ; gain = 13.875 ; free physical = 2134 ; free virtual = 16702
+Constraint Validation Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1351.977 ; gain = 16.066
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2342.645 ; gain = 541.645 ; free physical = 2216 ; free virtual = 16784
+Finished Constraint Validation : Time (s): cpu = 00:00:41 ; elapsed = 00:00:56 . Memory (MB): peak = 1351.977 ; gain = 587.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2342.645 ; gain = 541.645 ; free physical = 2216 ; free virtual = 16784
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:41 ; elapsed = 00:00:56 . Memory (MB): peak = 1351.977 ; gain = 587.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2342.645 ; gain = 541.645 ; free physical = 2216 ; free virtual = 16784
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:41 ; elapsed = 00:00:56 . Memory (MB): peak = 1351.977 ; gain = 587.387
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Axi4LiteSupporter'
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:194]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:194]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/top.v:296]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:194]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:194]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/top.v:299]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -202,10 +204,10 @@ INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recomm
 *
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Axi4LiteSupporter'
-WARNING: [Synth 8-327] inferring latch for variable 'out_reg' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/ro.v:47]
-WARNING: [Synth 8-327] inferring latch for variable 'latches_reg' [/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/new/tdc.v:59]
+WARNING: [Synth 8-327] inferring latch for variable 'out_reg' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/ro.v:47]
+WARNING: [Synth 8-327] inferring latch for variable 'latches_reg' [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/new/tdc.v:59]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2342.645 ; gain = 541.645 ; free physical = 2180 ; free virtual = 16752
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:46 ; elapsed = 00:01:04 . Memory (MB): peak = 1351.977 ; gain = 587.387
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -214,7 +216,7 @@ Report RTL Partitions:
 +------+--------------+------------+----------+
 |1     |virus         |           1|     49152|
 |2     |top__GB1      |           1|      3663|
-|3     |top__GB2      |           1|     13418|
+|3     |top__GB2      |           1|     13780|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -230,32 +232,35 @@ Detailed RTL Component Info :
 	              128 Bit    Registers := 3     
 	               64 Bit    Registers := 20    
 	               32 Bit    Registers := 6     
+	                6 Bit    Registers := 16    
 	                4 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Multipliers : 
 	                64x64  Multipliers := 1     
 +---Muxes : 
 	   2 Input    128 Bit        Muxes := 4     
-	   4 Input    128 Bit        Muxes := 1     
+	   5 Input    128 Bit        Muxes := 1     
 	   2 Input     64 Bit        Muxes := 8     
-	   4 Input     64 Bit        Muxes := 6     
+	   5 Input     64 Bit        Muxes := 6     
 	   3 Input     32 Bit        Muxes := 2     
-	   2 Input     32 Bit        Muxes := 13    
-	   4 Input     32 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 12    
+	   5 Input     32 Bit        Muxes := 3     
 	   2 Input     21 Bit        Muxes := 2     
 	   2 Input     16 Bit        Muxes := 5     
 	   3 Input     16 Bit        Muxes := 2     
-	   4 Input     16 Bit        Muxes := 2     
+	   5 Input     16 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 16    
+	   5 Input      6 Bit        Muxes := 16    
 	   2 Input      4 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
 	   3 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 24    
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 25    
 	   3 Input      1 Bit        Muxes := 4     
-	   4 Input      1 Bit        Muxes := 17    
+	   5 Input      1 Bit        Muxes := 15    
+	   4 Input      1 Bit        Muxes := 3     
 	   6 Input      1 Bit        Muxes := 2     
-	  11 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -351,27 +356,31 @@ Detailed RTL Component Info :
 	              128 Bit    Registers := 3     
 	               64 Bit    Registers := 4     
 	               32 Bit    Registers := 5     
+	                6 Bit    Registers := 16    
 	                4 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Multipliers : 
 	                64x64  Multipliers := 1     
 +---Muxes : 
 	   2 Input    128 Bit        Muxes := 4     
-	   4 Input    128 Bit        Muxes := 1     
+	   5 Input    128 Bit        Muxes := 1     
 	   2 Input     64 Bit        Muxes := 8     
-	   4 Input     64 Bit        Muxes := 6     
-	   2 Input     32 Bit        Muxes := 13    
-	   4 Input     32 Bit        Muxes := 3     
+	   5 Input     64 Bit        Muxes := 6     
+	   2 Input     32 Bit        Muxes := 12    
+	   5 Input     32 Bit        Muxes := 3     
 	   2 Input     21 Bit        Muxes := 2     
 	   2 Input     16 Bit        Muxes := 4     
-	   4 Input     16 Bit        Muxes := 2     
+	   5 Input     16 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 16    
+	   5 Input      6 Bit        Muxes := 16    
 	   2 Input      4 Bit        Muxes := 1     
-	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 23    
-	   4 Input      1 Bit        Muxes := 17    
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 24    
+	   5 Input      1 Bit        Muxes := 15    
+	   4 Input      1 Bit        Muxes := 3     
 	   6 Input      1 Bit        Muxes := 2     
-	  11 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -493,7 +502,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (insti_1/\
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (insti_1/\diffMinQ_reg[30] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (insti_1/\state_reg[3] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:01:20 . Memory (MB): peak = 2415.863 ; gain = 614.863 ; free physical = 2927 ; free virtual = 17543
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:22 ; elapsed = 00:03:41 . Memory (MB): peak = 1515.309 ; gain = 750.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -516,20 +525,20 @@ Report RTL Partitions:
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
 |1     |virus         |           1|     32768|
-|2     |top__GB1      |           1|      2400|
-|3     |top__GB2      |           1|     13703|
+|2     |top__GB1      |           1|      2402|
+|3     |top__GB2      |           1|     12304|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:57 ; elapsed = 00:01:27 . Memory (MB): peak = 2415.863 ; gain = 614.863 ; free physical = 2806 ; free virtual = 17422
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:33 ; elapsed = 00:03:52 . Memory (MB): peak = 1515.309 ; gain = 750.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:58 ; elapsed = 00:01:28 . Memory (MB): peak = 2415.863 ; gain = 614.863 ; free physical = 2805 ; free virtual = 17421
+Finished Timing Optimization : Time (s): cpu = 00:02:33 ; elapsed = 00:03:52 . Memory (MB): peak = 1515.309 ; gain = 750.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -551,14 +560,14 @@ Report RTL Partitions:
 |      |RTL Partition |Replication |Instances |
 +------+--------------+------------+----------+
 |1     |virus         |           1|     32768|
-|2     |top__GB1      |           1|      2400|
-|3     |top__GB2      |           1|     13703|
+|2     |top__GB1      |           1|      2402|
+|3     |top__GB2      |           1|     12304|
 +------+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:20 ; elapsed = 00:02:16 . Memory (MB): peak = 2458.863 ; gain = 657.863 ; free physical = 2810 ; free virtual = 17426
+Finished Technology Mapping : Time (s): cpu = 00:03:30 ; elapsed = 00:05:42 . Memory (MB): peak = 1515.309 ; gain = 750.719
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -630,13 +639,13 @@ INFO: [Synth 8-3295] tying undriven pin inst/genblk1[0].tdc1/delay_bufs_inferred
 INFO: [Synth 8-3295] tying undriven pin inst/genblk1[0].tdc1/delay_bufs_inferred:in0[62] to constant 0
 INFO: [Synth 8-3295] tying undriven pin inst/genblk1[0].tdc1/delay_bufs_inferred:in0[61] to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:24 ; elapsed = 00:02:21 . Memory (MB): peak = 2458.863 ; gain = 657.863 ; free physical = 2810 ; free virtual = 17426
+Finished IO Insertion : Time (s): cpu = 00:03:40 ; elapsed = 00:05:52 . Memory (MB): peak = 1515.309 ; gain = 750.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:24 ; elapsed = 00:02:21 . Memory (MB): peak = 2458.863 ; gain = 657.863 ; free physical = 2810 ; free virtual = 17426
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:40 ; elapsed = 00:05:52 . Memory (MB): peak = 1515.309 ; gain = 750.719
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -655,25 +664,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:26 ; elapsed = 00:02:23 . Memory (MB): peak = 2458.863 ; gain = 657.863 ; free physical = 2809 ; free virtual = 17425
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:45 ; elapsed = 00:05:56 . Memory (MB): peak = 1515.309 ; gain = 750.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:26 ; elapsed = 00:02:23 . Memory (MB): peak = 2458.863 ; gain = 657.863 ; free physical = 2809 ; free virtual = 17425
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:45 ; elapsed = 00:05:57 . Memory (MB): peak = 1515.309 ; gain = 750.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:28 ; elapsed = 00:02:25 . Memory (MB): peak = 2458.863 ; gain = 657.863 ; free physical = 2816 ; free virtual = 17432
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:48 ; elapsed = 00:05:59 . Memory (MB): peak = 1515.309 ; gain = 750.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:28 ; elapsed = 00:02:25 . Memory (MB): peak = 2458.863 ; gain = 657.863 ; free physical = 2816 ; free virtual = 17432
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:48 ; elapsed = 00:06:00 . Memory (MB): peak = 1515.309 ; gain = 750.719
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -690,15 +699,15 @@ Report Cell Usage:
 |      |Cell      |Count |
 +------+----------+------+
 |1     |CARRY4    |   323|
-|2     |LUT1      |  1093|
-|3     |LUT2      | 16604|
-|4     |LUT3      |   527|
-|5     |LUT4      |   695|
-|6     |LUT5      |   436|
-|7     |LUT6      |  1244|
+|2     |LUT1      |  1092|
+|3     |LUT2      | 16620|
+|4     |LUT3      |   631|
+|5     |LUT4      |   824|
+|6     |LUT5      |   323|
+|7     |LUT6      |  1174|
 |8     |RAM16X1S  |     7|
 |9     |RAM256X1S |   273|
-|10    |FDRE      |  1638|
+|10    |FDRE      |  1735|
 |11    |FDSE      |     6|
 |12    |LD        | 17392|
 +------+----------+------+
@@ -707,10 +716,10 @@ Report Instance Areas:
 +------+-------------------------------+------------------+------+
 |      |Instance                       |Module            |Cells |
 +------+-------------------------------+------------------+------+
-|1     |top                            |                  | 40238|
-|2     |  inst                         |top               | 40147|
-|3     |    AxiSupporter1              |Axi4LiteSupporter |   842|
-|4     |    \genblk1[0].tdc1           |tdc               |   325|
+|1     |top                            |                  | 40400|
+|2     |  inst                         |top               | 40345|
+|3     |    AxiSupporter1              |Axi4LiteSupporter |   832|
+|4     |    \genblk1[0].tdc1           |tdc               |   313|
 |5     |      \genblk1[1].init         |buffer__1         |     2|
 |6     |      \genblk1[2].init         |buffer__2         |     2|
 |7     |      \genblk1[3].init         |buffer__3         |     2|
@@ -742,7 +751,7 @@ Report Instance Areas:
 |33    |      \genblk1[29].init        |buffer__29        |     2|
 |34    |      \genblk1[30].init        |buffer__30        |     2|
 |35    |      \genblk1[31].init        |buffer            |     2|
-|36    |    \genblk1[10].tdc1          |tdc_0             |   324|
+|36    |    \genblk1[10].tdc1          |tdc_0             |   313|
 |37    |      \genblk1[1].init         |buffer__216       |     2|
 |38    |      \genblk1[2].init         |buffer__215       |     2|
 |39    |      \genblk1[3].init         |buffer__214       |     2|
@@ -774,7 +783,7 @@ Report Instance Areas:
 |65    |      \genblk1[29].init        |buffer__188       |     2|
 |66    |      \genblk1[30].init        |buffer__187       |     2|
 |67    |      \genblk1[31].init        |buffer__186       |     2|
-|68    |    \genblk1[11].tdc1          |tdc_1             |   310|
+|68    |    \genblk1[11].tdc1          |tdc_1             |   312|
 |69    |      \genblk1[1].init         |buffer__185       |     2|
 |70    |      \genblk1[2].init         |buffer__184       |     2|
 |71    |      \genblk1[3].init         |buffer__183       |     2|
@@ -806,7 +815,7 @@ Report Instance Areas:
 |97    |      \genblk1[29].init        |buffer__157       |     2|
 |98    |      \genblk1[30].init        |buffer__156       |     2|
 |99    |      \genblk1[31].init        |buffer__155       |     2|
-|100   |    \genblk1[12].tdc1          |tdc_2             |   310|
+|100   |    \genblk1[12].tdc1          |tdc_2             |   312|
 |101   |      \genblk1[1].init         |buffer__154       |     2|
 |102   |      \genblk1[2].init         |buffer__153       |     2|
 |103   |      \genblk1[3].init         |buffer__152       |     2|
@@ -838,7 +847,7 @@ Report Instance Areas:
 |129   |      \genblk1[29].init        |buffer__126       |     2|
 |130   |      \genblk1[30].init        |buffer__125       |     2|
 |131   |      \genblk1[31].init        |buffer__124       |     2|
-|132   |    \genblk1[13].tdc1          |tdc_3             |   326|
+|132   |    \genblk1[13].tdc1          |tdc_3             |   313|
 |133   |      \genblk1[1].init         |buffer__123       |     2|
 |134   |      \genblk1[2].init         |buffer__122       |     2|
 |135   |      \genblk1[3].init         |buffer__121       |     2|
@@ -870,7 +879,7 @@ Report Instance Areas:
 |161   |      \genblk1[29].init        |buffer__95        |     2|
 |162   |      \genblk1[30].init        |buffer__94        |     2|
 |163   |      \genblk1[31].init        |buffer__93        |     2|
-|164   |    \genblk1[14].tdc1          |tdc_4             |   310|
+|164   |    \genblk1[14].tdc1          |tdc_4             |   313|
 |165   |      \genblk1[1].init         |buffer__92        |     2|
 |166   |      \genblk1[2].init         |buffer__91        |     2|
 |167   |      \genblk1[3].init         |buffer__90        |     2|
@@ -902,7 +911,7 @@ Report Instance Areas:
 |193   |      \genblk1[29].init        |buffer__64        |     2|
 |194   |      \genblk1[30].init        |buffer__63        |     2|
 |195   |      \genblk1[31].init        |buffer__62        |     2|
-|196   |    \genblk1[15].tdc1          |tdc_5             |   310|
+|196   |    \genblk1[15].tdc1          |tdc_5             |   312|
 |197   |      \genblk1[1].init         |buffer__61        |     2|
 |198   |      \genblk1[2].init         |buffer__60        |     2|
 |199   |      \genblk1[3].init         |buffer__59        |     2|
@@ -934,7 +943,7 @@ Report Instance Areas:
 |225   |      \genblk1[29].init        |buffer__33        |     2|
 |226   |      \genblk1[30].init        |buffer__32        |     2|
 |227   |      \genblk1[31].init        |buffer__31        |     2|
-|228   |    \genblk1[1].tdc1           |tdc_6             |   323|
+|228   |    \genblk1[1].tdc1           |tdc_6             |   312|
 |229   |      \genblk1[1].init         |buffer__495       |     2|
 |230   |      \genblk1[2].init         |buffer__494       |     2|
 |231   |      \genblk1[3].init         |buffer__493       |     2|
@@ -966,7 +975,7 @@ Report Instance Areas:
 |257   |      \genblk1[29].init        |buffer__467       |     2|
 |258   |      \genblk1[30].init        |buffer__466       |     2|
 |259   |      \genblk1[31].init        |buffer__465       |     2|
-|260   |    \genblk1[2].tdc1           |tdc_7             |   310|
+|260   |    \genblk1[2].tdc1           |tdc_7             |   312|
 |261   |      \genblk1[1].init         |buffer__464       |     2|
 |262   |      \genblk1[2].init         |buffer__463       |     2|
 |263   |      \genblk1[3].init         |buffer__462       |     2|
@@ -998,7 +1007,7 @@ Report Instance Areas:
 |289   |      \genblk1[29].init        |buffer__436       |     2|
 |290   |      \genblk1[30].init        |buffer__435       |     2|
 |291   |      \genblk1[31].init        |buffer__434       |     2|
-|292   |    \genblk1[3].tdc1           |tdc_8             |   310|
+|292   |    \genblk1[3].tdc1           |tdc_8             |   312|
 |293   |      \genblk1[1].init         |buffer__433       |     2|
 |294   |      \genblk1[2].init         |buffer__432       |     2|
 |295   |      \genblk1[3].init         |buffer__431       |     2|
@@ -1030,7 +1039,7 @@ Report Instance Areas:
 |321   |      \genblk1[29].init        |buffer__405       |     2|
 |322   |      \genblk1[30].init        |buffer__404       |     2|
 |323   |      \genblk1[31].init        |buffer__403       |     2|
-|324   |    \genblk1[4].tdc1           |tdc_9             |   323|
+|324   |    \genblk1[4].tdc1           |tdc_9             |   312|
 |325   |      \genblk1[1].init         |buffer__402       |     2|
 |326   |      \genblk1[2].init         |buffer__401       |     2|
 |327   |      \genblk1[3].init         |buffer__400       |     2|
@@ -1062,7 +1071,7 @@ Report Instance Areas:
 |353   |      \genblk1[29].init        |buffer__374       |     2|
 |354   |      \genblk1[30].init        |buffer__373       |     2|
 |355   |      \genblk1[31].init        |buffer__372       |     2|
-|356   |    \genblk1[5].tdc1           |tdc_10            |   310|
+|356   |    \genblk1[5].tdc1           |tdc_10            |   312|
 |357   |      \genblk1[1].init         |buffer__371       |     2|
 |358   |      \genblk1[2].init         |buffer__370       |     2|
 |359   |      \genblk1[3].init         |buffer__369       |     2|
@@ -1094,7 +1103,7 @@ Report Instance Areas:
 |385   |      \genblk1[29].init        |buffer__343       |     2|
 |386   |      \genblk1[30].init        |buffer__342       |     2|
 |387   |      \genblk1[31].init        |buffer__341       |     2|
-|388   |    \genblk1[6].tdc1           |tdc_11            |   310|
+|388   |    \genblk1[6].tdc1           |tdc_11            |   314|
 |389   |      \genblk1[1].init         |buffer__340       |     2|
 |390   |      \genblk1[2].init         |buffer__339       |     2|
 |391   |      \genblk1[3].init         |buffer__338       |     2|
@@ -1126,7 +1135,7 @@ Report Instance Areas:
 |417   |      \genblk1[29].init        |buffer__312       |     2|
 |418   |      \genblk1[30].init        |buffer__311       |     2|
 |419   |      \genblk1[31].init        |buffer__310       |     2|
-|420   |    \genblk1[7].tdc1           |tdc_12            |   329|
+|420   |    \genblk1[7].tdc1           |tdc_12            |   314|
 |421   |      \genblk1[1].init         |buffer__309       |     2|
 |422   |      \genblk1[2].init         |buffer__308       |     2|
 |423   |      \genblk1[3].init         |buffer__307       |     2|
@@ -1158,7 +1167,7 @@ Report Instance Areas:
 |449   |      \genblk1[29].init        |buffer__281       |     2|
 |450   |      \genblk1[30].init        |buffer__280       |     2|
 |451   |      \genblk1[31].init        |buffer__279       |     2|
-|452   |    \genblk1[8].tdc1           |tdc_13            |   310|
+|452   |    \genblk1[8].tdc1           |tdc_13            |   313|
 |453   |      \genblk1[1].init         |buffer__278       |     2|
 |454   |      \genblk1[2].init         |buffer__277       |     2|
 |455   |      \genblk1[3].init         |buffer__276       |     2|
@@ -1190,7 +1199,7 @@ Report Instance Areas:
 |481   |      \genblk1[29].init        |buffer__250       |     2|
 |482   |      \genblk1[30].init        |buffer__249       |     2|
 |483   |      \genblk1[31].init        |buffer__248       |     2|
-|484   |    \genblk1[9].tdc1           |tdc_14            |   310|
+|484   |    \genblk1[9].tdc1           |tdc_14            |   312|
 |485   |      \genblk1[1].init         |buffer__247       |     2|
 |486   |      \genblk1[2].init         |buffer__246       |     2|
 |487   |      \genblk1[3].init         |buffer__245       |     2|
@@ -1222,7 +1231,7 @@ Report Instance Areas:
 |513   |      \genblk1[29].init        |buffer__219       |     2|
 |514   |      \genblk1[30].init        |buffer__218       |     2|
 |515   |      \genblk1[31].init        |buffer__217       |     2|
-|516   |    ram1                       |RAM               |   416|
+|516   |    ram1                       |RAM               |   513|
 |517   |    virus1                     |virus             | 32768|
 |518   |      \genblk1[0].vg           |virus_group       |   256|
 |519   |        \genblk1[0].ringOsc    |ro__255           |     2|
@@ -17738,18 +17747,18 @@ Report Instance Areas:
 |17029 |        \genblk1[127].ringOsc  |ro__1280          |     2|
 +------+-------------------------------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:28 ; elapsed = 00:02:25 . Memory (MB): peak = 2458.863 ; gain = 657.863 ; free physical = 2813 ; free virtual = 17432
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:49 ; elapsed = 00:06:01 . Memory (MB): peak = 1515.309 ; gain = 750.719
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:23 ; elapsed = 00:02:21 . Memory (MB): peak = 2458.863 ; gain = 409.457 ; free physical = 2867 ; free virtual = 17487
-Synthesis Optimization Complete : Time (s): cpu = 00:01:28 ; elapsed = 00:02:25 . Memory (MB): peak = 2458.871 ; gain = 657.863 ; free physical = 2867 ; free virtual = 17487
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:15 ; elapsed = 00:05:43 . Memory (MB): peak = 1515.309 ; gain = 495.391
+Synthesis Optimization Complete : Time (s): cpu = 00:03:49 ; elapsed = 00:06:01 . Memory (MB): peak = 1515.309 ; gain = 750.719
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.15 . Memory (MB): peak = 2458.871 ; gain = 0.000 ; free physical = 2920 ; free virtual = 17540
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.527 . Memory (MB): peak = 1515.309 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 17995 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 3 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2490.879 ; gain = 0.000 ; free physical = 2866 ; free virtual = 17486
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.165 . Memory (MB): peak = 1515.309 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 17672 instances were transformed.
   LD => LDCE: 17392 instances
@@ -17759,16 +17768,22 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 195 Infos, 59 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:39 ; elapsed = 00:02:38 . Memory (MB): peak = 2490.879 ; gain = 949.352 ; free physical = 3024 ; free virtual = 17644
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2490.879 ; gain = 0.000 ; free physical = 3024 ; free virtual = 17644
+synth_design: Time (s): cpu = 00:04:13 ; elapsed = 00:06:36 . Memory (MB): peak = 1515.309 ; gain = 1052.395
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.119 . Memory (MB): peak = 1515.309 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1/design_1_top_0_1.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.runs/design_1_top_0_1_synth_1/design_1_top_0_1.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 1515.309 ; gain = 0.000
+write_verilog: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1515.309 ; gain = 0.000
+write_vhdl: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1515.309 ; gain = 0.000
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
 INFO: [Coretcl 2-1174] Renamed 17028 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2514.891 ; gain = 0.000 ; free physical = 2979 ; free virtual = 17640
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.187 . Memory (MB): peak = 1515.309 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1/design_1_top_0_1.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.runs/design_1_top_0_1_synth_1/design_1_top_0_1.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 1515.309 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file design_1_top_0_1_utilization_synth.rpt -pb design_1_top_0_1_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jun 10 17:19:00 2020...
+write_verilog: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1515.309 ; gain = 0.000
+write_vhdl: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1515.309 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 11 10:43:47 2020...

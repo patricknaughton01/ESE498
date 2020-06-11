@@ -2,27 +2,28 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Mon Apr 20 10:52:57 2020
-# Process ID: 6876
-# Current directory: C:/Users/ressw/Documents/School/ESE498/CleanCode/ESE498/tdc.runs/design_1_clk_wiz_0_0_synth_1
+# Start of session at: Thu Jun 11 09:24:06 2020
+# Process ID: 12056
+# Current directory: C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.runs/design_1_clk_wiz_0_0_synth_1
 # Command line: vivado.exe -log design_1_clk_wiz_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_clk_wiz_0_0.tcl
-# Log file: C:/Users/ressw/Documents/School/ESE498/CleanCode/ESE498/tdc.runs/design_1_clk_wiz_0_0_synth_1/design_1_clk_wiz_0_0.vds
-# Journal file: C:/Users/ressw/Documents/School/ESE498/CleanCode/ESE498/tdc.runs/design_1_clk_wiz_0_0_synth_1\vivado.jou
+# Log file: C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.runs/design_1_clk_wiz_0_0_synth_1/design_1_clk_wiz_0_0.vds
+# Journal file: C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.runs/design_1_clk_wiz_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_clk_wiz_0_0.tcl -notrace
-WARNING: [IP_Flow 19-5242] IP Cache entry (cache-ID 7d82359d0a01d043) does not have the required number of cached files and is not valid. Please delete this entry using the TCL command: 'config_ip_cache -remove [get_ips design_1_clk_wiz_0_0]'
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 438.020 ; gain = 155.898
+WARNING: [IP_Flow 19-5242] IP Cache entry (cache-ID 7fc051f0773a4ebf) does not have the required number of cached files and is not valid. Please delete this entry using the TCL command: 'config_ip_cache -remove [get_ips design_1_clk_wiz_0_0]'
 Command: synth_design -top design_1_clk_wiz_0_0 -part xc7z020clg484-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8828 
+INFO: Helper process launched with PID 11460 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1001.609 ; gain = 235.207
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 1001.203 ; gain = 235.207
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [c:/Users/ressw/Documents/School/ESE498/CleanCode/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v:70]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0_clk_wiz' [c:/Users/ressw/Documents/School/ESE498/CleanCode/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v:68]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [c:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v:70]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0_clk_wiz' [c:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v:68]
 INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:32937]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
@@ -37,7 +38,7 @@ INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2019.2/s
 	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
 	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
 	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: double 
-	Parameter CLKOUT0_DIVIDE_F bound to: 4.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 10.000000 - type: double 
 	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
 	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
 	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
@@ -82,10 +83,10 @@ INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2019.2/s
 INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (2#1) [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:39940]
 INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1075]
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (3#1) [C:/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:1075]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0_clk_wiz' (4#1) [c:/Users/ressw/Documents/School/ESE498/CleanCode/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (5#1) [c:/Users/ressw/Documents/School/ESE498/CleanCode/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0_clk_wiz' (4#1) [c:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (5#1) [c:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v:70]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1077.316 ; gain = 310.914
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 1076.516 ; gain = 310.520
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -98,55 +99,55 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1077.316 ; gain = 310.914
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1076.516 ; gain = 310.520
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1077.316 ; gain = 310.914
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1076.516 ; gain = 310.520
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1078.109 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1076.516 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/CleanCode/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/CleanCode/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_ooc.xdc] for cell 'inst'
-Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/CleanCode/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'inst'
-Finished Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/CleanCode/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'inst'
-Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/CleanCode/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'inst'
-Finished Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/CleanCode/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/ressw/Documents/School/ESE498/CleanCode/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_clk_wiz_0_0_propImpl.xdc].
+Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'inst'
+Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_clk_wiz_0_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_clk_wiz_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
-Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/CleanCode/ESE498/tdc.runs/design_1_clk_wiz_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/CleanCode/ESE498/tdc.runs/design_1_clk_wiz_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.runs/design_1_clk_wiz_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.runs/design_1_clk_wiz_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1118.129 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1102.309 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1118.129 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 1102.309 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1118.129 ; gain = 351.727
+Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:45 . Memory (MB): peak = 1102.309 ; gain = 336.313
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1118.129 ; gain = 351.727
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:45 . Memory (MB): peak = 1102.309 ; gain = 336.313
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/Users/ressw/Documents/School/ESE498/CleanCode/ESE498/tdc.runs/design_1_clk_wiz_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.runs/design_1_clk_wiz_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1118.129 ; gain = 351.727
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:45 . Memory (MB): peak = 1102.309 ; gain = 336.313
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1118.129 ; gain = 351.727
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:46 . Memory (MB): peak = 1102.309 ; gain = 336.313
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -182,7 +183,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1118.129 ; gain = 351.727
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:49 . Memory (MB): peak = 1102.309 ; gain = 336.313
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -194,13 +195,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1145.184 ; gain = 378.781
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:01:06 . Memory (MB): peak = 1141.270 ; gain = 375.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1145.184 ; gain = 378.781
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:01:06 . Memory (MB): peak = 1141.270 ; gain = 375.273
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -212,7 +213,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1154.715 ; gain = 388.313
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:01:06 . Memory (MB): peak = 1150.805 ; gain = 384.809
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -236,13 +237,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1170.516 ; gain = 404.113
+Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:01:16 . Memory (MB): peak = 1166.609 ; gain = 400.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1170.516 ; gain = 404.113
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:01:16 . Memory (MB): peak = 1166.609 ; gain = 400.613
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -261,25 +262,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1170.516 ; gain = 404.113
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:01:16 . Memory (MB): peak = 1166.609 ; gain = 400.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1170.516 ; gain = 404.113
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:01:16 . Memory (MB): peak = 1166.609 ; gain = 400.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1170.516 ; gain = 404.113
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:01:16 . Memory (MB): peak = 1166.609 ; gain = 400.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1170.516 ; gain = 404.113
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:01:16 . Memory (MB): peak = 1166.609 ; gain = 400.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -309,33 +310,33 @@ Report Instance Areas:
 |2     |  inst   |design_1_clk_wiz_0_0_clk_wiz |     5|
 +------+---------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1170.516 ; gain = 404.113
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:01:16 . Memory (MB): peak = 1166.609 ; gain = 400.613
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 1170.516 ; gain = 363.301
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1170.516 ; gain = 404.113
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:01:06 . Memory (MB): peak = 1166.609 ; gain = 374.820
+Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:01:17 . Memory (MB): peak = 1166.609 ; gain = 400.613
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1170.516 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1166.609 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1191.688 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1182.813 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 25 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1191.688 ; gain = 720.781
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1191.688 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:06 ; elapsed = 00:01:38 . Memory (MB): peak = 1182.813 ; gain = 712.867
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1182.813 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/ressw/Documents/School/ESE498/CleanCode/ESE498/tdc.runs/design_1_clk_wiz_0_0_synth_1/design_1_clk_wiz_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.runs/design_1_clk_wiz_0_0_synth_1/design_1_clk_wiz_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1191.688 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1182.813 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/ressw/Documents/School/ESE498/CleanCode/ESE498/tdc.runs/design_1_clk_wiz_0_0_synth_1/design_1_clk_wiz_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.runs/design_1_clk_wiz_0_0_synth_1/design_1_clk_wiz_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_clk_wiz_0_0_utilization_synth.rpt -pb design_1_clk_wiz_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Apr 20 10:53:45 2020...
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 11 09:26:05 2020...
