@@ -389,7 +389,7 @@ always @ * begin
                 
                 // Write to the memory
                 memWe = 1;
-                memAddr = (counterQ - 3) << 2;
+                memAddr = (counterQ) << 2;
                 memDi = total;
                 counterD = counterQ + 1;
             end else begin
