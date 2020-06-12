@@ -267,7 +267,7 @@ always @ * begin
                 virusEnD = 0;
             end
             
-            if(counterQ < maxQ)begin
+//            if(counterQ < maxQ)begin
                 // Clean tdcOut to eliminate glitches
                 for(i = 0; i < TDC_COUNT; i = i + 1)begin
                     tdcCleanD[i][0] = tdcOut[i][0];
@@ -314,11 +314,12 @@ always @ * begin
                 memAddr = counterQ << 2;
                 memDi = avgTotalQ;
                 counterD = counterQ + 1;
-            end else begin
+//            end else begin
                 // Write to the PP register
-                diffMaxD = 0;
-                diffMinD = 'h3f;
-                ppD = (diffMaxQ - diffMinQ);
+//                diffMaxD = 0;
+//                diffMinD = 'h3f;
+//                ppD = (diffMaxQ - diffMinQ);
+            if (counterQ >= maxQ) begin
                 nextState = DONE;
             end
         end
@@ -342,7 +343,7 @@ always @ * begin
                 virusEnD = 0;
             end
             
-            if(counterQ < maxQ)begin
+//            if(counterQ < maxQ)begin
                 for(i = 0; i < TDC_COUNT; i = i + 1)begin
                     tdcCleanD[i][0] = tdcOut[i][0];
                 end
@@ -392,11 +393,12 @@ always @ * begin
                 memAddr = (counterQ - 3) << 2;
                 memDi = tempAvgTotal;
                 counterD = counterQ + 1;
-            end else begin
+//            end else begin
+            if (counterQ >= maxQ) begin
                 // Write to the PP register
-                diffMaxD = 0;
-                diffMinD = 'h3f;
-                ppD = (diffMaxQ - diffMinQ);
+//                diffMaxD = 0;
+//                diffMinD = 'h3f;
+//                ppD = (diffMaxQ - diffMinQ);
                 nextState = DONE;
             end
         end
