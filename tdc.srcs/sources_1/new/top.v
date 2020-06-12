@@ -296,23 +296,23 @@ always @ * begin
                     avgTotalD = avgTotalD + totalQ[i];
                 end
                 
-                tempAvgTotal = avgTotalQ >> $clog2(TDC_COUNT);
+//                tempAvgTotal = avgTotalQ >> $clog2(TDC_COUNT);
                 
-                rmsAccD = rmsAccQ + (tempAvgTotal * tempAvgTotal);
-                sumAccD = sumAccQ + tempAvgTotal;
+                rmsAccD = rmsAccQ + (avgTotalQ * avgTotalQ);
+                sumAccD = sumAccQ + avgTotalQ;
                 
                 // Decide if this is a new min or max
-                if (tempAvgTotal > diffMaxQ) begin
-                    diffMaxD = tempAvgTotal;
+                if (avgTotalQ > diffMaxQ) begin
+                    diffMaxD = avgTotalQ;
                 end
-                if (tempAvgTotal < diffMinQ) begin
-                    diffMinD = tempAvgTotal;
+                if (avgTotalQ < diffMinQ) begin
+                    diffMinD = avgTotalQ;
                 end
                 
                 // Write to the memory
                 memWe = 1;
                 memAddr = counterQ << 2;
-                memDi = tempAvgTotal;
+                memDi = avgTotalQ;
                 counterD = counterQ + 1;
             end else begin
                 // Write to the PP register
@@ -373,24 +373,24 @@ always @ * begin
                     avgTotalD = avgTotalD + totalQ[i];
                 end
                 
-                tempAvgTotal = avgTotalQ >> $clog2(TDC_COUNT);
-                tempAvgTotal = tempAvgTotal & 'hFFFFFFFF;
+//                tempAvgTotal = avgTotalQ >> $clog2(TDC_COUNT);
+//                tempAvgTotal = tempAvgTotal & 'hFFFFFFFF;
                 
-                rmsAccD = rmsAccQ + (tempAvgTotal * tempAvgTotal);
-                sumAccD = sumAccQ + tempAvgTotal;
+                rmsAccD = rmsAccQ + (avgTotalQ * avgTotalQ);
+                sumAccD = sumAccQ + avgTotalQ;
                 
                 // Decide if this is a new min or max
-                if (tempAvgTotal > diffMaxQ) begin
-                    diffMaxD = tempAvgTotal;
+                if (avgTotalQ > diffMaxQ) begin
+                    diffMaxD = avgTotalQ;
                 end
-                if (tempAvgTotal < diffMinQ) begin
-                    diffMinD = tempAvgTotal;
+                if (avgTotalQ < diffMinQ) begin
+                    diffMinD = avgTotalQ;
                 end
                 
                 // Write to the memory
                 memWe = 1;
-                memAddr = (counterQ << 2) - 3;
-                memDi = tempAvgTotal[C_S_AXI_DATA_WIDTH-1:0];
+                memAddr = (counterQ - 3) << 2;
+                memDi = avgTotalQ;
                 counterD = counterQ + 1;
             end else begin
                 // Write to the PP register
@@ -424,23 +424,23 @@ always @ * begin
                 avgTotalD = avgTotalD + totalQ[i];
             end
             
-            tempAvgTotal = avgTotalQ >> $clog2(TDC_COUNT);
+//            tempAvgTotal = avgTotalQ >> $clog2(TDC_COUNT);
             
-            rmsAccD = rmsAccQ + (tempAvgTotal * tempAvgTotal);
-            sumAccD = sumAccQ + tempAvgTotal;
+            rmsAccD = rmsAccQ + (avgTotalQ * avgTotalQ);
+            sumAccD = sumAccQ + avgTotalQ;
             
             // Decide if this is a new min or max
-            if (tempAvgTotal > diffMaxQ) begin
-                diffMaxD = tempAvgTotal;
+            if (avgTotalQ > diffMaxQ) begin
+                diffMaxD = avgTotalQ;
             end
-            if (tempAvgTotal < diffMinQ) begin
-                diffMinD = tempAvgTotal;
+            if (avgTotalQ < diffMinQ) begin
+                diffMinD = avgTotalQ;
             end
             
             // Write to the memory
             memWe = 1;
-            memAddr = (maxQ << 2) - 3;
-            memDi = tempAvgTotal;
+            memAddr = (maxQ - 3) << 2;
+            memDi = avgTotalQ;
         end
         DONE2:begin
             nextState = DONE3;
@@ -449,44 +449,44 @@ always @ * begin
                 avgTotalD = avgTotalD + totalQ[i];
             end
             
-            tempAvgTotal = avgTotalQ >> $clog2(TDC_COUNT);
+//            tempAvgTotal = avgTotalQ >> $clog2(TDC_COUNT);
             
-            rmsAccD = rmsAccQ + (tempAvgTotal * tempAvgTotal);
-            sumAccD = sumAccQ + tempAvgTotal;
+            rmsAccD = rmsAccQ + (avgTotalQ * avgTotalQ);
+            sumAccD = sumAccQ + avgTotalQ;
             
             // Decide if this is a new min or max
-            if (tempAvgTotal > diffMaxQ) begin
-                diffMaxD = tempAvgTotal;
+            if (avgTotalQ > diffMaxQ) begin
+                diffMaxD = avgTotalQ;
             end
-            if (tempAvgTotal < diffMinQ) begin
-                diffMinD = tempAvgTotal;
+            if (avgTotalQ < diffMinQ) begin
+                diffMinD = avgTotalQ;
             end
             
             // Write to the memory
             memWe = 1;
-            memAddr = (maxQ << 2) - 2;
-            memDi = tempAvgTotal;
+            memAddr = (maxQ - 2) << 2;
+            memDi = avgTotalQ;
         end
         DONE3:begin
             nextState = IDLE;
             
-            tempAvgTotal = avgTotalQ >> $clog2(TDC_COUNT);
+//            tempAvgTotal = avgTotalQ >> $clog2(TDC_COUNT);
             
-            rmsAccD = rmsAccQ + (tempAvgTotal * tempAvgTotal);
-            sumAccD = sumAccQ + tempAvgTotal;
+            rmsAccD = rmsAccQ + (avgTotalQ * avgTotalQ);
+            sumAccD = sumAccQ + avgTotalQ;
             
             // Decide if this is a new min or max
-            if (tempAvgTotal > diffMaxQ) begin
-                diffMaxD = tempAvgTotal;
+            if (avgTotalQ > diffMaxQ) begin
+                diffMaxD = avgTotalQ;
             end
-            if (tempAvgTotal < diffMinQ) begin
-                diffMinD = tempAvgTotal;
+            if (avgTotalQ < diffMinQ) begin
+                diffMinD = avgTotalQ;
             end
             
             // Write to the memory
             memWe = 1;
-            memAddr = (maxQ << 2) - 1;
-            memDi = tempAvgTotal;
+            memAddr = (maxQ - 1) << 2;
+            memDi = avgTotalQ;
         end
     endcase
 end
