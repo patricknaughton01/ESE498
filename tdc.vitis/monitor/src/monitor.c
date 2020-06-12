@@ -70,16 +70,16 @@ void challengeResponse(){
 	*(virus_addr + 1) = maskRO[1];
 	*(virus_addr + 2) = maskRO[2];
 	*(virus_addr + 3) = maskRO[3];
-	
-	for (int i=0; i < NUM_CHAL; i++) {
-		for(int j = 0; j<100; j++){
-			*chal_addr = challenges[i][0];
-			*(chal_addr + 1) = challenges[i][1];
-			*(chal_addr + 2) = challenges[i][2];
-			*(chal_addr + 3) = challenges[i][3];
+
+//	for (int i=0; i < NUM_CHAL; i++) {
+		for(int j = 0; j<1; j++){
+			*chal_addr = challenges[5][0];
+			*(chal_addr + 1) = challenges[5][1];
+			*(chal_addr + 2) = challenges[5][2];
+			*(chal_addr + 3) = challenges[5][3];
 			*rec_addr = 3;					// Start recording challenge response
 
-			int32_t rms_val;
+			/*int32_t rms_val;
 			// Wait until the response is done being collected
 			do{
 				rms_val = *(rms_addr);
@@ -98,16 +98,17 @@ void challengeResponse(){
 					((double)energy_val)
 					- ((double)sum_val * (double)sum_val / (double)num_reads);
 
-			xil_printf("%d %d\n", i, (int32_t)energy_no_dc_val);
-			/*int32_t tmp;
+			xil_printf("%d %d\n", i, (int32_t)energy_no_dc_val);*/
+			int32_t tmp;
 			do{
 				tmp = *(peripheral);
 			}while((tmp & (1<<31)) == 0);
 			for(int k = 0; k < num_reads; k++){
 				xil_printf("%d %d\n", k, *(peripheral+k) ^ (1<<31));
-			}*/
+			}
 		}
-	}
+//	}
+//	xil_printf("stop\n");
 }
 
 // This function measures a frequency response of the board, starting at a high
