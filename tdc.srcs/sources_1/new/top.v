@@ -47,8 +47,7 @@
 
 module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=32, DELAY=64, READ_MAX_ADDR='hFFF4, 
     REC_ADDR='hFFFC, FREQ_ADDR='hFFF8, VIRUS_ADDR='hFFE0, MEM_WIDTH=16, PP_ADDR='hFFF0, RMS_ADDR = 'hFFEC, SUM_ADDR='hFFE8,
-    ABS_READ_MAX=10000, VIRUS_NUM_B=128, VIRUS_B_SIZE=128, SIM=0, CHALLENGE_WIDTH=128, CHALLENGE_ADDR='hFF00,
-    TDC_COUNT=16)(
+    ABS_READ_MAX=10000, VIRUS_NUM_B=128, VIRUS_B_SIZE=128, SIM=0, CHALLENGE_WIDTH=128, CHALLENGE_ADDR='hFF00)(
     // Axi4Lite Bus
     input       S_AXI_ACLK,
     input       S_AXI_ARESETN,
@@ -82,7 +81,7 @@ reg  [C_S_AXI_DATA_WIDTH-1:0] rdData;
 wire rd;
 
 // Outputs from the TDC
-wire [DELAY-1:0] tdcOut[TDC_COUNT-1:0];
+wire [DELAY-1:0] tdcOut;//[TDC_COUNT-1:0];
 
 // Signals for the power virus. These are clocked with clk2
 reg[VIRUS_NUM_B-1:0] virusEnD, virusEnQ, virusMaskD, virusMaskQ;
@@ -121,15 +120,15 @@ Axi4LiteSupporter#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(
 );
 
 genvar t;
-generate
-    for(t = 0; t < TDC_COUNT; t = t + 1)begin
+//generate
+//    for(t = 0; t < TDC_COUNT; t = t + 1)begin
         tdc#(.INITIAL(INITIAL), .DELAY(DELAY)) tdc1(
             .clk(S_AXI_ACLK),
             .reset(S_AXI_ARESETN),
-            .delay(tdcOut[t])
+            .delay(tdcOut)
         );
-    end
-endgenerate
+//    end
+//endgenerate
 
 virus#(.NUM(VIRUS_NUM_B), .SIZE(VIRUS_B_SIZE)) virus1(
     .out(virusOut),
@@ -157,9 +156,9 @@ reg [3:0] state, nextState;
 
 reg [C_S_AXI_DATA_WIDTH-1:0] counterD, counterQ, virusCounterD, virusCounterQ, freqD, freqQ,
            maxD, maxQ, ppD, ppQ, oneMask;
-reg [DELAY-1:0] tdcCleanD[TDC_COUNT-1:0], tdcCleanQ[TDC_COUNT-1:0];
-reg [5:0] totalD[TDC_COUNT-1:0], totalQ[TDC_COUNT-1:0];
-reg [C_S_AXI_DATA_WIDTH-1:0] avgTotalD, avgTotalQ, diffMaxD, diffMaxQ, diffMinD, diffMinQ, tempAvgTotal;
+reg [DELAY-1:0] tdcClean;//D[TDC_COUNT-1:0], tdcCleanQ[TDC_COUNT-1:0];
+reg [5:0] total;//D[TDC_COUNT-1:0], totalQ[TDC_COUNT-1:0];
+reg [C_S_AXI_DATA_WIDTH-1:0] diffMaxD, diffMaxQ, diffMinD, diffMinQ;
 reg [2*C_S_AXI_DATA_WIDTH-1:0] rmsAccD, rmsAccQ, sumAccD, sumAccQ;
 
 
@@ -180,11 +179,11 @@ always @ * begin
     sumAccD = sumAccQ;
     challengeD = challengeQ;
     rdData = 0;
-    for(i = 0; i<TDC_COUNT; i = i+1)begin
-        totalD[i] = totalQ[i];
-        tdcCleanD[i] = tdcCleanQ[i];
-    end
-    avgTotalD = 0;
+//    for(i = 0; i<TDC_COUNT; i = i+1)begin
+//        totalD[i] = totalQ[i];
+//        tdcCleanD[i] = tdcCleanQ[i];
+//    end
+//    avgTotalD = 0;
     memWe = 0;
     memAddr = 0;
     memDi = 0;
@@ -221,11 +220,11 @@ always @ * begin
                     rmsAccD = 0;
                     sumAccD = 0;
                     virusCounterD = 0;
-                    for(i=0; i<TDC_COUNT; i = i+1) begin
-                        tdcCleanD[i]=0;
-                        totalD[i]=0;
-                    end
-                    avgTotalD = 0;
+//                    for(i=0; i<TDC_COUNT; i = i+1) begin
+//                        tdcCleanD[i]=0;
+//                        totalD[i]=0;
+//                    end
+//                    avgTotalD = 0;
                     trigger = 1;    // Trigger scope when we start recording
                     if(wrData == 0)begin
 						// Read at a particular frequency response
@@ -267,60 +266,60 @@ always @ * begin
                 virusEnD = 0;
             end
             
-//            if(counterQ < maxQ)begin
+            if(counterQ < maxQ)begin
                 // Clean tdcOut to eliminate glitches
-                for(i = 0; i < TDC_COUNT; i = i + 1)begin
-                    tdcCleanD[i][0] = tdcOut[i][0];
+//                for(i = 0; i < TDC_COUNT; i = i + 1)begin
+                    tdcClean[0] = tdcOut[0];
                     for(j = 1; j < DELAY; j = j + 1)begin
-                        tdcCleanD[i][j] = tdcOut[i][j-1] & tdcOut[i][j];
+                        tdcClean[j] = tdcOut[j-1] & tdcOut[j];
                     end
-                end
-                for(i = 0; i<TDC_COUNT; i = i+1)begin
-                    totalD[i] = 0;
-                end
+//                end
+//                for(i = 0; i<TDC_COUNT; i = i+1)begin
+                    total = 0;
+//                end
                 // Find top bit of tdc
-                for(i = 0; i < TDC_COUNT; i = i + 1)begin
+//                for(i = 0; i < TDC_COUNT; i = i + 1)begin
                     for(j = 0; j < DELAY; j = j + 1)begin
-                        totalD[i] = totalD[i] + tdcCleanQ[i][j];
+                        total = total + tdcClean[j];
                     end
-                end
+//                end
                 
                 // Give total a value so that we can simulate
                 if(SIM != 0)begin
-                    for(i = 0; i < TDC_COUNT; i = i + 1)begin
-                        totalD[i] = SIM;
-                    end
+//                    for(i = 0; i < TDC_COUNT; i = i + 1)begin
+                        total = SIM;
+//                    end
                 end
                 
-                for(i = 0; i < TDC_COUNT; i = i + 1)begin
-                    avgTotalD = avgTotalD + totalQ[i];
-                end
+//                for(i = 0; i < TDC_COUNT; i = i + 1)begin
+//                    avgTotalD = avgTotalD + totalQ[i];
+//                end
                 
 //                tempAvgTotal = avgTotalQ >> $clog2(TDC_COUNT);
                 
-                rmsAccD = rmsAccQ + (avgTotalQ * avgTotalQ);
-                sumAccD = sumAccQ + avgTotalQ;
+                rmsAccD = rmsAccQ + (total * total);
+                sumAccD = sumAccQ + total;
                 
                 // Decide if this is a new min or max
-                if (avgTotalQ > diffMaxQ) begin
-                    diffMaxD = avgTotalQ;
+                if (total > diffMaxQ) begin
+                    diffMaxD = total;
                 end
-                if (avgTotalQ < diffMinQ) begin
-                    diffMinD = avgTotalQ;
+                if (total < diffMinQ) begin
+                    diffMinD = total;
                 end
                 
                 // Write to the memory
                 memWe = 1;
                 memAddr = counterQ << 2;
-                memDi = avgTotalQ;
+                memDi = total;
                 counterD = counterQ + 1;
-//            end else begin
+            end else begin
                 // Write to the PP register
-//                diffMaxD = 0;
-//                diffMinD = 'h3f;
-//                ppD = (diffMaxQ - diffMinQ);
-            if (counterQ >= maxQ) begin
-                nextState = DONE;
+                diffMaxD = 0;
+                diffMinD = 'h3f;
+                ppD = (diffMaxQ - diffMinQ);
+//            if (counterQ >= maxQ) begin
+                nextState = IDLE;
             end
         end
         C_RD:begin
@@ -343,152 +342,64 @@ always @ * begin
                 virusEnD = 0;
             end
             
-//            if(counterQ < maxQ)begin
-                for(i = 0; i < TDC_COUNT; i = i + 1)begin
-                    tdcCleanD[i][0] = tdcOut[i][0];
-                end
+            if(counterQ < maxQ)begin
+//                for(i = 0; i < TDC_COUNT; i = i + 1)begin
+                    tdcClean[0] = tdcOut[0];
+//                end
                 // Clean tdcOut to eliminate glitches
-                for(i = 0; i < TDC_COUNT; i = i + 1)begin
+//                for(i = 0; i < TDC_COUNT; i = i + 1)begin
                     for(j = 1; j < DELAY; j = j + 1)begin
-                        tdcCleanD[i][j] = tdcOut[i][j-1] && tdcOut[i][j];
+                        tdcClean[j] = tdcOut[j-1] && tdcOut[j];
                     end
-                end
-                for(i = 0; i<TDC_COUNT; i = i+1)begin
-                    totalD[i] = 0;
-                end
+//                end
+//                for(i = 0; i<TDC_COUNT; i = i+1)begin
+                    total = 0;
+//                end
                 // Find top bit of tdc
-                for(i = 0; i < TDC_COUNT; i = i + 1)begin
+//                for(i = 0; i < TDC_COUNT; i = i + 1)begin
                     for(j = 0; j < DELAY; j = j + 1)begin
-                        totalD[i] = totalD[i] + tdcCleanQ[i][j];
+                        total = total + tdcClean[j];
                     end
-                end
+//                end
                 
                 // Give total a value so that we can simulate
                 if(SIM != 0)begin
-                    for(i = 0; i < TDC_COUNT; i = i + 1)begin
-                        totalD[i] = SIM + i;
-                    end
+//                    for(i = 0; i < TDC_COUNT; i = i + 1)begin
+                        total = SIM + i;
+//                    end
                 end
-                avgTotalD = 0;
-                for(i = 0; i < TDC_COUNT; i = i + 1)begin
-                    avgTotalD = avgTotalD + totalQ[i];
-                end
+//                avgTotalD = 0;
+//                for(i = 0; i < TDC_COUNT; i = i + 1)begin
+//                    avgTotalD = avgTotalD + totalQ[i];
+//                end
                 
 //                tempAvgTotal = avgTotalQ >> $clog2(TDC_COUNT);
 //                tempAvgTotal = tempAvgTotal & 'hFFFFFFFF;
                 
-                rmsAccD = rmsAccQ + (avgTotalQ * avgTotalQ);
-                sumAccD = sumAccQ + avgTotalQ;
+                rmsAccD = rmsAccQ + (total * total);
+                sumAccD = sumAccQ + total;
                 
                 // Decide if this is a new min or max
-                if (avgTotalQ > diffMaxQ) begin
-                    diffMaxD = avgTotalQ;
+                if (total > diffMaxQ) begin
+                    diffMaxD = total;
                 end
-                if (avgTotalQ < diffMinQ) begin
-                    diffMinD = avgTotalQ;
+                if (total < diffMinQ) begin
+                    diffMinD = total;
                 end
                 
                 // Write to the memory
                 memWe = 1;
                 memAddr = (counterQ - 3) << 2;
-                memDi = avgTotalQ;
+                memDi = total;
                 counterD = counterQ + 1;
-//            end else begin
-            if (counterQ >= maxQ) begin
+            end else begin
+//            if (counterQ >= maxQ) begin
                 // Write to the PP register
-//                diffMaxD = 0;
-//                diffMinD = 'h3f;
-//                ppD = (diffMaxQ - diffMinQ);
-                nextState = DONE;
+                diffMaxD = 0;
+                diffMinD = 'h3f;
+                ppD = (diffMaxQ - diffMinQ);
+                nextState = IDLE;
             end
-        end
-        DONE:begin
-            nextState = DONE2;
-            
-            for(i = 0; i<TDC_COUNT; i = i+1)begin
-                totalD[i] = 0;
-            end
-            // Find top bit of tdc
-            for(i = 0; i < TDC_COUNT; i = i + 1)begin
-                for(j = 0; j < DELAY; j = j + 1)begin
-                    totalD[i] = totalD[i] + tdcCleanQ[i][j];
-                end
-            end
-            
-            // Give total a value so that we can simulate
-            if(SIM != 0)begin
-                for(i = 0; i < TDC_COUNT; i = i + 1)begin
-                    totalD[i] = SIM + i;
-                end
-            end
-            
-            for(i = 0; i < TDC_COUNT; i = i + 1)begin
-                avgTotalD = avgTotalD + totalQ[i];
-            end
-            
-//            tempAvgTotal = avgTotalQ >> $clog2(TDC_COUNT);
-            
-            rmsAccD = rmsAccQ + (avgTotalQ * avgTotalQ);
-            sumAccD = sumAccQ + avgTotalQ;
-            
-            // Decide if this is a new min or max
-            if (avgTotalQ > diffMaxQ) begin
-                diffMaxD = avgTotalQ;
-            end
-            if (avgTotalQ < diffMinQ) begin
-                diffMinD = avgTotalQ;
-            end
-            
-            // Write to the memory
-            memWe = 1;
-            memAddr = (maxQ - 3) << 2;
-            memDi = avgTotalQ;
-        end
-        DONE2:begin
-            nextState = DONE3;
-            
-            for(i = 0; i < TDC_COUNT; i = i + 1)begin
-                avgTotalD = avgTotalD + totalQ[i];
-            end
-            
-//            tempAvgTotal = avgTotalQ >> $clog2(TDC_COUNT);
-            
-            rmsAccD = rmsAccQ + (avgTotalQ * avgTotalQ);
-            sumAccD = sumAccQ + avgTotalQ;
-            
-            // Decide if this is a new min or max
-            if (avgTotalQ > diffMaxQ) begin
-                diffMaxD = avgTotalQ;
-            end
-            if (avgTotalQ < diffMinQ) begin
-                diffMinD = avgTotalQ;
-            end
-            
-            // Write to the memory
-            memWe = 1;
-            memAddr = (maxQ - 2) << 2;
-            memDi = avgTotalQ;
-        end
-        DONE3:begin
-            nextState = IDLE;
-            
-//            tempAvgTotal = avgTotalQ >> $clog2(TDC_COUNT);
-            
-            rmsAccD = rmsAccQ + (avgTotalQ * avgTotalQ);
-            sumAccD = sumAccQ + avgTotalQ;
-            
-            // Decide if this is a new min or max
-            if (avgTotalQ > diffMaxQ) begin
-                diffMaxD = avgTotalQ;
-            end
-            if (avgTotalQ < diffMinQ) begin
-                diffMinD = avgTotalQ;
-            end
-            
-            // Write to the memory
-            memWe = 1;
-            memAddr = (maxQ - 1) << 2;
-            memDi = avgTotalQ;
         end
     endcase
 end
@@ -506,11 +417,11 @@ always @ (posedge S_AXI_ACLK)begin
         rmsAccQ <= rmsAccD;
         sumAccQ <= sumAccD;
         challengeQ <= challengeD;
-        avgTotalQ <= avgTotalD;
-        for(i = 0; i<TDC_COUNT; i = i+1)begin
-            totalQ[i] <= totalD[i];
-            tdcCleanQ[i] <= tdcCleanD[i];
-        end
+//        avgTotalQ <= avgTotalD;
+//        for(i = 0; i<TDC_COUNT; i = i+1)begin
+//            totalQ[i] <= totalD[i];
+//            tdcCleanQ[i] <= tdcCleanD[i];
+//        end
     end else begin
         state <= IDLE;
         counterQ <= 0;
@@ -523,11 +434,11 @@ always @ (posedge S_AXI_ACLK)begin
         rmsAccQ <= 0;
         sumAccQ <= 0;
         challengeQ <= 0;
-        avgTotalQ <= 0;
-        for(i = 0; i<TDC_COUNT; i = i+1)begin
-            totalQ[i] <= 0;
-            tdcCleanQ[i] <= 0;
-        end
+//        avgTotalQ <= 0;
+//        for(i = 0; i<TDC_COUNT; i = i+1)begin
+//            totalQ[i] <= 0;
+//            tdcCleanQ[i] <= 0;
+//        end
     end
 end
 
