@@ -150,7 +150,7 @@ RAM#(.DEPTH(ABS_READ_MAX)) ram1(
 );
 
 // State machine
-parameter IDLE=0, READ=1, C_INIT=2, C_INIT2=3, C_WAIT=4, C_RD=5, C_DONE=6, C_DONE2=7, C_DONE3=8;
+parameter IDLE=0, READ=1, C_INIT=2, C_WAIT=3, C_RD=4, C_DONE=5, C_DONE2=6, C_DONE3=7;
 reg [3:0] state, nextState;
 
 
@@ -160,11 +160,10 @@ reg [DELAY-1:0] tdcClean;//D[TDC_COUNT-1:0], tdcCleanQ[TDC_COUNT-1:0];
 reg [5:0] total;//D[TDC_COUNT-1:0], totalQ[TDC_COUNT-1:0];
 reg [C_S_AXI_DATA_WIDTH-1:0] diffMaxD, diffMaxQ, diffMinD, diffMinQ;
 //reg [2*C_S_AXI_DATA_WIDTH-1:0] rmsAccD, rmsAccQ, sumAccD, sumAccQ, avgAccD, avgAccQ, varAccD, varAccQ, tmpValD, tmpValQ, tmpVal2D, tmpVal2Q, avgSqrD, avgSqrQ, sumSqrD, sumSqrQ, var;
-reg [19:0] sumAccD, sumAccQ;
-reg [25:0] rmsAccD, rmsAccQ, tmpValD, tmpValQ;
-reg [32:0] avgAccD, avgAccQ;
-reg [39:0] sumSqrD, sumSqrQ;
-reg [51:0] tmpVal2D, tmpVal2Q;
+reg [37:0] sumAccD, sumAccQ;
+reg [25:0] rmsAccD, rmsAccQ;
+reg [51:0] avgAccD, avgAccQ;
+reg [51:0] tmpValD, tmpValQ, tmpVal2D, tmpVal2Q;
 reg [58:0] varAccD, varAccQ, var;
 reg [63:0] avgSqrD, avgSqrQ;
 
@@ -191,7 +190,6 @@ always @ * begin
     tmpValD = tmpValQ;
     tmpVal2D = tmpVal2Q;
     avgSqrD = avgSqrQ;
-    sumSqrD = sumSqrQ;
 //    for(i = 0; i<TDC_COUNT; i = i+1)begin
 //        totalD[i] = totalQ[i];
 //        tdcCleanD[i] = tdcCleanQ[i];
@@ -228,15 +226,15 @@ always @ * begin
                 rdData = sumAccQ;
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
             end else if(rd && (rdAddr == AVG_ADDR || rdAddr == AVG_ADDR + 4)) begin
-                avgSqrD = avgAccQ * avgAccQ;
+                avgSqrD = avgAccQ[51:$clog2(RUNS)] * avgAccQ[51:$clog2(RUNS)];
                 if (rdAddr == AVG_ADDR) begin
-                    rdData[C_S_AXI_DATA_WIDTH-2:0] = avgAccQ[C_S_AXI_DATA_WIDTH-2:0];
+                    rdData[C_S_AXI_DATA_WIDTH-2:0] = avgAccQ[C_S_AXI_DATA_WIDTH-2+$clog2(RUNS):$clog2(RUNS)];
                 end else begin
-                    rdData[C_S_AXI_DATA_WIDTH-2:0] = avgAccQ[32:C_S_AXI_DATA_WIDTH-1];
+                    rdData[C_S_AXI_DATA_WIDTH-2:0] = avgAccQ[51:C_S_AXI_DATA_WIDTH-1+$clog2(RUNS)];
                 end
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
             end else if(rd && (rdAddr == VAR_ADDR || rdAddr == VAR_ADDR + 4)) begin
-                var = varAccQ - avgSqrQ;
+                var = varAccQ[58:$clog2(RUNS)] - avgSqrQ;
                 if (rdAddr == VAR_ADDR) begin
                     rdData[C_S_AXI_DATA_WIDTH-2:0] = var[C_S_AXI_DATA_WIDTH-2:0];
                 end else begin
@@ -254,13 +252,6 @@ always @ * begin
                     rCounterD = 0;
                     tmpValD = 0;
                     tmpVal2D = 0;
-                    sumSqrD = 0;
-                    
-//                    for(i=0; i<TDC_COUNT; i = i+1) begin
-//                        tdcCleanD[i]=0;
-//                        totalD[i]=0;
-//                    end
-//                    avgTotalD = 0;
                     trigger = 1;    // Trigger scope when we start recording
                     if(wrData == 0)begin
 						// Read at a particular frequency response
@@ -355,32 +346,12 @@ always @ * begin
                 diffMaxD = 0;
                 diffMinD = 'h3f;
                 ppD = (diffMaxQ - diffMinQ);
-//            if (counterQ >= maxQ) begin
                 nextState = IDLE;
             end
         end
         C_INIT:begin
-            sumSqrD = sumAccQ * sumAccQ;
-            nextState = C_INIT2;
-//            rCounterD = rCounterQ + 1;
-//            tmpValD = rmsAccQ - ((sumAccQ * sumAccQ) >> $clog2(NUM_READS));
-//            avgAccD = avgAccQ + tmpValQ;
-//            varAccD = varAccQ + tmpVal2Q;
-//            tmpVal2D = tmpValQ * tmpValQ;
-//            if (rCounterQ < RUNS) begin
-//                rCounterD = rCounterQ + 1;
-//                rmsAccD = 0;
-//                sumAccD = 0;
-//                counterD = 0;
-//                virusCounterD = 0;
-//                nextState = C_INIT2;
-//            end else begin
-//                nextState = C_DONE;
-//            end
-        end
-        C_INIT2:begin
             rCounterD = rCounterQ + 1;
-            tmpValD = rmsAccQ - (sumSqrQ >> $clog2(NUM_READS));
+            tmpValD = rmsAccQ - ((sumAccQ * sumAccQ) >> $clog2(NUM_READS));
             avgAccD = avgAccQ + tmpValQ;
             varAccD = varAccQ + tmpVal2Q;
             tmpVal2D = tmpValQ * tmpValQ;
@@ -469,13 +440,13 @@ always @ * begin
         end
         C_DONE2:begin
             varAccD = varAccQ + tmpVal2Q;
-            nextState = C_DONE3;
-        end
-        C_DONE3:begin
-            avgAccD = avgAccQ >> $clog2(RUNS);
-            varAccD = varAccQ >> $clog2(RUNS);
             nextState = IDLE;
         end
+//        C_DONE3:begin
+//            avgAccD = avgAccQ >> $clog2(RUNS);
+//            varAccD = varAccQ >> $clog2(RUNS);
+//            nextState = IDLE;
+//        end
     endcase
 end
 
@@ -498,7 +469,6 @@ always @ (posedge S_AXI_ACLK)begin
         tmpValQ <= tmpValD;
         tmpVal2Q <= tmpVal2D;
         avgSqrQ <= avgSqrD;
-        sumSqrQ <= sumSqrD;
         virusCounterQ <= virusCounterD;
         virusFlagQ <= virusFlagD;
         virusEnQ <= virusEnD;
@@ -520,7 +490,6 @@ always @ (posedge S_AXI_ACLK)begin
         tmpValQ <= 0;
         tmpVal2Q <= 0;
         avgSqrQ <= 0;
-        sumSqrQ <= 0;
         virusCounterQ <= 0;
         virusFlagQ <= 0;
         virusEnQ <= 0;
