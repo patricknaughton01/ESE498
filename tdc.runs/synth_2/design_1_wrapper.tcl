@@ -39,6 +39,9 @@ set_property used_in_implementation false [get_files -all c:/Users/ressw/Documen
 set_property used_in_implementation false [get_files -all c:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_2/design_1_rst_ps7_0_100M_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
@@ -52,6 +55,9 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 }
 read_xdc C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/constrs_1/new/zedboard.xdc
 set_property used_in_implementation false [get_files C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/constrs_1/new/zedboard.xdc]
+
+read_xdc C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/constrs_1/new/loops.xdc
+set_property used_in_implementation false [get_files C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/constrs_1/new/loops.xdc]
 
 read_xdc C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/constrs_1/new/platform.xdc
 set_property used_in_implementation false [get_files C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/constrs_1/new/platform.xdc]

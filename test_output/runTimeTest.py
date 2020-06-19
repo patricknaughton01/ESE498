@@ -3,12 +3,17 @@ import argparse
 import math
 import time
 
+ROperG = 128
+
+def intToString(num):
+	mask = 255
+	return chr(num&mask) + chr((num&(mask<<8))>>8) + chr((num&(mask<<16))>>16) + chr((num&(mask<<24))>>24)
+
 def main():
 	parser = argparse.ArgumentParser(description='Runs through challenges at uniform time intervals')
 
 	parser.add_argument("-d", type=int, default=60, help="delay between each run in seconds")
-	parser.add_argument("-i", type=int, default=10, help="number of iterations")
-	parser.add_argument("-s", type=int, default=0, help="initial time to wait")
+	parser.add_argument("-t", type=int, default=3600, help="how long to run in seconds")
 	parser.add_argument("-p", type=str, default="COM5", help="port to connect to")
 
 	args = parser.parse_args()
@@ -20,12 +25,10 @@ def main():
 	ser.reset_input_buffer()
 	ser.reset_output_buffer()
 	
-	time.sleep(args.s)
-	
-	for c in range(0, args.i):
+	for c in range(0, math.floor(args.t/args.d)):
 		f = open('run'+str(c)+'.txt', 'w')
 		
-		print('run ' + str(c))
+		lastRun = time.time()
 		
 		ser.write("r".encode())
 		
@@ -37,8 +40,6 @@ def main():
 				f.write(line+'\n')
 			line = ser.readline().decode().strip()
 		f.close()
-		
-		lastRun = time.time()
 		
 		while(time.time() - lastRun < args.d):
 			time.sleep(1)

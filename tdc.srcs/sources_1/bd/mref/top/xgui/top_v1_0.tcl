@@ -4,7 +4,6 @@ proc init_gui { IPINST } {
   #Adding Page
   set Page_0 [ipgui::add_page $IPINST -name "Page 0"]
   ipgui::add_param $IPINST -name "ABS_READ_MAX" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "AVG_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "CHALLENGE_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "CHALLENGE_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "C_S_AXI_ADDR_WIDTH" -parent ${Page_0}
@@ -13,19 +12,16 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "FREQ_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "INITIAL" -parent ${Page_0}
   ipgui::add_param $IPINST -name "MEM_WIDTH" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "NUM_READS" -parent ${Page_0}
   ipgui::add_param $IPINST -name "PP_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "READ_MAX_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "REC_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "RMS_ADDR" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "RUNS" -parent ${Page_0}
   ipgui::add_param $IPINST -name "SIM" -parent ${Page_0}
   ipgui::add_param $IPINST -name "SUM_ADDR" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "VAR_ADDR" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "TDC_COUNT" -parent ${Page_0}
   ipgui::add_param $IPINST -name "VIRUS_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "VIRUS_B_SIZE" -parent ${Page_0}
   ipgui::add_param $IPINST -name "VIRUS_NUM_B" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "WAIT_CYCLES" -parent ${Page_0}
 
 
 }
@@ -36,15 +32,6 @@ proc update_PARAM_VALUE.ABS_READ_MAX { PARAM_VALUE.ABS_READ_MAX } {
 
 proc validate_PARAM_VALUE.ABS_READ_MAX { PARAM_VALUE.ABS_READ_MAX } {
 	# Procedure called to validate ABS_READ_MAX
-	return true
-}
-
-proc update_PARAM_VALUE.AVG_ADDR { PARAM_VALUE.AVG_ADDR } {
-	# Procedure called to update AVG_ADDR when any of the dependent parameters in the arguments change
-}
-
-proc validate_PARAM_VALUE.AVG_ADDR { PARAM_VALUE.AVG_ADDR } {
-	# Procedure called to validate AVG_ADDR
 	return true
 }
 
@@ -120,15 +107,6 @@ proc validate_PARAM_VALUE.MEM_WIDTH { PARAM_VALUE.MEM_WIDTH } {
 	return true
 }
 
-proc update_PARAM_VALUE.NUM_READS { PARAM_VALUE.NUM_READS } {
-	# Procedure called to update NUM_READS when any of the dependent parameters in the arguments change
-}
-
-proc validate_PARAM_VALUE.NUM_READS { PARAM_VALUE.NUM_READS } {
-	# Procedure called to validate NUM_READS
-	return true
-}
-
 proc update_PARAM_VALUE.PP_ADDR { PARAM_VALUE.PP_ADDR } {
 	# Procedure called to update PP_ADDR when any of the dependent parameters in the arguments change
 }
@@ -165,15 +143,6 @@ proc validate_PARAM_VALUE.RMS_ADDR { PARAM_VALUE.RMS_ADDR } {
 	return true
 }
 
-proc update_PARAM_VALUE.RUNS { PARAM_VALUE.RUNS } {
-	# Procedure called to update RUNS when any of the dependent parameters in the arguments change
-}
-
-proc validate_PARAM_VALUE.RUNS { PARAM_VALUE.RUNS } {
-	# Procedure called to validate RUNS
-	return true
-}
-
 proc update_PARAM_VALUE.SIM { PARAM_VALUE.SIM } {
 	# Procedure called to update SIM when any of the dependent parameters in the arguments change
 }
@@ -192,12 +161,12 @@ proc validate_PARAM_VALUE.SUM_ADDR { PARAM_VALUE.SUM_ADDR } {
 	return true
 }
 
-proc update_PARAM_VALUE.VAR_ADDR { PARAM_VALUE.VAR_ADDR } {
-	# Procedure called to update VAR_ADDR when any of the dependent parameters in the arguments change
+proc update_PARAM_VALUE.TDC_COUNT { PARAM_VALUE.TDC_COUNT } {
+	# Procedure called to update TDC_COUNT when any of the dependent parameters in the arguments change
 }
 
-proc validate_PARAM_VALUE.VAR_ADDR { PARAM_VALUE.VAR_ADDR } {
-	# Procedure called to validate VAR_ADDR
+proc validate_PARAM_VALUE.TDC_COUNT { PARAM_VALUE.TDC_COUNT } {
+	# Procedure called to validate TDC_COUNT
 	return true
 }
 
@@ -225,15 +194,6 @@ proc update_PARAM_VALUE.VIRUS_NUM_B { PARAM_VALUE.VIRUS_NUM_B } {
 
 proc validate_PARAM_VALUE.VIRUS_NUM_B { PARAM_VALUE.VIRUS_NUM_B } {
 	# Procedure called to validate VIRUS_NUM_B
-	return true
-}
-
-proc update_PARAM_VALUE.WAIT_CYCLES { PARAM_VALUE.WAIT_CYCLES } {
-	# Procedure called to update WAIT_CYCLES when any of the dependent parameters in the arguments change
-}
-
-proc validate_PARAM_VALUE.WAIT_CYCLES { PARAM_VALUE.WAIT_CYCLES } {
-	# Procedure called to validate WAIT_CYCLES
 	return true
 }
 
@@ -328,28 +288,8 @@ proc update_MODELPARAM_VALUE.CHALLENGE_ADDR { MODELPARAM_VALUE.CHALLENGE_ADDR PA
 	set_property value [get_property value ${PARAM_VALUE.CHALLENGE_ADDR}] ${MODELPARAM_VALUE.CHALLENGE_ADDR}
 }
 
-proc update_MODELPARAM_VALUE.RUNS { MODELPARAM_VALUE.RUNS PARAM_VALUE.RUNS } {
+proc update_MODELPARAM_VALUE.TDC_COUNT { MODELPARAM_VALUE.TDC_COUNT PARAM_VALUE.TDC_COUNT } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.RUNS}] ${MODELPARAM_VALUE.RUNS}
-}
-
-proc update_MODELPARAM_VALUE.AVG_ADDR { MODELPARAM_VALUE.AVG_ADDR PARAM_VALUE.AVG_ADDR } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.AVG_ADDR}] ${MODELPARAM_VALUE.AVG_ADDR}
-}
-
-proc update_MODELPARAM_VALUE.VAR_ADDR { MODELPARAM_VALUE.VAR_ADDR PARAM_VALUE.VAR_ADDR } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.VAR_ADDR}] ${MODELPARAM_VALUE.VAR_ADDR}
-}
-
-proc update_MODELPARAM_VALUE.NUM_READS { MODELPARAM_VALUE.NUM_READS PARAM_VALUE.NUM_READS } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.NUM_READS}] ${MODELPARAM_VALUE.NUM_READS}
-}
-
-proc update_MODELPARAM_VALUE.WAIT_CYCLES { MODELPARAM_VALUE.WAIT_CYCLES PARAM_VALUE.WAIT_CYCLES } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.WAIT_CYCLES}] ${MODELPARAM_VALUE.WAIT_CYCLES}
+	set_property value [get_property value ${PARAM_VALUE.TDC_COUNT}] ${MODELPARAM_VALUE.TDC_COUNT}
 }
 

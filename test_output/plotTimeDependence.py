@@ -13,28 +13,28 @@ def main():
 	y = []
 	for c in range(0, args.c):
 		y.append([])
-		first = True
-		prev = 0
+#		first = True
+#		prev = 0
 		for file in files:
 			f = open(file,'r').readlines()
 			for line in f:
 				if int(line.split()[0]) == c:
-					if first:
-						prev = int(line.split()[1])
-						first = False
-					else:
-						y[c].append(int(line.split()[1]) - prev)
-						prev = int(line.split()[1])
-						if c == 0:
-							temp = file
-							for i in temp:
-								if not i.isdigit():
-									temp = temp.replace(i,'')
-							x.append(int(temp))
+#					if first:
+#						prev = int(line.split()[1])
+#						first = False
+#					else:
+					y[c].append(int(line.split()[1]))
+#						prev = int(line.split()[1])
+					if c == 0:
+						temp = file
+						for i in temp:
+							if not i.isdigit():
+								temp = temp.replace(i,'')
+						x.append(int(temp))
 					break
 		plt.plot(x,y[c])
 
-	plt.xlabel('Time')
+	plt.xlabel('Time (minutes)')
 	plt.ylabel('Change in Response')
 	plt.title("Change Since Previous Response")
 	plt.show()
@@ -49,7 +49,7 @@ def main():
 	for i in range(0, len(avgs)):
 		avgs[i] /= len(y)
 	plt.plot(x,avgs)
-	plt.xlabel('Time')
+	plt.xlabel('Time (minutes)')
 	plt.ylabel('Change in Response')
 	plt.title('Average Change since Previous Response over 1000 Challenges')
 	plt.show()

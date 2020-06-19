@@ -119,7 +119,7 @@ Axi4LiteSupporter#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(
     .S_AXI_RREADY(S_AXI_RREADY)         // input
 );
 
-//genvar t;
+genvar t;
 //generate
 //    for(t = 0; t < TDC_COUNT; t = t + 1)begin
         tdc#(.INITIAL(INITIAL), .DELAY(DELAY)) tdc1(
