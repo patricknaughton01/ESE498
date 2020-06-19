@@ -548,7 +548,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8ce8b0a1</spirit:value>
+            <spirit:value>9:6cb210e6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -559,7 +559,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8ce8b0a1</spirit:value>
+            <spirit:value>9:6cb210e6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -575,11 +575,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Jun 11 15:34:54 UTC 2020</spirit:value>
+            <spirit:value>Thu Jun 18 17:03:37 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8ce8b0a1</spirit:value>
+            <spirit:value>9:6cb210e6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -591,7 +591,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:aa889b7e</spirit:value>
+            <spirit:value>9:32ab599f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -607,11 +607,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Jun 11 15:34:54 UTC 2020</spirit:value>
+            <spirit:value>Thu Jun 18 17:03:37 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:aa889b7e</spirit:value>
+            <spirit:value>9:32ab599f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -625,11 +625,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Jun 11 15:43:47 UTC 2020</spirit:value>
+            <spirit:value>Thu Jun 18 17:08:47 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8ce8b0a1</spirit:value>
+            <spirit:value>9:6cb210e6</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -938,19 +938,6 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>clk2</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
         <spirit:name>trigger</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
@@ -983,7 +970,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>DELAY</spirit:name>
         <spirit:displayName>Delay</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DELAY">63</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DELAY">64</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>READ_MAX_ADDR</spirit:name>
@@ -1056,9 +1043,29 @@
         <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CHALLENGE_ADDR" spirit:bitStringLength="32">0x0000FF00</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
-        <spirit:name>TDC_COUNT</spirit:name>
-        <spirit:displayName>Tdc Count</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.TDC_COUNT">16</spirit:value>
+        <spirit:name>RUNS</spirit:name>
+        <spirit:displayName>Runs</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.RUNS">128</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>AVG_ADDR</spirit:name>
+        <spirit:displayName>Avg Addr</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.AVG_ADDR" spirit:bitStringLength="32">0x0000FFD8</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>VAR_ADDR</spirit:name>
+        <spirit:displayName>Var Addr</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.VAR_ADDR" spirit:bitStringLength="32">0x0000FFD0</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>NUM_READS</spirit:name>
+        <spirit:displayName>Num Reads</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.NUM_READS">8192</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>WAIT_CYCLES</spirit:name>
+        <spirit:displayName>Wait Cycles</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.WAIT_CYCLES">1000</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -1143,7 +1150,7 @@
     <spirit:parameter>
       <spirit:name>DELAY</spirit:name>
       <spirit:displayName>Delay</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DELAY">63</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DELAY">64</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>READ_MAX_ADDR</spirit:name>
@@ -1216,9 +1223,29 @@
       <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.CHALLENGE_ADDR" spirit:bitStringLength="32">0x0000FF00</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
-      <spirit:name>TDC_COUNT</spirit:name>
-      <spirit:displayName>Tdc Count</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.TDC_COUNT">16</spirit:value>
+      <spirit:name>RUNS</spirit:name>
+      <spirit:displayName>Runs</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.RUNS">128</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>AVG_ADDR</spirit:name>
+      <spirit:displayName>Avg Addr</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.AVG_ADDR" spirit:bitStringLength="32">0x0000FFD8</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>VAR_ADDR</spirit:name>
+      <spirit:displayName>Var Addr</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.VAR_ADDR" spirit:bitStringLength="32">0x0000FFD0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>NUM_READS</spirit:name>
+      <spirit:displayName>Num Reads</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NUM_READS">8192</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>WAIT_CYCLES</spirit:name>
+      <spirit:displayName>Wait Cycles</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.WAIT_CYCLES">1000</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
