@@ -48,7 +48,7 @@
 module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=32, DELAY=64, READ_MAX_ADDR='hFFF4, 
     REC_ADDR='hFFFC, FREQ_ADDR='hFFF8, VIRUS_ADDR='hFFE0, MEM_WIDTH=16, PP_ADDR='hFFF0, RMS_ADDR = 'hFFEC, SUM_ADDR='hFFE8,
     ABS_READ_MAX=10000, VIRUS_NUM_B=128, VIRUS_B_SIZE=128, SIM=0, CHALLENGE_WIDTH=128, CHALLENGE_ADDR='hFF00, RUNS=128,
-    AVG_ADDR = 'hFFD8, VAR_ADDR = 'hFFD0, NUM_READS=8192, WAIT_CYCLES=1000)(
+    AVG_ADDR = 'hFFD8, VAR_ADDR = 'hFFD0, NUM_READS=8192, WAIT_CYCLES=10000)(
     // Axi4Lite Bus
     input       S_AXI_ACLK,
     input       S_AXI_ARESETN,
@@ -119,16 +119,11 @@ Axi4LiteSupporter#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(
     .S_AXI_RREADY(S_AXI_RREADY)         // input
 );
 
-//genvar t;
-//generate
-//    for(t = 0; t < TDC_COUNT; t = t + 1)begin
-        tdc#(.INITIAL(INITIAL), .DELAY(DELAY)) tdc1(
-            .clk(S_AXI_ACLK),
-            .reset(S_AXI_ARESETN),
-            .delay(tdcOut)
-        );
-//    end
-//endgenerate
+tdc#(.INITIAL(INITIAL), .DELAY(DELAY)) tdc1(
+    .clk(S_AXI_ACLK),
+    .reset(S_AXI_ARESETN),
+    .delay(tdcOut)
+);
 
 virus#(.NUM(VIRUS_NUM_B), .SIZE(VIRUS_B_SIZE)) virus1(
     .out(virusOut),
@@ -159,7 +154,6 @@ reg [C_S_AXI_DATA_WIDTH-1:0] counterD, counterQ, virusCounterD, virusCounterQ, f
 reg [DELAY-1:0] tdcClean;//D[TDC_COUNT-1:0], tdcCleanQ[TDC_COUNT-1:0];
 reg [$clog2(DELAY)-1:0] total;//D[TDC_COUNT-1:0], totalQ[TDC_COUNT-1:0];
 reg [C_S_AXI_DATA_WIDTH-1:0] diffMaxD, diffMaxQ, diffMinD, diffMinQ;
-//reg [2*C_S_AXI_DATA_WIDTH-1:0] rmsAccD, rmsAccQ, sumAccD, sumAccQ, avgAccD, avgAccQ, varAccD, varAccQ, tmpValD, tmpValQ, tmpVal2D, tmpVal2Q, avgSqrD, avgSqrQ, sumSqrD, sumSqrQ, var;
 reg [(2*($clog2(DELAY)+$clog2(NUM_READS)))-1:0] sumAccD, sumAccQ;
 reg [(2*$clog2(DELAY)+$clog2(NUM_READS))-1:0] rmsAccD, rmsAccQ;
 reg [(2*(2*$clog2(DELAY)+$clog2(NUM_READS)))-1:0] avgAccD, avgAccQ, tmpValD, tmpValQ, tmpVal2D, tmpVal2Q, avgSqrD, avgSqrQ;
@@ -361,6 +355,7 @@ always @ * begin
         end
         C_WAIT:begin
             counterD = counterQ + 1;
+            virusEnD = virusMaskQ;
             if (counterQ > WAIT_CYCLES) begin
                 counterD = 0;
                 nextState = C_RD;

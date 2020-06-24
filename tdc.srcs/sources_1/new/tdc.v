@@ -38,14 +38,16 @@ generate
         (* dont_touch = "true" *) buffer init(initial_bufs[k], initial_bufs[k-1]);
     end
 	// Sensitive delay line, this is implemented with the CARRY4 primitive
-    for(k = 0; k < (DELAY-1)/4; k = k + 1)begin
-         (* dont_touch = "true" *) CARRY4 delay_k (
-            .DI({0, 0, 0, delay_bufs[k*4] }),
-            .S('b1110),
-            .CYINIT('b0),
-            .CI('b0),
-            .CO(delay_bufs[k*4+4:k*4+1])
-        );
+//    for(k = 0; k < (DELAY-1)/4; k = k + 1)begin
+//         (* dont_touch = "true" *) CARRY4 delay_k (
+//            .DI({0, 0, 0, delay_bufs[k*4] }),
+//            .S('b1110),
+//            .CYINIT('b0),
+//            .CI('b0),
+//            .CO(delay_bufs[k*4+4:k*4+1])
+//        );
+    for(k = 1; k < DELAY; k = k + 1)begin
+        (* dont_touch= "true" *) and2 del(delay_bufs[k], delay_bufs[k-1], 1);
     end
 endgenerate
 
