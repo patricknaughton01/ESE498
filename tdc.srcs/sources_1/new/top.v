@@ -45,10 +45,10 @@
 
 `timescale 1ns / 1ps
 
-module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=32, DELAY=63, READ_MAX_ADDR='hFFF4, 
+module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=32, DELAY=64, READ_MAX_ADDR='hFFF4, 
     REC_ADDR='hFFFC, FREQ_ADDR='hFFF8, VIRUS_ADDR='hFFE0, MEM_WIDTH=16, PP_ADDR='hFFF0, RMS_ADDR = 'hFFEC, SUM_ADDR='hFFE8,
-    ABS_READ_MAX=8192, VIRUS_NUM_B=128, VIRUS_B_SIZE=128, SIM=0, CHALLENGE_WIDTH=128, CHALLENGE_ADDR='hFF00,
-    RUNS=128, MEAN_ADDR='hFEFC, VAR_ADDR='hFEF8)(
+    ABS_READ_MAX=10000, VIRUS_NUM_B=128, VIRUS_B_SIZE=128, SIM=0, CHALLENGE_WIDTH=128, CHALLENGE_ADDR='hFF00, RUNS=128,
+    AVG_ADDR = 'hFFD8, VAR_ADDR = 'hFFD0, NUM_READS=8192, WAIT_CYCLES=10000)(
     // Axi4Lite Bus
     input       S_AXI_ACLK,
     input       S_AXI_ARESETN,
@@ -69,7 +69,6 @@ module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=
     output      [1:0] S_AXI_RRESP,
     output      S_AXI_RVALID,
     input       S_AXI_RREADY,
-    input       clk2,
     output  reg trigger
 );
 
@@ -82,7 +81,7 @@ reg  [C_S_AXI_DATA_WIDTH-1:0] rdData;
 wire rd;
 
 // Outputs from the TDC
-wire [DELAY-1:0] tdcOut;
+wire [DELAY-1:0] tdcOut;//[TDC_COUNT-1:0];
 
 // Signals for the power virus. These are clocked with clk2
 reg[VIRUS_NUM_B-1:0] virusEnD, virusEnQ, virusMaskD, virusMaskQ;
@@ -146,19 +145,21 @@ RAM#(.DEPTH(ABS_READ_MAX)) ram1(
 );
 
 // State machine
-parameter IDLE=0, READ=1, READ_ONCE=2, READ_RAMP=3, RMS=4, C_RD1=5, C_RD0=6, C_RD2=7, C_RD_DELAY=8;
+parameter IDLE=0, READ=1, C_INIT=2, C_WAIT=3, C_RD=4, C_DONE=5, C_DONE2=6, C_DONE3=7;
 reg [3:0] state, nextState;
 
 
 reg [C_S_AXI_DATA_WIDTH-1:0] counterD, counterQ, virusCounterD, virusCounterQ, freqD, freqQ,
-           maxD, maxQ, ppD, ppQ, oneMask;
-reg [DELAY-1:0] tdcClean;
-reg [6:0] total, diffMaxD, diffMaxQ, diffMinD, diffMinQ;
-reg [C_S_AXI_DATA_WIDTH-1:0] rmsAccD, rmsAccQ, sumAccD, sumAccQ, r_counterD, r_counterQ;
-reg [64-1:0] varD, varQ, tmp_value, meanD, meanQ, tmpMean, tmpVar;
+           maxD, maxQ, ppD, ppQ, oneMask, rCounterD, rCounterQ;
+reg [DELAY-1:0] tdcClean;//D[TDC_COUNT-1:0], tdcCleanQ[TDC_COUNT-1:0];
+reg [$clog2(DELAY)-1:0] total;//D[TDC_COUNT-1:0], totalQ[TDC_COUNT-1:0];
+reg [C_S_AXI_DATA_WIDTH-1:0] diffMaxD, diffMaxQ, diffMinD, diffMinQ;
+reg [(2*($clog2(DELAY)+$clog2(NUM_READS)))-1:0] sumAccD, sumAccQ;
+reg [(2*$clog2(DELAY)+$clog2(NUM_READS))-1:0] rmsAccD, rmsAccQ;
+reg [(2*(2*$clog2(DELAY)+$clog2(NUM_READS)))-1:0] avgAccD, avgAccQ, tmpValD, tmpValQ, tmpVal2D, tmpVal2Q, avgSqrD, avgSqrQ;
+reg [(2*(2*$clog2(DELAY)+$clog2(NUM_READS)))+$clog2(RUNS)-1:0] varAccD, varAccQ, var;
 
-
-integer i;
+integer i, j;
 always @ * begin
     counterD = counterQ;
     virusCounterD = virusCounterQ;
@@ -181,7 +182,12 @@ always @ * begin
     tmpVar = 0;
     challengeD = challengeQ;
     rdData = 0;
-    total = 0;
+    rCounterD = rCounterQ;
+    avgAccD = avgAccQ;
+    varAccD = varAccQ;
+    tmpValD = tmpValQ;
+    tmpVal2D = tmpVal2Q;
+    avgSqrD = avgSqrQ;
     memWe = 0;
     memAddr = 0;
     memDi = 0;
@@ -204,24 +210,29 @@ always @ * begin
             end else if(rd && rdAddr == RMS_ADDR)begin
 				// The sum-of-squared measurements is being measured
                 rdData = rmsAccQ;
+                if(rdData[C_S_AXI_DATA_WIDTH-1] == 1)begin
+                    rdData = 0;
+                end
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
             end else if(rd && rdAddr == SUM_ADDR)begin
 				// The sum of measurements is being measured
                 rdData = sumAccQ;
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
-            end else if(rd && rdAddr == MEAN_ADDR)begin
-                // The mean part of the response is being measured
-                tmpMean = meanQ >> ($clog2(RUNS));
-                rdData = tmpMean[C_S_AXI_DATA_WIDTH-1:0];
+            end else if(rd && (rdAddr == AVG_ADDR || rdAddr == AVG_ADDR + 4)) begin
+                avgSqrD = avgAccQ * avgAccQ;
+                if (rdAddr == AVG_ADDR) begin
+                    rdData[C_S_AXI_DATA_WIDTH-2:0] = avgAccQ[C_S_AXI_DATA_WIDTH-2:0];
+                end else begin
+                    rdData[C_S_AXI_DATA_WIDTH-2:0] = avgAccQ[(2*(2*$clog2(DELAY)+$clog2(NUM_READS)))-1:C_S_AXI_DATA_WIDTH-1];
+                end
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
-            end else if(rd && rdAddr == VAR_ADDR)begin
-                // The variance part of the response is being measured
-                // Since var reg actually stores sum[X^2], compute actual
-                // variance now
-                tmpVar = varQ >> ($clog2(RUNS));      // tmpVar = E[X^2]
-                tmpMean = meanQ >> ($clog2(RUNS));    // tmpMean = E[X]
-                tmp_value = tmpVar - (tmpMean * tmpMean);
-                rdData = tmp_value[C_S_AXI_DATA_WIDTH-1:0];
+            end else if(rd && (rdAddr == VAR_ADDR || rdAddr == VAR_ADDR + 4)) begin
+                var = varAccQ - avgSqrQ;
+                if (rdAddr == VAR_ADDR) begin
+                    rdData[C_S_AXI_DATA_WIDTH-2:0] = var[C_S_AXI_DATA_WIDTH-2:0];
+                end else begin
+                    rdData[C_S_AXI_DATA_WIDTH-2:0] = var[(2*(2*$clog2(DELAY)+$clog2(NUM_READS)))+$clog2(RUNS)-1:C_S_AXI_DATA_WIDTH-2];
+                end
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
             end else if(wr) begin
                 if(wrAddr == REC_ADDR)begin
@@ -232,21 +243,19 @@ always @ * begin
                     meanD = 0;
                     varD = 0;
                     virusCounterD = 0;
-                    virusEnD = 0;
-                    virusFlagD = 0;
+                    avgAccD = 0;
+                    varAccD = 0;
+                    rCounterD = 0;
+                    tmpValD = 0;
+                    tmpVal2D = 0;
                     trigger = 1;    // Trigger scope when we start recording
                     if(wrData == 0)begin
 						// Read at a particular frequency response
                         nextState = READ;
-                    end else if (wrData == 1) begin
-						// Read a step response
-                        nextState = READ_ONCE;
-                    end else if (wrData == 2) begin
-						// Read the response from a ramp function
-                        nextState = READ_RAMP;
                     end else begin
 						// Read a challenge response
-                        nextState = C_RD0;
+                        nextState = C_INIT;
+                        rCounterD = 0;
                     end
                 end else if(wrAddr == FREQ_ADDR) begin
 					// Write the frequency to be measured
@@ -282,21 +291,35 @@ always @ * begin
             end
             
             if(counterQ < maxQ)begin
-                tdcClean[0] = tdcOut[0];
                 // Clean tdcOut to eliminate glitches
-                for(i = 1; i < DELAY; i = i + 1)begin
-                    tdcClean[i] = tdcOut[i-1] && tdcOut[i];
-                end
-                total = 0;
+//                for(i = 0; i < TDC_COUNT; i = i + 1)begin
+                    tdcClean[0] = tdcOut[0];
+                    for(j = 1; j < DELAY; j = j + 1)begin
+                        tdcClean[j] = tdcOut[j-1] & tdcOut[j];
+                    end
+//                end
+//                for(i = 0; i<TDC_COUNT; i = i+1)begin
+                    total = 0;
+//                end
                 // Find top bit of tdc
-                for(i = 0; i < DELAY; i = i + 1)begin
-                    total = total + tdcClean[i];
-                end
+//                for(i = 0; i < TDC_COUNT; i = i + 1)begin
+                    for(j = 0; j < DELAY; j = j + 1)begin
+                        total = total + tdcClean[j];
+                    end
+//                end
                 
                 // Give total a value so that we can simulate
                 if(SIM != 0)begin
-                    total = SIM;
+//                    for(i = 0; i < TDC_COUNT; i = i + 1)begin
+                        total = SIM;
+//                    end
                 end
+                
+//                for(i = 0; i < TDC_COUNT; i = i + 1)begin
+//                    avgTotalD = avgTotalD + totalQ[i];
+//                end
+                
+//                tempAvgTotal = avgTotalQ >> $clog2(TDC_COUNT);
                 
                 rmsAccD = rmsAccQ + (total * total);
                 sumAccD = sumAccQ + total;
@@ -316,40 +339,38 @@ always @ * begin
                 counterD = counterQ + 1;
             end else begin
                 // Write to the PP register
-                counterD = 0;
                 diffMaxD = 0;
                 diffMinD = 'h3f;
                 ppD = (diffMaxQ - diffMinQ);
                 nextState = IDLE;
             end
         end
-        C_RD0:begin
-            tmp_value = (rmsAccQ - ((sumAccQ * sumAccQ)>>$clog2(ABS_READ_MAX)));
-            meanD = meanQ + tmp_value;
-            // Var register just accumulates E[X^2] while running
-            varD = varQ + (tmp_value * tmp_value);
-            r_counterD = r_counterQ + 1;
-            if(r_counterQ < RUNS)begin
+        C_INIT:begin
+            rCounterD = rCounterQ + 1;
+            tmpValD = rmsAccQ - ((sumAccQ * sumAccQ) >> $clog2(NUM_READS));
+            avgAccD = avgAccQ + tmpValQ;
+            varAccD = varAccQ + tmpVal2Q;
+            tmpVal2D = tmpValQ * tmpValQ;
+            if (rCounterQ < RUNS) begin
+                rCounterD = rCounterQ + 1;
                 rmsAccD = 0;
                 sumAccD = 0;
+                counterD = 0;
                 virusCounterD = 0;
-                counterD = 0;
-                virusFlagD = 0;
-                virusEnD = 0;
-                nextState = C_RD_DELAY;
+                nextState = C_WAIT;
             end else begin
-                nextState = IDLE;
+                nextState = C_DONE;
             end
         end
-        C_RD_DELAY:begin
-            if (counterQ < (ABS_READ_MAX))begin
-                counterD = counterQ + 1;
-            end else begin
+        C_WAIT:begin
+            counterD = counterQ + 1;
+            virusEnD = virusMaskQ;
+            if (counterQ > WAIT_CYCLES) begin
                 counterD = 0;
-                nextState = C_RD1;
+                nextState = C_RD;
             end
         end
-        C_RD1:begin
+        C_RD:begin
 			// This state performs a read with the challenge in the challenge
 			// register
             if(virusCounterQ < CHALLENGE_WIDTH-1)begin
@@ -360,30 +381,28 @@ always @ * begin
             
             virusFlagD = challengeQ[virusCounterQ];
             
-            //virusFlagD = challengeQ[CHALLENGE_WIDTH-13];
-            //challengeD = {challengeQ[CHALLENGE_WIDTH-12] ^ challengeQ[CHALLENGE_WIDTH-13] ,challengeQ[CHALLENGE_WIDTH-1:1]};
-            
             if(virusFlagQ == 1)begin
                 virusEnD = virusMaskQ;
             end else begin
                 virusEnD = 0;
             end
             
-            if(counterQ < maxQ)begin
-                tdcClean[0] = tdcOut[0];
+            if(counterQ < NUM_READS)begin
                 // Clean tdcOut to eliminate glitches
-                for(i = 1; i < DELAY; i = i + 1)begin
-                    tdcClean[i] = tdcOut[i-1] && tdcOut[i];
+                tdcClean[0] = tdcOut[0];
+                for(j = 1; j < DELAY; j = j + 1)begin
+                    tdcClean[j] = tdcOut[j-1] && tdcOut[j];
                 end
-                total = 0;
+                
                 // Find top bit of tdc
-                for(i = 0; i < DELAY; i = i + 1)begin
-                    total = total + tdcClean[i];
+                total = 0;
+                for(j = 0; j < DELAY; j = j + 1)begin
+                    total = total + tdcClean[j];
                 end
                 
                 // Give total a value so that we can simulate
                 if(SIM != 0)begin
-                    total = SIM - counterQ[0];
+                    total = SIM + i;
                 end
                 
                 rmsAccD = rmsAccQ + (total * total);
@@ -399,95 +418,27 @@ always @ * begin
                 
                 // Write to the memory
                 memWe = 1;
-                memAddr = counterQ << 2;
+                memAddr = (counterQ) << 2;
                 memDi = total;
                 counterD = counterQ + 1;
             end else begin
                 // Write to the PP register
-                counterD = 0;
                 diffMaxD = 0;
                 diffMinD = 'h3f;
                 ppD = (diffMaxQ - diffMinQ);
-                virusFlagD = 0;
-                virusEnD = 0;
-                nextState = C_RD2;
+                nextState = C_INIT;
             end
         end
-        C_RD2:begin
-            if (counterQ < (ABS_READ_MAX))begin
-                counterD = counterQ + 1;
-            end else begin
-                counterD = 0;
-                nextState = C_RD0;
-            end
+        C_DONE:begin
+            avgAccD = avgAccQ + tmpValQ;
+            varAccD = varAccQ + tmpVal2Q;
+            tmpVal2D = tmpValQ * tmpValQ;
+            nextState = C_DONE2;
         end
-        READ_ONCE:begin
-			// This state performs a read with a step response. The power virus
-			//will turn on after the number of clock periods stored in the
-			//frequency register
-            if(virusCounterQ >= freqQ-1)begin
-                virusEnD = virusMaskQ;
-            end else begin
-                virusCounterD = virusCounterQ + 1;
-            end
-            
-            if(counterQ < maxQ)begin
-                tdcClean[0] = tdcOut[0];
-                // Clean tdcOut to eliminate glitches
-                for(i = 1; i < DELAY; i = i + 1)begin
-                    tdcClean[i] = tdcOut[i-1] && tdcOut[i];
-                end
-                total = 0;
-                // Find top bit of tdc
-                for(i = 0; i < DELAY; i = i + 1)begin
-                    total = total + tdcClean[i];
-                end
-                // Write to the memory
-                memWe = 1;
-                memAddr = counterQ << 2;
-                memDi = total;
-                counterD = counterQ + 1;
-            end else begin
-                counterD = 0;
-                nextState = IDLE;
-            end
-        end
-        READ_RAMP:begin
-			// This state performs a read for a ramp function
-            if(virusCounterQ >= freqQ-1)begin
-                virusCounterD = 0;
-                // If we haven't reached the final mask, add another 1 (turn another group on)
-                if(virusEnQ < virusMaskQ)begin
-                    if (virusEnQ == 0)begin
-                        virusEnD = 1;
-                    end else begin
-                        virusEnD = (virusEnQ << 1) | 1;
-                    end
-                end
-            end else begin
-                virusCounterD = virusCounterQ + 1;
-            end
-            
-            if(counterQ < maxQ)begin
-                tdcClean[0] = tdcOut[0];
-                // Clean tdcOut to eliminate glitches
-                for(i = 1; i < DELAY; i = i + 1)begin
-                    tdcClean[i] = tdcOut[i-1] && tdcOut[i];
-                end
-                total = 0;
-                // Find top bit of tdc
-                for(i = 0; i < DELAY; i = i + 1)begin
-                    total = total + tdcClean[i];
-                end
-                // Write to the memory
-                memWe = 1;
-                memAddr = counterQ << 2;
-                memDi = total;
-                counterD = counterQ + 1;
-            end else begin
-                counterD = 0;
-                nextState = IDLE;
-            end
+        C_DONE2:begin
+            avgAccD = avgAccQ >> $clog2(RUNS);
+            varAccD = (varAccQ + tmpVal2Q) >> $clog2(RUNS);
+            nextState = IDLE;
         end
     endcase
 end
@@ -508,6 +459,15 @@ always @ (posedge S_AXI_ACLK)begin
         meanQ <= meanD;
         varQ <= varD;
         challengeQ <= challengeD;
+        rCounterQ <= rCounterD;
+        avgAccQ <= avgAccD;
+        varAccQ <= varAccD;
+        tmpValQ <= tmpValD;
+        tmpVal2Q <= tmpVal2D;
+        avgSqrQ <= avgSqrD;
+        virusCounterQ <= virusCounterD;
+        virusFlagQ <= virusFlagD;
+        virusEnQ <= virusEnD;
     end else begin
         state <= IDLE;
         counterQ <= 0;
@@ -523,15 +483,12 @@ always @ (posedge S_AXI_ACLK)begin
         meanQ <= 0;
         varQ <= 0;
         challengeQ <= 0;
-    end
-end
-
-always @ (posedge clk2) begin
-    if(S_AXI_ARESETN == 1)begin
-        virusCounterQ <= virusCounterD;
-        virusFlagQ <= virusFlagD;
-        virusEnQ <= virusEnD;
-    end else begin
+        rCounterQ <= 0;
+        avgAccQ <= 0;
+        varAccQ <= 0;
+        tmpValQ <= 0;
+        tmpVal2Q <= 0;
+        avgSqrQ <= 0;
         virusCounterQ <= 0;
         virusFlagQ <= 0;
         virusEnQ <= 0;

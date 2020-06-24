@@ -43,7 +43,6 @@ def main():
 	for i in range(0, args.n):
 		print("Iteration: " + (str)(i))
 		responses.append([])
-		responses[i].append(mask)
 		# Assign which ring oscillators to use
 		for j in range(0, 4):
 			msg = bytearray(6)
@@ -63,10 +62,11 @@ def main():
 #			print(line)
 			elements = line.split()
 			if len(elements) >= 2:
-				while(len(responses[i]) - 2 < (int)(elements[0])):
+				while(len(responses[i]) - 1 < (int)(elements[0])):
 					responses[i].append([])
-				responses[i][(int)(elements[0])+1].append((int)(elements[1]))
-				line = ser.readline().decode().strip()
+				responses[i][(int)(elements[0])].append((int)(elements[1]))
+				responses[i][(int)(elements[0])].append((int)(elements[2]))
+			line = ser.readline().decode().strip()
 		
 		# Go to next mask
 		for j in range(0, (int)(args.step/ROperG)):
@@ -79,22 +79,13 @@ def main():
 		
 	ser.close()
 	
-	f = open(args.f, 'w')
-	row = 'Bitmask'
 	for i in range(0,len(responses)):
-		row += ',' + hex(responses[i][0])
-	f.write(row+'\n')
-	for i in range(1,len(responses[1])):
-		for j in range(0,len(responses[1][1])):
-			row = str(i)
-			for k in range(0,len(responses)):
-				if i < len(responses[k]) and j < len(responses[k][i]):
-					row += ',' + str(responses[k][i][j]).strip()
-				else:
-					print(str(k) + ' ' + str(i) + ' ' + str(j))
+		f = open(args.f+str(i*args.step+args.start)+'.txt','w')
+		for j in range(0,len(responses[i])):
+			row = str(j) + ' ' + str(responses[i][j][0]) + ' ' + str(responses[i][j][1])
 			f.write(row+'\n')
 #			print(str(row) + " end " + str(k) + " " + str(i) + " " + str(j))
-	f.close()			
+		f.close()			
 
 if __name__ == "__main__":
 	main()

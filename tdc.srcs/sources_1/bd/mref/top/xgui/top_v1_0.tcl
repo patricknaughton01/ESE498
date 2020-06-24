@@ -4,6 +4,7 @@ proc init_gui { IPINST } {
   #Adding Page
   set Page_0 [ipgui::add_page $IPINST -name "Page 0"]
   ipgui::add_param $IPINST -name "ABS_READ_MAX" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "AVG_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "CHALLENGE_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "CHALLENGE_WIDTH" -parent ${Page_0}
   ipgui::add_param $IPINST -name "C_S_AXI_ADDR_WIDTH" -parent ${Page_0}
@@ -13,6 +14,7 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "INITIAL" -parent ${Page_0}
   ipgui::add_param $IPINST -name "MEAN_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "MEM_WIDTH" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "NUM_READS" -parent ${Page_0}
   ipgui::add_param $IPINST -name "PP_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "READ_MAX_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "REC_ADDR" -parent ${Page_0}
@@ -24,6 +26,7 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "VIRUS_ADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "VIRUS_B_SIZE" -parent ${Page_0}
   ipgui::add_param $IPINST -name "VIRUS_NUM_B" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "WAIT_CYCLES" -parent ${Page_0}
 
 
 }
@@ -34,6 +37,15 @@ proc update_PARAM_VALUE.ABS_READ_MAX { PARAM_VALUE.ABS_READ_MAX } {
 
 proc validate_PARAM_VALUE.ABS_READ_MAX { PARAM_VALUE.ABS_READ_MAX } {
 	# Procedure called to validate ABS_READ_MAX
+	return true
+}
+
+proc update_PARAM_VALUE.AVG_ADDR { PARAM_VALUE.AVG_ADDR } {
+	# Procedure called to update AVG_ADDR when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.AVG_ADDR { PARAM_VALUE.AVG_ADDR } {
+	# Procedure called to validate AVG_ADDR
 	return true
 }
 
@@ -115,6 +127,15 @@ proc update_PARAM_VALUE.MEM_WIDTH { PARAM_VALUE.MEM_WIDTH } {
 
 proc validate_PARAM_VALUE.MEM_WIDTH { PARAM_VALUE.MEM_WIDTH } {
 	# Procedure called to validate MEM_WIDTH
+	return true
+}
+
+proc update_PARAM_VALUE.NUM_READS { PARAM_VALUE.NUM_READS } {
+	# Procedure called to update NUM_READS when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.NUM_READS { PARAM_VALUE.NUM_READS } {
+	# Procedure called to validate NUM_READS
 	return true
 }
 
@@ -217,6 +238,15 @@ proc validate_PARAM_VALUE.VIRUS_NUM_B { PARAM_VALUE.VIRUS_NUM_B } {
 	return true
 }
 
+proc update_PARAM_VALUE.WAIT_CYCLES { PARAM_VALUE.WAIT_CYCLES } {
+	# Procedure called to update WAIT_CYCLES when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.WAIT_CYCLES { PARAM_VALUE.WAIT_CYCLES } {
+	# Procedure called to validate WAIT_CYCLES
+	return true
+}
+
 
 proc update_MODELPARAM_VALUE.C_S_AXI_ADDR_WIDTH { MODELPARAM_VALUE.C_S_AXI_ADDR_WIDTH PARAM_VALUE.C_S_AXI_ADDR_WIDTH } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
@@ -313,13 +343,23 @@ proc update_MODELPARAM_VALUE.RUNS { MODELPARAM_VALUE.RUNS PARAM_VALUE.RUNS } {
 	set_property value [get_property value ${PARAM_VALUE.RUNS}] ${MODELPARAM_VALUE.RUNS}
 }
 
-proc update_MODELPARAM_VALUE.MEAN_ADDR { MODELPARAM_VALUE.MEAN_ADDR PARAM_VALUE.MEAN_ADDR } {
+proc update_MODELPARAM_VALUE.AVG_ADDR { MODELPARAM_VALUE.AVG_ADDR PARAM_VALUE.AVG_ADDR } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.MEAN_ADDR}] ${MODELPARAM_VALUE.MEAN_ADDR}
+	set_property value [get_property value ${PARAM_VALUE.AVG_ADDR}] ${MODELPARAM_VALUE.AVG_ADDR}
 }
 
 proc update_MODELPARAM_VALUE.VAR_ADDR { MODELPARAM_VALUE.VAR_ADDR PARAM_VALUE.VAR_ADDR } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.VAR_ADDR}] ${MODELPARAM_VALUE.VAR_ADDR}
+}
+
+proc update_MODELPARAM_VALUE.NUM_READS { MODELPARAM_VALUE.NUM_READS PARAM_VALUE.NUM_READS } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.NUM_READS}] ${MODELPARAM_VALUE.NUM_READS}
+}
+
+proc update_MODELPARAM_VALUE.WAIT_CYCLES { MODELPARAM_VALUE.WAIT_CYCLES PARAM_VALUE.WAIT_CYCLES } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.WAIT_CYCLES}] ${MODELPARAM_VALUE.WAIT_CYCLES}
 }
 

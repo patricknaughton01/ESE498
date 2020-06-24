@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include "platform.h"
 #include "xil_printf.h"
 #include "xparameters.h"
@@ -20,12 +21,12 @@ int32_t * const freq_addr 	= (int32_t*)0x43C0FFF8;
 int32_t * const read_addr 	= (int32_t*)0x43C0FFF4;
 int32_t * const rms_addr	= (int32_t*)0x43C0FFEC;
 int32_t * const sum_addr	= (int32_t*)0x43C0FFE8;
-int32_t * const mean_addr	= (int32_t*)0x43C0FEFC;
-int32_t * const var_addr	= (int32_t*)0x43C0FEF8;
 int32_t * const virus_addr 	= (int32_t*)0x43C0FFE0;
 int32_t * const chal_addr	= (int32_t*)0x43C0FF00;
-const int32_t num_reads = 8192;
-int32_t maskRO[5] = {0xffff0000, 0x0, 0x0, 0x0};
+int32_t * const avg_addr	= (int32_t*)0x43C0FFD8;
+int32_t * const var_addr	= (int32_t*)0x43C0FFD0;
+const int32_t num_reads = 10000;
+int32_t maskRO[4] = {0xffffffff, 0x0000ffff, 0x0, 0x0};
 
 void makeMeasurement();
 void stepResponse();
@@ -57,7 +58,7 @@ void setMask() {
 	}
 	if(buf[0] < 4) {
 		maskRO[buf[0]] = buf[1] + ((int)(buf[2]) << 8) + ((int)(buf[3]) << 16) + ((int)(buf[3]) << 24);
-		xil_printf("mask: %x%x%x%x\n", maskRO[3], maskRO[2], maskRO[1], maskRO[0]);
+//		xil_printf("mask: %x%x%x%x\n", maskRO[3], maskRO[2], maskRO[1], maskRO[0]);
 	}else {
 		xil_printf("Invalid index\n");
 	}
@@ -66,20 +67,39 @@ void setMask() {
 // This function sends a challenge to the top module, then reads a challenge
 // response 100 times for all challenges provided in the header file
 void challengeResponse(){
-	*read_addr = num_reads;
+//	*read_addr = num_reads;
 	*virus_addr = maskRO[0];
 	*(virus_addr + 1) = maskRO[1];
 	*(virus_addr + 2) = maskRO[2];
 	*(virus_addr + 3) = maskRO[3];
-	
-	for (int i=0; i<NUM_CHAL; i++) {
-			*chal_addr = challenges[i][0];
-			*(chal_addr + 1) = challenges[i][1];
-			*(chal_addr + 2) = challenges[i][2];
-			*(chal_addr + 3) = challenges[i][3];
+
+	for (int i=0; i < NUM_CHAL; i++) {
+//	for (int i=0; i < 1000; i++) {
+//		for(int j = 0; j<100; j++){
+			*chal_addr = challenges[0][0];
+			*(chal_addr + 1) = challenges[0][1];
+			*(chal_addr + 2) = challenges[0][2];
+			*(chal_addr + 3) = challenges[0][3];
 			*rec_addr = 3;					// Start recording challenge response
 
-			int32_t mean;
+			int32_t avg;
+			int32_t var;
+
+			do{
+				avg = *(avg_addr);
+			}while((avg & 1<<31)==0);
+			avg ^= (1<<31);
+
+			do{
+				var = *(var_addr);
+			}while((var & 1<<31)==0);
+			var ^= (1<<31);
+
+			xil_printf("%d %d %d\n", i, avg, var);
+
+			usleep(50000);
+
+/*			int32_t rms_val;
 			// Wait until the response is done being collected
 			do{
 				mean = *(mean_addr);
@@ -92,9 +112,23 @@ void challengeResponse(){
 			}while((var & 1<<31) == 0);
 			var ^= (1<<31);
 
-			xil_printf("%d %d %d\n", i, mean, var);
+			int32_t energy_val = (int32_t)rms_val;	// Divide by clock ticks to get power
+
+			double energy_no_dc_val =
+					((double)energy_val)
+					- ((double)sum_val * (double)sum_val / (double)num_reads);
+
+			xil_printf("%d %d\n", i, (int32_t)energy_no_dc_val);
+			int32_t tmp;
+			do{
+				tmp = *(peripheral);
+			}while((tmp & (1<<31)) == 0);
+			for(int k = 0; k < num_reads; k++){
+				xil_printf("%d %d %d\n", i, k, *(peripheral+k) ^ (1<<31));
+			}*/
+//		}
 	}
-	//xil_printf("stop\n");
+//	xil_printf("stop\n");
 }
 
 // This function measures a frequency response of the board, starting at a high
