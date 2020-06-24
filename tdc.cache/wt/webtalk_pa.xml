@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Wed Jun 24 09:09:10 2020">
+<application name="pa" timeStamp="Wed Jun 24 10:34:42 2020">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="aa3585c2a36a47b5ad5a5d9bbd2f2248" type="ProjectID"/>
 <property name="ProjectIteration" value="55" type="ProjectIteration"/>
@@ -28,7 +28,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="LaunchVitis" value="19" type="JavaHandler"/>
 <property name="NewExportHardware" value="35" type="JavaHandler"/>
 <property name="OpenBlockDesign" value="3" type="JavaHandler"/>
-<property name="OpenProject" value="6" type="JavaHandler"/>
+<property name="OpenProject" value="12" type="JavaHandler"/>
 <property name="RecustomizeCore" value="2" type="JavaHandler"/>
 <property name="RegenerateRSBLayout" value="4" type="JavaHandler"/>
 <property name="ReportTimingSummary" value="2" type="JavaHandler"/>
@@ -67,7 +67,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ExpRunTreePanel_EXP_RUN_TREE_TABLE" value="1" type="GuiHandlerData"/>
 <property name="FileSetPanel_FILE_SET_PANEL_TREE" value="234" type="GuiHandlerData"/>
 <property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="98" type="GuiHandlerData"/>
-<property name="GettingStartedView_OPEN_PROJECT" value="6" type="GuiHandlerData"/>
+<property name="GettingStartedView_OPEN_PROJECT" value="12" type="GuiHandlerData"/>
 <property name="GraphicalView_ZOOM_FIT" value="35" type="GuiHandlerData"/>
 <property name="GraphicalView_ZOOM_IN" value="124" type="GuiHandlerData"/>
 <property name="GraphicalView_ZOOM_OUT" value="23" type="GuiHandlerData"/>
@@ -151,6 +151,11 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="TimingSumResultsTab_SHOW_ONLY_FAILING_CHECKS" value="1" type="GuiHandlerData"/>
 <property name="UtilizationHierViewTreeTablePanel_TABLE(Hierarchy)" value="2" type="GuiHandlerData"/>
 <property name="WaveformNameTree_WAVEFORM_NAME_TREE" value="80" type="GuiHandlerData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="149" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="125" type="TclMode"/>
 </item>
 </section>
 </application>
