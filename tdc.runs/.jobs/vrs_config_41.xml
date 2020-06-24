@@ -1,5 +1,10 @@
 <?xml version="1.0"?>
 <Runs Version="1" Minor="0">
+<<<<<<< HEAD
+	<Run Id="synth_2" LaunchDir="/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/synth_2" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="impl_2" LaunchDir="/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/impl_2" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_2"/>
+=======
 	<Run Id="design_1_top_0_1_synth_1" LaunchDir="/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_top_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
 	<Run Id="design_1_auto_pc_0_synth_1" LaunchDir="/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/design_1_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
 	<Run Id="synth_2" LaunchDir="/home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/synth_2" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
@@ -10,6 +15,7 @@
 		<Parent Id="synth_2"/>
 		<Parent Id="design_1_top_0_1_synth_1"/>
 		<Parent Id="design_1_auto_pc_0_synth_1"/>
+>>>>>>> retest
 	</Run>
 	<Parameters>
 		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
