@@ -156,8 +156,9 @@ reg [$clog2(DELAY)-1:0] total;//D[TDC_COUNT-1:0], totalQ[TDC_COUNT-1:0];
 reg [C_S_AXI_DATA_WIDTH-1:0] diffMaxD, diffMaxQ, diffMinD, diffMinQ;
 reg [(2*($clog2(DELAY)+$clog2(NUM_READS)))-1:0] sumAccD, sumAccQ;
 reg [(2*$clog2(DELAY)+$clog2(NUM_READS))-1:0] rmsAccD, rmsAccQ;
-reg [(2*(2*$clog2(DELAY)+$clog2(NUM_READS)))-1:0] avgAccD, avgAccQ, tmpValD, tmpValQ, tmpVal2D, tmpVal2Q, avgSqrD, avgSqrQ;
-reg [(2*(2*$clog2(DELAY)+$clog2(NUM_READS)))+$clog2(RUNS)-1:0] varAccD, varAccQ, var;
+//reg [(2*(2*$clog2(DELAY)+$clog2(NUM_READS)))-1:0] avgAccD, avgAccQ, tmpValD, tmpValQ, tmpVal2D, tmpVal2Q, avgSqrD, avgSqrQ;
+reg [(2*(2*$clog2(DELAY)+$clog2(NUM_READS)))-1:0] avgAccD, avgAccQ, tmpValD, tmpValQ;
+//reg [(2*(2*$clog2(DELAY)+$clog2(NUM_READS)))+$clog2(RUNS)-1:0] varAccD, varAccQ, var;
 
 integer i, j;
 always @ * begin
@@ -178,10 +179,10 @@ always @ * begin
     rdData = 0;
     rCounterD = rCounterQ;
     avgAccD = avgAccQ;
-    varAccD = varAccQ;
+//    varAccD = varAccQ;
     tmpValD = tmpValQ;
-    tmpVal2D = tmpVal2Q;
-    avgSqrD = avgSqrQ;
+//    tmpVal2D = tmpVal2Q;
+//    avgSqrD = avgSqrQ;
     memWe = 0;
     memAddr = 0;
     memDi = 0;
@@ -213,21 +214,21 @@ always @ * begin
                 rdData = sumAccQ;
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
             end else if(rd && (rdAddr == AVG_ADDR || rdAddr == AVG_ADDR + 4)) begin
-                avgSqrD = avgAccQ * avgAccQ;
+//                avgSqrD = avgAccQ * avgAccQ;
                 if (rdAddr == AVG_ADDR) begin
                     rdData[C_S_AXI_DATA_WIDTH-2:0] = avgAccQ[C_S_AXI_DATA_WIDTH-2:0];
                 end else begin
                     rdData[C_S_AXI_DATA_WIDTH-2:0] = avgAccQ[(2*(2*$clog2(DELAY)+$clog2(NUM_READS)))-1:C_S_AXI_DATA_WIDTH-1];
                 end
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
-            end else if(rd && (rdAddr == VAR_ADDR || rdAddr == VAR_ADDR + 4)) begin
-                var = varAccQ - avgSqrQ;
-                if (rdAddr == VAR_ADDR) begin
-                    rdData[C_S_AXI_DATA_WIDTH-2:0] = var[C_S_AXI_DATA_WIDTH-2:0];
-                end else begin
-                    rdData[C_S_AXI_DATA_WIDTH-2:0] = var[(2*(2*$clog2(DELAY)+$clog2(NUM_READS)))+$clog2(RUNS)-1:C_S_AXI_DATA_WIDTH-2];
-                end
-                rdData[C_S_AXI_DATA_WIDTH-1] = 1;
+//            end else if(rd && (rdAddr == VAR_ADDR || rdAddr == VAR_ADDR + 4)) begin
+//                var = varAccQ - avgSqrQ;
+//                if (rdAddr == VAR_ADDR) begin
+//                    rdData[C_S_AXI_DATA_WIDTH-2:0] = var[C_S_AXI_DATA_WIDTH-2:0];
+//                end else begin
+//                    rdData[C_S_AXI_DATA_WIDTH-2:0] = var[(2*(2*$clog2(DELAY)+$clog2(NUM_READS)))+$clog2(RUNS)-1:C_S_AXI_DATA_WIDTH-2];
+//                end
+//                rdData[C_S_AXI_DATA_WIDTH-1] = 1;
             end else if(wr) begin
                 if(wrAddr == REC_ADDR)begin
                     counterD = 0;
@@ -235,10 +236,10 @@ always @ * begin
                     sumAccD = 0;
                     virusCounterD = 0;
                     avgAccD = 0;
-                    varAccD = 0;
+//                    varAccD = 0;
                     rCounterD = 0;
                     tmpValD = 0;
-                    tmpVal2D = 0;
+//                    tmpVal2D = 0;
                     trigger = 1;    // Trigger scope when we start recording
                     if(wrData == 0)begin
 						// Read at a particular frequency response
@@ -340,8 +341,8 @@ always @ * begin
             rCounterD = rCounterQ + 1;
             tmpValD = rmsAccQ - ((sumAccQ * sumAccQ) >> $clog2(NUM_READS));
             avgAccD = avgAccQ + tmpValQ;
-            varAccD = varAccQ + tmpVal2Q;
-            tmpVal2D = tmpValQ * tmpValQ;
+//            varAccD = varAccQ + tmpVal2Q;
+//            tmpVal2D = tmpValQ * tmpValQ;
             if (rCounterQ < RUNS) begin
                 rCounterD = rCounterQ + 1;
                 rmsAccD = 0;
@@ -421,16 +422,18 @@ always @ * begin
             end
         end
         C_DONE:begin
-            avgAccD = avgAccQ + tmpValQ;
-            varAccD = varAccQ + tmpVal2Q;
-            tmpVal2D = tmpValQ * tmpValQ;
-            nextState = C_DONE2;
-        end
-        C_DONE2:begin
-            avgAccD = avgAccQ >> $clog2(RUNS);
-            varAccD = (varAccQ + tmpVal2Q) >> $clog2(RUNS);
+//            avgAccD = avgAccQ + tmpValQ;
+            avgAccD = (avgAccQ + tmpValQ) >> $clog2(RUNS);
+//            varAccD = varAccQ + tmpVal2Q;
+//            tmpVal2D = tmpValQ * tmpValQ;
+//            nextState = C_DONE2;
             nextState = IDLE;
         end
+//        C_DONE2:begin
+//            avgAccD = avgAccQ >> $clog2(RUNS);
+//            varAccD = (varAccQ + tmpVal2Q) >> $clog2(RUNS);
+//            nextState = IDLE;
+//        end
     endcase
 end
 
@@ -449,10 +452,10 @@ always @ (posedge S_AXI_ACLK)begin
         challengeQ <= challengeD;
         rCounterQ <= rCounterD;
         avgAccQ <= avgAccD;
-        varAccQ <= varAccD;
+//        varAccQ <= varAccD;
         tmpValQ <= tmpValD;
-        tmpVal2Q <= tmpVal2D;
-        avgSqrQ <= avgSqrD;
+//        tmpVal2Q <= tmpVal2D;
+//        avgSqrQ <= avgSqrD;
         virusCounterQ <= virusCounterD;
         virusFlagQ <= virusFlagD;
         virusEnQ <= virusEnD;
@@ -470,10 +473,10 @@ always @ (posedge S_AXI_ACLK)begin
         challengeQ <= 0;
         rCounterQ <= 0;
         avgAccQ <= 0;
-        varAccQ <= 0;
+//        varAccQ <= 0;
         tmpValQ <= 0;
-        tmpVal2Q <= 0;
-        avgSqrQ <= 0;
+//        tmpVal2Q <= 0;
+//        avgSqrQ <= 0;
         virusCounterQ <= 0;
         virusFlagQ <= 0;
         virusEnQ <= 0;
