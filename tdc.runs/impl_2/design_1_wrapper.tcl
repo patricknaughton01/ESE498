@@ -66,30 +66,11 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-<<<<<<< HEAD
-  set_param chipscope.maxJobs 3
-=======
   set_param chipscope.maxJobs 2
->>>>>>> retest
   create_project -in_memory -part xc7z020clg484-1
   set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-<<<<<<< HEAD
-  set_property webtalk.parent_dir /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.cache/wt [current_project]
-  set_property parent.project_path /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.xpr [current_project]
-  set_property ip_output_repo /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.cache/ip [current_project]
-  set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.runs/synth_2/design_1_wrapper.dcp
-  set_msg_config -source 4 -id {BD 41-1661} -limit 0
-  set_param project.isImplRun true
-  add_files /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/sources_1/bd/design_1/design_1.bd
-  set_param project.isImplRun false
-  read_xdc /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/constrs_1/new/zedboard.xdc
-  read_xdc /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/constrs_1/new/loops.xdc
-  read_xdc /home/patricknaughton01/Documents/WashU/School/Sem6/ESE498/tdc/tdc.srcs/constrs_1/new/placement.xdc
-=======
   set_property webtalk.parent_dir C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.cache/wt [current_project]
   set_property parent.project_path C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.xpr [current_project]
   set_property ip_output_repo C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.cache/ip [current_project]
@@ -101,8 +82,8 @@ set rc [catch {
   add_files C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
   read_xdc C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/constrs_1/new/zedboard.xdc
+  read_xdc C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/constrs_1/new/loops.xdc
   read_xdc C:/Users/ressw/Documents/School/ESE498/retest/ESE498/tdc.srcs/constrs_1/new/platform.xdc
->>>>>>> retest
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7z020clg484-1
   set_param project.isImplRun false
