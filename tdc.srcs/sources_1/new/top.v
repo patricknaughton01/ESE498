@@ -174,12 +174,6 @@ always @ * begin
     ppD = ppQ;
     rmsAccD = rmsAccQ;
     sumAccD = sumAccQ;
-    r_counterD = r_counterQ;
-    meanD = meanQ;
-    varD = varQ;
-    tmp_value = 0;
-    tmpMean = 0;
-    tmpVar = 0;
     challengeD = challengeQ;
     rdData = 0;
     rCounterD = rCounterQ;
@@ -237,11 +231,8 @@ always @ * begin
             end else if(wr) begin
                 if(wrAddr == REC_ADDR)begin
                     counterD = 0;
-                    r_counterD = 0;
                     rmsAccD = 0;
                     sumAccD = 0;
-                    meanD = 0;
-                    varD = 0;
                     virusCounterD = 0;
                     avgAccD = 0;
                     varAccD = 0;
@@ -447,7 +438,6 @@ always @ (posedge S_AXI_ACLK)begin
     if(S_AXI_ARESETN == 1)begin
         state <= nextState;
         counterQ <= counterD;
-        r_counterQ <= r_counterD;
         freqQ <= freqD;
         virusMaskQ <= virusMaskD;
         maxQ <= maxD;
@@ -456,8 +446,6 @@ always @ (posedge S_AXI_ACLK)begin
         ppQ <= ppD;
         rmsAccQ <= rmsAccD;
         sumAccQ <= sumAccD;
-        meanQ <= meanD;
-        varQ <= varD;
         challengeQ <= challengeD;
         rCounterQ <= rCounterD;
         avgAccQ <= avgAccD;
@@ -471,7 +459,6 @@ always @ (posedge S_AXI_ACLK)begin
     end else begin
         state <= IDLE;
         counterQ <= 0;
-        r_counterQ <= 0;
         freqQ <= 0;
         virusMaskQ <= 0;
         maxQ <= 0;
@@ -480,8 +467,6 @@ always @ (posedge S_AXI_ACLK)begin
         ppQ <= 0;
         rmsAccQ <= 0;
         sumAccQ <= 0;
-        meanQ <= 0;
-        varQ <= 0;
         challengeQ <= 0;
         rCounterQ <= 0;
         avgAccQ <= 0;
