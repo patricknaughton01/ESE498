@@ -76,10 +76,10 @@ void challengeResponse(){
 	for (int i=0; i < NUM_CHAL; i++) {
 //	for (int i=0; i < 1000; i++) {
 //		for(int j = 0; j<100; j++){
-			*chal_addr = challenges[0][0];
-			*(chal_addr + 1) = challenges[0][1];
-			*(chal_addr + 2) = challenges[0][2];
-			*(chal_addr + 3) = challenges[0][3];
+			*chal_addr = challenges[i][0];
+			*(chal_addr + 1) = challenges[i][1];
+			*(chal_addr + 2) = challenges[i][2];
+			*(chal_addr + 3) = challenges[i][3];
 			*rec_addr = 3;					// Start recording challenge response
 
 			int32_t avg;
@@ -97,7 +97,7 @@ void challengeResponse(){
 
 			xil_printf("%d %d %d\n", i, avg, var);
 
-			usleep(50000);
+			usleep(1000000);
 
 /*			int32_t rms_val;
 			// Wait until the response is done being collected
