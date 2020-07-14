@@ -14,7 +14,6 @@
  *                       stored
  *   VIRUS_ADDR:         the address of the bitmask that determines which power
  *                       viruses are used
- *   MEM_WIDTH:          the size of each value in memory
  *   PP_ADDR:            the address that will return the peak-to-peak value
  *                       when read from
  *   RMS_ADDR:           the address that will return the sum-of-squared
@@ -46,9 +45,9 @@
 `timescale 1ns / 1ps
 
 module top#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, INITIAL=32, DELAY=64, READ_MAX_ADDR='hFFF4, 
-    REC_ADDR='hFFFC, FREQ_ADDR='hFFF8, VIRUS_ADDR='hFFE0, MEM_WIDTH=16, PP_ADDR='hFFF0, RMS_ADDR = 'hFFEC, SUM_ADDR='hFFE8,
-    ABS_READ_MAX=10000, VIRUS_NUM_B=128, VIRUS_B_SIZE=128, SIM=0, CHALLENGE_WIDTH=128, CHALLENGE_ADDR='hFF00, RUNS=128,
-    AVG_ADDR = 'hFFD8, VAR_ADDR = 'hFFD0, NUM_READS=128, WAIT_CYCLES=10000)(
+    REC_ADDR='hFFFC, FREQ_ADDR='hFFF8, VIRUS_ADDR='hFFC0, PP_ADDR='hFFF0, RMS_ADDR = 'hFFEC, SUM_ADDR='hFFE8,
+    VIRUS_NUM_B=128, VIRUS_B_SIZE=128, SIM=0, CHALLENGE_ADDR='h0, RUNS=128,
+    AVG_ADDR = 'hFFD8, VAR_ADDR = 'hFFD0, NUM_READS=128, WAIT_CYCLES=10000, MAX_CHALLENGE_WORDS=256)(
     // Axi4Lite Bus
     input       S_AXI_ACLK,
     input       S_AXI_ARESETN,
@@ -87,7 +86,6 @@ wire [DELAY-1:0] tdcOut;//[TDC_COUNT-1:0];
 reg[VIRUS_NUM_B-1:0] virusEnD, virusEnQ, virusMaskD, virusMaskQ;
 reg virusFlagD, virusFlagQ;
 wire [(VIRUS_NUM_B*VIRUS_B_SIZE)-1:0] virusOut;
-reg [CHALLENGE_WIDTH-1:0] challengeD, challengeQ;
 
 Axi4LiteSupporter#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH))AxiSupporter1(
     // Simple Bus
@@ -133,10 +131,10 @@ virus#(.NUM(VIRUS_NUM_B), .SIZE(VIRUS_B_SIZE)) virus1(
 // Memory input and output
 reg  memWe;
 reg  [C_S_AXI_ADDR_WIDTH-1:0] memAddr;
-reg  [MEM_WIDTH-1:0] memDi;
-wire [MEM_WIDTH-1:0] memDo;
+reg  [C_S_AXI_DATA_WIDTH-1:0] memDi;
+wire [C_S_AXI_DATA_WIDTH-1:0] memDo;
 
-RAM#(.DEPTH(ABS_READ_MAX)) ram1(
+RAM#(.DEPTH(MAX_CHALLENGE_WORDS), .WIDTH(C_S_AXI_DATA_WIDTH)) challengeRam(
     .clk(S_AXI_ACLK),
     .we(memWe),
     .a(memAddr),
@@ -145,7 +143,7 @@ RAM#(.DEPTH(ABS_READ_MAX)) ram1(
 );
 
 // State machine
-parameter IDLE=0, READ=1, C_INIT=2, C_WAIT=3, C_RD=4, C_DONE=5, C_DONE2=6, C_DONE3=7;
+parameter IDLE=0, C_INIT=2, C_WAIT=3, C_RD=4, C_DONE=5, C_DONE2=6, C_DONE3=7;
 reg [3:0] state, nextState;
 
 
@@ -174,7 +172,6 @@ always @ * begin
     ppD = ppQ;
     rmsAccD = rmsAccQ;
     sumAccD = sumAccQ;
-    challengeD = challengeQ;
     rdData = 0;
     rCounterD = rCounterQ;
     avgAccD = avgAccQ;
@@ -192,12 +189,7 @@ always @ * begin
         IDLE:begin
             virusEnD = 0;
             virusFlagD = 0;
-            if(rd && rdAddr < (ABS_READ_MAX<<2))begin
-				// The memory is being read from
-                memAddr = rdAddr;
-                rdData = memDo;
-                rdData[C_S_AXI_DATA_WIDTH-1] = 1; 
-             end else if(rd && rdAddr == PP_ADDR)begin
+            if(rd && rdAddr == PP_ADDR)begin
 				// The peak-to-peak response is being measured
                 rdData = ppQ;
                 rdData[C_S_AXI_DATA_WIDTH-1] = 1;
@@ -241,9 +233,6 @@ always @ * begin
                     tmpVal2D = 0;
                     trigger = 1;    // Trigger scope when we start recording
                     if(wrData == 0)begin
-						// Read at a particular frequency response
-                        nextState = READ;
-                    end else begin
 						// Read a challenge response
                         nextState = C_INIT;
                         rCounterD = 0;
@@ -258,82 +247,13 @@ always @ * begin
 					// Write to the virus bitmask. Note that this covers
 					// several addresses
                     virusMaskD = (virusMaskQ & ~(oneMask << ((wrAddr - VIRUS_ADDR)<<3))) | (wrData << ((wrAddr - VIRUS_ADDR)<<3));
-                end else if(wrAddr >= CHALLENGE_ADDR && wrAddr < (CHALLENGE_ADDR + (CHALLENGE_WIDTH>>3)))begin
+                end else if(wrAddr >= CHALLENGE_ADDR && wrAddr < (CHALLENGE_ADDR + (MAX_CHALLENGE_WORDS<<2)))begin
 					// Write to the challenge. Note that this covers several
 					// addresses
-                    challengeD = (challengeQ & ~(oneMask << ((wrAddr - CHALLENGE_ADDR)<<3))) | (wrData << ((wrAddr - CHALLENGE_ADDR)<<3));
+					memWe = 1;
+					memAddr = wrAddr - CHALLENGE_ADDR;
+					memDi = wrData;
                 end
-            end
-        end
-        READ:begin
-			// This state performs a read at the frequency stored in the freq
-			// register
-            if(virusCounterQ == (freqQ-1))begin
-                virusFlagD = ~virusFlagQ;
-                virusCounterD = 0;
-            end else begin
-                virusCounterD = virusCounterQ + 1;
-            end
-            
-            if(virusFlagQ == 1)begin
-                virusEnD = virusMaskQ;
-            end else begin
-                virusEnD = 0;
-            end
-            
-            if(counterQ < maxQ)begin
-                // Clean tdcOut to eliminate glitches
-//                for(i = 0; i < TDC_COUNT; i = i + 1)begin
-                    tdcClean[0] = tdcOut[0];
-                    for(j = 1; j < DELAY; j = j + 1)begin
-                        tdcClean[j] = tdcOut[j-1] & tdcOut[j];
-                    end
-//                end
-//                for(i = 0; i<TDC_COUNT; i = i+1)begin
-                    total = 0;
-//                end
-                // Find top bit of tdc
-//                for(i = 0; i < TDC_COUNT; i = i + 1)begin
-                    for(j = 0; j < DELAY; j = j + 1)begin
-                        total = total + tdcClean[j];
-                    end
-//                end
-                
-                // Give total a value so that we can simulate
-                if(SIM != 0)begin
-//                    for(i = 0; i < TDC_COUNT; i = i + 1)begin
-                        total = SIM;
-//                    end
-                end
-                
-//                for(i = 0; i < TDC_COUNT; i = i + 1)begin
-//                    avgTotalD = avgTotalD + totalQ[i];
-//                end
-                
-//                tempAvgTotal = avgTotalQ >> $clog2(TDC_COUNT);
-                
-                rmsAccD = rmsAccQ + (total * total);
-                sumAccD = sumAccQ + total;
-                
-                // Decide if this is a new min or max
-                if (total > diffMaxQ) begin
-                    diffMaxD = total;
-                end
-                if (total < diffMinQ) begin
-                    diffMinD = total;
-                end
-                
-                // Write to the memory
-                memWe = 1;
-                memAddr = counterQ << 2;
-                memDi = total;
-                counterD = counterQ + 1;
-            end else begin
-                // Write to the PP register
-                diffMaxD = 0;
-                diffMinD = 'h3f;
-                ppD = (diffMaxQ - diffMinQ);
-                nextState = IDLE;
             end
         end
         C_INIT:begin
@@ -364,13 +284,15 @@ always @ * begin
         C_RD:begin
 			// This state performs a read with the challenge in the challenge
 			// register
-            if(virusCounterQ < CHALLENGE_WIDTH-1)begin
+            if(virusCounterQ < maxQ-1)begin
                 virusCounterD = virusCounterQ + 1;
             end else begin
                 virusCounterD = 0;
             end
             
-            virusFlagD = challengeQ[virusCounterQ];
+            // virusCounter counts bits so divide by 8 to get bytes
+            memAddr = virusCounterQ >> 3;
+            virusFlagD = memDo[virusCounterQ[$clog2(C_S_AXI_DATA_WIDTH)-1:0]];
             
             if(virusFlagQ == 1)begin
                 virusEnD = virusMaskQ;
@@ -378,7 +300,7 @@ always @ * begin
                 virusEnD = 0;
             end
             
-            if(counterQ < NUM_READS)begin
+            if(counterQ < maxQ)begin
                 // Clean tdcOut to eliminate glitches
                 tdcClean[0] = tdcOut[0];
                 for(j = 1; j < DELAY; j = j + 1)begin
@@ -393,7 +315,7 @@ always @ * begin
                 
                 // Give total a value so that we can simulate
                 if(SIM != 0)begin
-                    total = SIM + i;
+                    total = SIM + virusCounterQ[0];
                 end
                 
                 rmsAccD = rmsAccQ + (total * total);
@@ -407,10 +329,6 @@ always @ * begin
                     diffMinD = total;
                 end
                 
-                // Write to the memory
-                memWe = 1;
-                memAddr = (counterQ) << 2;
-                memDi = total;
                 counterD = counterQ + 1;
             end else begin
                 // Write to the PP register
@@ -446,7 +364,6 @@ always @ (posedge S_AXI_ACLK)begin
         ppQ <= ppD;
         rmsAccQ <= rmsAccD;
         sumAccQ <= sumAccD;
-        challengeQ <= challengeD;
         rCounterQ <= rCounterD;
         avgAccQ <= avgAccD;
         varAccQ <= varAccD;
@@ -467,7 +384,6 @@ always @ (posedge S_AXI_ACLK)begin
         ppQ <= 0;
         rmsAccQ <= 0;
         sumAccQ <= 0;
-        challengeQ <= 0;
         rCounterQ <= 0;
         avgAccQ <= 0;
         varAccQ <= 0;

@@ -21,12 +21,12 @@ int32_t * const freq_addr 	= (int32_t*)0x43C0FFF8;
 int32_t * const read_addr 	= (int32_t*)0x43C0FFF4;
 int32_t * const rms_addr	= (int32_t*)0x43C0FFEC;
 int32_t * const sum_addr	= (int32_t*)0x43C0FFE8;
-int32_t * const virus_addr 	= (int32_t*)0x43C0FFE0;
-int32_t * const chal_addr	= (int32_t*)0x43C0FF00;
+int32_t * const virus_addr 	= (int32_t*)0x43C0FFC0;
+int32_t * const chal_addr	= (int32_t*)0x43C00000;
 int32_t * const avg_addr	= (int32_t*)0x43C0FFD8;
 int32_t * const var_addr	= (int32_t*)0x43C0FFD0;
-const int32_t num_reads = 10000;
-int32_t maskRO[4] = {0xffffffff, 0x0000ffff, 0x0, 0x0};
+const int32_t num_reads = 128;
+int32_t maskRO[4] = {0xffffffff, 0xffffffa0, 0x0, 0x0};
 
 void makeMeasurement();
 void stepResponse();
@@ -67,7 +67,7 @@ void setMask() {
 // This function sends a challenge to the top module, then reads a challenge
 // response 100 times for all challenges provided in the header file
 void challengeResponse(){
-//	*read_addr = num_reads;
+	*read_addr = num_reads;
 	*virus_addr = maskRO[0];
 	*(virus_addr + 1) = maskRO[1];
 	*(virus_addr + 2) = maskRO[2];
@@ -80,7 +80,7 @@ void challengeResponse(){
 			*(chal_addr + 1) = challenges[i][1];
 			*(chal_addr + 2) = challenges[i][2];
 			*(chal_addr + 3) = challenges[i][3];
-			*rec_addr = 3;					// Start recording challenge response
+			*rec_addr = 0;					// Start recording challenge response
 
 			int32_t avg;
 			int32_t var;

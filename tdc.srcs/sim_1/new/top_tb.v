@@ -21,7 +21,7 @@
 
 
 module top_tb#(parameter C_S_AXI_ADDR_WIDTH = 16, C_S_AXI_DATA_WIDTH = 32, CLK_PERIOD=10, READ_MAX=8192,
-    TO_READ=8192, M_TDATA_WIDTH=16, S_TDATA_WIDTH=48, FFT_WIDTH=8192, RUNS=4)();
+    TO_READ=128, RUNS=4, WAIT_CYCLES=16)();
 
 // Axi4Lite signals
 reg  S_AXI_ACLK ;
@@ -53,22 +53,10 @@ wire    [C_S_AXI_DATA_WIDTH-1:0]    rdData ;
 reg                                 rd ;
 wire                                rdDone ;
 
-// AxiS bus Manager
-wire[M_TDATA_WIDTH-1:0] M_TDATA;
-wire                    M_TLAST;
-reg                     M_TREADY;
-wire                    M_TVALID;
-
-// AxiS bus Supporter
-reg [S_TDATA_WIDTH-1:0] S_TDATA;
-reg                     S_TLAST;
-wire                    S_TREADY;
-reg                     S_TVALID;
-
 wire trigger;
 
 top#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH), .SIM(63),
-    .M_TDATA_WIDTH(M_TDATA_WIDTH), .S_TDATA_WIDTH(S_TDATA_WIDTH), .FFT_WIDTH(FFT_WIDTH)) top1(
+    .WAIT_CYCLES(WAIT_CYCLES), .RUNS(RUNS)) top1(
     // Axi4Lite Bus
     S_AXI_ACLK,
     S_AXI_ARESETN,
@@ -89,7 +77,6 @@ top#(.C_S_AXI_ADDR_WIDTH(C_S_AXI_ADDR_WIDTH), .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_W
     S_AXI_RRESP,
     S_AXI_RVALID,
     S_AXI_RREADY,
-    S_AXI_ACLK, // clk2
     trigger
 );
 
@@ -161,25 +148,25 @@ initial begin
     // Write the number of virus groups to start
     // Must be done in 4 groups b/c mask is 128 bits
     wr = 1;
-    wrAddr = 'hFFD8;
+    wrAddr = 'hFFC0;
     wrData = 'hDEADDEAD;
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * 5);
     wr = 1;
-    wrAddr = 'hFFDC;
+    wrAddr = 'hFFC4;
     wrData = 'hBEEFBEEF;
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * 5);
     wr = 1;
-    wrAddr = 'hFFE0;
+    wrAddr = 'hFFC8;
     wrData = 'hFEEDFEED;
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * 5);
     wr = 1;
-    wrAddr = 'hFFE4;
+    wrAddr = 'hFFCC;
     wrData = 'hDEAFDEAF;
     #CLK_PERIOD;
     wr = 0;
@@ -187,25 +174,25 @@ initial begin
     // Write the challenge in
     // Must be done in 4 groups b/c mask is 128 bits
     wr = 1;
-    wrAddr = 'hFF00;
+    wrAddr = 'h00;
     wrData = 'hAAAA_AAAA;
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * 5);
     wr = 1;
-    wrAddr = 'hFF04;
+    wrAddr = 'h04;
     wrData = 'hBBBB_BBBB;
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * 5);
     wr = 1;
-    wrAddr = 'hFF08;
+    wrAddr = 'h08;
     wrData = 'hCCCC_CCCC;
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * 5);
     wr = 1;
-    wrAddr = 'hFF0C;
+    wrAddr = 'h0C;
     wrData = 'hDDDD_DDDD;
     #CLK_PERIOD;
     wr = 0;
@@ -213,11 +200,11 @@ initial begin
     // Start the measurement - Challenge
     wr = 1;
     wrAddr = 'hFFFC;
-    wrData = 3;
+    wrData = 0;
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * 5);
-    #(CLK_PERIOD * ((TO_READ * 3 * RUNS) + 100));
+    #(CLK_PERIOD * ((TO_READ * RUNS) + (WAIT_CYCLES * RUNS) + 100));
     // Read Mean value
     rd = 1;
     rdAddr = 'hFEFC;
@@ -234,25 +221,25 @@ initial begin
     // Write a second challenge in
     // Must be done in 4 groups b/c mask is 128 bits
     wr = 1;
-    wrAddr = 'hFF00;
+    wrAddr = 'h00;
     wrData = 'h0123_4567;
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * 5);
     wr = 1;
-    wrAddr = 'hFF04;
+    wrAddr = 'h04;
     wrData = 'h89AB_CDEF;
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * 5);
     wr = 1;
-    wrAddr = 'hFF08;
+    wrAddr = 'h08;
     wrData = 'hFEDC_BA98;
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * 5);
     wr = 1;
-    wrAddr = 'hFF0C;
+    wrAddr = 'h0C;
     wrData = 'h7654_3210;
     #CLK_PERIOD;
     wr = 0;
@@ -260,11 +247,11 @@ initial begin
     // Start the measurement - Challenge
     wr = 1;
     wrAddr = 'hFFFC;
-    wrData = 3;
+    wrData = 0;
     #CLK_PERIOD;
     wr = 0;
     #(CLK_PERIOD * 5);
-    #(CLK_PERIOD * ((TO_READ * 3 * RUNS) + 100));
+    #(CLK_PERIOD * ((TO_READ * RUNS) + (WAIT_CYCLES * RUNS) + 100));
     // Read Mean value
     rd = 1;
     rdAddr = 'hFEFC;
@@ -278,13 +265,6 @@ initial begin
     rd = 0;
     #(CLK_PERIOD*10);
     $stop;
-end
-
-always @ * begin
-    M_TREADY = 0;
-    if(M_TVALID == 1)begin
-        M_TREADY = 1;
-    end
 end
 
 endmodule
