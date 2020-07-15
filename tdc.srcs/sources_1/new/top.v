@@ -146,7 +146,6 @@ RAM#(.DEPTH(MAX_CHALLENGE_WORDS), .WIDTH(C_S_AXI_DATA_WIDTH)) challengeRam(
 parameter IDLE=0, C_INIT=2, C_WAIT=3, C_RD=4, C_DONE=5, C_DONE2=6, C_DONE3=7;
 reg [3:0] state, nextState;
 
-
 reg [C_S_AXI_DATA_WIDTH-1:0] counterD, counterQ, virusCounterD, virusCounterQ, freqD, freqQ,
            maxD, maxQ, ppD, ppQ, oneMask, rCounterD, rCounterQ;
 reg [DELAY-1:0] tdcClean;//D[TDC_COUNT-1:0], tdcCleanQ[TDC_COUNT-1:0];
@@ -258,7 +257,7 @@ always @ * begin
         end
         C_INIT:begin
             rCounterD = rCounterQ + 1;
-            tmpValD = rmsAccQ - ((sumAccQ * sumAccQ) >> $clog2(NUM_READS));
+            tmpValD = rmsAccQ - ((sumAccQ * sumAccQ) >> maxQ);
             avgAccD = avgAccQ + tmpValQ;
             varAccD = varAccQ + tmpVal2Q;
             tmpVal2D = tmpValQ * tmpValQ;
@@ -284,7 +283,7 @@ always @ * begin
         C_RD:begin
 			// This state performs a read with the challenge in the challenge
 			// register
-            if(virusCounterQ < maxQ-1)begin
+            if(virusCounterQ < (32'h00000001 << maxQ)-1)begin
                 virusCounterD = virusCounterQ + 1;
             end else begin
                 virusCounterD = 0;
@@ -300,7 +299,7 @@ always @ * begin
                 virusEnD = 0;
             end
             
-            if(counterQ < maxQ)begin
+            if(counterQ < (32'h00000001 << maxQ))begin
                 // Clean tdcOut to eliminate glitches
                 tdcClean[0] = tdcOut[0];
                 for(j = 1; j < DELAY; j = j + 1)begin
