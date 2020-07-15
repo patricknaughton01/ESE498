@@ -25,7 +25,7 @@ int32_t * const virus_addr 	= (int32_t*)0x43C0FFC0;
 int32_t * const chal_addr	= (int32_t*)0x43C00000;
 int32_t * const avg_addr	= (int32_t*)0x43C0FFD8;
 int32_t * const var_addr	= (int32_t*)0x43C0FFD0;
-const int32_t num_reads = 128;
+const int32_t num_reads = 1024;
 int32_t maskRO[4] = {0xffffffff, 0xffffffa0, 0x0, 0x0};
 
 void makeMeasurement();
@@ -76,10 +76,9 @@ void challengeResponse(){
 	for (int i=0; i < NUM_CHAL; i++) {
 //	for (int i=0; i < 1000; i++) {
 //		for(int j = 0; j<100; j++){
-			*chal_addr = challenges[i][0];
-			*(chal_addr + 1) = challenges[i][1];
-			*(chal_addr + 2) = challenges[i][2];
-			*(chal_addr + 3) = challenges[i][3];
+			for(int c = 0; c < 32; c++){
+				*(chal_addr + c) = challenges1024[i][c];
+			}
 			*rec_addr = 0;					// Start recording challenge response
 
 			int32_t avg;

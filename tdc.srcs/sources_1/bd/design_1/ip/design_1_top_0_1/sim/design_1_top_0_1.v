@@ -140,7 +140,7 @@ output wire trigger;
     .RUNS(128),
     .AVG_ADDR(32'H0000FFD8),
     .VAR_ADDR(32'H0000FFD0),
-    .NUM_READS(128),
+    .NUM_READS(1024),
     .WAIT_CYCLES(10000),
     .MAX_CHALLENGE_WORDS(256)
   ) inst (
